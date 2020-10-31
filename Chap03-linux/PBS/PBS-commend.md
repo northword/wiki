@@ -119,3 +119,7 @@ PE:  4.00  StartPriority:  6000
 ```
 
 如果任务无法运行，可以这样查询原因。
+
+## pbsnodes
+
+查看节点的空闲情况。有`free`、`busy`、`down`等状态。
