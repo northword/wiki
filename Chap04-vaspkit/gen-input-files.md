@@ -1,7 +1,5 @@
 输入文件包括POSCAR、INCAR、KPOINTS、POTCAR。注意大小写，因为linux时严格区分大小写的系统。
 
-
-
 ## POSCAR
 
 首先准备好POSCAR文件：

@@ -17,7 +17,7 @@ $ qsub [options] <control script>
 
 作业提交后一般会先排队等待，PBS 系统会根据作业的优先级和可用的计算资源来调度和执行作业。
 
-其中`-N thisIsName`为选项，它指定了作业的名称。`vasp.pbs`为PBS脚本，它设定了作业的属性和作业的内容。`options`与`control script`详见 `##PBS脚本`
+其中`-N thisIsName`为选项，它指定了作业的名称。`vasp.pbs`为PBS脚本，它设定了作业的属性和作业的内容。`options`与`control script`详见 [`## PBS脚本`](./PBS-script.html)。
 
 > 文档中，命令带有`$`符号的，表示是在shell终端输入的命令，实际输入的时候不需要带有这个符号。
 
@@ -78,3 +78,44 @@ $ qdel <jobid>
 $ qsig -s KILL <job ID>
 ```
 
+## checkjob
+
+```
+checkjob <job id>
+```
+
+注意这儿的`job id`不包括`.inodexxx`，比如上述的`201848.inode202`作业，如果使用`checkjob`查询，命令应为`checkjob 201848`。
+
+```
+[zjb@op testEnergy]$ checkjob 201848
+
+
+checking job 201848
+
+State: Running
+Creds:  user:zjb  group:energy  account:SugonClus  class:energy  qos:preemptee
+WallTime: 00:02:03 of 00:30:00
+SubmitTime: Sat Oct 31 19:45:48
+  (Time Queued  Total: 00:00:01  Eligible: 00:00:01)
+
+StartTime: Sat Oct 31 19:45:49
+Total Tasks: 4
+
+Req[0]  TaskCount: 4  Partition: DEFAULT
+Network: [NONE]  Memory >= 0  Disk >= 0  Swap >= 0
+Opsys: [NONE]  Arch: [NONE]  Features: [NONE]
+Allocated Nodes:
+[inode53:4]
+
+
+IWD: [NONE]  Executable:  [NONE]
+Bypass: 0  StartCount: 1
+PartitionMask: [ALL]
+Flags:       BACKFILL RESTARTABLE PREEMPTEE
+Attr:        PREEMPTEE
+
+Reservation '201868' (-00:02:04 -> 00:27:56  Duration: 00:30:00)
+PE:  4.00  StartPriority:  6000
+```
+
+如果任务无法运行，可以这样查询原因。

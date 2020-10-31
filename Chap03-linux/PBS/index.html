@@ -69,8 +69,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="commend.html" />
+    <link rel="next" href="PBS-commend.html" />
     
+    
+    <link rel="prev" href="../vi.html" />
     
 
     </head>
@@ -179,9 +181,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="../command.html">
+        <li class="chapter " data-level="3.2.1" data-path="../linux-command.html">
             
-                <a href="../command.html">
+                <a href="../linux-command.html">
             
                     
                     Linux 常用命令
@@ -192,14 +194,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" >
+        <li class="chapter " data-level="3.2.2" data-path="../vi.html">
             
-                <span>
+                <a href="../vi.html">
             
                     
-                    [VI/VIM 编辑器]
+                    VI/VIM 编辑器
             
-                </span>
+                </a>
             
 
             
@@ -224,9 +226,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.3.1" data-path="commend.html">
+        <li class="chapter " data-level="3.3.1" data-path="PBS-commend.html">
             
-                <a href="commend.html">
+                <a href="PBS-commend.html">
             
                     
                     管理作业
@@ -237,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3.2" data-path="script.html">
+        <li class="chapter " data-level="3.3.2" data-path="PBS-script.html">
             
-                <a href="script.html">
+                <a href="PBS-script.html">
             
                     
                     PBS 脚本
@@ -348,7 +350,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x4F5C;&#x4E1A;&#x4E00;&#x822C;&#x4F1A;&#x63D0;&#x4EA4;&#x5230;&#x8D85;&#x7B97;&#x96C6;&#x7FA4;&#x4E0A;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;&#x5728;&#x96C6;&#x7FA4;&#x4E0A;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x5730;&#x76F4;&#x63A5;&#x4EE5; mpirun &#x8FD0;&#x884C;&#x6211;&#x4EEC;&#x7684;&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x7A0B;&#x5E8F;&#xFF0C;&#x800C;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x5176;&#x4E0A;&#x63D0;&#x4F9B;&#x7684;&#x4F5C;&#x4E1A;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x6765;&#x63D0;&#x4EA4;&#x8BA1;&#x7B97;&#x4EFB;&#x52A1;&#x3002;&#x96C6;&#x7FA4;&#x4F5C;&#x4E1A;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x548C;&#x8C03;&#x5EA6;&#x96C6;&#x7FA4;&#x7684;&#x8F6F;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#xFF0C;&#x4FDD;&#x8BC1;&#x7528;&#x6237;&#x4F5C;&#x4E1A;&#x516C;&#x5E73;&#x5408;&#x7406;&#x5730;&#x5171;&#x4EAB;&#x96C6;&#x7FA4;&#x8D44;&#x6E90;&#xFF0C;&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x5229;&#x7528;&#x7387;&#x548C;&#x541E;&#x5410;&#x7387;&#x3002;</p>
+                                <h1 id="&#x4EC0;&#x4E48;&#x662F;pbs">&#x4EC0;&#x4E48;&#x662F;PBS</h1>
+<p>&#x4F5C;&#x4E1A;&#x4E00;&#x822C;&#x4F1A;&#x63D0;&#x4EA4;&#x5230;&#x8D85;&#x7B97;&#x96C6;&#x7FA4;&#x4E0A;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;&#x5728;&#x96C6;&#x7FA4;&#x4E0A;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x5730;&#x76F4;&#x63A5;&#x4EE5; mpirun &#x8FD0;&#x884C;&#x6211;&#x4EEC;&#x7684;&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x7A0B;&#x5E8F;&#xFF0C;&#x800C;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x5176;&#x4E0A;&#x63D0;&#x4F9B;&#x7684;&#x4F5C;&#x4E1A;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x6765;&#x63D0;&#x4EA4;&#x8BA1;&#x7B97;&#x4EFB;&#x52A1;&#x3002;&#x96C6;&#x7FA4;&#x4F5C;&#x4E1A;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x548C;&#x8C03;&#x5EA6;&#x96C6;&#x7FA4;&#x7684;&#x8F6F;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#xFF0C;&#x4FDD;&#x8BC1;&#x7528;&#x6237;&#x4F5C;&#x4E1A;&#x516C;&#x5E73;&#x5408;&#x7406;&#x5730;&#x5171;&#x4EAB;&#x96C6;&#x7FA4;&#x8D44;&#x6E90;&#xFF0C;&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x5229;&#x7528;&#x7387;&#x548C;&#x541E;&#x5410;&#x7387;&#x3002;</p>
 <p>PBS&#x5C31;&#x662F;&#x5176;&#x4E2D;&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x4F5C;&#x4E1A;&#x901A;&#x8FC7;PBS&#x547D;&#x4EE4;&#x63D0;&#x4EA4;&#x5230;PBS&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x7ECF;&#x7531;PBS&#x5206;&#x914D;&#x8D44;&#x6E90;&#x8FD0;&#x884C;&#x3002;</p>
 
                                 
@@ -393,8 +396,12 @@
 
             
                 
+                <a href="../vi.html" class="navigation navigation-prev " aria-label="Previous page: VI/VIM 编辑器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="commend.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 管理作业">
+                
+                <a href="PBS-commend.html" class="navigation navigation-next " aria-label="Next page: 管理作业">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -405,7 +412,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PBS 作业管理系统","level":"3.3","depth":1,"next":{"title":"管理作业","level":"3.3.1","depth":2,"path":"Chap03-linux/PBS/commend.md","ref":"Chap03-linux/PBS/commend.md","articles":[]},"previous":{"title":"[VI/VIM 编辑器]","level":"3.2.2","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table","livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"ace":{},"search":{},"livereload":{},"chapter-fold":{},"code":{"copyButtons":true},"search-plus":{},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap03-linux/PBS/README.md","mtime":"2020-10-31T08:21:58.026Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T08:28:48.158Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PBS 作业管理系统","level":"3.3","depth":1,"next":{"title":"管理作业","level":"3.3.1","depth":2,"path":"Chap03-linux/PBS/PBS-commend.md","ref":"Chap03-linux/PBS/PBS-commend.md","articles":[]},"previous":{"title":"VI/VIM 编辑器","level":"3.2.2","depth":2,"path":"Chap03-linux/vi.md","ref":"Chap03-linux/vi.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"ace":{},"search":{},"livereload":{},"chapter-fold":{},"code":{"copyButtons":true},"search-plus":{},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap03-linux/PBS/README.md","mtime":"2020-10-31T08:35:25.685Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T11:42:22.819Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>生成输入文件 · Computation and Simulation</title>
+        <title>VI/VIM 编辑器 · Computation and Simulation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,8 +69,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="PBS/" />
     
-    <link rel="prev" href="install.html" />
+    
+    <link rel="prev" href="linux-command.html" />
     
 
     </head>
@@ -165,9 +167,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../Chap03-linux/">
+        <li class="chapter " data-level="3.2" data-path="./">
             
-                <a href="../Chap03-linux/">
+                <a href="./">
             
                     
                     Linux
@@ -179,9 +181,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="../Chap03-linux/linux-command.html">
+        <li class="chapter " data-level="3.2.1" data-path="linux-command.html">
             
-                <a href="../Chap03-linux/linux-command.html">
+                <a href="linux-command.html">
             
                     
                     Linux 常用命令
@@ -192,9 +194,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" data-path="../Chap03-linux/vi.html">
+        <li class="chapter active" data-level="3.2.2" data-path="vi.html">
             
-                <a href="../Chap03-linux/vi.html">
+                <a href="vi.html">
             
                     
                     VI/VIM 编辑器
@@ -210,9 +212,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../Chap03-linux/PBS/">
+        <li class="chapter " data-level="3.3" data-path="PBS/">
             
-                <a href="../Chap03-linux/PBS/">
+                <a href="PBS/">
             
                     
                     PBS 作业管理系统
@@ -224,9 +226,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.3.1" data-path="../Chap03-linux/PBS/PBS-commend.html">
+        <li class="chapter " data-level="3.3.1" data-path="PBS/PBS-commend.html">
             
-                <a href="../Chap03-linux/PBS/PBS-commend.html">
+                <a href="PBS/PBS-commend.html">
             
                     
                     管理作业
@@ -237,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3.2" data-path="../Chap03-linux/PBS/PBS-script.html">
+        <li class="chapter " data-level="3.3.2" data-path="PBS/PBS-script.html">
             
-                <a href="../Chap03-linux/PBS/PBS-script.html">
+                <a href="PBS/PBS-script.html">
             
                     
                     PBS 脚本
@@ -255,9 +257,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="./">
+        <li class="chapter " data-level="3.4" data-path="../Chap04-vaspkit/">
             
-                <a href="./">
+                <a href="../Chap04-vaspkit/">
             
                     
                     VaspKit
@@ -269,9 +271,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.4.1" data-path="install.html">
+        <li class="chapter " data-level="3.4.1" data-path="../Chap04-vaspkit/install.html">
             
-                <a href="install.html">
+                <a href="../Chap04-vaspkit/install.html">
             
                     
                     安装
@@ -282,9 +284,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.4.2" data-path="gen-input-files.html">
+        <li class="chapter " data-level="3.4.2" data-path="../Chap04-vaspkit/gen-input-files.html">
             
-                <a href="gen-input-files.html">
+                <a href="../Chap04-vaspkit/gen-input-files.html">
             
                     
                     生成输入文件
@@ -330,7 +332,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >生成输入文件</a>
+        <a href=".." >VI/VIM 编辑器</a>
     </h1>
 </div>
 
@@ -348,27 +350,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x5305;&#x62EC;POSCAR&#x3001;INCAR&#x3001;KPOINTS&#x3001;POTCAR&#x3002;&#x6CE8;&#x610F;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x56E0;&#x4E3A;linux&#x65F6;&#x4E25;&#x683C;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x7684;&#x7CFB;&#x7EDF;&#x3002;</p>
-<h2 id="poscar">POSCAR</h2>
-<p>&#x9996;&#x5148;&#x51C6;&#x5907;&#x597D;POSCAR&#x6587;&#x4EF6;&#xFF1A;</p>
-<pre><code>O2 molecule   #&#x6CE8;&#x91CA;&#x884C;
-10            #
-1.0 0.0 0.0   #
-0.0 1.0 0.0
-0.0 0.0 1.0
-O             #&#x5143;&#x7D20;&#x7C7B;&#x522B;
-2             #&#x539F;&#x5B50;&#x6570;&#x91CF;
-Direct        #&#x5750;&#x6807;&#x7C7B;&#x522B;&#xFF1A;&#x76F4;&#x89D2;/&#x7B1B;&#x5361;&#x5C14;
-0.5 0.5 0.5   #
-0.5 0.5 0.623
-</code></pre><h2 id="incar">INCAR</h2>
-<p>&#x4E4B;&#x540E;&#x7531;VASPKIT&#x751F;&#x6210;&#x5176;&#x4F59;&#x4E09;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x952E;&#x5165;&#x547D;&#x4EE4;<code>vaspkit</code>&#x4EE5;&#x542F;&#x52A8;&#xFF0C;&#x4E0B;&#x4E3A;&#x542F;&#x52A8;&#x9762;&#x677F;&#xFF1A;</p>
-<p><img src="assets/image-20201022140535378.png" alt="image-20201022140535378"></p>
-<p>&#x9009;&#x62E9;<code>1</code>&#xFF0C;&#x4EE5;&#x751F;&#x6210;Input Files&#x3002;</p>
-<p><img src="assets/image-20201022140626483.png" alt="image-20201022140626483"></p>
-<p>&#x9009;&#x62E9;<code>101</code>&#x4EE5;&#x751F;&#x6210;INCAR&#x6587;&#x4EF6;</p>
-<p><img src="assets/image-20201022140743419.png" alt="image-20201022140743419"></p>
-<p>ST&#xFF1A;&#x9759;&#x6001;&#x8BA1;&#x7B97;&#xFF1B;</p>
+                                <h1 id="vi--vim-&#x7F16;&#x8F91;&#x5668;">vi / vim &#x7F16;&#x8F91;&#x5668;</h1>
+<p>vi&#x7F16;&#x8F91;&#x5668;&#x662F;Linux&#x7CFB;&#x7EDF;&#x4E0B;&#x6807;&#x51C6;&#x7684;&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x8FD9;&#x73A9;&#x610F;&#x6709;&#x4E9B;&#x7B80;&#x5355;&#xFF0C;&#x867D;&#x7136;&#x547D;&#x4EE4;&#x5F88;&#x591A;&#xFF0C;&#x4E0D;&#x8FC7;&#x7EC3;&#x7EC3;&#x5C31;&#x597D;&#xFF0C;&#x61D2;&#x5F97;&#x5199;&#x4E86;&#xFF0C;&#x53C2;&#x8003;<a href="https://www.runoob.com/linux/linux-vim.html" target="_blank">Linux vi/vim | &#x83DC;&#x9E1F;&#x6559;&#x7A0B;</a>&#x5427;&#x3002;</p>
 
                                 
                                 </section>
@@ -412,10 +395,14 @@ Direct        #&#x5750;&#x6807;&#x7C7B;&#x522B;&#xFF1A;&#x76F4;&#x89D2;/&#x7B1B;
 
             
                 
-                <a href="install.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 安装">
+                <a href="linux-command.html" class="navigation navigation-prev " aria-label="Previous page: Linux 常用命令">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="PBS/" class="navigation navigation-next " aria-label="Next page: PBS 作业管理系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -424,7 +411,7 @@ Direct        #&#x5750;&#x6807;&#x7C7B;&#x522B;&#xFF1A;&#x76F4;&#x89D2;/&#x7B1B;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"生成输入文件","level":"3.4.2","depth":2,"previous":{"title":"安装","level":"3.4.1","depth":2,"path":"Chap04-vaspkit/install.md","ref":"Chap04-vaspkit/install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"ace":{},"search":{},"livereload":{},"chapter-fold":{},"code":{"copyButtons":true},"search-plus":{},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap04-vaspkit/gen-input-files.md","mtime":"2020-10-31T11:33:22.241Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T11:42:22.819Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"VI/VIM 编辑器","level":"3.2.2","depth":2,"next":{"title":"PBS 作业管理系统","level":"3.3","depth":1,"path":"Chap03-linux/PBS/README.md","ref":"Chap03-linux/PBS/README.md","articles":[{"title":"管理作业","level":"3.3.1","depth":2,"path":"Chap03-linux/PBS/PBS-commend.md","ref":"Chap03-linux/PBS/PBS-commend.md","articles":[]},{"title":"PBS 脚本","level":"3.3.2","depth":2,"path":"Chap03-linux/PBS/PBS-script.md","ref":"Chap03-linux/PBS/PBS-script.md","articles":[]}]},"previous":{"title":"Linux 常用命令","level":"3.2.1","depth":2,"path":"Chap03-linux/linux-command.md","ref":"Chap03-linux/linux-command.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"ace":{},"search":{},"livereload":{},"chapter-fold":{},"code":{"copyButtons":true},"search-plus":{},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap03-linux/vi.md","mtime":"2020-10-31T11:36:34.197Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T11:42:22.819Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

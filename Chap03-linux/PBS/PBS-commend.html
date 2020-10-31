@@ -69,7 +69,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="script.html" />
+    <link rel="next" href="PBS-script.html" />
     
     
     <link rel="prev" href="./" />
@@ -181,9 +181,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="../command.html">
+        <li class="chapter " data-level="3.2.1" data-path="../linux-command.html">
             
-                <a href="../command.html">
+                <a href="../linux-command.html">
             
                     
                     Linux 常用命令
@@ -194,14 +194,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" >
+        <li class="chapter " data-level="3.2.2" data-path="../vi.html">
             
-                <span>
+                <a href="../vi.html">
             
                     
-                    [VI/VIM 编辑器]
+                    VI/VIM 编辑器
             
-                </span>
+                </a>
             
 
             
@@ -226,9 +226,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.3.1" data-path="commend.html">
+        <li class="chapter active" data-level="3.3.1" data-path="PBS-commend.html">
             
-                <a href="commend.html">
+                <a href="PBS-commend.html">
             
                     
                     管理作业
@@ -239,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3.2" data-path="script.html">
+        <li class="chapter " data-level="3.3.2" data-path="PBS-script.html">
             
-                <a href="script.html">
+                <a href="PBS-script.html">
             
                     
                     PBS 脚本
@@ -359,7 +359,7 @@
 <pre><code>[zjb@op back]$ qsub -N thisIsName vasp.pbs 
 201848.inode202
 </code></pre><p>&#x4F5C;&#x4E1A;&#x63D0;&#x4EA4;&#x540E;&#x4E00;&#x822C;&#x4F1A;&#x5148;&#x6392;&#x961F;&#x7B49;&#x5F85;&#xFF0C;PBS &#x7CFB;&#x7EDF;&#x4F1A;&#x6839;&#x636E;&#x4F5C;&#x4E1A;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x548C;&#x53EF;&#x7528;&#x7684;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x6765;&#x8C03;&#x5EA6;&#x548C;&#x6267;&#x884C;&#x4F5C;&#x4E1A;&#x3002;</p>
-<p>&#x5176;&#x4E2D;<code>-N thisIsName</code>&#x4E3A;&#x9009;&#x9879;&#xFF0C;&#x5B83;&#x6307;&#x5B9A;&#x4E86;&#x4F5C;&#x4E1A;&#x7684;&#x540D;&#x79F0;&#x3002;<code>vasp.pbs</code>&#x4E3A;PBS&#x811A;&#x672C;&#xFF0C;&#x5B83;&#x8BBE;&#x5B9A;&#x4E86;&#x4F5C;&#x4E1A;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x4F5C;&#x4E1A;&#x7684;&#x5185;&#x5BB9;&#x3002;<code>options</code>&#x4E0E;<code>control script</code>&#x8BE6;&#x89C1; <code>##PBS&#x811A;&#x672C;</code></p>
+<p>&#x5176;&#x4E2D;<code>-N thisIsName</code>&#x4E3A;&#x9009;&#x9879;&#xFF0C;&#x5B83;&#x6307;&#x5B9A;&#x4E86;&#x4F5C;&#x4E1A;&#x7684;&#x540D;&#x79F0;&#x3002;<code>vasp.pbs</code>&#x4E3A;PBS&#x811A;&#x672C;&#xFF0C;&#x5B83;&#x8BBE;&#x5B9A;&#x4E86;&#x4F5C;&#x4E1A;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x4F5C;&#x4E1A;&#x7684;&#x5185;&#x5BB9;&#x3002;<code>options</code>&#x4E0E;<code>control script</code>&#x8BE6;&#x89C1; <a href="PBS-script.html"><code>## PBS&#x811A;&#x672C;</code></a>&#x3002;</p>
 <blockquote>
 <p>&#x6587;&#x6863;&#x4E2D;&#xFF0C;&#x547D;&#x4EE4;&#x5E26;&#x6709;<code>$</code>&#x7B26;&#x53F7;&#x7684;&#xFF0C;&#x8868;&#x793A;&#x662F;&#x5728;shell&#x7EC8;&#x7AEF;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5B9E;&#x9645;&#x8F93;&#x5165;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x5E26;&#x6709;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x3002;</p>
 </blockquote>
@@ -479,6 +479,39 @@ Job ID                    Name             User            Time Use S Queue
 <h2 id="&#x505C;&#x6B62;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;">&#x505C;&#x6B62;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;</h2>
 <pre><code class="lang-shell">$ qsig -s KILL &lt;job ID&gt;
 </code></pre>
+<h2 id="checkjob">checkjob</h2>
+<pre><code>checkjob &lt;job id&gt;
+</code></pre><p>&#x6CE8;&#x610F;&#x8FD9;&#x513F;&#x7684;<code>job id</code>&#x4E0D;&#x5305;&#x62EC;<code>.inodexxx</code>&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x8FF0;&#x7684;<code>201848.inode202</code>&#x4F5C;&#x4E1A;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;<code>checkjob</code>&#x67E5;&#x8BE2;&#xFF0C;&#x547D;&#x4EE4;&#x5E94;&#x4E3A;<code>checkjob 201848</code>&#x3002;</p>
+<pre><code>[zjb@op testEnergy]$ checkjob 201848
+
+
+checking job 201848
+
+State: Running
+Creds:  user:zjb  group:energy  account:SugonClus  class:energy  qos:preemptee
+WallTime: 00:02:03 of 00:30:00
+SubmitTime: Sat Oct 31 19:45:48
+  (Time Queued  Total: 00:00:01  Eligible: 00:00:01)
+
+StartTime: Sat Oct 31 19:45:49
+Total Tasks: 4
+
+Req[0]  TaskCount: 4  Partition: DEFAULT
+Network: [NONE]  Memory &gt;= 0  Disk &gt;= 0  Swap &gt;= 0
+Opsys: [NONE]  Arch: [NONE]  Features: [NONE]
+Allocated Nodes:
+[inode53:4]
+
+
+IWD: [NONE]  Executable:  [NONE]
+Bypass: 0  StartCount: 1
+PartitionMask: [ALL]
+Flags:       BACKFILL RESTARTABLE PREEMPTEE
+Attr:        PREEMPTEE
+
+Reservation &apos;201868&apos; (-00:02:04 -&gt; 00:27:56  Duration: 00:30:00)
+PE:  4.00  StartPriority:  6000
+</code></pre><p>&#x5982;&#x679C;&#x4EFB;&#x52A1;&#x65E0;&#x6CD5;&#x8FD0;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x67E5;&#x8BE2;&#x539F;&#x56E0;&#x3002;</p>
 
                                 
                                 </section>
@@ -527,7 +560,7 @@ Job ID                    Name             User            Time Use S Queue
                 </a>
                 
                 
-                <a href="script.html" class="navigation navigation-next " aria-label="Next page: PBS 脚本">
+                <a href="PBS-script.html" class="navigation navigation-next " aria-label="Next page: PBS 脚本">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -538,7 +571,7 @@ Job ID                    Name             User            Time Use S Queue
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"管理作业","level":"3.3.1","depth":2,"next":{"title":"PBS 脚本","level":"3.3.2","depth":2,"path":"Chap03-linux/PBS/script.md","ref":"Chap03-linux/PBS/script.md","articles":[]},"previous":{"title":"PBS 作业管理系统","level":"3.3","depth":1,"path":"Chap03-linux/PBS/README.md","ref":"Chap03-linux/PBS/README.md","articles":[{"title":"管理作业","level":"3.3.1","depth":2,"path":"Chap03-linux/PBS/commend.md","ref":"Chap03-linux/PBS/commend.md","articles":[]},{"title":"PBS 脚本","level":"3.3.2","depth":2,"path":"Chap03-linux/PBS/script.md","ref":"Chap03-linux/PBS/script.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table","livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"ace":{},"search":{},"livereload":{},"chapter-fold":{},"code":{"copyButtons":true},"search-plus":{},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap03-linux/PBS/commend.md","mtime":"2020-10-31T08:23:13.039Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T08:28:48.158Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"管理作业","level":"3.3.1","depth":2,"next":{"title":"PBS 脚本","level":"3.3.2","depth":2,"path":"Chap03-linux/PBS/PBS-script.md","ref":"Chap03-linux/PBS/PBS-script.md","articles":[]},"previous":{"title":"PBS 作业管理系统","level":"3.3","depth":1,"path":"Chap03-linux/PBS/README.md","ref":"Chap03-linux/PBS/README.md","articles":[{"title":"管理作业","level":"3.3.1","depth":2,"path":"Chap03-linux/PBS/PBS-commend.md","ref":"Chap03-linux/PBS/PBS-commend.md","articles":[]},{"title":"PBS 脚本","level":"3.3.2","depth":2,"path":"Chap03-linux/PBS/PBS-script.md","ref":"Chap03-linux/PBS/PBS-script.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"ace":{},"search":{},"livereload":{},"chapter-fold":{},"code":{"copyButtons":true},"search-plus":{},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap03-linux/PBS/PBS-commend.md","mtime":"2020-10-31T11:41:09.299Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T11:42:22.819Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
