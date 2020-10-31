@@ -430,7 +430,7 @@ EDIFFG = -2E-02        (Ionic convergence; eV/AA)
 
 到此为止VASP运行所需要的四个输入文件就全都准备好了，我们就可以提交这个作业了。
 
-将`VASP脚本`复制到当前目录，然后使用`qsub`命令提交作业。
+将`PBS脚本`复制到当前目录，然后使用`qsub`命令提交作业。
 
 ```
 qsub -N O2_opt vasp.pbs
