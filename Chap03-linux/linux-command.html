@@ -25,6 +25,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
@@ -350,7 +354,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="linux&#x5E38;&#x7528;&#x547D;&#x4EE4;">Linux&#x5E38;&#x7528;&#x547D;&#x4EE4;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#linux&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b>1. </b>Linux&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#cd&#xFF1A;change-directory"><b>1.1. </b>cd&#xFF1A;Change Directory</a></li><li><span class="title-icon "></span><a href="#ls&#x4E0E;ll&#xFF1A;list"><b>1.2. </b>ls&#x4E0E;ll&#xFF1A;list</a></li><li><span class="title-icon "></span><a href="#mkdir&#xFF1A;make-directory"><b>1.3. </b>mkdir&#xFF1A;Make Directory</a></li><li><span class="title-icon "></span><a href="#cp&#xFF1A;copy"><b>1.4. </b>cp&#xFF1A;Copy</a></li><li><span class="title-icon "></span><a href="#mv&#xFF1A;move"><b>1.5. </b>mv&#xFF1A;Move</a></li><li><span class="title-icon "></span><a href="#rm&#xFF1A;remove"><b>1.6. </b>rm&#xFF1A;Remove</a></li><li><span class="title-icon "></span><a href="#rmdir-&#xFF1A;remove-directory"><b>1.7. </b>rmdir &#xFF1A;Remove Directory</a></li><li><span class="title-icon "></span><a href="#pwd-&#xFF1A;print-working-directory"><b>1.8. </b>pwd &#xFF1A;Print Working Directory</a></li><li><span class="title-icon "></span><a href="#cat&#xFF1A;concatenate-and-print-files"><b>1.9. </b>cat&#xFF1A;concatenate and print files</a></li><li><span class="title-icon "></span><a href="#tar"><b>1.10. </b>tar</a></li><li><span class="title-icon "></span><a href="#grep&#x547D;&#x4EE4;"><b>1.11. </b>grep&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#find&#x547D;&#x4EE4;"><b>1.12. </b>find&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#ps&#x547D;&#x4EE4;"><b>1.13. </b>ps&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#kill&#x547D;&#x4EE4;"><b>1.14. </b>kill&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#killall&#x547D;&#x4EE4;"><b>1.15. </b>killall&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#file&#x547D;&#x4EE4;"><b>1.16. </b>file&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#chgrp&#x547D;&#x4EE4;"><b>1.17. </b>chgrp&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#chown&#x547D;&#x4EE4;"><b>1.18. </b>chown&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#chmod&#x547D;&#x4EE4;"><b>1.19. </b>chmod&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#gcc&#x547D;&#x4EE4;"><b>1.20. </b>gcc&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#time&#x547D;&#x4EE4;"><b>1.21. </b>time&#x547D;&#x4EE4;</a></li></ul></ul></div><a href="#linux&#x5E38;&#x7528;&#x547D;&#x4EE4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="linux&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="linux&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#linux&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Linux&#x5E38;&#x7528;&#x547D;&#x4EE4;</h1>
 <table>
 <thead>
 <tr>
@@ -405,13 +409,13 @@
 </tr>
 </tbody>
 </table>
-<h2 id="cd&#xFF1A;change-directory">cd&#xFF1A;Change Directory</h2>
+<h2 id="cd&#xFF1A;change-directory"><a name="cd&#xFF1A;change-directory" class="anchor-navigation-ex-anchor" href="#cd&#xFF1A;change-directory"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. cd&#xFF1A;Change Directory</h2>
 <p>&#x5207;&#x6362;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#xFF1A;</p>
 <pre><code class="lang-bash">cd /root/Docements # &#x5207;&#x6362;&#x5230;&#x76EE;&#x5F55;/root/Docements
 cd ./path          # &#x5207;&#x6362;&#x5230;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;path&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x201C;.&#x201D;&#x8868;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;  
 cd ../path         # &#x5207;&#x6362;&#x5230;&#x4E0A;&#x5C42;&#x76EE;&#x5F55;&#x4E2D;&#x7684;path&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x201C;..&#x201D;&#x8868;&#x793A;&#x4E0A;&#x4E00;&#x5C42;&#x76EE;&#x5F55;
 </code></pre>
-<h2 id="ls&#x4E0E;ll&#xFF1A;list">ls&#x4E0E;ll&#xFF1A;list</h2>
+<h2 id="ls&#x4E0E;ll&#xFF1A;list"><a name="ls&#x4E0E;ll&#xFF1A;list" class="anchor-navigation-ex-anchor" href="#ls&#x4E0E;ll&#xFF1A;list"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. ls&#x4E0E;ll&#xFF1A;list</h2>
 <p><code>ls</code>&#xFF1A;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x4E0E;&#x76EE;&#x5F55;&#xFF0C;&#x53C2;&#x6570;&#x5982;&#x4E0B;</p>
 <pre><code class="lang-shell">-l &#xFF1A;&#x5217;&#x51FA;&#x957F;&#x6570;&#x636E;&#x4E32;&#xFF0C;&#x5305;&#x542B;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x4E0E;&#x6743;&#x9650;&#x6570;&#x636E;&#x7B49;
 -a &#xFF1A;&#x5217;&#x51FA;&#x5168;&#x90E8;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8FDE;&#x540C;&#x9690;&#x85CF;&#x6587;&#x4EF6;&#xFF08;&#x5F00;&#x5934;&#x4E3A;.&#x7684;&#x6587;&#x4EF6;&#xFF09;&#x4E00;&#x8D77;&#x5217;&#x51FA;&#x6765;&#xFF08;&#x5E38;&#x7528;&#xFF09;
@@ -444,7 +448,7 @@ drwxr-xr-x  2 zjb energy    4096 Oct 29 15:11 scripts
 drwxr-xr-x  2 zjb energy    4096 Oct 31 17:48 tgz_backup
 drwxr-xr-x  7 zjb energy    4096 Oct  9 16:50 vaspkit.1.12
 drwxr-xr-x  5 zjb energy    8192 Dec 28  2017 vtstscripts-933
-</code></pre><h2 id="mkdir&#xFF1A;make-directory">mkdir&#xFF1A;Make Directory</h2>
+</code></pre><h2 id="mkdir&#xFF1A;make-directory"><a name="mkdir&#xFF1A;make-directory" class="anchor-navigation-ex-anchor" href="#mkdir&#xFF1A;make-directory"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. mkdir&#xFF1A;Make Directory</h2>
 <p>&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;</p>
 <pre><code class="lang-shell">mkdir &lt;&#x6587;&#x4EF6;&#x5939;&#x540D;&#x79F0;&gt;
 </code></pre>
@@ -467,7 +471,7 @@ drwxr-xr-x 2 zjb energy 4096 Oct 31 21:03 NaCl
 drwxr-xr-x 2 zjb energy 4096 Oct 25 22:43 O2_opt
 drwxr-xr-x 6 zjb energy 4096 Oct 31 20:07 test
 -rw-r--r-- 1 zjb energy 1288 Oct 31 17:53 vasp.pbs
-</code></pre><h2 id="cp&#xFF1A;copy">cp&#xFF1A;Copy</h2>
+</code></pre><h2 id="cp&#xFF1A;copy"><a name="cp&#xFF1A;copy" class="anchor-navigation-ex-anchor" href="#cp&#xFF1A;copy"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. cp&#xFF1A;Copy</h2>
 <p>&#x590D;&#x5236;&#x6587;&#x4EF6;&#xFF08;&#x5939;&#xFF09;&#xFF0C;copy&#x4E4B;&#x610F;&#xFF0C;&#x5B83;&#x8FD8;&#x53EF;&#x4EE5;&#x628A;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E00;&#x6B21;&#x6027;&#x5730;&#x590D;&#x5236;&#x5230;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C; &#x5B83;&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-shell">-a &#xFF1A;&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x7279;&#x6027;&#x4E00;&#x8D77;&#x590D;&#x5236;
 -p &#xFF1A;&#x8FDE;&#x540C;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x590D;&#x5236;&#xFF0C;&#x800C;&#x975E;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0E;-a&#x76F8;&#x4F3C;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x5907;&#x4EFD;
@@ -479,7 +483,7 @@ drwxr-xr-x 6 zjb energy 4096 Oct 31 20:07 test
 <pre><code class="lang-apache">cp -a file1 file2 #&#x8FDE;&#x540C;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x7279;&#x6027;&#x628A;&#x6587;&#x4EF6;file1&#x590D;&#x5236;&#x6210;&#x6587;&#x4EF6;file2
 cp file1 file2 file3 dir/ #&#x628A;&#x6587;&#x4EF6;file1&#x3001;file2&#x3001;file3&#x590D;&#x5236;&#x5230;&#x76EE;&#x5F55;dir&#x4E2D;
 </code></pre>
-<h2 id="mv&#xFF1A;move">mv&#xFF1A;Move</h2>
+<h2 id="mv&#xFF1A;move"><a name="mv&#xFF1A;move" class="anchor-navigation-ex-anchor" href="#mv&#xFF1A;move"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. mv&#xFF1A;Move</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x79FB;&#x52A8;&#x6587;&#x4EF6;&#x3001;&#x76EE;&#x5F55;&#x6216;&#x66F4;&#x540D;&#xFF0C;move&#x4E4B;&#x610F;&#xFF0C;&#x5B83;&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-shell">-f &#xFF1A;force&#x5F3A;&#x5236;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x5982;&#x679C;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x4E0D;&#x4F1A;&#x8BE2;&#x95EE;&#x800C;&#x76F4;&#x63A5;&#x8986;&#x76D6;
 -i &#xFF1A;&#x82E5;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5C31;&#x4F1A;&#x8BE2;&#x95EE;&#x662F;&#x5426;&#x8986;&#x76D6;
@@ -490,7 +494,7 @@ cp file1 file2 file3 dir/ #&#x628A;&#x6587;&#x4EF6;file1&#x3001;file2&#x3001;fil
 <pre><code class="lang-apache">mv file1 file2 file3 dir/   # &#x628A;&#x6587;&#x4EF6;file1&#x3001;file2&#x3001;file3&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x5F55;dir&#x4E2D;
 mv file1 file2              # &#x628A;&#x6587;&#x4EF6;file1&#x91CD;&#x547D;&#x540D;&#x4E3A;file2
 </code></pre>
-<h2 id="rm&#xFF1A;remove">rm&#xFF1A;Remove</h2>
+<h2 id="rm&#xFF1A;remove"><a name="rm&#xFF1A;remove" class="anchor-navigation-ex-anchor" href="#rm&#xFF1A;remove"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. rm&#xFF1A;Remove</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#xFF0C;remove&#xFF0C;&#x5B83;&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-shell">-f &#xFF1A;&#x5C31;&#x662F;force&#x7684;&#x610F;&#x601D;&#xFF0C;&#x5FFD;&#x7565;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x8B66;&#x544A;&#x6D88;&#x606F;
 -i &#xFF1A;&#x4E92;&#x52A8;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x5220;&#x9664;&#x524D;&#x4F1A;&#x8BE2;&#x95EE;&#x7528;&#x6237;&#x662F;&#x5426;&#x64CD;&#x4F5C;
@@ -514,19 +518,19 @@ drwxr-xr-x 2 zjb energy 4096 Oct 31 21:03 NaCl
 drwxr-xr-x 2 zjb energy 4096 Oct 25 22:43 O2_opt
 drwxr-xr-x 6 zjb energy 4096 Oct 31 20:07 test
 -rw-r--r-- 1 zjb energy 1288 Oct 31 17:53 vasp.pbs
-</code></pre><h2 id="rmdir-&#xFF1A;remove-directory">rmdir &#xFF1A;Remove Directory</h2>
+</code></pre><h2 id="rmdir-&#xFF1A;remove-directory"><a name="rmdir-&#xFF1A;remove-directory" class="anchor-navigation-ex-anchor" href="#rmdir-&#xFF1A;remove-directory"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. rmdir &#xFF1A;Remove Directory</h2>
 <p>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x3002;&#x8981;&#x4E48;&#x7528;<code>rm -r &lt;dir&gt;</code>&#x8981;&#x4E48;&#x7528;<code>rmdir &lt;dir&gt;</code>&#x3002;&#x66F4;&#x5EFA;&#x8BAE;&#x7528;<code>rmdir</code>&#x3002;</p>
-<h2 id="pwd-&#xFF1A;print-working-directory">pwd &#xFF1A;Print Working Directory</h2>
+<h2 id="pwd-&#xFF1A;print-working-directory"><a name="pwd-&#xFF1A;print-working-directory" class="anchor-navigation-ex-anchor" href="#pwd-&#xFF1A;print-working-directory"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. pwd &#xFF1A;Print Working Directory</h2>
 <p>&#x6253;&#x5370;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x8DEF;&#x5F84;&#x3002;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</p>
 <pre><code>[zjb@op utilities]$ pwd
 /public/home/zjb/app/vaspkit.1.12/utilities
-</code></pre><h2 id="cat&#xFF1A;concatenate-and-print-files">cat&#xFF1A;concatenate and print files</h2>
+</code></pre><h2 id="cat&#xFF1A;concatenate-and-print-files"><a name="cat&#xFF1A;concatenate-and-print-files" class="anchor-navigation-ex-anchor" href="#cat&#xFF1A;concatenate-and-print-files"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. cat&#xFF1A;concatenate and print files</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x67E5;&#x770B;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x540E;&#x63A5;&#x8981;&#x67E5;&#x770B;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x901A;&#x5E38;&#x53EF;&#x7528;&#x7BA1;&#x9053;&#x4E0E;more&#x548C;less&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x4E00;&#x9875;&#x9875;&#x5730;&#x67E5;&#x770B;&#x6570;&#x636E;&#x3002;</p>
 <pre><code>[zjb@op utilities]$ cat hello.sh 
 #!/bin/bash
 echo &quot;I love you&quot;
 [zjb@op utilities]$
-</code></pre><h2 id="tar">tar</h2>
+</code></pre><h2 id="tar"><a name="tar" class="anchor-navigation-ex-anchor" href="#tar"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. tar</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5BF9;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x6253;&#x5305;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x5E76;&#x4E0D;&#x4F1A;&#x538B;&#x7F29;&#xFF0C;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x8FD8;&#x4F1A;&#x8C03;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x538B;&#x7F29;&#x7A0B;&#x5E8F;&#xFF08;&#x5982;gzip&#x548C;bzip&#x7B49;&#xFF09;&#x8FDB;&#x884C;&#x538B;&#x7F29;&#x548C;&#x89E3;&#x538B;&#x3002;&#x5B83;&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>-c &#xFF1A;&#x65B0;&#x5EFA;&#x6253;&#x5305;&#x6587;&#x4EF6;
 -t &#xFF1A;&#x67E5;&#x770B;&#x6253;&#x5305;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x542B;&#x6709;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;&#x540D;
@@ -544,7 +548,7 @@ echo &quot;I love you&quot;
 <p>&#x6CE8;&#xFF1A;&#x6587;&#x4EF6;&#x540D;&#x5E76;&#x4E0D;&#x5B9A;&#x8981;&#x4EE5;&#x540E;&#x7F00;<code>tar.gz</code>&#x7ED3;&#x5C3E;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x8BF4;&#x660E;&#x4F7F;&#x7528;&#x7684;&#x538B;&#x7F29;&#x7A0B;&#x5E8F;&#x4E3A;<code>gzip</code>&#x3002;&#x540E;&#x7F00;&#x4E5F;&#x53EF;&#x662F;<code>.tar</code>&#xFF0C;<code>.tar.bz2</code>&#x3002;</p>
 <hr>
 <p>&#x5176;&#x5B9E;&#x638C;&#x63E1;&#x4E0A;&#x9762;&#x90A3;&#x4E9B;&#x5C31;&#x591F;&#x4E86;&#x3002;</p>
-<h2 id="grep&#x547D;&#x4EE4;">grep&#x547D;&#x4EE4;</h2>
+<h2 id="grep&#x547D;&#x4EE4;"><a name="grep&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#grep&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. grep&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x5E38;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x4E00;&#x884C;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x82E5;&#x5F53;&#x4E2D;&#x6709;&#x6211;&#x4EEC;&#x6240;&#x9700;&#x8981;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5C31;&#x5C06;&#x8BE5;&#x884C;&#x663E;&#x793A;&#x51FA;&#x6765;&#xFF0C;&#x8BE5;&#x547D;&#x4EE4;&#x901A;&#x5E38;&#x4E0E;&#x7BA1;&#x9053;&#x547D;&#x4EE4;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x7528;&#x4E8E;&#x5BF9;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x8FDB;&#x884C;&#x7B5B;&#x9009;&#x52A0;&#x5DE5;&#x7B49;&#x7B49;&#xFF0C;&#x5B83;&#x7684;&#x7B80;&#x5355;&#x8BED;&#x6CD5;&#x4E3A;</p>
 <pre><code>grep [-acinv] [--color=auto] &apos;&#x67E5;&#x627E;&#x5B57;&#x7B26;&#x4E32;&apos; filename
 </code></pre><p>&#x5B83;&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
@@ -557,7 +561,7 @@ echo &quot;I love you&quot;
 grep --color=auto &apos;MANPATH&apos; /etc/man.config
 # &#x628A;ls -l&#x7684;&#x8F93;&#x51FA;&#x4E2D;&#x5305;&#x542B;&#x5B57;&#x6BCD;file&#xFF08;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF09;&#x7684;&#x5185;&#x5BB9;&#x8F93;&#x51FA;
 ls -l | grep -i file
-</code></pre><h2 id="find&#x547D;&#x4EE4;">find&#x547D;&#x4EE4;</h2>
+</code></pre><h2 id="find&#x547D;&#x4EE4;"><a name="find&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#find&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. find&#x547D;&#x4EE4;</h2>
 <p>find&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x67E5;&#x627E;&#x7684;&#x529F;&#x80FD;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x76F8;&#x5BF9;&#x800C;&#x8A00;&#xFF0C;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x4E5F;&#x76F8;&#x5BF9;&#x8F83;&#x4E3A;&#x590D;&#x6742;&#xFF0C;&#x53C2;&#x6570;&#x4E5F;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x5C06;&#x7ED9;&#x628A;&#x5B83;&#x4EEC;&#x5206;&#x7C7B;&#x5217;&#x51FA;&#xFF0C;&#x5B83;&#x7684;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>find [PATH] [option] [action]
 
@@ -589,7 +593,7 @@ find /home/ljianhui -user ljianhui # &#x5728;&#x76EE;&#x5F55;/home/ljianhui&#x4E
 find / -name passwd # &#x67E5;&#x627E;&#x6587;&#x4EF6;&#x540D;&#x4E3A;passwd&#x7684;&#x6587;&#x4EF6;
 find . -perm 0755 # &#x67E5;&#x627E;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x6587;&#x4EF6;&#x6743;&#x9650;&#x7684;0755&#x7684;&#x6587;&#x4EF6;
 find . -size +12k # &#x67E5;&#x627E;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x5927;&#x4E8E;12KB&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6CE8;&#x610F;c&#x8868;&#x793A;byte
-</code></pre><h2 id="ps&#x547D;&#x4EE4;">ps&#x547D;&#x4EE4;</h2>
+</code></pre><h2 id="ps&#x547D;&#x4EE4;"><a name="ps&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#ps&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. ps&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5C06;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x60C5;&#x51B5;&#x9009;&#x53D6;&#x4E0B;&#x6765;&#x5E76;&#x8F93;&#x51FA;&#xFF0C;process&#x4E4B;&#x610F;&#xFF0C;&#x5B83;&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>-A &#xFF1A;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x7A0B;&#x5747;&#x663E;&#x793A;&#x51FA;&#x6765;
 -a &#xFF1A;&#x4E0D;&#x4E0E;terminal&#x6709;&#x5173;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;
@@ -602,7 +606,7 @@ ps ax # &#x67E5;&#x770B;&#x4E0D;&#x4E0E;terminal&#x6709;&#x5173;&#x7684;&#x6240;
 ps -lA # &#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x7A0B;&#x6570;&#x636E;
 ps axjf # &#x67E5;&#x770B;&#x8FDE;&#x540C;&#x4E00;&#x90E8;&#x5206;&#x8FDB;&#x7A0B;&#x6811;&#x72B6;&#x6001;
 </code></pre>
-<h2 id="kill&#x547D;&#x4EE4;">kill&#x547D;&#x4EE4;</h2>
+<h2 id="kill&#x547D;&#x4EE4;"><a name="kill&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#kill&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. kill&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5411;&#x67D0;&#x4E2A;&#x5DE5;&#x4F5C;&#xFF08;%jobnumber&#xFF09;&#x6216;&#x8005;&#x662F;&#x67D0;&#x4E2A;PID&#xFF08;&#x6570;&#x5B57;&#xFF09;&#x4F20;&#x9001;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#xFF0C;&#x5B83;&#x901A;&#x5E38;&#x4E0E;ps&#x548C;jobs&#x547D;&#x4EE4;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x5B83;&#x7684;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-sql">kill -signal PID
 </code></pre>
@@ -620,7 +624,7 @@ kill -SIGTERM %1
 # &#x91CD;&#x65B0;&#x6539;&#x52A8;&#x8FDB;&#x7A0B;ID&#x4E3A;PID&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;PID&#x53EF;&#x7528;ps&#x547D;&#x4EE4;&#x901A;&#x8FC7;&#x7BA1;&#x9053;&#x547D;&#x4EE4;&#x52A0;&#x4E0A;grep&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x7B5B;&#x9009;&#x83B7;&#x5F97;
 kill -SIGHUP PID
 </code></pre>
-<h2 id="killall&#x547D;&#x4EE4;">killall&#x547D;&#x4EE4;</h2>
+<h2 id="killall&#x547D;&#x4EE4;"><a name="killall&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#killall&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. killall&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5411;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x542F;&#x52A8;&#x7684;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#xFF0C;&#x5B83;&#x7684;&#x4E00;&#x822C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-shell">killall [-iIe] [command name]
 </code></pre>
@@ -631,21 +635,21 @@ kill -SIGHUP PID
 # &#x4F8B;&#x5982;&#xFF1A;
 killall -SIGHUP syslogd # &#x91CD;&#x65B0;&#x542F;&#x52A8;syslogd
 </code></pre>
-<h2 id="file&#x547D;&#x4EE4;">file&#x547D;&#x4EE4;</h2>
+<h2 id="file&#x547D;&#x4EE4;"><a name="file&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#file&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. file&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5224;&#x65AD;&#x63A5;&#x5728;file&#x547D;&#x4EE4;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x57FA;&#x672C;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;Linux&#x4E0B;&#x6587;&#x4EF6;&#x7684;&#x7C7B;&#x578B;&#x5E76;&#x4E0D;&#x662F;&#x4EE5;&#x540E;&#x7F00;&#x4E3A;&#x5206;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x5BF9;&#x6211;&#x4EEC;&#x6765;&#x8BF4;&#x5C31;&#x5F88;&#x6709;&#x7528;&#x4E86;&#xFF0C;&#x5B83;&#x7684;&#x7528;&#x6CD5;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>file filename
 #&#x4F8B;&#x5982;&#xFF1A;
 file ./test
-</code></pre><h2 id="chgrp&#x547D;&#x4EE4;">chgrp&#x547D;&#x4EE4;</h2>
+</code></pre><h2 id="chgrp&#x547D;&#x4EE4;"><a name="chgrp&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#chgrp&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. chgrp&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x6240;&#x5C5E;&#x7528;&#x6237;&#x7EC4;&#xFF0C;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5B83;&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-properties">chgrp [-R] dirname/filename
 -R &#xFF1A;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x7684;&#x6301;&#x7EED;&#x5BF9;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x548C;&#x5B50;&#x76EE;&#x5F55;&#x66F4;&#x6539;
 # &#x4F8B;&#x5982;&#xFF1A;
 chgrp users -R ./dir # &#x9012;&#x5F52;&#x5730;&#x628A;dir&#x76EE;&#x5F55;&#x4E0B;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x548C;&#x5B50;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7684;&#x7528;&#x6237;&#x7EC4;&#x4FEE;&#x6539;&#x4E3A;users
 </code></pre>
-<h2 id="chown&#x547D;&#x4EE4;">chown&#x547D;&#x4EE4;</h2>
+<h2 id="chown&#x547D;&#x4EE4;"><a name="chown&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#chown&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. chown&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x8005;&#xFF0C;&#x4E0E;chgrp&#x547D;&#x4EE4;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x76F8;&#x540C;&#xFF0C;&#x53EA;&#x662F;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x4E0D;&#x540C;&#xFF0C;&#x4E0D;&#x518D;&#x8BE6;&#x8FF0;&#x3002;</p>
-<h2 id="chmod&#x547D;&#x4EE4;">chmod&#x547D;&#x4EE4;</h2>
+<h2 id="chmod&#x547D;&#x4EE4;"><a name="chmod&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#chmod&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. chmod&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x4E00;&#x822C;&#x7684;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-properties">chmod [-R] xyz &#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;
 -R&#xFF1A;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x7684;&#x6301;&#x7EED;&#x66F4;&#x6539;&#xFF0C;&#x5373;&#x8FDE;&#x540C;&#x5B50;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x90FD;&#x4F1A;&#x66F4;&#x6539;
@@ -655,7 +659,7 @@ chgrp users -R ./dir # &#x9012;&#x5F52;&#x5730;&#x628A;dir&#x76EE;&#x5F55;&#x4E0
 chmod 0755 file # &#x628A;file&#x7684;&#x6587;&#x4EF6;&#x6743;&#x9650;&#x6539;&#x53D8;&#x4E3A;-rxwr-xr-x
 chmod g+w file # &#x5411;file&#x7684;&#x6587;&#x4EF6;&#x6743;&#x9650;&#x4E2D;&#x52A0;&#x5165;&#x7528;&#x6237;&#x7EC4;&#x53EF;&#x5199;&#x6743;&#x9650;
 </code></pre>
-<h2 id="gcc&#x547D;&#x4EE4;">gcc&#x547D;&#x4EE4;</h2>
+<h2 id="gcc&#x547D;&#x4EE4;"><a name="gcc&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#gcc&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.20. gcc&#x547D;&#x4EE4;</h2>
 <p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x7528;Linux&#x5F00;&#x53D1;C&#x7A0B;&#x5E8F;&#x7684;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x5C31;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x4E86;&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x628A;C&#x8BED;&#x8A00;&#x7684;&#x6E90;&#x7A0B;&#x5E8F;&#x6587;&#x4EF6;&#xFF0C;&#x7F16;&#x8BD1;&#x6210;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#xFF0C;&#x7531;&#x4E8E;g++&#x7684;&#x5F88;&#x591A;&#x53C2;&#x6570;&#x8DDF;&#x5B83;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x53EA;&#x4ECB;&#x7ECD;gcc&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-diff">-o &#xFF1A;output&#x4E4B;&#x610F;&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;
 -c &#xFF1A;&#x7528;&#x4E8E;&#x628A;&#x6E90;&#x6587;&#x4EF6;&#x751F;&#x6210;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#xFF08;.o)&#xFF0C;&#x5E76;&#x963B;&#x6B62;&#x7F16;&#x8BD1;&#x5668;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x7A0B;&#x5E8F;
@@ -672,7 +676,7 @@ gcc -o test test.c -lm -std=c99
 #&#x628A;&#x6E90;&#x6587;&#x4EF6;test.c&#x8F6C;&#x6362;&#x4E3A;&#x76F8;&#x5E94;&#x7684;&#x6C47;&#x7F16;&#x7A0B;&#x5E8F;&#x6E90;&#x6587;&#x4EF6;test.s
 gcc -S test.c
 </code></pre>
-<h2 id="time&#x547D;&#x4EE4;">time&#x547D;&#x4EE4;</h2>
+<h2 id="time&#x547D;&#x4EE4;"><a name="time&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#time&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.21. time&#x547D;&#x4EE4;</h2>
 <p>&#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6D4B;&#x7B97;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF08;&#x5373;&#x7A0B;&#x5E8F;&#xFF09;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x3002;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x50CF;&#x5E73;&#x65F6;&#x8F93;&#x5165;&#x547D;&#x4EE4;&#x4E00;&#x6837;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x547D;&#x4EE4;&#x7684;&#x524D;&#x9762;&#x52A0;&#x5165;&#x4E00;&#x4E2A;time&#x5373;&#x53EF;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
 <pre><code class="lang-shell">time ./process
 time ps aux
@@ -741,7 +745,7 @@ time ps aux
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Linux 常用命令","level":"3.2.1","depth":2,"next":{"title":"VI/VIM 编辑器","level":"3.2.2","depth":2,"path":"Chap03-linux/vi.md","ref":"Chap03-linux/vi.md","articles":[]},"previous":{"title":"Linux","level":"3.2","depth":1,"path":"Chap03-linux/README.md","ref":"Chap03-linux/README.md","articles":[{"title":"Linux 常用命令","level":"3.2.1","depth":2,"path":"Chap03-linux/linux-command.md","ref":"Chap03-linux/linux-command.md","articles":[]},{"title":"VI/VIM 编辑器","level":"3.2.2","depth":2,"path":"Chap03-linux/vi.md","ref":"Chap03-linux/vi.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"ace":{},"search":{},"livereload":{},"chapter-fold":{},"code":{"copyButtons":true},"search-plus":{},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap03-linux/linux-command.md","mtime":"2020-10-31T13:42:22.189Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T13:42:31.658Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Linux 常用命令","level":"3.2.1","depth":2,"next":{"title":"VI/VIM 编辑器","level":"3.2.2","depth":2,"path":"Chap03-linux/vi.md","ref":"Chap03-linux/vi.md","articles":[]},"previous":{"title":"Linux","level":"3.2","depth":1,"path":"Chap03-linux/README.md","ref":"Chap03-linux/README.md","articles":[{"title":"Linux 常用命令","level":"3.2.1","depth":2,"path":"Chap03-linux/linux-command.md","ref":"Chap03-linux/linux-command.md","articles":[]},{"title":"VI/VIM 编辑器","level":"3.2.2","depth":2,"path":"Chap03-linux/vi.md","ref":"Chap03-linux/vi.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ace":{},"livereload":{},"search":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap03-linux/linux-command.md","mtime":"2020-10-31T13:42:22.189Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T14:13:35.065Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
