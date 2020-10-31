@@ -1,0 +1,634 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PBS 脚本 · Computation and Simulation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Northword">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../Chap04-vaspkit/" />
+    
+    
+    <link rel="prev" href="commend.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">原理</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Chap01-theory/">
+            
+                <a href="../../Chap01-theory/">
+            
+                    
+                    第一性原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    第5章 物质结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">操作</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../Chap02-MS/">
+            
+                <a href="../../Chap02-MS/">
+            
+                    
+                    Material Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../command.html">
+            
+                <a href="../command.html">
+            
+                    
+                    Linux 常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                    [VI/VIM 编辑器]
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    PBS 作业管理系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="commend.html">
+            
+                <a href="commend.html">
+            
+                    
+                    管理作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3.2" data-path="script.html">
+            
+                <a href="script.html">
+            
+                    
+                    PBS 脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../Chap04-vaspkit/">
+            
+                <a href="../../Chap04-vaspkit/">
+            
+                    
+                    VaspKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../Chap04-vaspkit/install.html">
+            
+                <a href="../../Chap04-vaspkit/install.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../../Chap04-vaspkit/gen-input-files.html">
+            
+                <a href="../../Chap04-vaspkit/gen-input-files.html">
+            
+                    
+                    生成输入文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >PBS 脚本</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pbs&#x811A;&#x672C;">PBS&#x811A;&#x672C;</h1>
+<p>PBS&#x811A;&#x672C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;linux shell&#x811A;&#x672C;&#xFF0C;&#x5728; PBS &#x811A;&#x672C;&#x4E2D;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x5F62;&#x5F0F;&#x7684;&#x6CE8;&#x91CA;&#xFF08;#PBS&#xFF09;&#x4F5C;&#x4E3A; PBS &#x6307;&#x4EE4;&#x4EE5;&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A; PBS &#x811A;&#x672C;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-shell">#!/bin/sh
+#PBS -N Untitled
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=00:10:00
+#PBS -j oe
+#PBS -o ./out.log
+
+cd ${PBS_O_WORKDIR}
+source /public/software/profile.d/compiler_intel-composer_xe_2015.2.164.sh
+source /public/software/profile.d/mpi_intelmpi-5.0.2.044.sh
+echo &quot;=============================================&quot;
+echo &quot;Starting VASP run at&quot; `date` 
+echo &quot;=============================================&quot;
+echo &quot;# SYSTEM INFO&quot;
+echo &apos;The hostname is &apos; `hostname`  
+grep &apos;Linux&apos; /etc/issue 
+grep &apos;model name&apos; /proc/cpuinfo |cut -d: -f2 |uniq -c
+grep &apos;cpu M&apos; /proc/cpuinfo 
+grep &apos;MemTotal&apos; /proc/meminfo
+echo &quot;=============================================&quot;
+echo &quot;# PBS INFO&quot;
+echo &quot;The PBS_O_WORKDIR is&quot; $PBS_O_WORKDIR
+echo &quot;The PBS_JOBID is&quot; $PBS_JOBID
+echo &quot;The PBS_O_QUEUE is&quot; $PBS_O_QUEUE
+echo &quot;The PBS_O_HOST is&quot; $PBS_O_HOST
+NP=`cat $PBS_NODEFILE | wc -l`
+echo &quot;The num of PBS_NODEFILE is&quot; $NP
+echo &quot;The PBS_NODEFILE IS:&quot; 
+cat $PBS_NODEFILE
+mpirun -np $NP -machinefile $PBS_NODEFILE /public/software//apps/vasp/5.4.1/intelmpi/vasp_std &gt;&amp; stdout
+echo &quot;=============================================&quot;
+echo &quot;End task at &quot; `date`  
+echo &quot;=============================================&quot;
+</code></pre>
+<h2 id="pbs&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;">PBS&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x53D6;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-l</td>
+<td>&#x8D44;&#x6E90;&#x5217;&#x8868;</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x6240;&#x9700;&#x8D44;&#x6E90;&#xFF0C;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;</td>
+</tr>
+<tr>
+<td>-N</td>
+<td>&#x4F5C;&#x4E1A;&#x540D;&#x79F0;</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x7684;&#x9ED8;&#x8BA4;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x7684;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x7684;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>-j</td>
+<td>oe&#x6216;eo</td>
+<td>oe:&#x5C06;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x6587;&#x4EF6;&#x4E0E;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#x6210;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x3002;eo:&#x5C06;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x6587;&#x4EF6;&#x548C;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#x6210;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>-1024 &#x5230; +1023 &#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570;</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x8D8A;&#x5927;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x9AD8;</td>
+</tr>
+<tr>
+<td>-q</td>
+<td>&#x961F;&#x5217;&#x540D;&#x79F0;</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x961F;&#x5217;&#x540D;&#x79F0;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x8D44;&#x6E90;&#x5217;&#x8868;">&#x8D44;&#x6E90;&#x5217;&#x8868;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x8D44;&#x6E90;</th>
+<th>&#x53D6;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodes</td>
+<td>&#x8282;&#x70B9;&#x8D44;&#x6E90;&#x6784;&#x578B;</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x6240;&#x9700;&#x8BA1;&#x7B97;&#x8282;&#x70B9;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td>walltime</td>
+<td>hh:mm:ss</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x6240;&#x9700;&#x7684;&#x6700;&#x5927; wallclock &#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>cput</td>
+<td>hh:mm:ss</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x6240;&#x9700;&#x7684;&#x6700;&#x5927; CPU &#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>mem</td>
+<td>&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x540E;&#x9762;&#x53EF;&#x8DDF; b&#xFF0C;kb&#xFF0C;mb&#xFF0C;gb</td>
+<td>&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x6240;&#x9700;&#x7684;&#x6700;&#x5927;&#x5185;&#x5B58;  ncpus &#x6B63;&#x6574;&#x6570; &#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x6240;&#x9700;&#x7684; CPU &#x6570;&#x76EE;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pbs&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;">PBS&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x73AF;&#x5883;&#x53D8;&#x91CF;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PBS_ENVIRONMENT</td>
+<td>&#x6279;&#x5904;&#x7406;&#x4F5C;&#x4E1A;&#x4E3A; PBS_BATCH&#xFF0C;&#x4EA4;&#x4E92;&#x5F0F;&#x4F5C;&#x4E1A;&#x4E3A; PBS_INTERACTIVE</td>
+</tr>
+<tr>
+<td>PBS_JOBID PBS</td>
+<td>&#x7CFB;&#x7EDF;&#x7ED9;&#x4F5C;&#x4E1A;&#x5206;&#x914D;&#x7684;&#x6807;&#x8BC6;&#x53F7;</td>
+</tr>
+<tr>
+<td>PBS_JOBNAME</td>
+<td>&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x4F5C;&#x4E1A;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>PBS_NODEFILE</td>
+<td>&#x5305;&#x542B;&#x4F5C;&#x4E1A;&#x6240;&#x7528;&#x8BA1;&#x7B97;&#x8282;&#x70B9;&#x7684;&#x6587;&#x4EF6;&#x540D;</td>
+</tr>
+<tr>
+<td>PBS_QUEUE</td>
+<td>&#x4F5C;&#x4E1A;&#x6240;&#x6267;&#x884C;&#x7684;&#x961F;&#x5217;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>PBS_O_HOME</td>
+<td>&#x6267;&#x884C; qsub &#x547D;&#x4EE4;&#x7684; HOME &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x503C;</td>
+</tr>
+<tr>
+<td>PBS_O_PATH</td>
+<td>&#x6267;&#x884C; qsub &#x547D;&#x4EE4;&#x7684; PATH &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x503C;</td>
+</tr>
+<tr>
+<td>PBS_O_SHELL</td>
+<td>&#x6267;&#x884C; qsub &#x547D;&#x4EE4;&#x7684; SHELL &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x503C;</td>
+</tr>
+<tr>
+<td>PBS_O_HOST</td>
+<td>&#x6267;&#x884C; qsub &#x547D;&#x4EE4;&#x8282;&#x70B9;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>PBS_O_QUEUE</td>
+<td>&#x63D0;&#x4EA4;&#x7684;&#x4F5C;&#x4E1A;&#x7684;&#x6700;&#x521D;&#x961F;&#x5217;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>PBS_O_WORKDIR</td>
+<td>&#x6267;&#x884C; qsub &#x547D;&#x4EE4;&#x6240;&#x5728;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="commend.html" class="navigation navigation-prev " aria-label="Previous page: 管理作业">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../Chap04-vaspkit/" class="navigation navigation-next " aria-label="Next page: VaspKit">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PBS 脚本","level":"3.3.2","depth":2,"next":{"title":"VaspKit","level":"3.4","depth":1,"path":"Chap04-vaspkit/README.md","ref":"Chap04-vaspkit/README.md","articles":[{"title":"安装","level":"3.4.1","depth":2,"path":"Chap04-vaspkit/install.md","ref":"Chap04-vaspkit/install.md","articles":[]},{"title":"生成输入文件","level":"3.4.2","depth":2,"path":"Chap04-vaspkit/gen-input-files.md","ref":"Chap04-vaspkit/gen-input-files.md","articles":[]}]},"previous":{"title":"管理作业","level":"3.3.1","depth":2,"path":"Chap03-linux/PBS/commend.md","ref":"Chap03-linux/PBS/commend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table","livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"ace":{},"search":{},"livereload":{},"chapter-fold":{},"code":{"copyButtons":true},"search-plus":{},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation and Simulation","language":"zh-hans","gitbook":"3.2.3","description":"��¼ ģ����� ��ѧϰ����"},"file":{"path":"Chap03-linux/PBS/script.md","mtime":"2020-10-31T08:24:14.807Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T08:28:48.158Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
