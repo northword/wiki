@@ -36,11 +36,13 @@ $ wget https://github.com/northword/Computation-Simulation/raw/main/app/vtstscri
 ## 解压缩
 
 ```shell
-tar -xfzv vaspkit.1.2.1.linux.x64.tar.gz 
-tar -xfzv pot.tar
-tar -xfzv vtstscripts.tar
+tar -xzvf vaspkit.1.2.1.linux.x64.tar.gz 
+tar -xzvf pot.tgz
+tar -xzvf vtstscripts.tgz
 rm vaspkit.1.2.1.linux.x64.tar.gz pot.tar vtstscripts.tar
 ```
+
+`tar`命令用法见 [linux-command.md](..\Chap03-linux\linux-command.html#tar) 
 
 ## 配置VASPKIT的环境变量
 
@@ -91,11 +93,11 @@ PBE_PATH                      ~/app/pot_database/PBE         #  Path of PBE pote
 接下来，要把`vaspkit`这个关键词添加到系统的环境变量里。由于新版本(version>0.73)给了方便的配置脚本，我们直接运行，
 
 ```shell
-bash setup.sh
-source ~/.bashrc
+$ bash setup.sh
+$ source ~/.bashrc
 ```
 
-其中第一行作用为将`export PATH=/home/vaspkit.1.00/bin/:$PATH`添加到了`~/.bashrc`，第二行作用为使环境变量立即生效。
+其中第一行作用为将`export PATH=[你的VASPKIT目录]/bin/:$PATH`添加到了`~/.bashrc`，第二行作用为使环境变量立即生效。
 
 至此，环境变量配置完成，我们可以通过`vaspkit`命令来启动它。
 
