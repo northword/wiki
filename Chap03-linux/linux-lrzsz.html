@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PBS 作业管理系统 · Computation-Simulation</title>
+        <title>lrzsz的安装及其使用 · Computation-Simulation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,6 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="PBS-commend.html" />
-    
-    
-    <link rel="prev" href="linux-bashrc-VS-bash_profile.html" />
     
 
     </head>
@@ -257,7 +253,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.3.1" data-path="linux-lrzsz.html">
+        <li class="chapter active" data-level="3.2.3.1" data-path="linux-lrzsz.html">
             
                 <a href="linux-lrzsz.html">
             
@@ -306,7 +302,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="PBS-README.html">
+        <li class="chapter " data-level="3.3" data-path="PBS-README.html">
             
                 <a href="PBS-README.html">
             
@@ -426,7 +422,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >PBS 作业管理系统</a>
+        <a href=".." >lrzsz的安装及其使用</a>
     </h1>
 </div>
 
@@ -444,8 +440,56 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x4F5C;&#x4E1A;&#x4E00;&#x822C;&#x4F1A;&#x63D0;&#x4EA4;&#x5230;&#x8D85;&#x7B97;&#x96C6;&#x7FA4;&#x4E0A;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;&#x5728;&#x96C6;&#x7FA4;&#x4E0A;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x5730;&#x76F4;&#x63A5;&#x4EE5; mpirun &#x8FD0;&#x884C;&#x6211;&#x4EEC;&#x7684;&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x7A0B;&#x5E8F;&#xFF0C;&#x800C;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x5176;&#x4E0A;&#x63D0;&#x4F9B;&#x7684;&#x4F5C;&#x4E1A;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x6765;&#x63D0;&#x4EA4;&#x8BA1;&#x7B97;&#x4EFB;&#x52A1;&#x3002;&#x96C6;&#x7FA4;&#x4F5C;&#x4E1A;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x548C;&#x8C03;&#x5EA6;&#x96C6;&#x7FA4;&#x7684;&#x8F6F;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#xFF0C;&#x4FDD;&#x8BC1;&#x7528;&#x6237;&#x4F5C;&#x4E1A;&#x516C;&#x5E73;&#x5408;&#x7406;&#x5730;&#x5171;&#x4EAB;&#x96C6;&#x7FA4;&#x8D44;&#x6E90;&#xFF0C;&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x5229;&#x7528;&#x7387;&#x548C;&#x541E;&#x5410;&#x7387;&#x3002;</p>
-<p>PBS&#x5C31;&#x662F;&#x5176;&#x4E2D;&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x4F5C;&#x4E1A;&#x901A;&#x8FC7;PBS&#x547D;&#x4EE4;&#x63D0;&#x4EA4;&#x5230;PBS&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x7ECF;&#x7531;PBS&#x5206;&#x914D;&#x8D44;&#x6E90;&#x8FD0;&#x884C;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4E3A;linux&#x975E;root&#x7528;&#x6237;&#x5B89;&#x88C5;lrzsz"><b>1. </b>&#x4E3A;linux&#x975E;ROOT&#x7528;&#x6237;&#x5B89;&#x88C5;lrzsz</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;"><b>1.1. </b>&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;"><b>1.2. </b>&#x914D;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</a></li><li><span class="title-icon "></span><a href="#&#x7F16;&#x8BD1;&#x5B89;&#x88C5;"><b>1.3. </b>&#x7F16;&#x8BD1;&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4E0B;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;"><b>1.4. </b>&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4E0B;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><b>1.5. </b>&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><b>2. </b>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E0A;&#x4F20;&#xFF08;rz&#xFF09;"><b>2.1. </b>&#x4E0A;&#x4F20;&#xFF08;rz&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x4E0B;&#x8F7D;&#xFF08;sz&#xFF09;"><b>2.2. </b>&#x4E0B;&#x8F7D;&#xFF08;sz&#xFF09;</a></li></ul></ul></div><a href="#&#x4E3A;linux&#x975E;root&#x7528;&#x6237;&#x5B89;&#x88C5;lrzsz" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4E3A;linux&#x975E;root&#x7528;&#x6237;&#x5B89;&#x88C5;lrzsz"><a name="&#x4E3A;linux&#x975E;root&#x7528;&#x6237;&#x5B89;&#x88C5;lrzsz" class="anchor-navigation-ex-anchor" href="#&#x4E3A;linux&#x975E;root&#x7528;&#x6237;&#x5B89;&#x88C5;lrzsz"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4E3A;linux&#x975E;ROOT&#x7528;&#x6237;&#x5B89;&#x88C5;lrzsz</h1>
+<p><code>lrzsz</code>&#x662F;&#x4E00;&#x6B3E;&#x5728;linux&#x91CC;&#x53EF;&#x4EE3;&#x66FF;FTP&#x4E0A;&#x4F20;&#x548C;&#x4E0B;&#x8F7D;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5728;linux&#x4E2D;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x62D6;&#x62FD;&#x4E0A;&#x4F20;&#xFF1B;&#x540C;&#x65F6;&#x4E5F;&#x652F;&#x6301;<code>rz</code>&#x548C;<code>sz</code>&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x4E0A;&#x4F20;&#x548C;&#x4E0B;&#x8F7D;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x62E5;&#x6709;ROOT&#x6743;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x4E0B;&#x8FF0;&#x4EE3;&#x7801;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre><code class="lang-shell">$ yum -y install lrzsz
+</code></pre>
+<p>&#x800C;&#x5982;&#x679C;&#x6CA1;&#x6709;ROOT&#x6743;&#x9650;&#xFF0C;&#x662F;&#x65E0;&#x6CD5;&#x5199;&#x5165;&#x7684;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x81EA;&#x884C;&#x7F16;&#x8BD1;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x666E;&#x901A;&#x7528;&#x6237;&#x5B89;&#x88C5;&#x7684;&#x529E;&#x6CD5;&#x3002;</p>
+<h2 id="&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;"><a name="&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;</h2>
+<pre><code class="lang-shell">$ cd /tmp
+$ wget http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+$ tar -zxvf lrzsz-0.12.20.tar.gz &amp;&amp; cd lrzsz-0.12.20
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;"><a name="&#x914D;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x914D;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</h2>
+<pre><code class="lang-shell"># &#x5728;&#x7B49;&#x53F7;&#x540E;&#x5199;&#x5165;&#x76EE;&#x6807;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;
+./configure --prefix=/public/home/zjb/app/lrzsz
+</code></pre>
+<h2 id="&#x7F16;&#x8BD1;&#x5B89;&#x88C5;"><a name="&#x7F16;&#x8BD1;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8BD1;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x7F16;&#x8BD1;&#x5B89;&#x88C5;</h2>
+<pre><code class="lang-shell">$ make &amp;&amp; make install
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4E0B;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;"><a name="&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4E0B;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4E0B;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4E0B;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;</h2>
+<pre><code class="lang-shell">$ cd /public/home/zjb/app/lrzsz
+$ mkdir bash-command
+$ cd bash-command
+$ ln -s /public/home/zjb/app/lrzsz/bin/lrz rz 
+$ ln -s /public/home/zjb/app/lrzsz/bin/lsz sz
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<pre><code class="lang-shell">$ cd ~
+$ vi .bash_profile
+# &#x5728;PATH&#x5217;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#xFF1A;
+export PATH=&quot;/public/home/zjb/app/lrzsz/bash-command&quot;:$PATH
+$ source .bash_profile
+</code></pre>
+<h1 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><a name="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h1>
+<h2 id="&#x4E0A;&#x4F20;&#xFF08;rz&#xFF09;"><a name="&#x4E0A;&#x4F20;&#xFF08;rz&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x4E0A;&#x4F20;&#xFF08;rz&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x4E0A;&#x4F20;&#xFF08;rz&#xFF09;</h2>
+<pre><code class="lang-shell">$ rz
+</code></pre>
+<ul>
+<li>&#x4E0A;&#x4F20;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x62D6;&#x52A8;&#xFF0C;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x81F3;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#xFF1B;</li>
+<li>&#x540C;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x547D;&#x4EE4;&#xFF1A;&#x8F93;&#x5165;rz&#x56DE;&#x8F66;&#x540E;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x6587;&#x4EF6;&#x9009;&#x62E9;&#x5BF9;&#x8BDD;&#x6846;&#xFF0C;&#x9009;&#x62E9;&#x9700;&#x8981;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x6B21;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8DEF;&#x5F84;&#x4E3A;&#x5F53;&#x524D;&#x6267;&#x884C;rz&#x547D;&#x4EE4;&#x7684;&#x76EE;&#x5F55;</li>
+</ul>
+<h2 id="&#x4E0B;&#x8F7D;&#xFF08;sz&#xFF09;"><a name="&#x4E0B;&#x8F7D;&#xFF08;sz&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x8F7D;&#xFF08;sz&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x4E0B;&#x8F7D;&#xFF08;sz&#xFF09;</h2>
+<pre><code class="lang-shell">#&#x4E0B;&#x8F7D;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;
+$ sz filename 
+
+#&#x4E0B;&#x8F7D;&#x591A;&#x4E2A;&#x6587;&#x4EF6;
+$ sz filename1 filename2
+
+#&#x4E0B;&#x8F7D;dir&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x5305;&#x542B;dir&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5939;
+$ sz dir/*
+</code></pre>
 
                                 
                                 </section>
@@ -489,14 +533,6 @@
 
             
                 
-                <a href="linux-bashrc-VS-bash_profile.html" class="navigation navigation-prev " aria-label="Previous page: .bashrc与.bash_profile的区别">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="PBS-commend.html" class="navigation navigation-next " aria-label="Next page: 管理作业">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -505,7 +541,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PBS 作业管理系统","level":"3.3","depth":1,"next":{"title":"管理作业","level":"3.3.1","depth":2,"path":"Chap03-linux/PBS-commend.md","ref":"Chap03-linux/PBS-commend.md","articles":[]},"previous":{"title":".bashrc与.bash_profile的区别","level":"3.2.3.3","depth":3,"path":"Chap03-linux/linux-bashrc-VS-bash_profile.md","ref":"Chap03-linux/linux-bashrc-VS-bash_profile.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ace":{},"livereload":{},"search":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"Chap03-linux/PBS-README.md","mtime":"2020-11-02T04:34:02.558Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-03T14:29:57.950Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"lrzsz的安装及其使用","level":"3.2.3.1","depth":3,"next":{"title":"为非ROOT用户安装Python3","level":"3.2.3.2","depth":3,"ref":"","articles":[]},"previous":{"title":"linux为非ROOT用户安装应用程序","level":"3.2.3","depth":2,"url":"https://tlanyan.me/work-with-linux-without-root-permission/","ref":"https://tlanyan.me/work-with-linux-without-root-permission/","articles":[{"title":"lrzsz的安装及其使用","level":"3.2.3.1","depth":3,"path":"Chap03-linux/linux-lrzsz.md","ref":"Chap03-linux/linux-lrzsz.md","articles":[]},{"title":"为非ROOT用户安装Python3","level":"3.2.3.2","depth":3,"ref":"","articles":[]},{"title":".bashrc与.bash_profile的区别","level":"3.2.3.3","depth":3,"path":"Chap03-linux/linux-bashrc-VS-bash_profile.md","ref":"Chap03-linux/linux-bashrc-VS-bash_profile.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","-popup","-auto-scroll-table"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ace":{},"livereload":{},"search":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"Chap03-linux/linux-lrzsz.md","mtime":"2020-11-03T14:22:01.685Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-03T14:29:57.950Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
