@@ -1,0 +1,786 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Windows 20H2下ASE报错 · Computation-Simulation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Northword">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+		<span class="title"></span>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="../" target="_blank">Blog</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">文档目录</div>
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Theory</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../01-Theory/DFT.html">
+            
+                <a href="../01-Theory/DFT.html">
+            
+                    
+                    第1章 第一性原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    第5章 物质结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Install</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../02-Install/Windows-platform.html">
+            
+                <a href="../02-Install/Windows-platform.html">
+            
+                    
+                    Windows平台里的相关软件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../02-Install/windows-ase-install.html">
+            
+                <a href="../02-Install/windows-ase-install.html">
+            
+                    
+                    ase
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../02-Install/linux-platform.html">
+            
+                <a href="../02-Install/linux-platform.html">
+            
+                    
+                    Linux里的相关软件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../05-VASP/install-vaspkit.html">
+            
+                <a href="../05-VASP/install-vaspkit.html">
+            
+                    
+                    VaspKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                    VTST
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../02-install/linux-gunplot-install.html">
+            
+                <a href="../02-install/linux-gunplot-install.html">
+            
+                    
+                    gunplot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" >
+            
+                <span>
+            
+                    
+                    为非ROOT用户安装Python3
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../02-Install/linux-lrzsz-install.html">
+            
+                <a href="../02-Install/linux-lrzsz-install.html">
+            
+                    
+                    Irzsz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" >
+            
+                <a target="_blank" href="https://tlanyan.me/work-with-linux-without-root-permission/">
+            
+                    
+                    linux为非ROOT用户安装应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../03-Linux/linux-README.html">
+            
+                <a href="../03-Linux/linux-README.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../03-Linux/linux-command.html">
+            
+                <a href="../03-Linux/linux-command.html">
+            
+                    
+                    Linux 常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../03-Linux/linux-vi.html">
+            
+                <a href="../03-Linux/linux-vi.html">
+            
+                    
+                    VI/VIM 编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../03-Linux/linux-lrzsz-usage.md">
+            
+                <span>
+            
+                    
+                    lrzsz的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../03-Linux/linux-bashrc-VS-bash_profile.html">
+            
+                <a href="../03-Linux/linux-bashrc-VS-bash_profile.html">
+            
+                    
+                    .bashrc与.bash_profile的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../03-Linux/PBS-README.html">
+            
+                <a href="../03-Linux/PBS-README.html">
+            
+                    
+                    PBS 作业管理系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../03-Linux/PBS-commend.html">
+            
+                <a href="../03-Linux/PBS-commend.html">
+            
+                    
+                    管理作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../03-Linux/PBS-script.html">
+            
+                <a href="../03-Linux/PBS-script.html">
+            
+                    
+                    PBS 脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Materials Studio</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../04-Materials-Studio/About.html">
+            
+                <a href="../04-Materials-Studio/About.html">
+            
+                    
+                    关于Material Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <a target="_blank" href="http://www.cailiaoniu.com/51296.html">
+            
+                    
+                    界面各部分介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    栗子：建立Au的111切面的4×4超胞
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">VASP</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../05-VASP/VASP-and-VASPKIT.html">
+            
+                <a href="../05-VASP/VASP-and-VASPKIT.html">
+            
+                    
+                    VASP与VASPKIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../05-VASP/install-vaspkit.html">
+            
+                <a href="../05-VASP/install-vaspkit.html">
+            
+                    
+                    安装VASPKIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../05-VASP/gen-input-files.html">
+            
+                <a href="../05-VASP/gen-input-files.html">
+            
+                    
+                    生成输入文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <span>
+            
+                    
+                    使用VASP NEB方法计算反应路径
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">异常解决</li>
+        
+        
+    
+        <li class="chapter active" data-level="7.1" data-path="numpy-in-win20H2.html">
+            
+                <a href="numpy-in-win20H2.html">
+            
+                    
+                    Windows 20H2下ASE报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">在这篇文章中:</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Windows 20H2下ASE报错</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<h1 id="&#x5728;windows-20h2&#x4E0A;&#x8FD0;&#x884C;ase&#x62A5;&#x9519;">&#x5728;Windows 20H2&#x4E0A;&#x8FD0;&#x884C;ASE&#x62A5;&#x9519;</h1>
+<pre><code> ase --version
+ ** On entry to DGEBAL parameter number  3 had an illegal value
+ ** On entry to DGEHRD  parameter number  2 had an illegal value
+ ** On entry to DORGHR DORGQR parameter number  2 had an illegal value
+ ** On entry to DHSEQR parameter number  4 had an illegal value
+Traceback (most recent call last):
+  File &quot;c:\users\northword\appdata\local\programs\python\python39\lib\runpy.py&quot;, line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File &quot;c:\users\northword\appdata\local\programs\python\python39\lib\runpy.py&quot;, line 87, in _run_code
+    exec(code, run_globals)
+  File &quot;C:\Users\Northword\AppData\Roaming\Python\Python39\Scripts\ase.exe\__main__.py&quot;, line 4, in &lt;module&gt;
+  File &quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\ase\__init__.py&quot;, line 8, in &lt;module&gt;
+    import numpy as np
+  File &quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\numpy\__init__.py&quot;, line 305, in &lt;module&gt;
+    _win_os_check()
+  File &quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\numpy\__init__.py&quot;, line 302, in _win_os_check
+    raise RuntimeError(msg.format(__file__)) from None
+RuntimeError: The current Numpy installation (&apos;C:\\Users\\Northword\\AppData\\Roaming\\Python\\Python39\\site-packages\\numpy\\__init__.py&apos;) fails to pass a sanity check due to a bug in the windows runtime. See this issue for more information: https://tinyurl.com/y3dm3h86
+</code></pre><p>&#x641C;&#x7D22;&#x5230;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;<code>numpy</code>&#x4E0E;<code>windows 20H2</code>&#x7684;&#x5173;&#x7CFB;&#xFF08;&#x53CD;&#x6B63;&#x603B;&#x662F;Windows &#x7684;&#x9505;&#xFF09;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x5C06;<code>numpy</code>&#x964D;&#x7EA7;&#x5373;&#x53EF;&#x3002;</p>
+<pre><code>pip install numpy==1.19.3
+</code></pre><p>&#x5F15;&#x7528;&#x5730;&#x5740;&#xFF1A;<a href="https://blog.csdn.net/yangtzech/article/details/109494653" target="_blank">https://blog.csdn.net/yangtzech/article/details/109494653</a></p>
+<p>&#x4E0B;&#x4E3A;&#x955C;&#x50CF;&#x3002;</p>
+<hr>
+<h1 id="numpy-sanity-check-in-windows-200420h2">numpy sanity check in Windows 2004/20H2</h1>
+<p>&#x5B9E;&#x9A8C;&#x5BA4;&#x7684;&#x65B0;&#x7535;&#x8111;&#x5230;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x91CD;&#x65B0;&#x914D;&#x7F6E;python&#x73AF;&#x5883;&#xFF0C;&#x5B89;&#x88C5;&#x5B8C;Python&#x540E;&#x5C31;&#x5F00;&#x59CB;&#x8DD1;&#x7A0B;&#x5E8F;&#x4E86;&#x3002;&#x5176;&#x4E2D;&#x9700;&#x8981;&#x7528;&#x5230;numpy&#xFF0C;&#x5B89;&#x88C5;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;1.19.4&#xFF0C;&#x7136;&#x540E;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#x3002;&#x62A5;&#x9519;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code> ** On entry to DGEBAL parameter number  3 had an illegal value
+ ** On entry to DGEHRD  parameter number  2 had an illegal value
+ ** On entry to DORGHR DORGQR parameter number  2 had an illegal value
+ ** On entry to DHSEQR parameter number  4 had an illegal value
+  File &quot;c:\Users\Public\OneDrive\&#x684C;&#x9762;\LateralControl\path-following-control\examples\pure_pursuit_control.py&quot;, line 5, in &lt;module&gt;
+    from model import particle
+  File &quot;c:/Users/Public/OneDrive/&#x684C;&#x9762;/LateralControl/path-following-control/examples/..\model\particle.py&quot;, line 1, in &lt;module&gt;
+    import numpy as np
+  File &quot;D:\ProgramData\Python\Python39\lib\site-packages\numpy\__init__.py&quot;, line 305, in &lt;module&gt;
+    _win_os_check()
+    raise RuntimeError(msg.format(__file__)) from None
+RuntimeError: The current Numpy installation (&apos;D:\\ProgramData\\Python\\Python39\\lib\\site-packages\\numpy\\__init__.py&apos;) fails to pass a sanity check due to a bug in the windows runtime. See this issue for more information: https://tinyurl.com/y3dm3h86
+</code></pre><p>Python&#x7248;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:34:40) [MSC v.1927 64 bit (AMD64)] on win32
+</code></pre><p>Windows&#x7248;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&#x7248;&#x672C;         Windows 10 &#x5BB6;&#x5EAD;&#x4E2D;&#x6587;&#x7248;
+&#x7248;&#x672C;&#x53F7;        20H2
+&#x5B89;&#x88C5;&#x65E5;&#x671F;      2020/11/2
+&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7248;&#x672C;   19042.610
+&#x5E8F;&#x5217;&#x53F7;        S101APL1
+&#x4F53;&#x9A8C; Windows Feature Experience Pack 120.2212.31.0
+</code></pre><p>&#x65E9;&#x4E0A;&#x6253;&#x4E0D;&#x5F00;&#x62A5;&#x9519;&#x91CC;&#x9762;&#x7684;&#x94FE;&#x63A5;<a href="https://tinyurl.com/y3dm3h86&#xFF0C;&#x4E0B;&#x5348;&#x53C8;&#x6253;&#x5F00;&#x4E86;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;https://developercommunity.visualstudio.com/content/problem/1207405/fmod-after-an-update-to-windows-2004-is-causing-a.html&#xFF0C;&#x6309;&#x7167;&#x91CC;&#x9762;&#x7684;&#x56DE;&#x7B54;https://developercommunity.visualstudio.com/users/290300/3616d928-e552-6c3c-a305-d773da8af52d.html&#xFF0C;&#x4F7F;&#x7528;`pip" target="_blank">https://tinyurl.com/y3dm3h86&#xFF0C;&#x4E0B;&#x5348;&#x53C8;&#x6253;&#x5F00;&#x4E86;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;https://developercommunity.visualstudio.com/content/problem/1207405/fmod-after-an-update-to-windows-2004-is-causing-a.html&#xFF0C;&#x6309;&#x7167;&#x91CC;&#x9762;&#x7684;&#x56DE;&#x7B54;https://developercommunity.visualstudio.com/users/290300/3616d928-e552-6c3c-a305-d773da8af52d.html&#xFF0C;&#x4F7F;&#x7528;`pip</a> install numpy==1.19.3`&#x5C06;numpy&#x964D;&#x5230;1.9.3&#x7248;&#x672C;&#x5373;&#x53EF;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x6309;&#x7167;&#x56DE;&#x7B54;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x56E0;&#x4E3A;&#x66F4;&#x65B0;&#x4E86;Windows 2004/20H2&#xFF0C;&#x6240;&#x4EE5;&#x51FA;&#x4E86;&#x95EE;&#x9898;&#x3002;</p>
+<p>QAQ&#xFF1A;&#x4E3A;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x88C5;&#x4E86;Anaconda&#xFF0C;&#x53C8;&#x662F;Visual Studio Code&#x3001;Visual Studio 2019&#xFF0C;&#x53C8;&#x662F;&#x5378;&#x8F7D;Python3.9&#xFF0C;&#x518D;&#x88C5;&#x4E0A;Python3.8&#xFF0C;&#x4E00;&#x5929;&#x7684;&#x65F6;&#x95F4;&#x5C31;&#x8FD9;&#x6837;&#x8FC7;&#x53BB;&#x4E86;&#x2026;&#x3002;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x539F;&#x56E0;&#x90FD;&#x662F;<a href="https://tinyurl.com/y3dm3h86&#x7684;&#x94FE;&#x63A5;&#x6253;&#x4E0D;&#x5F00;&#x3002;&#x7136;&#x540E;&#x641C;&#x4E86;&#x534A;&#x5929;&#x6559;&#x7A0B;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x9519;&#x8BEF;&#x3002;&#x672C;&#x6765;&#x662F;&#x8981;&#x7528;google&#x641C;&#x4E86;&#xFF0C;&#x5F53;&#x65F6;&#x4E5F;&#x521A;&#x597D;&#x4E0A;&#x4E0D;&#x53BB;&#x3002;&#x545C;&#x545C;&#x545C;" target="_blank">https://tinyurl.com/y3dm3h86&#x7684;&#x94FE;&#x63A5;&#x6253;&#x4E0D;&#x5F00;&#x3002;&#x7136;&#x540E;&#x641C;&#x4E86;&#x534A;&#x5929;&#x6559;&#x7A0B;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x9519;&#x8BEF;&#x3002;&#x672C;&#x6765;&#x662F;&#x8981;&#x7528;google&#x641C;&#x4E86;&#xFF0C;&#x5F53;&#x65F6;&#x4E5F;&#x521A;&#x597D;&#x4E0A;&#x4E0D;&#x53BB;&#x3002;&#x545C;&#x545C;&#x545C;</a></p>
+<p>&#x540C;&#x6B65;&#x53D1;&#x5E03;&#x4E8E;&#xFF1A;&#x8BED;&#x96C0;&#xFF1A;<a href="https://www.yuque.com/yangtzech/blog/omkav0" target="_blank">https://www.yuque.com/yangtzech/blog/omkav0</a></p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"Windows 20H2下ASE报错","level":"7.1","depth":1,"previous":{"title":"使用VASP NEB方法计算反应路径","level":"6.4","depth":1,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","ace","-lunr","search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","popup","-auto-scroll-table","theme-fexa","theme-comscore"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ace":{},"livereload":{},"search":{},"popup":{},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"09-Others/numpy-in-win20H2.md","mtime":"2020-11-13T14:42:57.292Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-13T14:45:07.678Z"},"basePath":"..","book":{"language":""}});
+		});
+	</script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
