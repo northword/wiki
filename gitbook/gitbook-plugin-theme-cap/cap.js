@@ -32,7 +32,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         });
 
         $(".book-header .pull-left").click(function () {
-            $(".book-summary").toggle();
+            //$(".book-summary").toggle();
         });
 
         $(".book-anchor-body>a").click(function(){
