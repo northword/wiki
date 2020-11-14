@@ -271,10 +271,12 @@ body {
     display: none;
   }
 }
+/* 小窗口时的样式 */
 @media (max-width: 768px) {
-  .header-inner .title {
+/* 标题 我改了 */
+/*   .header-inner .title {
     display: none;
-  }
+  } */
   .page-inner {
     max-width: 100%;
     padding: 20px;
