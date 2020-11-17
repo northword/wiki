@@ -1,0 +1,7 @@
+# linux
+
+没啥好写的，不就是个系统，区别于`Windows`、`MacOs`嘛。
+
+
+# 一些非初级非高级玩法
+* [Linux为非ROOT用户安装应用程序](https://tlanyan.me/work-with-linux-without-root-permission/)
