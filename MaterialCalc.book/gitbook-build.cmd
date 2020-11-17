@@ -5,8 +5,8 @@ echo Starting Build...
 goto build
 
 :build
-gitbook build ./ ./docs
-@cmd /k
+gitbook build ./ ../docs
+
 goto end
 
 :end
