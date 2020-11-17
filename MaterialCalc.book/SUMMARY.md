@@ -42,6 +42,11 @@
 * [生成输入文件](05-VASP/gen-input-files.md)
 * [使用VASP NEB方法计算反应路径](05-VASP/vasp-neb.md)
 
+## Other Apps
+
+* [高斯](06-Other App\README.md) 
+* [ASE 的使用](06-Other App\ASE-usage.md) 
+
 ## 异常解决
 * [MS在win2004一按键盘就假死](09-Others/MS-NoResponse-win2004.md)
 * [Windows 20H2下ASE报错](09-Others/numpy-in-win20H2.md)
