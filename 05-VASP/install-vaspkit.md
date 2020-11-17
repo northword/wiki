@@ -2,6 +2,13 @@
 
 # VASPKIT的配置
 
+推荐视频 [VASPKIT功能介绍，解放你的双手](https://www.bilibili.com/video/BV17J411i78D) ：
+
+<div class="btv" id="bav">
+<iframe src="//player.bilibili.com/player.html?aid=78202388&bvid=BV17J411i78D&cid=133805579&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div>
+
+---
+
 我们预计将`VASPKIT`安装在`~/app/`下，在用户目录下新建一个`app`文件夹并进入：
 
 ```shell
@@ -21,8 +28,6 @@ cd app
 $ wget https://nchc.dl.sourceforge.net/project/vaspkit/Binaries/vaspkit.1.2.1.linux.x64.tar.gz
 # 赝势文件的包
 $ wget https://github.com/northword/Computation-Simulation/raw/main/app/pot.tgz
-# 一个脚本集合
-$ wget https://github.com/northword/Computation-Simulation/raw/main/app/vtstscripts.tgz
 ```
 
 下载成功即如图：![执行成功](assets/image-20201031164747239.png)
@@ -38,13 +43,12 @@ $ wget https://github.com/northword/Computation-Simulation/raw/main/app/vtstscri
 ```shell
 tar -xzvf vaspkit.1.2.1.linux.x64.tar.gz 
 tar -xzvf pot.tgz
-tar -xzvf vtstscripts.tgz
 rm vaspkit.1.2.1.linux.x64.tar.gz pot.tar vtstscripts.tar
 ```
 
 `tar`命令用法见 [linux-command.md](..\Chap03-linux\linux-command.html#tar) 
 
-## 配置VASPKIT的环境变量
+## 配置VASPKIT程序的环境变量
 
 首先配置VASPKIT软件的变量。将软件自带的环境变量模板文件复制到用户目录，并编辑
 
@@ -90,6 +94,8 @@ LDA_PATH                      ~/app/pot_database/LDA         #  Path of LDA pote
 PBE_PATH                      ~/app/pot_database/PBE         #  Path of PBE potential.
 ```
 
+## 将`vaspkit`关键字加入系统环境变量
+
 接下来，要把`vaspkit`这个关键词添加到系统的环境变量里。由于新版本(version>0.73)给了方便的配置脚本，我们直接运行，
 
 ```shell
@@ -98,6 +104,8 @@ $ source ~/.bashrc
 ```
 
 其中第一行作用为将`export PATH=[你的VASPKIT目录]/bin/:$PATH`添加到了`~/.bashrc`，第二行作用为使环境变量立即生效。
+
+当然，也可以去`vi ~/.bashrc`，将路径添加到PATH。
 
 至此，环境变量配置完成，我们可以通过`vaspkit`命令来启动它。
 

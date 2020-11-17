@@ -4,6 +4,17 @@
 
 ---
 
+下面是Linux下非root用户安装软件的一般流程：
+
+1. 获取源代码；常用`wget/curl`下载，也可以用类似`apt-get source`的方式获取仓库中软件源代码；
+2. 解压源代码安装包；例如对于gzip格式的tar包：`tar -zxvf xxx.tar.gz`；
+3. 切换到解压后的目录，运行 `./configure`;`./configure --help`可以列出配置项，**非root用户最重要的配置项是安装目录prefix**，例如 `./configure --prefix=/path/to/bin`。在无法自动找到依赖库位置的情况下，用 `--with-xx-dir=xxx` 的形式配置依赖库位置；
+4. 编译源代码并复制可执行文件到指定的安装目录： `make && make install`。这两条命令可以分开执行，make时指定 -j 参数并行编译，能显著减少编译耗时（单进程编译GCC需要几个小时，开启并行编译后可缩短到十几分钟）；
+5. 使用`export PATH=/path/to/bin:$PATH`更新PATH变量。命令行窗口运行此命令只对本次会话中有效，可将其写到.bashrc或者.bash_profile中；
+6. 如果安装的是动态链接库，则需要更新动态链接库路径： `export LD_LIBRARY_PATH=/path/to/library:$LD_LIBRARY_PATH`。最好将此命令写在.bashrc文件中，用户下次打开会话时自动执行。
+
+---
+
 
 
 > 从[windows](https://tlanyan.me/tag/windows/)转移到[Linux](https://tlanyan.me/category/linux/)的用户刚开始会有各种不适，因使用习惯水土不服而放弃Linux的不在少数。还没有领略到Linux的美好就退却，对于这类人只能说可惜。还有部分人在个人电脑上用Linux，总体感觉还不错；切换到工作时只能使用无特权的普通账户，会遇到“没root权限 -> 出现问题 -> 找答案 -> 提示用root”的死循环，于是感到沮丧和抓狂。本文主要面向对象第二类人，简要介绍没有root权限时，安装软件的步骤和操作。
@@ -22,11 +33,3 @@
 >
 > 了解完权限，再看普通账户安装软件困难的原因。大部分软件默认安装路径是 `/usr/bin` 或 `/usr/local/bin`，安装时需要将可执行文件复制到这些目录下。普通用户没有目录的写权限，于是提示无权限导致安装失败。切换到root模式后，一切又都好使了。根据普通账号的权限，可以得出结论：非root用户，（几乎）只能安装软件到家目录下。
 
-下面是Linux下非root用户安装软件的一般流程：
-
-1. 获取源代码；常用`wget/curl`下载，也可以用类似`apt-get source`的方式获取仓库中软件源代码；
-2. 解压源代码安装包；例如对于gzip格式的tar包：`tar -zxvf xxx.tar.gz`；
-3. 切换到解压后的目录，运行 `./configure`;`./configure --help`可以列出配置项，**非root用户最重要的配置项是安装目录prefix**，例如 `./configure --prefix=/path/to/bin`。在无法自动找到依赖库位置的情况下，用 `--with-xx-dir=xxx` 的形式配置依赖库位置；
-4. 编译源代码并复制可执行文件到指定的安装目录： `make && make install`。这两条命令可以分开执行，make时指定 -j 参数并行编译，能显著减少编译耗时（单进程编译GCC需要几个小时，开启并行编译后可缩短到十几分钟）；
-5. 使用`export PATH=/path/to/bin:$PATH`更新PATH变量。命令行窗口运行此命令只对本次会话中有效，可将其写到.bashrc或者.bash_profile中；
-6. 如果安装的是动态链接库，则需要更新动态链接库路径： `export LD_LIBRARY_PATH=/path/to/library:$LD_LIBRARY_PATH`。最好将此命令写在.bashrc文件中，用户下次打开会话时自动执行。

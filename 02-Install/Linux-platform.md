@@ -5,7 +5,7 @@
 |VASP| |集群管理员已编译|
 |VTST| |集群管理员已编译|
 |VASPKIT| |见  [install-vaspkit.md](..\05-VASP\install-vaspkit.md) |
-|VTST-Script| |同上|
+|VTST-Script| |见[linux-install-VTSTScript.md](linux-install-VTSTScript.md)|
 |Python| ||
 |Irzsz| | 见  [linux-lrzsz-install.md](linux-lrzsz-install.md) |
-|gunplot| | [linux-gunplot-install.md](linux-gunplot-install.md) |
+|gunplot| | 见[linux-gunplot-install.md](linux-gunplot-install.md) |

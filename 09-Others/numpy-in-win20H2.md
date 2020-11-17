@@ -33,7 +33,7 @@ pip install numpy==1.19.3
 
 
 
-引用地址：https://blog.csdn.net/yangtzech/article/details/109494653
+引用地址：https://blog.csdn.net/yangtzech/article/details/109494653 、https://tinyurl.com/y3dm3h86
 
 下为镜像。
 
@@ -75,10 +75,10 @@ Windows版本如下：
 体验 Windows Feature Experience Pack 120.2212.31.0
 ```
 
-早上打不开报错里面的链接https://tinyurl.com/y3dm3h86，下午又打开了，跳转到https://developercommunity.visualstudio.com/content/problem/1207405/fmod-after-an-update-to-windows-2004-is-causing-a.html，按照里面的回答https://developercommunity.visualstudio.com/users/290300/3616d928-e552-6c3c-a305-d773da8af52d.html，使用`pip install numpy==1.19.3`将numpy降到1.9.3版本即可解决问题。
+早上打不开报错里面的链接 https://tinyurl.com/y3dm3h86 , 下午又打开了，跳转到https://developercommunity.visualstudio.com/content/problem/1207405/fmod-after-an-update-to-windows-2004-is-causing-a.html ，按照里面的回答 https://developercommunity.visualstudio.com/users/290300/3616d928-e552-6c3c-a305-d773da8af52d.html ，使用`pip install numpy==1.19.3`将numpy降到1.9.3版本即可解决问题。
 
 按照回答，可能是因为更新了Windows 2004/20H2，所以出了问题。
 
-QAQ：为了这个问题，我装了Anaconda，又是Visual Studio Code、Visual Studio 2019，又是卸载Python3.9，再装上Python3.8，一天的时间就这样过去了…。所有这些原因都是https://tinyurl.com/y3dm3h86的链接打不开。然后搜了半天教程，但是没有这样的错误。本来是要用google搜了，当时也刚好上不去。呜呜呜
+QAQ：为了这个问题，我装了Anaconda，又是Visual Studio Code、Visual Studio 2019，又是卸载Python3.9，再装上Python3.8，一天的时间就这样过去了…。所有这些原因都是 https://tinyurl.com/y3dm3h86 的链接打不开。然后搜了半天教程，但是没有这样的错误。本来是要用google搜了，当时也刚好上不去。呜呜呜
 
 同步发布于：语雀：https://www.yuque.com/yangtzech/blog/omkav0
