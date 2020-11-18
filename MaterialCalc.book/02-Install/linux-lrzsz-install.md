@@ -4,7 +4,7 @@
 
 如果拥有ROOT权限，可以直接执行下述代码安装：
 
-```shell
+```bash
 $ yum -y install lrzsz
 ```
 
@@ -12,7 +12,7 @@ $ yum -y install lrzsz
 
 ## 下载并解压
 
-```shell
+```bash
 $ cd /tmp
 $ wget http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
 $ tar -zxvf lrzsz-0.12.20.tar.gz && cd lrzsz-0.12.20
@@ -20,20 +20,20 @@ $ tar -zxvf lrzsz-0.12.20.tar.gz && cd lrzsz-0.12.20
 
 ## 配置安装路径
 
-```shell
+```bash
 # 在等号后写入目标安装路径
 ./configure --prefix=/public/home/zjb/app/lrzsz
 ```
 
 ## 编译安装
 
-```shell
+```bash
 $ make && make install
 ```
 
 ## 配置当前用户下的系统命令
 
-```shell
+```bash
 $ cd /public/home/zjb/app/lrzsz
 $ mkdir bash-command
 $ cd bash-command
@@ -43,7 +43,7 @@ $ ln -s /public/home/zjb/app/lrzsz/bin/lsz sz
 
 ## 配置当前用户的环境变量
 
-```shell
+```bash
 $ cd ~
 $ vi .bash_profile
 # 在PATH列表中添加如下：
@@ -55,7 +55,7 @@ $ source .bash_profile
 
 ## 上传（rz）
 
-```shell
+```bash
 $ rz 
 ```
 
@@ -64,7 +64,7 @@ $ rz
 
 ## 下载（sz）
 
-```shell
+```bash
 #下载一个文件
 $ sz filename 
 

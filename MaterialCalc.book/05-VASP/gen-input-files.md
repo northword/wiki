@@ -8,7 +8,7 @@
 
 在工作目录键入命令`vaspkit`以启动vaspkit：
 
-```
+```bash
 [zjb@op O2_opt]$ vaspkit
  
             \\\///         
@@ -94,7 +94,7 @@ Direct                # 坐标类别：直角/笛卡尔
 
 ### 通过新建POSCAR文件并手动写入内容来准备
 
-```
+```bash
 vi POSCAR
 # 之后手动键入上面POSCAR示例的内容（不包含#后的注释）
 ```
@@ -136,7 +136,7 @@ vi POSCAR
 
 从MS建模完成后导出为cif文件：`file-export-.cif`，用`VESTA`打开该cif文件，选择`file-export data`，`save as type : .vasp`。将这个`.vasp`文件上传到服务器，将其重命名为`POSCAR`，然后打开`vaspkit`，依次进入`3`，`303`。
 
-```shell
+```bash
 [zjb@op NaCl]$ cp NaCl.vasp POSCAR
 [zjb@op NaCl]$ vaspkit
  
@@ -238,7 +238,7 @@ vi POSCAR
 
 之后这个目录会有如下文件：
 
-```
+```bash
 [zjb@op NaCl]$ ll
 total 400
 -rw-r--r-- 1 zjb energy    957 Oct 31 21:02 HIGH_SYMMETRY_POINTS
@@ -252,7 +252,7 @@ total 400
 
 这样就生成了`POACAR`和`POTCAR`。
 
-```shell 
+```bash
 [zjb@op NaCl]$ cat POSCAR 
 NaCl_import
 1.0
@@ -432,7 +432,7 @@ EDIFFG = -2E-02        (Ionic convergence; eV/AA)
 
 将`PBS脚本`复制到当前目录，然后使用`qsub`命令提交作业。
 
-```
+```bash
 qsub -N O2_opt vasp.pbs
 ```
 

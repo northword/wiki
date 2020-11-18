@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -26,6 +26,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
@@ -688,17 +692,20 @@
 								
 								<h1 id="&#x914D;&#x7F6E;vtst&#x7684;&#x811A;&#x672C;">&#x914D;&#x7F6E;VTST&#x7684;&#x811A;&#x672C;</h1>
 <h2 id="&#x4E0B;&#x8F7D;">&#x4E0B;&#x8F7D;</h2>
-<pre><code>cd ~/app
-$ wget https://github.com/northword/Computation-Simulation/raw/main/app/vtstscripts.tgz
-</code></pre><h2 id="&#x89E3;&#x538B;&#x7F29;">&#x89E3;&#x538B;&#x7F29;</h2>
-<pre><code>tar -xzvf vtstscripts.tgz &amp; rm vtstscripts.tar
-cd vtstscripts-933
-pwd
-# &#x5C06;&#x8FD4;&#x56DE;&#x503C;&#x590D;&#x5236;
-</code></pre><h2 id="&#x52A0;&#x5165;bashrc">&#x52A0;&#x5165;bashrc</h2>
-<pre><code>vi ~/.bashrc
-# &#x5C06;&#x4E0A;&#x9762;pwd&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x52A0;&#x5165;PATH
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">cd</span> ~/app
+$ <span class="token function">wget</span> https://github.com/northword/Computation-Simulation/raw/main/app/vtstscripts.tgz
 </code></pre>
+<h2 id="&#x89E3;&#x538B;&#x7F29;">&#x89E3;&#x538B;&#x7F29;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token function">tar</span> -xzvf vtstscripts.tgz <span class="token operator">&amp;</span> <span class="token function">rm</span> vtstscripts.tar
+<span class="token builtin class-name">cd</span> vtstscripts-933
+<span class="token builtin class-name">pwd</span>
+<span class="token comment"># &#x5C06;&#x8FD4;&#x56DE;&#x503C;&#x590D;&#x5236;</span>
+</code></pre>
+<h2 id="&#x52A0;&#x5165;bashrc">&#x52A0;&#x5165;bashrc</h2>
+<pre class="language-"><code class="lang-bash"><span class="token function">vi</span> ~/.bashrc
+<span class="token comment"># &#x5C06;&#x4E0A;&#x9762;pwd&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x52A0;&#x5165;PATH</span>
+</code></pre>
+
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
 								
 							</section>
@@ -769,7 +776,7 @@ pwd
 	<script>
 		var gitbook = gitbook || [];
 		gitbook.push(function () {
-			gitbook.page.hasChanged({"page":{"title":"VTST Script","level":"3.2.2","depth":2,"next":{"title":"gunplot","level":"3.2.3","depth":2,"path":"02-install/linux-gunplot-install.md","ref":"02-install/linux-gunplot-install.md","articles":[]},"previous":{"title":"VaspKit","level":"3.2.1","depth":2,"path":"05-VASP/install-vaspkit.md","ref":"05-VASP/install-vaspkit.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","-lunr","-search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","-back-to-top-button","-copy-code-button","-cuav-chapters","-heading-anchors","theme-cap"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"02-Install/linux-install-VTSTScript.md","mtime":"2020-11-17T10:12:48.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-17T15:06:55.981Z"},"basePath":"..","book":{"language":""}});
+			gitbook.page.hasChanged({"page":{"title":"VTST Script","level":"3.2.2","depth":2,"next":{"title":"gunplot","level":"3.2.3","depth":2,"path":"02-install/linux-gunplot-install.md","ref":"02-install/linux-gunplot-install.md","articles":[]},"previous":{"title":"VaspKit","level":"3.2.1","depth":2,"path":"05-VASP/install-vaspkit.md","ref":"05-VASP/install-vaspkit.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","theme-cap","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"02-Install/linux-install-VTSTScript.md","mtime":"2020-11-18T13:19:28.150Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T13:27:10.411Z"},"basePath":"..","book":{"language":""}});
 		});
 	</script>
 </div>
@@ -777,14 +784,6 @@ pwd
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
@@ -796,6 +795,14 @@ pwd
     
         
         <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         

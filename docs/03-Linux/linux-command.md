@@ -28,7 +28,7 @@ cd ../path         # 切换到上层目录中的path目录中，“..”表示�
 
 `ls`：查看文件与目录，参数如下
 
-```shell
+```bash
 -l ：列出长数据串，包含文件的属性与权限数据等
 -a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）
 -d ：仅列出目录本身，而不是列出目录的文件数据
@@ -36,7 +36,7 @@ cd ../path         # 切换到上层目录中的path目录中，“..”表示�
 -R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来
 ```
 值得一提的是`-l`参数，它可以用`ll`来简化，如下例：
-```
+```bash
 [zjb@op app]$ ls
 get-pip.py  pot_database  python38  Python-3.8.5  scripts  tgz_backup  vaspkit.1.12  vtstscripts-933
 
@@ -67,13 +67,13 @@ drwxr-xr-x  5 zjb energy    8192 Dec 28  2017 vtstscripts-933
 
 创建文件夹
 
-```shell
+```bash
 mkdir <文件夹名称>
 ```
 
 例 行9
 
-```
+```bash
 [zjb@op ~]$ ll
 total 21
 drwxr-xr-x 9 zjb energy 4096 Oct 29 15:10 app
@@ -98,7 +98,7 @@ drwxr-xr-x 6 zjb energy 4096 Oct 31 20:07 test
 
 复制文件（夹），copy之意，它还可以把多个文件一次性地复制到一个目录下， 它的常用参数如下：
 
-```shell
+```bash
 -a ：将文件的特性一起复制
 -p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份
 -i ：若目标文件已经存在时，在覆盖时会先询问操作的进行
@@ -108,7 +108,7 @@ drwxr-xr-x 6 zjb energy 4096 Oct 31 20:07 test
 
 例如 ：
 
-```apache
+```bash
 cp -a file1 file2 #连同文件的所有特性把文件file1复制成文件file2
 cp file1 file2 file3 dir/ #把文件file1、file2、file3复制到目录dir中
 ```
@@ -117,7 +117,7 @@ cp file1 file2 file3 dir/ #把文件file1、file2、file3复制到目录dir中
 
 该命令用于移动文件、目录或更名，move之意，它的常用参数如下：
 
-```shell
+```bash
 -f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖
 -i ：若目标文件已经存在，就会询问是否覆盖
 -u ：若目标文件已经存在，且比目标文件新，才会更新
@@ -127,7 +127,7 @@ cp file1 file2 file3 dir/ #把文件file1、file2、file3复制到目录dir中
 
 例如：
 
-```apache
+```bash
 mv file1 file2 file3 dir/   # 把文件file1、file2、file3移动到目录dir中
 mv file1 file2              # 把文件file1重命名为file2
 ```
@@ -136,13 +136,13 @@ mv file1 file2              # 把文件file1重命名为file2
 
 该命令用于删除文件或目录，remove，它的常用参数如下：
 
-```shell
+```bash
 -f ：就是force的意思，忽略不存在的文件，不会出现警告消息
 -i ：互动模式，在删除前会询问用户是否操作
 -r ：递归删除，最常用于目录删除，它是一个非常危险的参数
 ```
 
-```
+```bash
 [zjb@op ~]$ ll
 total 25
 drwxr-xr-x 9 zjb energy 4096 Oct 29 15:10 app
@@ -171,7 +171,7 @@ drwxr-xr-x 6 zjb energy 4096 Oct 31 20:07 test
 
 打印当前工作路径。绝对路径。
 
-```
+```bash
 [zjb@op utilities]$ pwd
 /public/home/zjb/app/vaspkit.1.12/utilities
 ```
@@ -180,7 +180,7 @@ drwxr-xr-x 6 zjb energy 4096 Oct 31 20:07 test
 
 该命令用于查看文本文件的内容，后接要查看的文件名。通常可用管道与more和less一起使用，从而可以一页页地查看数据。
 
-```
+```bash
 [zjb@op utilities]$ cat hello.sh 
 #!/bin/bash
 echo "I love you"
@@ -191,7 +191,7 @@ echo "I love you"
 
 该命令用于对文件进行打包，默认情况并不会压缩，如果指定了相应的参数，它还会调用相应的压缩程序（如gzip和bzip等）进行压缩和解压。它的常用参数如下：
 
-```
+```bash
 -c ：新建打包文件
 -t ：查看打包文件的内容含有哪些文件名
 -x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中
@@ -204,7 +204,7 @@ echo "I love you"
 
 上面的解说可以已经让你晕过去了，但是通常我们只需要记住下面三条命令即可：
 
-```css
+```bash
 压缩：tar -zcvf filename.tar.gz 要被处理的文件或目录名称
 查询：tar -tvf filename.tar
 解压：tar -zxvf filename.tar.gz 
@@ -220,19 +220,19 @@ echo "I love you"
 
 该命令常用于分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常与管道命令一起使用，用于对一些命令的输出进行筛选加工等等，它的简单语法为
 
-```
+```bash
 grep [-acinv] [--color=auto] '查找字符串' filename
 ```
 
 它的常用参数如下：
 
-```
+```bash
 -a ：将binary文件以text文件的方式查找数据
 -c ：计算找到‘查找字符串’的次数
 -i ：忽略大小写的区别，即把大小写视为相同
 -v ：反向选择，即显示出没有‘查找字符串’内容的那一行
 ```
-```
+```bash
 # 例如：
 # 取出文件/etc/man.config中包含MANPATH的行，并把找到的关键字加上颜色
 grep --color=auto 'MANPATH' /etc/man.config
@@ -244,7 +244,7 @@ ls -l | grep -i file
 
 find是一个基于查找的功能非常强大的命令，相对而言，它的使用也相对较为复杂，参数也比较多，所以在这里将给把它们分类列出，它的基本语法如下：
 
-```
+```bash
 find [PATH] [option] [action]
 
 # 与时间有关的参数：
@@ -281,7 +281,7 @@ find . -size +12k # 查找当前目录中大于12KB的文件，注意c表示byte
 
 该命令用于将某个时间点的进程运行情况选取下来并输出，process之意，它的常用参数如下：
 
-```
+```bash
 -A ：所有的进程均显示出来
 -a ：不与terminal有关的所有进程
 -u ：有效用户的相关进程
@@ -291,7 +291,7 @@ find . -size +12k # 查找当前目录中大于12KB的文件，注意c表示byte
 
 其实我们只要记住ps一般使用的命令参数搭配即可，它们并不多，如下：
 
-```shell
+```bash
 ps aux # 查看系统所有的进程数据
 ps ax # 查看不与terminal有关的所有进程
 ps -lA # 查看系统所有的进程数据
@@ -302,7 +302,7 @@ ps axjf # 查看连同一部分进程树状态
 
 该命令用于向某个工作（%jobnumber）或者是某个PID（数字）传送一个信号，它通常与ps和jobs命令一起使用，它的基本语法如下：
 
-```sql
+```bash
 kill -signal PID
 ```
 
@@ -310,7 +310,7 @@ signal的常用参数如下：
 
 注：最前面的数字为信号的代号，使用时可以用代号代替相应的信号。
 
-```shell
+```bash
 1：SIGHUP，启动被终止的进程
 2：SIGINT，相当于输入ctrl+c，中断一个程序的进行
 9：SIGKILL，强制中断一个进程的进行
@@ -320,7 +320,7 @@ signal的常用参数如下：
 
 例如：
 
-```shell
+```bash
 # 以正常的结束进程方式来终于第一个后台工作，可用jobs命令查看后台中的第一个工作进程
 kill -SIGTERM %1 
 # 重新改动进程ID为PID的进程，PID可用ps命令通过管道命令加上grep命令进行筛选获得
@@ -331,7 +331,7 @@ kill -SIGHUP PID
 
 该命令用于向一个命令启动的进程发送一个信号，它的一般语法如下：
 
-```shell
+```bash
 killall [-iIe] [command name]
 ```
 
@@ -349,7 +349,7 @@ killall -SIGHUP syslogd # 重新启动syslogd
 
 该命令用于判断接在file命令后的文件的基本数据，因为在Linux下文件的类型并不是以后缀为分的，所以这个命令对我们来说就很有用了，它的用法非常简单，基本语法如下：
 
-```
+```bash
 file filename
 #例如：
 file ./test
@@ -359,7 +359,7 @@ file ./test
 
 该命令用于改变文件所属用户组，它的使用非常简单，它的基本用法如下：
 
-```properties
+```bash
 chgrp [-R] dirname/filename
 -R ：进行递归的持续对所有文件和子目录更改
 # 例如：
@@ -374,14 +374,14 @@ chgrp users -R ./dir # 递归地把dir目录下中的所有文件和子目录下
 
 该命令用于改变文件的权限，一般的用法如下：
 
-```properties
+```bash
 chmod [-R] xyz 文件或目录
 -R：进行递归的持续更改，即连同子目录下的所有文件都会更改
 ```
 
 同时，chmod还可以使用u（user）、g（group）、o（other）、a（all）和+（加入）、-（删除）、=（设置）跟rwx搭配来对文件的权限进行更改。
 
-```perl
+```bash
 # 例如：
 chmod 0755 file # 把file的文件权限改变为-rxwr-xr-x
 chmod g+w file # 向file的文件权限中加入用户组可写权限
@@ -393,7 +393,7 @@ chmod g+w file # 向file的文件权限中加入用户组可写权限
 
 对于一个用Linux开发C程序的人来说，这个命令就非常重要了，它用于把C语言的源程序文件，编译成可执行程序，由于g++的很多参数跟它非常相似，所以这里只介绍gcc的参数，它的常用参数如下：
 
-```diff
+```bash
 -o ：output之意，用于指定生成一个可执行文件的文件名
 -c ：用于把源文件生成目标文件（.o)，并阻止编译器创建一个完整的程序
 -I ：增加编译时搜索头文件的路径
@@ -414,7 +414,7 @@ gcc -S test.c
 
 该命令用于测算一个命令（即程序）的执行时间。它的使用非常简单，就像平时输入命令一样，不过在命令的前面加入一个time即可，例如：
 
-```shell
+```bash
 time ./process
 time ps aux
 ```

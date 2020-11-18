@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -26,6 +26,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
@@ -687,12 +691,12 @@
 							<section class="normal markdown-section">
 								
 								<h1 id="&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;gcc&#x7F16;&#x8BD1;gunplot">&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;GCC&#x7F16;&#x8BD1;gunplot</h1>
-<pre><code class="lang-shell">cd /tmp
-wget https://jaist.dl.sourceforge.net/project/gnuplot/gnuplot/5.2.5/gnuplot-5.2.5.tar.gz
-tar xzvf gnuplot-5.2.5.tar.gz 
-cd gnuplot-5.2.5/
-./configure --prefix=/public/home/zjb/app/gunplot/
-make &amp; make install
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">cd</span> /tmp
+<span class="token function">wget</span> https://jaist.dl.sourceforge.net/project/gnuplot/gnuplot/5.2.5/gnuplot-5.2.5.tar.gz
+<span class="token function">tar</span> xzvf gnuplot-5.2.5.tar.gz 
+<span class="token builtin class-name">cd</span> gnuplot-5.2.5/
+./configure --prefix<span class="token operator">=</span>/public/home/zjb/app/gunplot/
+<span class="token function">make</span> <span class="token operator">&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
 </code></pre>
 <p>&#x7B2C;&#x4E94;&#x884C;&#x7B49;&#x53F7;&#x540E;&#x9762;&#x662F;&#x4F60;&#x7684;&#x76EE;&#x6807;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</p>
 
@@ -766,7 +770,7 @@ make &amp; make install
 	<script>
 		var gitbook = gitbook || [];
 		gitbook.push(function () {
-			gitbook.page.hasChanged({"page":{"title":"gunplot","level":"3.2.3","depth":2,"next":{"title":"为非ROOT用户安装Python3","level":"3.2.4","depth":2,"path":"02-install/linux-python-for-nonRoot.md","ref":"02-install/linux-python-for-nonRoot.md","articles":[]},"previous":{"title":"VTST Script","level":"3.2.2","depth":2,"path":"02-Install/linux-install-VTSTScript.md","ref":"02-Install/linux-install-VTSTScript.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","-lunr","-search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","-back-to-top-button","-copy-code-button","-cuav-chapters","-heading-anchors","theme-cap"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"02-install/linux-gunplot-install.md","mtime":"2020-11-13T13:51:56.562Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-17T15:06:55.981Z"},"basePath":"..","book":{"language":""}});
+			gitbook.page.hasChanged({"page":{"title":"gunplot","level":"3.2.3","depth":2,"next":{"title":"为非ROOT用户安装Python3","level":"3.2.4","depth":2,"path":"02-install/linux-python-for-nonRoot.md","ref":"02-install/linux-python-for-nonRoot.md","articles":[]},"previous":{"title":"VTST Script","level":"3.2.2","depth":2,"path":"02-Install/linux-install-VTSTScript.md","ref":"02-Install/linux-install-VTSTScript.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","theme-cap","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"02-install/linux-gunplot-install.md","mtime":"2020-11-18T13:19:07.181Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T13:27:10.411Z"},"basePath":"..","book":{"language":""}});
 		});
 	</script>
 </div>
@@ -774,14 +778,6 @@ make &amp; make install
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
@@ -793,6 +789,14 @@ make &amp; make install
     
         
         <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         

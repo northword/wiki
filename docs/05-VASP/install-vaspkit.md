@@ -4,14 +4,15 @@
 
 推荐视频 [VASPKIT功能介绍，解放你的双手](https://www.bilibili.com/video/BV17J411i78D) ：
 
-<div class="btv" id="bav">
+<div class="btv" id="btv">
 <iframe src="//player.bilibili.com/player.html?aid=78202388&bvid=BV17J411i78D&cid=133805579&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div>
+
 
 ---
 
 我们预计将`VASPKIT`安装在`~/app/`下，在用户目录下新建一个`app`文件夹并进入：
 
-```shell
+```bash
 cd ~
 mkdir app
 cd app
@@ -23,7 +24,7 @@ cd app
 
 ### 方式一（Recommend）
 
-```shell
+```bash
 # VASPKIT软件的包
 $ wget https://nchc.dl.sourceforge.net/project/vaspkit/Binaries/vaspkit.1.2.1.linux.x64.tar.gz
 # 赝势文件的包
@@ -40,7 +41,7 @@ $ wget https://github.com/northword/Computation-Simulation/raw/main/app/pot.tgz
 
 ## 解压缩
 
-```shell
+```bash
 tar -xzvf vaspkit.1.2.1.linux.x64.tar.gz 
 tar -xzvf pot.tgz
 rm vaspkit.1.2.1.linux.x64.tar.gz pot.tar vtstscripts.tar
@@ -52,7 +53,7 @@ rm vaspkit.1.2.1.linux.x64.tar.gz pot.tar vtstscripts.tar
 
 首先配置VASPKIT软件的变量。将软件自带的环境变量模板文件复制到用户目录，并编辑
 
-```shell
+```bash
 cp -f how_to_set_environment_variable ~/.vaspkit
 vi ~/.vaspkit
 ```
@@ -98,7 +99,7 @@ PBE_PATH                      ~/app/pot_database/PBE         #  Path of PBE pote
 
 接下来，要把`vaspkit`这个关键词添加到系统的环境变量里。由于新版本(version>0.73)给了方便的配置脚本，我们直接运行，
 
-```shell
+```bash
 $ bash setup.sh
 $ source ~/.bashrc
 ```

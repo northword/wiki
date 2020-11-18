@@ -2,7 +2,7 @@
 
 # 在Windows 20H2上运行ASE报错
 
-```
+```powershell
  ase --version
  ** On entry to DGEBAL parameter number  3 had an illegal value
  ** On entry to DGEHRD  parameter number  2 had an illegal value
@@ -27,7 +27,7 @@ RuntimeError: The current Numpy installation ('C:\\Users\\Northword\\AppData\\Ro
 
 使用如下将`numpy`降级即可。
 
-```
+```powershell
 pip install numpy==1.19.3
 ```
 
@@ -43,7 +43,7 @@ pip install numpy==1.19.3
 
 实验室的新电脑到了，所以要重新配置python环境，安装完Python后就开始跑程序了。其中需要用到numpy，安装的最新版本1.19.4，然后运行的时候就出问题了。报错如下：
 
-```
+```powershell
  ** On entry to DGEBAL parameter number  3 had an illegal value
  ** On entry to DGEHRD  parameter number  2 had an illegal value
  ** On entry to DORGHR DORGQR parameter number  2 had an illegal value

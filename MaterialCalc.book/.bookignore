@@ -1,2 +1,3 @@
-gitbook-build.cmd
+gitbook-build.bat
 _book/*
+.bookignore

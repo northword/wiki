@@ -1,4 +1,5 @@
 /MaterialCalc.book/node_modules/*
 /MaterialCalc.book/_book/*
-/MaterialCalc.book/gitbook-build.cmd
+/MaterialCalc.book/gitbook-build.bat
 /MaterialCalc.book/.bookignore
+gitbook-build.bat

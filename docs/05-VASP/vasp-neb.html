@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -26,6 +26,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
@@ -702,7 +706,7 @@
 <li>&#x5904;&#x7406;&#x7ED3;&#x679C;</li>
 </ol>
 <p>&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#xFF1A;</p>
-<pre><code>&#x5047;&#x8BBE;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x5982;&#x4E0B;
+<pre class="language-"><code>&#x5047;&#x8BBE;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x5982;&#x4E0B;
 neb
 --ini                  # &#x4F5C;&#x4E3A;&#x521D;&#x6001;&#x7ED3;&#x6784;&#x4F18;&#x5316;&#x7684;&#x76EE;&#x5F55;
     ini.xsd
@@ -712,7 +716,7 @@ neb
 <p>&#x8FD9;&#x5F20;&#x56FE;&#x6574;&#x633A;&#x597D;&#xFF0C;&#x76F4;&#x63A5;&#x62FF;&#x8FC7;&#x6765;&#x4E86;&#xFF0C;<a href="cndaqiang.github.io/2018/12/07/NEB">&#x8FD9;&#x662F;&#x539F;&#x5730;&#x5740;</a> &#x3002;</p>
 <h2 id="&#x5206;&#x522B;&#x5BF9;&#x521D;&#x6001;&#x548C;&#x672B;&#x6001;&#x8FDB;&#x884C;&#x5E38;&#x89C4;&#x7684;&#x7ED3;&#x6784;&#x4F18;&#x5316;">&#x5206;&#x522B;&#x5BF9;&#x521D;&#x6001;&#x548C;&#x672B;&#x6001;&#x8FDB;&#x884C;&#x5E38;&#x89C4;&#x7684;&#x7ED3;&#x6784;&#x4F18;&#x5316;</h2>
 <p>&#x4E0A;&#x8BFE;&#x65F6;&#x7684;&#x4F8B;&#x5B50;&#x662F;<code>O&#x5728;N&#x63BA;&#x6742;&#x7684;&#x77F3;&#x58A8;&#x70EF;&#x4E0A;&#x7684;&#x5438;&#x9644;</code>&#xFF0C;&#x5176;&#x4E2D;<code>INCAR</code>&#x4E3A;</p>
-<pre><code>Global Parameters
+<pre class="language-"><code>Global Parameters
 ISTART =  0            (Read existing wavefunction; if there)
 LREAL  = .FALSE.          (Projection operators: automatic)
 ENCUT  =  400        (Cut-off energy for plane wave basis set, in eV)
@@ -737,32 +741,37 @@ POTIM = 0.3
 </code></pre><p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x4E24;&#x4E2A;<code>POSCAR</code>&#x4E2D;&#xFF0C;<strong>&#x5143;&#x7D20;&#x987A;&#x5E8F;&#x5FC5;&#x987B;&#x5BF9;&#x5E94;</strong>&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x540E;&#x9762;&#x6D4B;&#x76F8;&#x4F3C;&#x5EA6;&#x4F1A;&#x51FA;&#x95EE;&#x9898;&#xFF0C;&#x4F1A;&#x53D8;&#x5F97;&#x5F88;&#x5927;&#x3002;&#xFF08;&#x901A;&#x8FC7;cif2pos&#x548C;xsd2pos&#x7684;&#x9ED8;&#x8BA4;&#x6392;&#x7684;&#x987A;&#x5E8F;&#x4E0D;&#x4E00;&#x6837;&#x54E6;&#xFF0C;&#x5DF2;&#x8E29;&#x5751;&#xFF09;</p>
 <h2 id="&#x4F7F;&#x7528;&#x811A;&#x672C;&#x5904;&#x7406;&#x4E2D;&#x95F4;&#x8FC7;&#x7A0B;">&#x4F7F;&#x7528;&#x811A;&#x672C;&#x5904;&#x7406;&#x4E2D;&#x95F4;&#x8FC7;&#x7A0B;</h2>
 <p>&#x7ED3;&#x6784;&#x4F18;&#x5316;&#x540E;&#xFF0C;&#x5206;&#x522B;&#x5C06;&#x521D;&#x672B;&#x6001;&#x7684;<code>CONTCAR</code>&#x590D;&#x5236;&#x51FA;&#x6765;&#x4F5C;&#x4E3A;&#x65B0;&#x7684;&#x521D;&#x6001;&#x548C;&#x672B;&#x6001;</p>
-<pre><code>$ cp ini/CONTCAR POSCAR_ini
-$ cp fin/CONTCAR POSCAR_fin
-</code></pre><h3 id="&#x5BF9;&#x521D;&#x672B;&#x6001;&#x6D4B;&#x76F8;&#x4F3C;&#x5EA6;&#x4EE5;&#x786E;&#x5B9A;&#x63D2;&#x70B9;&#x6570;&#x91CF;">&#x5BF9;&#x521D;&#x672B;&#x6001;&#x6D4B;&#x76F8;&#x4F3C;&#x5EA6;&#x4EE5;&#x786E;&#x5B9A;&#x63D2;&#x70B9;&#x6570;&#x91CF;</h3>
-<pre><code>$ dist.pl POSCAR_ini POSCAR_fin
-</code></pre><blockquote>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">cp</span> ini/CONTCAR POSCAR_ini
+$ <span class="token function">cp</span> fin/CONTCAR POSCAR_fin
+</code></pre>
+<h3 id="&#x5BF9;&#x521D;&#x672B;&#x6001;&#x6D4B;&#x76F8;&#x4F3C;&#x5EA6;&#x4EE5;&#x786E;&#x5B9A;&#x63D2;&#x70B9;&#x6570;&#x91CF;">&#x5BF9;&#x521D;&#x672B;&#x6001;&#x6D4B;&#x76F8;&#x4F3C;&#x5EA6;&#x4EE5;&#x786E;&#x5B9A;&#x63D2;&#x70B9;&#x6570;&#x91CF;</h3>
+<pre class="language-"><code class="lang-bash">$ dist.pl POSCAR_ini POSCAR_fin
+</code></pre>
+<blockquote>
 <p>&#x82E5;&#x8FD4;&#x56DE;&#x503C;&lt;5&#xFF0C;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x4E0B;&#x4E00;&#x6B65;</p>
 <p>&#x63D2;&#x70B9;&#x6570;&#x91CF;&#x901A;&#x5E38;&#x662F;<code>&#x76F8;&#x4F3C;&#x5EA6;/0.8</code>.</p>
 </blockquote>
 <h3 id="&#x63D2;&#x5165;&#x4E2D;&#x95F4;&#x56FE;&#x50CF;">&#x63D2;&#x5165;&#x4E2D;&#x95F4;&#x56FE;&#x50CF;</h3>
-<pre><code>$ nebmake.pl POSCAR_ini POSCAR_fin 3   # 3&#x4E3A;&#x63D2;&#x70B9;&#x6570;&#x91CF;&#xFF0C;&#x54B1;&#x8FD9;&#x513F;&#x628A;&#x5B83;&#x8BB0;&#x4E3A;N
+<pre class="language-"><code class="lang-bash">$ nebmake.pl POSCAR_ini POSCAR_fin <span class="token number">3</span>   <span class="token comment"># 3&#x4E3A;&#x63D2;&#x70B9;&#x6570;&#x91CF;&#xFF0C;&#x54B1;&#x8FD9;&#x513F;&#x628A;&#x5B83;&#x8BB0;&#x4E3A;N</span>
 filetype1: vasp5
 filetype2: vasp5
 
 OK, ALL SETUP HERE
-FOR LATER ANALYSIS, PUT OUTCARs IN FOLDERS 00 and 04 !!!
-</code></pre><blockquote>
+FOR LATER ANALYSIS, PUT OUTCARs IN FOLDERS 00 and 04 <span class="token operator">!</span><span class="token operator">!</span><span class="token operator">!</span>
+</code></pre>
+<blockquote>
 <p>&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;CPU&#x9700;&#x8981;&#x662F;&#x63D2;&#x70B9;&#x6570;&#x91CF;N&#x7684;&#x6574;&#x6570;&#x500D;</p>
 </blockquote>
 <h3 id="&#x4F7F;&#x7528;nebmovie&#x67E5;&#x770B;&#x751F;&#x6210;&#x7684;&#x8DEF;&#x7EBF;&#x662F;&#x5426;&#x5408;&#x7406;">&#x4F7F;&#x7528;nebmovie&#x67E5;&#x770B;&#x751F;&#x6210;&#x7684;&#x8DEF;&#x7EBF;&#x662F;&#x5426;&#x5408;&#x7406;</h3>
-<pre><code>$ nebmovie.pl
-</code></pre><p>&#x6267;&#x884C;&#x540E;&#x4F1A;&#x751F;&#x6210;<code>movie.xyz</code>&#x6587;&#x4EF6;&#xFF0C;<code>sz movie.xyz</code>&#x4E0B;&#x8F7D;&#xFF0C;&#x672C;&#x5730;&#x7EC8;&#x7AEF;&#x4E2D;&#x4F7F;&#x7528;<code>ase gui &#x6587;&#x4EF6;&#x8DEF;&#x5F84;</code>&#x67E5;&#x770B;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ nebmovie.pl
+</code></pre>
+<p>&#x6267;&#x884C;&#x540E;&#x4F1A;&#x751F;&#x6210;<code>movie.xyz</code>&#x6587;&#x4EF6;&#xFF0C;<code>sz movie.xyz</code>&#x4E0B;&#x8F7D;&#xFF0C;&#x672C;&#x5730;&#x7EC8;&#x7AEF;&#x4E2D;&#x4F7F;&#x7528;<code>ase gui &#x6587;&#x4EF6;&#x8DEF;&#x5F84;</code>&#x67E5;&#x770B;&#x3002;</p>
 <h3 id="&#x5206;&#x522B;&#x5C06;&#x521D;&#x672B;&#x6001;&#x7684;outcar&#x590D;&#x5236;&#x5230;00&#x548C;n1&#x6587;&#x4EF6;&#x5939;">&#x5206;&#x522B;&#x5C06;&#x521D;&#x672B;&#x6001;&#x7684;<code>OUTCAR</code>&#x590D;&#x5236;&#x5230;<code>00</code>&#x548C;<code>N+1</code>&#x6587;&#x4EF6;&#x5939;</h3>
 <p>&#x5982;&#x679C;&#x5408;&#x7406;&#xFF0C;&#x6839;&#x636E;<code>nebmake</code>&#x7684;&#x63D0;&#x793A;&#xFF0C;&#x5C06;<code>OUTCAR</code>&#x653E;&#x5165;&#x5404;&#x81EA;&#x6587;&#x4EF6;&#x5939;&#x4EE5;&#x4FBF;&#x4E8E;&#x540E;&#x7EED;&#x5206;&#x6790;&#x3002;</p>
-<pre><code>cp ini/OUTCAR 00/
-cp fin/OUTCAR 04/
-</code></pre><h2 id="neb&#x8BA1;&#x7B97;">NEB&#x8BA1;&#x7B97;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token function">cp</span> ini/OUTCAR 00/
+<span class="token function">cp</span> fin/OUTCAR 04/
+</code></pre>
+<h2 id="neb&#x8BA1;&#x7B97;">NEB&#x8BA1;&#x7B97;</h2>
 <h3 id="&#x51C6;&#x5907;neb&#x8BA1;&#x7B97;&#x7684;incar&#x3001;potcar&#x3001;kpoints">&#x51C6;&#x5907;NEB&#x8BA1;&#x7B97;&#x7684;<code>INCAR</code>&#x3001;<code>POTCAR</code>&#x3001;<code>KPOINTS</code></h3>
 <p><code>POTCAR</code>&#x548C;<code>KPOINTS</code>&#x4E0D;&#x7528;&#x6539;&#x76F4;&#x63A5;&#x590D;&#x5236;&#x8FC7;&#x6765;&#x5C31;&#x597D;&#xFF0C;</p>
 <p><code>INCAR</code>&#x8981;&#x589E;&#x52A0;&#x4E0D;&#x5C11;&#x4E1C;&#x897F;&#xFF1A;</p>
@@ -770,8 +779,9 @@ cp fin/OUTCAR 04/
 <p>&#x6CE8;&#x610F;CPU&#x6570;&#x91CF;&#x662F;&#x63D2;&#x70B9;&#x6570;&#x91CF;N&#x7684;&#x6574;&#x6570;&#x500D;</p>
 <h3 id="&#x68C0;&#x67E5;&#x7ED3;&#x679C;">&#x68C0;&#x67E5;&#x7ED3;&#x679C;</h3>
 <p><strong>&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6536;&#x655B;</strong></p>
-<pre><code>nebef.pl
-</code></pre><p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A; <code>&#x5E8F;&#x53F7;</code>&#x2014;<code>&#x6700;&#x5927;&#x539F;&#x5B50;&#x53D7;&#x529B;</code> &#x2014;<code>&#x80FD;&#x91CF;</code>&#x2014;<code>&#x76F8;&#x5BF9;&#x521D;&#x6001;&#x7684;&#x80FD;&#x91CF;</code>. </p>
+<pre class="language-"><code class="lang-bash">nebef.pl
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A; <code>&#x5E8F;&#x53F7;</code>&#x2014;<code>&#x6700;&#x5927;&#x539F;&#x5B50;&#x53D7;&#x529B;</code> &#x2014;<code>&#x80FD;&#x91CF;</code>&#x2014;<code>&#x76F8;&#x5BF9;&#x521D;&#x6001;&#x7684;&#x80FD;&#x91CF;</code>. </p>
 <p>&#x5F53;&#x6240;&#x6709;&#x63D2;&#x70B9;&#x7684;&#x6700;&#x5927;&#x539F;&#x5B50;&#x53D7;&#x529B;&#x90FD;&lt;|EDIFFG|&#x65F6;&#xFF0C;&#x8BA1;&#x7B97;&#x6536;&#x655B;&#x3002;</p>
 <p><strong>&#x865A;&#x9891;</strong></p>
 <p><strong><code>nebresult.pl</code>&#x603B;&#x7ED3;&#x7ED3;&#x679C;</strong></p>
@@ -848,7 +858,7 @@ cp fin/OUTCAR 04/
 	<script>
 		var gitbook = gitbook || [];
 		gitbook.push(function () {
-			gitbook.page.hasChanged({"page":{"title":"使用VASP NEB方法计算反应路径","level":"6.4","depth":1,"next":{"title":"高斯","level":"7.1","depth":1,"path":"06-Other App/README.md","ref":"06-Other App/README.md","articles":[]},"previous":{"title":"生成输入文件","level":"6.3","depth":1,"path":"05-VASP/gen-input-files.md","ref":"05-VASP/gen-input-files.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","-lunr","-search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","-back-to-top-button","-copy-code-button","-cuav-chapters","-heading-anchors","theme-cap"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"05-VASP/vasp-neb.md","mtime":"2020-11-17T11:32:17.197Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-17T15:06:55.981Z"},"basePath":"..","book":{"language":""}});
+			gitbook.page.hasChanged({"page":{"title":"使用VASP NEB方法计算反应路径","level":"6.4","depth":1,"next":{"title":"高斯","level":"7.1","depth":1,"path":"06-Other App/README.md","ref":"06-Other App/README.md","articles":[]},"previous":{"title":"生成输入文件","level":"6.3","depth":1,"path":"05-VASP/gen-input-files.md","ref":"05-VASP/gen-input-files.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","theme-cap","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"05-VASP/vasp-neb.md","mtime":"2020-11-18T13:24:39.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T13:27:10.411Z"},"basePath":"..","book":{"language":""}});
 		});
 	</script>
 </div>
@@ -856,14 +866,6 @@ cp fin/OUTCAR 04/
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
@@ -875,6 +877,14 @@ cp fin/OUTCAR 04/
     
         
         <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         

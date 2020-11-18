@@ -2,7 +2,7 @@
 
 PBS脚本实际上是一个linux shell脚本，在 PBS 脚本中可以用一种特殊形式的注释（#PBS）作为 PBS 指令以设定作业属性。下面是一个 PBS 脚本示例：
 
-```shell
+```bash
 #!/bin/sh
 #PBS -N Untitled
 #PBS -l nodes=1:ppn=4

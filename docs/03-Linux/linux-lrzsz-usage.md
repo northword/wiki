@@ -2,7 +2,7 @@
 
 ## 上传（rz）
 
-```shell
+```bash
 $ rz 
 ```
 
@@ -11,7 +11,7 @@ $ rz
 
 ## 下载（sz）
 
-```shell
+```bash
 #下载一个文件
 $ sz filename 
 

@@ -11,27 +11,28 @@
 	"plugins": [
 		"-highlight",
 		"-ace",
+		"prism",
+		"prism-themes",
+		"code",
+
 		"-lunr",
 		"-search",
+		"search-plus",
+
 		"-sharing",
 		"livereload",
 		"-expandable-chapters",
 		"-page-treeview",
 		"-anchor-navigation-ex",
 		"chapter-fold",
-		"code",
-		"search-plus",
 		"-splitter",
 		"-mermaid-gb3",
 		"popup",
 		"-auto-scroll-table",
 		"-theme-fexa",
 		"theme-comscore",
-		"-back-to-top-button",
-		"-copy-code-button",
-		"-cuav-chapters",
-		"-heading-anchors",
-		"theme-cap"
+		"theme-cap",
+		"-back-to-top-button"
 	],
 	"pluginsConfig": {
 		"theme-default": {

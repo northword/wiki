@@ -4,13 +4,13 @@
 
 用以下命令提交作业：
 
-```shell
+```bash
 $ qsub [options] <control script>
 ```
 
 命令执行后会返回一个作业ID。如：
 
-```
+```bash
 [zjb@op back]$ qsub -N thisIsName vasp.pbs 
 201848.inode202
 ```
@@ -23,13 +23,13 @@ $ qsub [options] <control script>
 
 ## 查看任务
 
-```shell
+```bash
 $ qstat [option] <jobid>
 ```
 
 如：
 
-```
+```bash
 [zjb@op back]$ qstat
 Job ID                    Name             User            Time Use S Queue
 ------------------------- ---------------- --------------- -------- - -----
@@ -68,25 +68,25 @@ Job ID                    Name             User            Time Use S Queue
 
 ## 取消任务
 
-```shell
+```bash
 $ qdel <jobid>
 ```
 
 ## 停止正在运行的任务
 
-```shell
+```bash
 $ qsig -s KILL <job ID>
 ```
 
 ## checkjob
 
-```
-checkjob <job id>
+```bash
+$ checkjob <job id>
 ```
 
 注意这儿的`job id`不包括`.inodexxx`，比如上述的`201848.inode202`作业，如果使用`checkjob`查询，命令应为`checkjob 201848`。
 
-```
+```bash
 [zjb@op testEnergy]$ checkjob 201848
 
 

@@ -1,6 +1,6 @@
 # 使用默认GCC编译gunplot
 
-```shell
+```bash
 cd /tmp
 wget https://jaist.dl.sourceforge.net/project/gnuplot/gnuplot/5.2.5/gnuplot-5.2.5.tar.gz
 tar xzvf gnuplot-5.2.5.tar.gz 

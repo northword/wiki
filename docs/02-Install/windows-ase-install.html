@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -26,6 +26,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
@@ -708,14 +712,19 @@
 <hr>
 <h2 id="1&#x5B89;&#x88C5;&#x5E76;&#x914D;&#x7F6E;python&#x73AF;&#x5883;">1.&#x5B89;&#x88C5;&#x5E76;&#x914D;&#x7F6E;Python&#x73AF;&#x5883;</h2>
 <h2 id="2-&#x5B89;&#x88C5;ase">2. &#x5B89;&#x88C5;ASE</h2>
-<pre><code>pip install --upgrade --user ase
-</code></pre><h2 id="3-&#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;">3. &#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
-<pre><code>&#x5C06;&#x4EE5;&#x4E0B;&#x6DFB;&#x52A0;&#x5230;PATH
-%AppData%\Roaming\Python\Python38\Scripts
-</code></pre><p>&#x8BE5;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x884C;&#x786E;&#x5B9A;</p>
+<pre class="language-"><code class="lang-bash">pip <span class="token function">install</span> --upgrade --user ase
+</code></pre>
+<h2 id="3-&#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;">3. &#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<pre class="language-"><code class="lang-bash">&#x5C06;&#x4EE5;&#x4E0B;&#x6DFB;&#x52A0;&#x5230;<span class="token environment constant">PATH</span>
+%AppData%<span class="token punctuation">\</span>Roaming<span class="token punctuation">\</span>Python<span class="token punctuation">\</span>Python38<span class="token punctuation">\</span>Scripts
+</code></pre>
+<p>&#x8BE5;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x884C;&#x786E;&#x5B9A;</p>
 <hr>
 <h2 id="&#x53C2;&#x8003;&#x6587;&#x732E;">&#x53C2;&#x8003;&#x6587;&#x732E;</h2>
-<h2 id="-httpswikifysikdtudkaseinstallhtmlinstallation-using-pip">- <a href="https://wiki.fysik.dtu.dk/ase/install.html#installation-using-pip" target="_blank">https://wiki.fysik.dtu.dk/ase/install.html#installation-using-pip</a></h2>
+<ul>
+<li><a href="https://wiki.fysik.dtu.dk/ase/install.html#installation-using-pip" target="_blank">https://wiki.fysik.dtu.dk/ase/install.html#installation-using-pip</a></li>
+</ul>
+<hr>
 <p>&#x5728;Windows 10 20H2 &#x7248;&#x672C;&#x4E0A;&#xFF0C;ASE&#x53EF;&#x80FD;&#x62A5;&#x9519;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x7531;&#x4E8E;numpy&#x4E0E;Windows 20H2&#x4E0D;&#x517C;&#x5BB9;&#x5BFC;&#x81F4;&#xFF0C;&#x53C2;&#x8003; <a href="../09-Others/numpy-in-win20H2.html">numpy-in-win20H2.md</a> &#x3002;</p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
@@ -788,7 +797,7 @@
 	<script>
 		var gitbook = gitbook || [];
 		gitbook.push(function () {
-			gitbook.page.hasChanged({"page":{"title":"ase","level":"3.1.2","depth":2,"next":{"title":"Linux里的相关软件","level":"3.2","depth":1,"path":"02-Install/linux-platform.md","ref":"02-Install/linux-platform.md","articles":[{"title":"VaspKit","level":"3.2.1","depth":2,"path":"05-VASP/install-vaspkit.md","ref":"05-VASP/install-vaspkit.md","articles":[]},{"title":"VTST Script","level":"3.2.2","depth":2,"path":"02-Install/linux-install-VTSTScript.md","ref":"02-Install/linux-install-VTSTScript.md","articles":[]},{"title":"gunplot","level":"3.2.3","depth":2,"path":"02-install/linux-gunplot-install.md","ref":"02-install/linux-gunplot-install.md","articles":[]},{"title":"为非ROOT用户安装Python3","level":"3.2.4","depth":2,"path":"02-install/linux-python-for-nonRoot.md","ref":"02-install/linux-python-for-nonRoot.md","articles":[]},{"title":"Irzsz","level":"3.2.5","depth":2,"path":"02-Install/linux-lrzsz-install.md","ref":"02-Install/linux-lrzsz-install.md","articles":[]},{"title":"linux为非ROOT用户安装应用程序","level":"3.2.6","depth":2,"path":"02-Install/linux-install-app-for-nonRoot.md","ref":"02-Install/linux-install-app-for-nonRoot.md","articles":[]}]},"previous":{"title":"Python","level":"3.1.1","depth":2,"path":"02-install/windows-python.md","ref":"02-install/windows-python.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","-lunr","-search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","-back-to-top-button","-copy-code-button","-cuav-chapters","-heading-anchors","theme-cap"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"02-Install/windows-ase-install.md","mtime":"2020-11-17T14:54:03.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-17T15:06:55.981Z"},"basePath":"..","book":{"language":""}});
+			gitbook.page.hasChanged({"page":{"title":"ase","level":"3.1.2","depth":2,"next":{"title":"Linux里的相关软件","level":"3.2","depth":1,"path":"02-Install/linux-platform.md","ref":"02-Install/linux-platform.md","articles":[{"title":"VaspKit","level":"3.2.1","depth":2,"path":"05-VASP/install-vaspkit.md","ref":"05-VASP/install-vaspkit.md","articles":[]},{"title":"VTST Script","level":"3.2.2","depth":2,"path":"02-Install/linux-install-VTSTScript.md","ref":"02-Install/linux-install-VTSTScript.md","articles":[]},{"title":"gunplot","level":"3.2.3","depth":2,"path":"02-install/linux-gunplot-install.md","ref":"02-install/linux-gunplot-install.md","articles":[]},{"title":"为非ROOT用户安装Python3","level":"3.2.4","depth":2,"path":"02-install/linux-python-for-nonRoot.md","ref":"02-install/linux-python-for-nonRoot.md","articles":[]},{"title":"Irzsz","level":"3.2.5","depth":2,"path":"02-Install/linux-lrzsz-install.md","ref":"02-Install/linux-lrzsz-install.md","articles":[]},{"title":"linux为非ROOT用户安装应用程序","level":"3.2.6","depth":2,"path":"02-Install/linux-install-app-for-nonRoot.md","ref":"02-Install/linux-install-app-for-nonRoot.md","articles":[]}]},"previous":{"title":"Python","level":"3.1.1","depth":2,"path":"02-install/windows-python.md","ref":"02-install/windows-python.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","theme-cap","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"02-Install/windows-ase-install.md","mtime":"2020-11-18T13:20:10.481Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T13:27:10.411Z"},"basePath":"..","book":{"language":""}});
 		});
 	</script>
 </div>
@@ -796,14 +805,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
@@ -815,6 +816,14 @@
     
         
         <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         

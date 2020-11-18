@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -26,6 +26,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
@@ -688,39 +692,39 @@
 								
 								<h1 id="pbs&#x811A;&#x672C;">PBS&#x811A;&#x672C;</h1>
 <p>PBS&#x811A;&#x672C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;linux shell&#x811A;&#x672C;&#xFF0C;&#x5728; PBS &#x811A;&#x672C;&#x4E2D;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x5F62;&#x5F0F;&#x7684;&#x6CE8;&#x91CA;&#xFF08;#PBS&#xFF09;&#x4F5C;&#x4E3A; PBS &#x6307;&#x4EE4;&#x4EE5;&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A; PBS &#x811A;&#x672C;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-shell">#!/bin/sh
-#PBS -N Untitled
-#PBS -l nodes=1:ppn=4
-#PBS -l walltime=00:10:00
-#PBS -j oe
-#PBS -o ./out.log
+<pre class="language-"><code class="lang-bash"><span class="token shebang important">#!/bin/sh</span>
+<span class="token comment">#PBS -N Untitled</span>
+<span class="token comment">#PBS -l nodes=1:ppn=4</span>
+<span class="token comment">#PBS -l walltime=00:10:00</span>
+<span class="token comment">#PBS -j oe</span>
+<span class="token comment">#PBS -o ./out.log</span>
 
-cd ${PBS_O_WORKDIR}
-source /public/software/profile.d/compiler_intel-composer_xe_2015.2.164.sh
-source /public/software/profile.d/mpi_intelmpi-5.0.2.044.sh
-echo &quot;=============================================&quot;
-echo &quot;Starting VASP run at&quot; `date` 
-echo &quot;=============================================&quot;
-echo &quot;# SYSTEM INFO&quot;
-echo &apos;The hostname is &apos; `hostname`  
-grep &apos;Linux&apos; /etc/issue 
-grep &apos;model name&apos; /proc/cpuinfo |cut -d: -f2 |uniq -c
-grep &apos;cpu M&apos; /proc/cpuinfo 
-grep &apos;MemTotal&apos; /proc/meminfo
-echo &quot;=============================================&quot;
-echo &quot;# PBS INFO&quot;
-echo &quot;The PBS_O_WORKDIR is&quot; $PBS_O_WORKDIR
-echo &quot;The PBS_JOBID is&quot; $PBS_JOBID
-echo &quot;The PBS_O_QUEUE is&quot; $PBS_O_QUEUE
-echo &quot;The PBS_O_HOST is&quot; $PBS_O_HOST
-NP=`cat $PBS_NODEFILE | wc -l`
-echo &quot;The num of PBS_NODEFILE is&quot; $NP
-echo &quot;The PBS_NODEFILE IS:&quot; 
-cat $PBS_NODEFILE
-mpirun -np $NP -machinefile $PBS_NODEFILE /public/software//apps/vasp/5.4.1/intelmpi/vasp_std &gt;&amp; stdout
-echo &quot;=============================================&quot;
-echo &quot;End task at &quot; `date`  
-echo &quot;=============================================&quot;
+<span class="token builtin class-name">cd</span> <span class="token variable">${PBS_O_WORKDIR}</span>
+<span class="token builtin class-name">source</span> /public/software/profile.d/compiler_intel-composer_xe_2015.2.164.sh
+<span class="token builtin class-name">source</span> /public/software/profile.d/mpi_intelmpi-5.0.2.044.sh
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;=============================================&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Starting VASP run at&quot;</span> <span class="token variable"><span class="token variable">`</span><span class="token function">date</span><span class="token variable">`</span></span> 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;=============================================&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;# SYSTEM INFO&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&apos;The hostname is &apos;</span> <span class="token variable"><span class="token variable">`</span><span class="token function">hostname</span><span class="token variable">`</span></span>  
+<span class="token function">grep</span> <span class="token string">&apos;Linux&apos;</span> /etc/issue 
+<span class="token function">grep</span> <span class="token string">&apos;model name&apos;</span> /proc/cpuinfo <span class="token operator">|</span><span class="token function">cut</span> -d: -f2 <span class="token operator">|</span><span class="token function">uniq</span> -c
+<span class="token function">grep</span> <span class="token string">&apos;cpu M&apos;</span> /proc/cpuinfo 
+<span class="token function">grep</span> <span class="token string">&apos;MemTotal&apos;</span> /proc/meminfo
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;=============================================&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;# PBS INFO&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;The PBS_O_WORKDIR is&quot;</span> <span class="token variable">$PBS_O_WORKDIR</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;The PBS_JOBID is&quot;</span> <span class="token variable">$PBS_JOBID</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;The PBS_O_QUEUE is&quot;</span> <span class="token variable">$PBS_O_QUEUE</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;The PBS_O_HOST is&quot;</span> <span class="token variable">$PBS_O_HOST</span>
+<span class="token assign-left variable">NP</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">cat</span> $PBS_NODEFILE <span class="token operator">|</span> <span class="token function">wc</span> -l<span class="token variable">`</span></span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;The num of PBS_NODEFILE is&quot;</span> <span class="token variable">$NP</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;The PBS_NODEFILE IS:&quot;</span> 
+<span class="token function">cat</span> <span class="token variable">$PBS_NODEFILE</span>
+mpirun -np <span class="token variable">$NP</span> -machinefile <span class="token variable">$PBS_NODEFILE</span> /public/software//apps/vasp/5.4.1/intelmpi/vasp_std <span class="token operator">&gt;&amp;</span> stdout
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;=============================================&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;End task at &quot;</span> <span class="token variable"><span class="token variable">`</span><span class="token function">date</span><span class="token variable">`</span></span>  
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;=============================================&quot;</span>
 </code></pre>
 <h2 id="pbs&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;">PBS&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;</h2>
 <table>
@@ -927,7 +931,7 @@ echo &quot;=============================================&quot;
 	<script>
 		var gitbook = gitbook || [];
 		gitbook.push(function () {
-			gitbook.page.hasChanged({"page":{"title":"PBS 脚本","level":"4.2.2","depth":2,"next":{"title":"关于Material Studio","level":"5.1","depth":1,"path":"04-Materials-Studio/About.md","ref":"04-Materials-Studio/About.md","articles":[]},"previous":{"title":"管理作业","level":"4.2.1","depth":2,"path":"03-Linux/PBS-commend.md","ref":"03-Linux/PBS-commend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","-lunr","-search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","-back-to-top-button","-copy-code-button","-cuav-chapters","-heading-anchors","theme-cap"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"03-Linux/PBS-script.md","mtime":"2020-11-14T06:54:08.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-17T15:06:55.981Z"},"basePath":"..","book":{"language":""}});
+			gitbook.page.hasChanged({"page":{"title":"PBS 脚本","level":"4.2.2","depth":2,"next":{"title":"关于Material Studio","level":"5.1","depth":1,"path":"04-Materials-Studio/About.md","ref":"04-Materials-Studio/About.md","articles":[]},"previous":{"title":"管理作业","level":"4.2.1","depth":2,"path":"03-Linux/PBS-commend.md","ref":"03-Linux/PBS-commend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","theme-cap","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"03-Linux/PBS-script.md","mtime":"2020-11-18T13:22:35.479Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T13:27:10.411Z"},"basePath":"..","book":{"language":""}});
 		});
 	</script>
 </div>
@@ -935,14 +939,6 @@ echo &quot;=============================================&quot;
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
@@ -954,6 +950,14 @@ echo &quot;=============================================&quot;
     
         
         <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         

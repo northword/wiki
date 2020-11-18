@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -26,6 +26,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
@@ -689,25 +693,27 @@
 								<h1 id="&#x4F7F;&#x7528;pbs&#x7BA1;&#x7406;&#x4F5C;&#x4E1A;&#x7684;&#x51E0;&#x79CD;&#x547D;&#x4EE4;">&#x4F7F;&#x7528;PBS&#x7BA1;&#x7406;&#x4F5C;&#x4E1A;&#x7684;&#x51E0;&#x79CD;&#x547D;&#x4EE4;</h1>
 <h2 id="&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;">&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;</h2>
 <p>&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#xFF1A;</p>
-<pre><code class="lang-shell">$ qsub [options] &lt;control script&gt;
+<pre class="language-"><code class="lang-bash">$ qsub <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>control script<span class="token operator">&gt;</span>
 </code></pre>
 <p>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x540E;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4F5C;&#x4E1A;ID&#x3002;&#x5982;&#xFF1A;</p>
-<pre><code>[zjb@op back]$ qsub -N thisIsName vasp.pbs 
-201848.inode202
-</code></pre><p>&#x4F5C;&#x4E1A;&#x63D0;&#x4EA4;&#x540E;&#x4E00;&#x822C;&#x4F1A;&#x5148;&#x6392;&#x961F;&#x7B49;&#x5F85;&#xFF0C;PBS &#x7CFB;&#x7EDF;&#x4F1A;&#x6839;&#x636E;&#x4F5C;&#x4E1A;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x548C;&#x53EF;&#x7528;&#x7684;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x6765;&#x8C03;&#x5EA6;&#x548C;&#x6267;&#x884C;&#x4F5C;&#x4E1A;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>zjb@op back<span class="token punctuation">]</span>$ qsub -N thisIsName vasp.pbs 
+<span class="token number">201848</span>.inode202
+</code></pre>
+<p>&#x4F5C;&#x4E1A;&#x63D0;&#x4EA4;&#x540E;&#x4E00;&#x822C;&#x4F1A;&#x5148;&#x6392;&#x961F;&#x7B49;&#x5F85;&#xFF0C;PBS &#x7CFB;&#x7EDF;&#x4F1A;&#x6839;&#x636E;&#x4F5C;&#x4E1A;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x548C;&#x53EF;&#x7528;&#x7684;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x6765;&#x8C03;&#x5EA6;&#x548C;&#x6267;&#x884C;&#x4F5C;&#x4E1A;&#x3002;</p>
 <p>&#x5176;&#x4E2D;<code>-N thisIsName</code>&#x4E3A;&#x9009;&#x9879;&#xFF0C;&#x5B83;&#x6307;&#x5B9A;&#x4E86;&#x4F5C;&#x4E1A;&#x7684;&#x540D;&#x79F0;&#x3002;<code>vasp.pbs</code>&#x4E3A;PBS&#x811A;&#x672C;&#xFF0C;&#x5B83;&#x8BBE;&#x5B9A;&#x4E86;&#x4F5C;&#x4E1A;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x4F5C;&#x4E1A;&#x7684;&#x5185;&#x5BB9;&#x3002;<code>options</code>&#x4E0E;<code>control script</code>&#x8BE6;&#x89C1; <a href="PBS-script.html"><code>## PBS&#x811A;&#x672C;</code></a>&#x3002;</p>
 <blockquote>
 <p>&#x6587;&#x6863;&#x4E2D;&#xFF0C;&#x547D;&#x4EE4;&#x5E26;&#x6709;<code>$</code>&#x7B26;&#x53F7;&#x7684;&#xFF0C;&#x8868;&#x793A;&#x662F;&#x5728;shell&#x7EC8;&#x7AEF;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5B9E;&#x9645;&#x8F93;&#x5165;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x5E26;&#x6709;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x3002;</p>
 </blockquote>
 <h2 id="&#x67E5;&#x770B;&#x4EFB;&#x52A1;">&#x67E5;&#x770B;&#x4EFB;&#x52A1;</h2>
-<pre><code class="lang-shell">$ qstat [option] &lt;jobid&gt;
+<pre class="language-"><code class="lang-bash">$ qstat <span class="token punctuation">[</span>option<span class="token punctuation">]</span> <span class="token operator">&lt;</span>jobid<span class="token operator">&gt;</span>
 </code></pre>
 <p>&#x5982;&#xFF1A;</p>
-<pre><code>[zjb@op back]$ qstat
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>zjb@op back<span class="token punctuation">]</span>$ qstat
 Job ID                    Name             User            Time Use S Queue
 ------------------------- ---------------- --------------- -------- - -----
-201848.inode202            thisIsName       zjb             00:00:00 C energy
-</code></pre><p>&#x5176;&#x4E2D;&#xFF0C;<code>S</code>&#x8868;&#x793A;&#x4EFB;&#x52A1;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#x72B6;&#x6001;&#xFF1A;</p>
+<span class="token number">201848</span>.inode202            thisIsName       zjb             00:00:00 C energy
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF0C;<code>S</code>&#x8868;&#x793A;&#x4EFB;&#x52A1;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#x72B6;&#x6001;&#xFF1A;</p>
 <table>
 <thead>
 <tr>
@@ -810,44 +816,46 @@ Job ID                    Name             User            Time Use S Queue
 </tbody>
 </table>
 <h2 id="&#x53D6;&#x6D88;&#x4EFB;&#x52A1;">&#x53D6;&#x6D88;&#x4EFB;&#x52A1;</h2>
-<pre><code class="lang-shell">$ qdel &lt;jobid&gt;
+<pre class="language-"><code class="lang-bash">$ qdel <span class="token operator">&lt;</span>jobid<span class="token operator">&gt;</span>
 </code></pre>
 <h2 id="&#x505C;&#x6B62;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;">&#x505C;&#x6B62;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;</h2>
-<pre><code class="lang-shell">$ qsig -s KILL &lt;job ID&gt;
+<pre class="language-"><code class="lang-bash">$ qsig -s KILL <span class="token operator">&lt;</span>job ID<span class="token operator">&gt;</span>
 </code></pre>
 <h2 id="checkjob">checkjob</h2>
-<pre><code>checkjob &lt;job id&gt;
-</code></pre><p>&#x6CE8;&#x610F;&#x8FD9;&#x513F;&#x7684;<code>job id</code>&#x4E0D;&#x5305;&#x62EC;<code>.inodexxx</code>&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x8FF0;&#x7684;<code>201848.inode202</code>&#x4F5C;&#x4E1A;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;<code>checkjob</code>&#x67E5;&#x8BE2;&#xFF0C;&#x547D;&#x4EE4;&#x5E94;&#x4E3A;<code>checkjob 201848</code>&#x3002;</p>
-<pre><code>[zjb@op testEnergy]$ checkjob 201848
+<pre class="language-"><code class="lang-bash">$ checkjob <span class="token operator">&lt;</span>job id<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x8FD9;&#x513F;&#x7684;<code>job id</code>&#x4E0D;&#x5305;&#x62EC;<code>.inodexxx</code>&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x8FF0;&#x7684;<code>201848.inode202</code>&#x4F5C;&#x4E1A;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;<code>checkjob</code>&#x67E5;&#x8BE2;&#xFF0C;&#x547D;&#x4EE4;&#x5E94;&#x4E3A;<code>checkjob 201848</code>&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>zjb@op testEnergy<span class="token punctuation">]</span>$ checkjob <span class="token number">201848</span>
 
 
-checking job 201848
+checking job <span class="token number">201848</span>
 
 State: Running
 Creds:  user:zjb  group:energy  account:SugonClus  class:energy  qos:preemptee
 WallTime: 00:02:03 of 00:30:00
-SubmitTime: Sat Oct 31 19:45:48
-  (Time Queued  Total: 00:00:01  Eligible: 00:00:01)
+SubmitTime: Sat Oct <span class="token number">31</span> <span class="token number">19</span>:45:48
+  <span class="token punctuation">(</span>Time Queued  Total: 00:00:01  Eligible: 00:00:01<span class="token punctuation">)</span>
 
-StartTime: Sat Oct 31 19:45:49
-Total Tasks: 4
+StartTime: Sat Oct <span class="token number">31</span> <span class="token number">19</span>:45:49
+Total Tasks: <span class="token number">4</span>
 
-Req[0]  TaskCount: 4  Partition: DEFAULT
-Network: [NONE]  Memory &gt;= 0  Disk &gt;= 0  Swap &gt;= 0
-Opsys: [NONE]  Arch: [NONE]  Features: [NONE]
+Req<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  TaskCount: <span class="token number">4</span>  Partition: DEFAULT
+Network: <span class="token punctuation">[</span>NONE<span class="token punctuation">]</span>  Memory <span class="token operator">&gt;</span><span class="token operator">=</span> <span class="token number">0</span>  Disk <span class="token operator">&gt;</span><span class="token operator">=</span> <span class="token number">0</span>  Swap <span class="token operator">&gt;</span><span class="token operator">=</span> <span class="token number">0</span>
+Opsys: <span class="token punctuation">[</span>NONE<span class="token punctuation">]</span>  Arch: <span class="token punctuation">[</span>NONE<span class="token punctuation">]</span>  Features: <span class="token punctuation">[</span>NONE<span class="token punctuation">]</span>
 Allocated Nodes:
-[inode53:4]
+<span class="token punctuation">[</span>inode53:4<span class="token punctuation">]</span>
 
 
-IWD: [NONE]  Executable:  [NONE]
-Bypass: 0  StartCount: 1
-PartitionMask: [ALL]
+IWD: <span class="token punctuation">[</span>NONE<span class="token punctuation">]</span>  Executable:  <span class="token punctuation">[</span>NONE<span class="token punctuation">]</span>
+Bypass: <span class="token number">0</span>  StartCount: <span class="token number">1</span>
+PartitionMask: <span class="token punctuation">[</span>ALL<span class="token punctuation">]</span>
 Flags:       BACKFILL RESTARTABLE PREEMPTEE
 Attr:        PREEMPTEE
 
-Reservation &apos;201868&apos; (-00:02:04 -&gt; 00:27:56  Duration: 00:30:00)
-PE:  4.00  StartPriority:  6000
-</code></pre><p>&#x5982;&#x679C;&#x4EFB;&#x52A1;&#x65E0;&#x6CD5;&#x8FD0;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x67E5;&#x8BE2;&#x539F;&#x56E0;&#x3002;</p>
+Reservation <span class="token string">&apos;201868&apos;</span> <span class="token punctuation">(</span>-00:02:04 -<span class="token operator">&gt;</span> 00:27:56  Duration: 00:30:00<span class="token punctuation">)</span>
+PE:  <span class="token number">4.00</span>  StartPriority:  <span class="token number">6000</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4EFB;&#x52A1;&#x65E0;&#x6CD5;&#x8FD0;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x67E5;&#x8BE2;&#x539F;&#x56E0;&#x3002;</p>
 <h2 id="pbsnodes">pbsnodes</h2>
 <p>&#x67E5;&#x770B;&#x8282;&#x70B9;&#x7684;&#x7A7A;&#x95F2;&#x60C5;&#x51B5;&#x3002;&#x6709;<code>free</code>&#x3001;<code>busy</code>&#x3001;<code>down</code>&#x7B49;&#x72B6;&#x6001;&#x3002;</p>
 
@@ -921,7 +929,7 @@ PE:  4.00  StartPriority:  6000
 	<script>
 		var gitbook = gitbook || [];
 		gitbook.push(function () {
-			gitbook.page.hasChanged({"page":{"title":"管理作业","level":"4.2.1","depth":2,"next":{"title":"PBS 脚本","level":"4.2.2","depth":2,"path":"03-Linux/PBS-script.md","ref":"03-Linux/PBS-script.md","articles":[]},"previous":{"title":"PBS 作业管理系统","level":"4.2","depth":1,"path":"03-Linux/PBS-README.md","ref":"03-Linux/PBS-README.md","articles":[{"title":"管理作业","level":"4.2.1","depth":2,"path":"03-Linux/PBS-commend.md","ref":"03-Linux/PBS-commend.md","articles":[]},{"title":"PBS 脚本","level":"4.2.2","depth":2,"path":"03-Linux/PBS-script.md","ref":"03-Linux/PBS-script.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","-lunr","-search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","-back-to-top-button","-copy-code-button","-cuav-chapters","-heading-anchors","theme-cap"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"03-Linux/PBS-commend.md","mtime":"2020-10-31T13:46:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-17T15:06:55.981Z"},"basePath":"..","book":{"language":""}});
+			gitbook.page.hasChanged({"page":{"title":"管理作业","level":"4.2.1","depth":2,"next":{"title":"PBS 脚本","level":"4.2.2","depth":2,"path":"03-Linux/PBS-script.md","ref":"03-Linux/PBS-script.md","articles":[]},"previous":{"title":"PBS 作业管理系统","level":"4.2","depth":1,"path":"03-Linux/PBS-README.md","ref":"03-Linux/PBS-README.md","articles":[{"title":"管理作业","level":"4.2.1","depth":2,"path":"03-Linux/PBS-commend.md","ref":"03-Linux/PBS-commend.md","articles":[]},{"title":"PBS 脚本","level":"4.2.2","depth":2,"path":"03-Linux/PBS-script.md","ref":"03-Linux/PBS-script.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","theme-cap","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"03-Linux/PBS-commend.md","mtime":"2020-11-18T13:22:27.445Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T13:27:10.411Z"},"basePath":"..","book":{"language":""}});
 		});
 	</script>
 </div>
@@ -929,14 +937,6 @@ PE:  4.00  StartPriority:  6000
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
@@ -948,6 +948,14 @@ PE:  4.00  StartPriority:  6000
     
         
         <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         

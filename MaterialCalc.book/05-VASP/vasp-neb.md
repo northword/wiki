@@ -66,14 +66,14 @@ POTIM = 0.3
 
 结构优化后，分别将初末态的`CONTCAR`复制出来作为新的初态和末态
 
-```
+```bash
 $ cp ini/CONTCAR POSCAR_ini
 $ cp fin/CONTCAR POSCAR_fin
 ```
 
 ### 对初末态测相似度以确定插点数量
 
-```
+```bash
 $ dist.pl POSCAR_ini POSCAR_fin
 ```
 
@@ -83,7 +83,7 @@ $ dist.pl POSCAR_ini POSCAR_fin
 
 ### 插入中间图像
 
-```
+```bash
 $ nebmake.pl POSCAR_ini POSCAR_fin 3   # 3为插点数量，咱这儿把它记为N
 filetype1: vasp5
 filetype2: vasp5
@@ -96,7 +96,7 @@ FOR LATER ANALYSIS, PUT OUTCARs IN FOLDERS 00 and 04 !!!
 
 ### 使用nebmovie查看生成的路线是否合理
 
-```
+```bash
 $ nebmovie.pl
 ```
 
@@ -106,7 +106,7 @@ $ nebmovie.pl
 
 如果合理，根据`nebmake`的提示，将`OUTCAR`放入各自文件夹以便于后续分析。
 
-```
+```bash
 cp ini/OUTCAR 00/
 cp fin/OUTCAR 04/        
 ```
@@ -129,7 +129,7 @@ cp fin/OUTCAR 04/
 
 **检查是否收敛**
 
-```
+```bash
 nebef.pl
 ```
 

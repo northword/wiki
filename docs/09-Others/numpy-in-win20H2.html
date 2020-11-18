@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -26,6 +26,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
@@ -685,48 +689,51 @@
 							<section class="normal markdown-section">
 								
 								<h1 id="&#x5728;windows-20h2&#x4E0A;&#x8FD0;&#x884C;ase&#x62A5;&#x9519;">&#x5728;Windows 20H2&#x4E0A;&#x8FD0;&#x884C;ASE&#x62A5;&#x9519;</h1>
-<pre><code> ase --version
- ** On entry to DGEBAL parameter number  3 had an illegal value
- ** On entry to DGEHRD  parameter number  2 had an illegal value
- ** On entry to DORGHR DORGQR parameter number  2 had an illegal value
- ** On entry to DHSEQR parameter number  4 had an illegal value
-Traceback (most recent call last):
-  File &quot;c:\users\northword\appdata\local\programs\python\python39\lib\runpy.py&quot;, line 197, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File &quot;c:\users\northword\appdata\local\programs\python\python39\lib\runpy.py&quot;, line 87, in _run_code
-    exec(code, run_globals)
-  File &quot;C:\Users\Northword\AppData\Roaming\Python\Python39\Scripts\ase.exe\__main__.py&quot;, line 4, in &lt;module&gt;
-  File &quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\ase\__init__.py&quot;, line 8, in &lt;module&gt;
+<pre class="language-"><code class="lang-powershell"> ase <span class="token operator">--</span>version
+ <span class="token operator">*</span><span class="token operator">*</span> On entry to DGEBAL parameter number  3 had an illegal value
+ <span class="token operator">*</span><span class="token operator">*</span> On entry to DGEHRD  parameter number  2 had an illegal value
+ <span class="token operator">*</span><span class="token operator">*</span> On entry to DORGHR DORGQR parameter number  2 had an illegal value
+ <span class="token operator">*</span><span class="token operator">*</span> On entry to DHSEQR parameter number  4 had an illegal value
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">&quot;c:\users\northword\appdata\local\programs\python\python39\lib\runpy.py&quot;</span><span class="token punctuation">,</span> line 197<span class="token punctuation">,</span> in _run_module_as_main
+    <span class="token keyword">return</span> _run_code<span class="token punctuation">(</span>code<span class="token punctuation">,</span> main_globals<span class="token punctuation">,</span> None<span class="token punctuation">,</span>
+  File <span class="token string">&quot;c:\users\northword\appdata\local\programs\python\python39\lib\runpy.py&quot;</span><span class="token punctuation">,</span> line 87<span class="token punctuation">,</span> in _run_code
+    exec<span class="token punctuation">(</span>code<span class="token punctuation">,</span> run_globals<span class="token punctuation">)</span>
+  File <span class="token string">&quot;C:\Users\Northword\AppData\Roaming\Python\Python39\Scripts\ase.exe\__main__.py&quot;</span><span class="token punctuation">,</span> line 4<span class="token punctuation">,</span> in &lt;module&gt;
+  File <span class="token string">&quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\ase\__init__.py&quot;</span><span class="token punctuation">,</span> line 8<span class="token punctuation">,</span> in &lt;module&gt;
     import numpy as np
-  File &quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\numpy\__init__.py&quot;, line 305, in &lt;module&gt;
-    _win_os_check()
-  File &quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\numpy\__init__.py&quot;, line 302, in _win_os_check
-    raise RuntimeError(msg.format(__file__)) from None
-RuntimeError: The current Numpy installation (&apos;C:\\Users\\Northword\\AppData\\Roaming\\Python\\Python39\\site-packages\\numpy\\__init__.py&apos;) fails to pass a sanity check due to a bug in the windows runtime. See this issue for more information: https://tinyurl.com/y3dm3h86
-</code></pre><p>&#x641C;&#x7D22;&#x5230;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;<code>numpy</code>&#x4E0E;<code>windows 20H2</code>&#x7684;&#x5173;&#x7CFB;&#xFF08;&#x53CD;&#x6B63;&#x603B;&#x662F;Windows &#x7684;&#x9505;&#xFF09;&#x3002;</p>
+  File <span class="token string">&quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\numpy\__init__.py&quot;</span><span class="token punctuation">,</span> line 305<span class="token punctuation">,</span> in &lt;module&gt;
+    _win_os_check<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  File <span class="token string">&quot;C:\Users\Northword\AppData\Roaming\Python\Python39\site-packages\numpy\__init__.py&quot;</span><span class="token punctuation">,</span> line 302<span class="token punctuation">,</span> in _win_os_check
+    raise RuntimeError<span class="token punctuation">(</span>msg<span class="token punctuation">.</span>format<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">from</span> None
+RuntimeError: The current Numpy installation <span class="token punctuation">(</span><span class="token string">&apos;C:\\Users\\Northword\\AppData\\Roaming\\Python\\Python39\\site-packages\\numpy\\__init__.py&apos;</span><span class="token punctuation">)</span> fails to pass a sanity check due to a bug in the windows runtime<span class="token punctuation">.</span> See this issue <span class="token keyword">for</span> more information: https:<span class="token operator">/</span><span class="token operator">/</span>tinyurl<span class="token punctuation">.</span>com<span class="token operator">/</span>y3dm3h86
+</code></pre>
+<p>&#x641C;&#x7D22;&#x5230;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;<code>numpy</code>&#x4E0E;<code>windows 20H2</code>&#x7684;&#x5173;&#x7CFB;&#xFF08;&#x53CD;&#x6B63;&#x603B;&#x662F;Windows &#x7684;&#x9505;&#xFF09;&#x3002;</p>
 <p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x5C06;<code>numpy</code>&#x964D;&#x7EA7;&#x5373;&#x53EF;&#x3002;</p>
-<pre><code>pip install numpy==1.19.3
-</code></pre><p>&#x5F15;&#x7528;&#x5730;&#x5740;&#xFF1A;<a href="https://blog.csdn.net/yangtzech/article/details/109494653" target="_blank">https://blog.csdn.net/yangtzech/article/details/109494653</a> &#x3001;<a href="https://tinyurl.com/y3dm3h86" target="_blank">https://tinyurl.com/y3dm3h86</a></p>
+<pre class="language-"><code class="lang-powershell">pip install numpy==1<span class="token punctuation">.</span>19<span class="token punctuation">.</span>3
+</code></pre>
+<p>&#x5F15;&#x7528;&#x5730;&#x5740;&#xFF1A;<a href="https://blog.csdn.net/yangtzech/article/details/109494653" target="_blank">https://blog.csdn.net/yangtzech/article/details/109494653</a> &#x3001;<a href="https://tinyurl.com/y3dm3h86" target="_blank">https://tinyurl.com/y3dm3h86</a></p>
 <p>&#x4E0B;&#x4E3A;&#x955C;&#x50CF;&#x3002;</p>
 <hr>
 <h1 id="numpy-sanity-check-in-windows-200420h2">numpy sanity check in Windows 2004/20H2</h1>
 <p>&#x5B9E;&#x9A8C;&#x5BA4;&#x7684;&#x65B0;&#x7535;&#x8111;&#x5230;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x91CD;&#x65B0;&#x914D;&#x7F6E;python&#x73AF;&#x5883;&#xFF0C;&#x5B89;&#x88C5;&#x5B8C;Python&#x540E;&#x5C31;&#x5F00;&#x59CB;&#x8DD1;&#x7A0B;&#x5E8F;&#x4E86;&#x3002;&#x5176;&#x4E2D;&#x9700;&#x8981;&#x7528;&#x5230;numpy&#xFF0C;&#x5B89;&#x88C5;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;1.19.4&#xFF0C;&#x7136;&#x540E;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#x3002;&#x62A5;&#x9519;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code> ** On entry to DGEBAL parameter number  3 had an illegal value
- ** On entry to DGEHRD  parameter number  2 had an illegal value
- ** On entry to DORGHR DORGQR parameter number  2 had an illegal value
- ** On entry to DHSEQR parameter number  4 had an illegal value
-  File &quot;c:\Users\Public\OneDrive\&#x684C;&#x9762;\LateralControl\path-following-control\examples\pure_pursuit_control.py&quot;, line 5, in &lt;module&gt;
-    from model import particle
-  File &quot;c:/Users/Public/OneDrive/&#x684C;&#x9762;/LateralControl/path-following-control/examples/..\model\particle.py&quot;, line 1, in &lt;module&gt;
+<pre class="language-"><code class="lang-powershell"> <span class="token operator">*</span><span class="token operator">*</span> On entry to DGEBAL parameter number  3 had an illegal value
+ <span class="token operator">*</span><span class="token operator">*</span> On entry to DGEHRD  parameter number  2 had an illegal value
+ <span class="token operator">*</span><span class="token operator">*</span> On entry to DORGHR DORGQR parameter number  2 had an illegal value
+ <span class="token operator">*</span><span class="token operator">*</span> On entry to DHSEQR parameter number  4 had an illegal value
+  File <span class="token string">&quot;c:\Users\Public\OneDrive\&#x684C;&#x9762;\LateralControl\path-following-control\examples\pure_pursuit_control.py&quot;</span><span class="token punctuation">,</span> line 5<span class="token punctuation">,</span> in &lt;module&gt;
+    <span class="token keyword">from</span> model import particle
+  File <span class="token string">&quot;c:/Users/Public/OneDrive/&#x684C;&#x9762;/LateralControl/path-following-control/examples/..\model\particle.py&quot;</span><span class="token punctuation">,</span> line 1<span class="token punctuation">,</span> in &lt;module&gt;
     import numpy as np
-  File &quot;D:\ProgramData\Python\Python39\lib\site-packages\numpy\__init__.py&quot;, line 305, in &lt;module&gt;
-    _win_os_check()
-    raise RuntimeError(msg.format(__file__)) from None
-RuntimeError: The current Numpy installation (&apos;D:\\ProgramData\\Python\\Python39\\lib\\site-packages\\numpy\\__init__.py&apos;) fails to pass a sanity check due to a bug in the windows runtime. See this issue for more information: https://tinyurl.com/y3dm3h86
-</code></pre><p>Python&#x7248;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:34:40) [MSC v.1927 64 bit (AMD64)] on win32
+  File <span class="token string">&quot;D:\ProgramData\Python\Python39\lib\site-packages\numpy\__init__.py&quot;</span><span class="token punctuation">,</span> line 305<span class="token punctuation">,</span> in &lt;module&gt;
+    _win_os_check<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    raise RuntimeError<span class="token punctuation">(</span>msg<span class="token punctuation">.</span>format<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">from</span> None
+RuntimeError: The current Numpy installation <span class="token punctuation">(</span><span class="token string">&apos;D:\\ProgramData\\Python\\Python39\\lib\\site-packages\\numpy\\__init__.py&apos;</span><span class="token punctuation">)</span> fails to pass a sanity check due to a bug in the windows runtime<span class="token punctuation">.</span> See this issue <span class="token keyword">for</span> more information: https:<span class="token operator">/</span><span class="token operator">/</span>tinyurl<span class="token punctuation">.</span>com<span class="token operator">/</span>y3dm3h86
+</code></pre>
+<p>Python&#x7248;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:34:40) [MSC v.1927 64 bit (AMD64)] on win32
 </code></pre><p>Windows&#x7248;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>&#x7248;&#x672C;         Windows 10 &#x5BB6;&#x5EAD;&#x4E2D;&#x6587;&#x7248;
+<pre class="language-"><code>&#x7248;&#x672C;         Windows 10 &#x5BB6;&#x5EAD;&#x4E2D;&#x6587;&#x7248;
 &#x7248;&#x672C;&#x53F7;        20H2
 &#x5B89;&#x88C5;&#x65E5;&#x671F;      2020/11/2
 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7248;&#x672C;   19042.610
@@ -793,7 +800,7 @@ RuntimeError: The current Numpy installation (&apos;D:\\ProgramData\\Python\\Pyt
 	<script>
 		var gitbook = gitbook || [];
 		gitbook.push(function () {
-			gitbook.page.hasChanged({"page":{"title":"Windows 20H2下ASE报错","level":"8.2","depth":1,"previous":{"title":"MS在win2004一按键盘就假死","level":"8.1","depth":1,"path":"09-Others/MS-NoResponse-win2004.md","ref":"09-Others/MS-NoResponse-win2004.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","-lunr","-search","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","code","search-plus","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","-back-to-top-button","-copy-code-button","-cuav-chapters","-heading-anchors","theme-cap"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"09-Others/numpy-in-win20H2.md","mtime":"2020-11-14T03:17:11.011Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-17T15:06:55.981Z"},"basePath":"..","book":{"language":""}});
+			gitbook.page.hasChanged({"page":{"title":"Windows 20H2下ASE报错","level":"8.2","depth":1,"previous":{"title":"MS在win2004一按键盘就假死","level":"8.1","depth":1,"path":"09-Others/MS-NoResponse-win2004.md","ref":"09-Others/MS-NoResponse-win2004.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","theme-cap","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"09-Others/numpy-in-win20H2.md","mtime":"2020-11-18T13:25:29.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T13:27:10.411Z"},"basePath":"..","book":{"language":""}});
 		});
 	</script>
 </div>
@@ -801,14 +808,6 @@ RuntimeError: The current Numpy installation (&apos;D:\\ProgramData\\Python\\Pyt
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
@@ -820,6 +819,14 @@ RuntimeError: The current Numpy installation (&apos;D:\\ProgramData\\Python\\Pyt
     
         
         <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         
