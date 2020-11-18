@@ -29,6 +29,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
@@ -41,7 +45,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-cap/cap.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-northword1/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-northword1/style.css">
                 
             
         
@@ -63,7 +71,6 @@
     
 
         
-    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -80,49 +87,20 @@
     <link rel="prev" href="PBS-commend.html" />
     
 
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
     </head>
     <body>
         
 <div class="book">
-
-	<div class="cap-book-header">
-		<div class="book-container">
-			<div class="header-inner">
-				<!-- LOGO -->
-				<div class="logo"></div>
-				<span class="title"></span>
-				
-				<!-- Search -->
-				
+    <div class="book-summary">
+        
+            
 <div id="book-search-input" role="search">
     <input type="text" placeholder="输入并搜索" />
 </div>
 
-
-				<!-- Nav -->
-				<ul class="header-nav">
-					<li>
-						<a class="" href="../" target="_blank">
-							Blog
-							
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<div class="content">
-		<div class="book-container">
-
-			<div class="book-summary">
-				<div class="book-summary-title"></div>
-				
-				
-				<nav role="navigation">
-					
+            
+                <nav role="navigation">
+                
 
 
 <ul class="summary">
@@ -650,24 +628,16 @@
 </ul>
 
 
-				</nav>
-				
-				
-			</div>
+                </nav>
+            
+        
+    </div>
 
-			<!-- Content nav -->
-			<div class="book-anchor">
-				<div class="book-anchor-title"><i class="fa fa-align-right"></i>CONTENTS</div>
-				<div class="book-anchor-body">
-
-				</div>
-			</div>
-
-			<div class="book-body">
-				
-				<div class="body-inner">
-					
-					
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
 
 <div class="book-header" role="navigation">
     
@@ -682,15 +652,15 @@
 
 
 
-					<div class="page-wrapper" tabindex="-1" role="main">
-						<div class="page-inner">
-							
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
 <div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
-							<section class="normal markdown-section">
-								
-								<h1 id="pbs&#x811A;&#x672C;">PBS&#x811A;&#x672C;</h1>
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#pbs&#x811A;&#x672C;"><b></b>PBS&#x811A;&#x672C;</a></li><ul><li><span class="title-icon "></span><a href="#pbs&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;"><b></b>PBS&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;</a></li><li><span class="title-icon "></span><a href="#&#x8D44;&#x6E90;&#x5217;&#x8868;"><b></b>&#x8D44;&#x6E90;&#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#pbs&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><b></b>PBS&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li></ul></ul></div><a href="#pbs&#x811A;&#x672C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="pbs&#x811A;&#x672C;"><a name="pbs&#x811A;&#x672C;" class="anchor-navigation-ex-anchor" href="#pbs&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>PBS&#x811A;&#x672C;</h1>
 <p>PBS&#x811A;&#x672C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;linux shell&#x811A;&#x672C;&#xFF0C;&#x5728; PBS &#x811A;&#x672C;&#x4E2D;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x5F62;&#x5F0F;&#x7684;&#x6CE8;&#x91CA;&#xFF08;#PBS&#xFF09;&#x4F5C;&#x4E3A; PBS &#x6307;&#x4EE4;&#x4EE5;&#x8BBE;&#x5B9A;&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A; PBS &#x811A;&#x672C;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-bash"><span class="token shebang important">#!/bin/sh</span>
 <span class="token comment">#PBS -N Untitled</span>
@@ -726,7 +696,7 @@ mpirun -np <span class="token variable">$NP</span> -machinefile <span class="tok
 <span class="token builtin class-name">echo</span> <span class="token string">&quot;End task at &quot;</span> <span class="token variable"><span class="token variable">`</span><span class="token function">date</span><span class="token variable">`</span></span>  
 <span class="token builtin class-name">echo</span> <span class="token string">&quot;=============================================&quot;</span>
 </code></pre>
-<h2 id="pbs&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;">PBS&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;</h2>
+<h2 id="pbs&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;"><a name="pbs&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#pbs&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>PBS&#x4F5C;&#x4E1A;&#x5C5E;&#x6027;</h2>
 <table>
 <thead>
 <tr>
@@ -773,7 +743,7 @@ mpirun -np <span class="token variable">$NP</span> -machinefile <span class="tok
 </tr>
 </tbody>
 </table>
-<h2 id="&#x8D44;&#x6E90;&#x5217;&#x8868;">&#x8D44;&#x6E90;&#x5217;&#x8868;</h2>
+<h2 id="&#x8D44;&#x6E90;&#x5217;&#x8868;"><a name="&#x8D44;&#x6E90;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x8D44;&#x6E90;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D44;&#x6E90;&#x5217;&#x8868;</h2>
 <table>
 <thead>
 <tr>
@@ -805,7 +775,7 @@ mpirun -np <span class="token variable">$NP</span> -machinefile <span class="tok
 </tr>
 </tbody>
 </table>
-<h2 id="pbs&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;">PBS&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<h2 id="pbs&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="pbs&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#pbs&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>PBS&#x5E38;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
 <table>
 <thead>
 <tr>
@@ -862,9 +832,9 @@ mpirun -np <span class="token variable">$NP</span> -machinefile <span class="tok
 </table>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
-								
-							</section>
-							
+                                
+                                </section>
+                            
     </div>
     <div class="search-results">
         <div class="has-results">
@@ -881,59 +851,32 @@ mpirun -np <span class="token variable">$NP</span> -machinefile <span class="tok
     </div>
 </div>
 
+                        </div>
+                    </div>
+                
+            </div>
 
+            
+                
+                <a href="PBS-commend.html" class="navigation navigation-prev " aria-label="Previous page: 管理作业">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../04-Materials-Studio/About.html" class="navigation navigation-next " aria-label="Next page: 关于Material Studio">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
 
-							<div class="book-navigation">
-								
-								
-								<div class="book-navigation-prev" style=" padding-right: 10px; ">
-									<a href="PBS-commend.html"
-										class="navigation navigation-prev "
-										aria-label="Previous page: 管理作业">
-										<div class="book-navigation-container">
-											<div class="arrow"><i class="fa fa-long-arrow-left"></i></div>
-											<div class="text" style="text-align:right">
-												<div class="help">Previous</div>
-												<div class="title">管理作业</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								
-								
-								<div class="book-navigation-next">
-									<a href="../04-Materials-Studio/About.html"
-										class="navigation navigation-next "
-										aria-label="Next page: 关于Material Studio">
-										<div class="book-navigation-container"> 
-											<div class="text" style="text-align:left">
-												<div class="help">Next</div>
-												<div class="title">关于Material Studio</div>
-											</div>
-											<div class="arrow"><i class="fa fa-long-arrow-right"></i></div>
-										</div>
-									</a>
-								</div>
-								
-								
-							</div>
-
-						</div>
-					</div>
-					
-				</div>
-
-
-				
-			</div>
-		</div>
-	</div>
-	<script>
-		var gitbook = gitbook || [];
-		gitbook.push(function () {
-			gitbook.page.hasChanged({"page":{"title":"PBS 脚本","level":"4.2.2","depth":2,"next":{"title":"关于Material Studio","level":"5.1","depth":1,"path":"04-Materials-Studio/About.md","ref":"04-Materials-Studio/About.md","articles":[]},"previous":{"title":"管理作业","level":"4.2.1","depth":2,"path":"03-Linux/PBS-commend.md","ref":"03-Linux/PBS-commend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-ace","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","-anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","popup","-auto-scroll-table","-theme-fexa","theme-comscore","theme-cap","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"popup":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"03-Linux/PBS-script.md","mtime":"2020-11-18T13:22:35.479Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T13:27:10.411Z"},"basePath":"..","book":{"language":""}});
-		});
-	</script>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PBS 脚本","level":"4.2.2","depth":2,"next":{"title":"关于Material Studio","level":"5.1","depth":1,"path":"04-Materials-Studio/About.md","ref":"04-Materials-Studio/About.md","articles":[]},"previous":{"title":"管理作业","level":"4.2.1","depth":2,"path":"03-Linux/PBS-commend.md","ref":"03-Linux/PBS-commend.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","-popup","-auto-scroll-table","-theme-fexa","theme-comscore","-theme-cap","theme-northword1","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"theme-northword1":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"03-Linux/PBS-script.md","mtime":"2020-11-18T13:22:35.479Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T16:01:38.913Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
 </div>
 
         
@@ -969,7 +912,7 @@ mpirun -np <span class="token variable">$NP</span> -machinefile <span class="tok
         
     
         
-        <script src="../gitbook/gitbook-plugin-theme-cap/cap.js"></script>
+        <script src="../gitbook/gitbook-plugin-theme-northword1/splitter.js"></script>
         
     
 

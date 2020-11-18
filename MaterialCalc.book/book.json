@@ -10,7 +10,6 @@
     },
 	"plugins": [
 		"-highlight",
-		"-ace",
 		"prism",
 		"prism-themes",
 		"code",
@@ -21,17 +20,22 @@
 
 		"-sharing",
 		"livereload",
+		
 		"-expandable-chapters",
 		"-page-treeview",
-		"-anchor-navigation-ex",
+		"anchor-navigation-ex",
 		"chapter-fold",
 		"-splitter",
+		
 		"-mermaid-gb3",
-		"popup",
+		"-popup",
 		"-auto-scroll-table",
+		
 		"-theme-fexa",
 		"theme-comscore",
-		"theme-cap",
+		"-theme-cap",
+		"theme-northword1",
+		
 		"-back-to-top-button"
 	],
 	"pluginsConfig": {
@@ -42,7 +46,28 @@
             "search-placeholder":"输入关键字搜索", 
             "logo":"./logo.png", 
             "favicon": "./fav.ico"
-        }
+        },
+		"anchor-navigation-ex":{
+			"showLevel": false,
+			"associatedWithSummary": true,
+			"printLog": false,
+			"multipleH1": false,
+			"mode": "float",
+			"showGoTop":true,
+			"float": {
+				"floatIcon": "fa fa-navicon",
+				"showLevelIcon": false,
+				"level1Icon": "fa fa-hand-o-right",
+				"level2Icon": "fa fa-hand-o-right",
+				"level3Icon": "fa fa-hand-o-right"
+			},
+			"pageTop": {
+				"showLevelIcon": false,
+				"level1Icon": "fa fa-hand-o-right",
+				"level2Icon": "fa fa-hand-o-right",
+				"level3Icon": "fa fa-hand-o-right"
+			}
+		}
 	},
 	"variables": {
 		"themeCAP":{
