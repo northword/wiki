@@ -4,9 +4,11 @@
 
 该页以对`O2`分子进行结构优化为例，说明VASP输入文件的生成步骤。
 
-## 生成输入文件选项的菜单（大体的步骤）
+---
 
-在工作目录键入命令`vaspkit`以启动vaspkit：
+## VASPKIT生成输入文件的选项
+
+可以先看下VASPKIT提供了哪些可以生成输入文件的工具：
 
 ```bash
 [zjb@op O2_opt]$ vaspkit
@@ -47,7 +49,7 @@
 
 ```
 
-键入`1`并`enter`以选择`1)  VASP Input Files Generator`。
+选择`1)  VASP Input Files Generator`
 
 ```
 ------------>>
@@ -68,42 +70,26 @@
  ------------>>
 
 ```
-然后就可以根据你的需求去选择要生成的文件了。我们先选择`0`退出`VASPKIT`。
+上面`101-106`都可以生成输入文件，然后就可以根据你的需求去选择要生成的文件了。
+
+---
 
 ## POSCAR
 
-POSCAR文件可以自己写入，也可以通过Materials Studio建模后导出`.cif`，再转换格式。这是一个POSCAR文件的内容：
+POSCAR文件可以自己写入，也可以通过Materials Studio建模后转换格式，还可以从一些结构网站获取结构。
 
-```
-O2 molecule           # 注释行
-10                    # 比例，提供了通用缩放因子（晶格常数）
-1.0 0.0 0.0           # 下三行 格矢
-0.0 1.0 0.0
-0.0 0.0 1.0
-O                     # 元素类别（按照它们在POTCAR文件中的显示顺序）
-2                     # 原子数量
-Selective Dynamic     # 
-Direct                # 坐标类别：直角/笛卡尔
-0.5 0.5 0.5           # 每个原子的三个(X Y Z)坐标。
-0.5 0.5 0.623
-```
-
-第8行：该模式允许为每个原子提供额外的标志，以指示在离子弛豫期间是否将允许更改此原子的相应坐标。如果仅缺陷周围的某些壳或表面附近的层应松弛，则此设置很有用。**选择性动力学输入标签是可选的，如果省略了选择性动力学标签，则第八行将在笛卡尔和直角坐标之间进行切换。**
-
-第9行：（如果不启用选择性动力学，则为第8行）指定原子位置是在笛卡尔坐标系中还是在直角坐标（分别为分数坐标）中提供。仅一行上的第一个字符是有效的，并且VASP识别的唯一关键字符是`C`or`c` for `cartesian mode`，`D`or`d`for `direct mode`。
-
-### 通过新建POSCAR文件并手动写入内容来准备
+### 方法1：通过新建POSCAR文件并手动写入内容来准备
 
 ```bash
 vi POSCAR
 # 之后手动键入上面POSCAR示例的内容（不包含#后的注释）
 ```
 
-### 通过Materials Studio建模以生成POSCAR
+### 方法2：通过Materials Studio建模以生成POSCAR
 
-> 这一小部分用的例子是`NaCl`。已经在Materials Studio中建好了`NaCl`的模型。
+在MS中建模完成后，有如下几种方式将其转换为`POSCAR`：
 
-#### 方法1：使用VASPKIT转换.cif
+#### 2.1. 使用VASPKIT的cif2pos.py
 
 从MS建模完成后导出为cif文件：`file-export`，`save as type : .cif`，上传到服务器上，使用`vaspkit`-`1`-`105`，
 
@@ -111,10 +97,10 @@ vi POSCAR
    ------------>>
   105
    Please type in the filename of cif->
-  NaCl_import.cif                         # 在这里输入了.cif文件的文件名
+  NaCl_import.cif           # 在这里输入了.cif文件的文件名
   Pleas input the order of element, `ENTER` for default!
   Example: 'NA CL' in this CIF
-                                          #在这里需要输入元素的符号，通常可以按回车使用默认值
+                            #在这里需要输入元素的顺序，通常可以按回车使用默认值
     -->> (01) POSCAR has been generated...
    +---------------------------------------------------------------+
    |                       * ACKNOWLEDGMENTS *                     |
@@ -132,151 +118,21 @@ vi POSCAR
 
 在第4行，会要求你输入`.cif`文件的文件名。在第7行，会要求你输入`元素的种类`，如果第6行提示的正确，可以回车使用默认。
 
-#### 方法2：使用VESTA转换
+#### 2.2. 使用VESTA转换
 
-从MS建模完成后导出为cif文件：`file-export-.cif`，用`VESTA`打开该cif文件，选择`file-export data`，`save as type : .vasp`。将这个`.vasp`文件上传到服务器，将其重命名为`POSCAR`，然后打开`vaspkit`，依次进入`3`，`303`。
+从MS建模完成后导出为cif文件：`file-export-.cif`，用`VESTA`打开该cif文件，选择`file-export data`，`save as : xxx.vasp`。将`xxx.vasp`文件上传到服务器，将其重命名为`POSCAR`，`cp xxx.vasp POSCAR`。
 
-```bash
-[zjb@op NaCl]$ cp NaCl.vasp POSCAR
-[zjb@op NaCl]$ vaspkit
- 
-            \\\///         
-           / _  _ \       Hey, you must know what you are doing.  
-         (| (.)(.) |)     Otherwise you might get wrong results!  
- +-----.OOOo--()--oOOO.------------------------------------------+
- |             VASPKIT Version: 1.12 (01 Mar. 2020)              |
- |        Core Developer: Vei WANG (wangvei@icloud.com)          |
- |     Main Contributors: Nan XU, Jin-Cheng LIU & Gang TANG      |
- |    Please send Bugs and Suggestions to vaspkit@gmail.com      |
- +-----.oooO-----------------------------------------------------+
-        (   )   Oooo.     
-         \ (    (   )     
-          \_)    ) /      
-                (_/       
- ===================== Structural Options ========================
- 1)  VASP Input Files Generator    2)  Elastic-Properties         
- 3)  K-Path Generator              4)  Structure Editor           
- 5)  Catalysis-ElectroChem Kit     6)  Symmetry Search            
- 
- ===================== Electronic Options ========================
- 11) Density-of-States             21) DFT Band-Structure         
- 23) 3D Band-Structure             25) Hybrid-DFT Band-Structure  
- 26) Fermi-Surface                 28) Band-Structure Unfolding   
- 
- =========== Charge & Potential & Wavefunction Options ===========
- 31) Charge & Spin Density         42) Potential-Related          
- 51) Wave-Function Analysis  
- ====================== Misc Utilities ===========================
- 71) Optical-Properties            72) Molecular-Dynamics Kit 
- 73) VASP2other Interface          74) USER interface
- 91) Semiconductor Calculator      92) 2D-Materials Kit       
-                                                                  
- 0)  Quit                                                         
- ------------>>
-3
- ===================== K-Path Options ============================
- 301) 1D Nano Structure
- 302) 2D Nano Structure (Experimental)
- 303) 3D bulk structure (Experimental)
- 304) Phonopy K-Path for 2D Nano Structure (Experimental)
- 
- 0) Quit                                              
- 9) Back                                              
- ------------>>
-303
- +-------------------------- Warm Tips --------------------------+
-   The suggested K-Path is only for standardized primtive cell.
-   It is for reference only and you can manually modify K-Path.
- +---------------------------------------------------------------+
- +-------------------------- Warm Tips --------------------------+
-     See An Example in vaspkit/examples/seek_kpath/GaAs_bulk.        
-   The suggested K-Path is only for standardized primtive cell.
- This Feature is Experimental & Check Your System using SeeK-Path.       
- For More details See [www.materialscloud.org/work/tools/seekpath].
- +---------------------------------------------------------------+
-  -->> (01) Reading Structural Parameters from POSCAR File...
- +-------------------------- Summary ----------------------------+
-                           Prototype: AB
-           Total Atoms in Input Cell:   8
-     Lattice Constants in Input Cell:   5.620   5.620   5.620
-        Lattice Angles in Input Cell:  90.000  90.000  90.000
-       Total Atoms in Primitive Cell:   2
- Lattice Constants in Primitive Cell:   3.974   3.974   3.974
-    Lattice Angles in Primitive Cell:  60.000  60.000  60.000
-                      Crystal System: Cubic
-                       Crystal Class: m-3m
-                     Bravais Lattice: cF
-            Extended Bravais Lattice: cF2
-                         Space Group: 225
-                         Point Group: 32 [ Oh ]
-                       International: Fm-3m
-                 Symmetry Operations: 192
-                    Suggested K-Path: (shown in the next line)
- [ Gamma-X-U|K-Gamma-L-W-X ]
- +---------------------------------------------------------------+
-  -->> (02) Written PRIMCELL.vasp file.
-  -->> (03) Written HIGH_SYMMETRY_POINTS File for Reference.
-  -->> (04) Written POTCAR File with the Recommended Potential!
-  -->> (05) Written KPATH.in File for Band-Structure Calculation.
- +----------------------------WARNING----------------------------+
- | Do NOT forget to copy PRIMCELL.vasp to POSCAR unless you know |
- |   what you are doing. Otherwise you might get wrong results!  |
- +---------------------------------------------------------------+
- +---------------------------------------------------------------+
- |                       * ACKNOWLEDGMENTS *                     |
- | Other Contributors: Xue-Fei LIU, Peng-Fei LIU, Dao-Xiong WU,  |
- | Zhao-Fu ZHANG, Tian WANG, Ya-Chao LIU, Qiang LI, iGo and You! |
- +---------------------------------------------------------------+
- |                          * CITATIONS *                        |
- | We Would Appreciate if You Cite in Your Research with VASPKIT.|
- | [1] V. Wang, N. Xu, J.C. LIU, G. Tang, et al, VASPKIT: A Pre- |
- | and Post-Processing Program for VASP Code, arXiv:1908.08269.  |
- +---------------------------------------------------------------+
-[zjb@op NaCl]$ 
+#### 2.3. 使用vaspkit的xsd2pos.py
 
-```
+从MS建模完成后导出为xsd文件，上传，使用`vaspkit`-`1）VASP Input Files Generator`-`106) Generate POSCAR File from Material Studio xsd (retain fixes)`.
 
-之后这个目录会有如下文件：
+### 方法3：从结构网站获取
 
-```bash
-[zjb@op NaCl]$ ll
-total 400
--rw-r--r-- 1 zjb energy    957 Oct 31 21:02 HIGH_SYMMETRY_POINTS
--rw-r--r-- 1 zjb energy    860 Oct 31 21:03 KPATH.in
--rw-r--r-- 1 zjb energy   4008 Oct 30 16:14 NaCl_import.cif
--rw-r--r-- 1 zjb energy    706 Oct 30 16:19 NaCl.vasp
--rw-r--r-- 1 zjb energy    706 Oct 31 21:02 POSCAR
--rw-r--r-- 1 zjb energy 404221 Oct 31 21:03 POTCAR
--rw-r--r-- 1 zjb energy    382 Oct 31 21:02 PRIMCELL.vasp
-```
-
-这样就生成了`POACAR`和`POTCAR`。
-
-```bash
-[zjb@op NaCl]$ cat POSCAR 
-NaCl_import
-1.0
-        5.6199998856         0.0000000000         0.0000000000
-        0.0000000000         5.6199998856         0.0000000000
-        0.0000000000         0.0000000000         5.6199998856
-   Na   Cl
-    4    4
-Direct
-     0.000000000         0.000000000         0.000000000
-     0.000000000         0.500000000         0.500000000
-     0.500000000         0.000000000         0.500000000
-     0.500000000         0.500000000         0.000000000
-     0.500000000         0.500000000         0.500000000
-     0.500000000         0.000000000         0.000000000
-     0.000000000         0.500000000         0.000000000
-     0.000000000         0.000000000         0.500000000
-```
-
-> 值得一提的是，这两种方法生成的`POSCAR`有细小的差别，似乎是四舍五入导致的，老师更推荐第二种（VESTA）。
+从诸如 [Materials Project](https://materialsproject.org/) 等网站获取结构，然后同方法2里的各种转换方法。
 
 ## INCAR
 
-接着最开始的`O2分子`，依次执行`VASPKIT`选择`101`，然后选择`INCAR选项`，就生成了INCAR文件
+`VASPKIT`选择`101`，然后选择`INCAR选项`，就生成了INCAR文件
 
 ```
  ------------>>
@@ -366,7 +222,7 @@ EDIFFG = -2E-02        (Ionic convergence; eV/AA)
 ~
 ```
 
-这些具体的意义记不清了，查`VASP手册`吧...
+标签和值如何选择可以查`VASP手册`呢。
 
 ## KPOINTS
 
@@ -426,7 +282,11 @@ EDIFFG = -2E-02        (Ionic convergence; eV/AA)
 
 `vaspkit`-`1`-`103`。`103) Generate POTCAR File with Default Setting`
 
-## 很简单了
+
+
+---
+
+
 
 到此为止VASP运行所需要的四个输入文件就全都准备好了，我们就可以提交这个作业了。
 

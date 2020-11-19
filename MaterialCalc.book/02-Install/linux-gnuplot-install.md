@@ -1,4 +1,4 @@
-# 使用默认GCC编译gunplot
+# 使用默认GCC编译gnuplot
 
 ```bash
 cd /tmp
