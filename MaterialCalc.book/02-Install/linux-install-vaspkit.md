@@ -4,5 +4,11 @@ Include Page： [install-vaspkit.md](..\05-VASP\install-vaspkit.md)
 
 ---
 
-{% include '../05-VASP/install-vaspkit.md' %} 
+Gitbook支持的，Github不支持，弃。
+
+```
+{% include "../05-VASP/install-vaspkit.md" %} 
+```
+
+
 
