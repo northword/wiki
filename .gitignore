@@ -3,3 +3,6 @@
 /MaterialCalc.book/gitbook-build.bat
 /MaterialCalc.book/.bookignore
 gitbook-build.bat
+
+/docs/**/*.md
+
