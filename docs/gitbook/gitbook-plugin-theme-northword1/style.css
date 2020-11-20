@@ -115,7 +115,7 @@
 .markdown-section h2:before {
     /* display: inline-block; */
     content: '';
-    vertical-align: middle;
+    /* vertical-align: middle; */
     border-right: 6px solid #0099cc;
     /* width: 20px; */
     margin-right: 8px;
