@@ -27,7 +27,7 @@
 
 Bug/typo/error reports should be sent to:
 
-[Zhang' email](mailto:zhangjianbei@mail.scu.edu.cn) or reported as an [issue](https://github.com/northword/Computation-Simulation/issues).
+[Zhang' email](mailto:zhangjianbei@stu.scu.edu.cn) or reported as an [issue](https://github.com/northword/Computation-Simulation/issues).
 
 ---
 

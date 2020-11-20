@@ -3,7 +3,7 @@
 
 ## Theory
 
-* [入门材料计算](01-Theory\How-to-Start.md) 
+* [入门理论计算](01-Theory\How-to-Start.md) 
 * [第1章 第一性原理](01-Theory/DFT.md)
 * [第5章 物质结构](01-Theory/unfinished.md)
 
@@ -42,6 +42,7 @@
 * [VASP的输出文件](05-VASP\vasp-output-files.md) 
 * [生成VASP输入文件](05-VASP/gen-input-files.md)
 * [使用VASP进行结构优化](05-VASP\vasp-geo.md) 
+* [K-PATH](05-VASP\K-PATH.md) 
 * [使用VASP NEB方法计算反应路径](05-VASP/vasp-neb.md)
 
 ## Other Apps
@@ -52,4 +53,10 @@
 ## 异常解决
 * [MS在win2004一按键盘就假死](09-Others/MS-NoResponse-win2004.md)
 * [Windows 20H2下ASE报错](09-Others/numpy-in-win20H2.md)
+
+---
+* []()
+
+## 链接
+* [菜鸡小张的博客](http://blog.northword.cn)
 

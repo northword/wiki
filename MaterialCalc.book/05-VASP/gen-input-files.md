@@ -8,7 +8,7 @@
 
 ## VASPKIT生成输入文件的选项
 
-可以先看下VASPKIT提供了哪些可以生成输入文件的工具：
+VASPKIT可以帮助我们简化准备输入文件的步骤，可以先看下VASPKIT提供了哪些可以生成输入文件的工具：
 
 ```bash
 [zjb@op O2_opt]$ vaspkit
@@ -70,7 +70,7 @@
  ------------>>
 
 ```
-上面`101-106`都可以生成输入文件，然后就可以根据你的需求去选择要生成的文件了。
+上面`101-106`都可以生成输入文件，然后就可以根据需求去选择了。
 
 ---
 
@@ -78,11 +78,10 @@
 
 POSCAR文件可以自己写入，也可以通过Materials Studio建模后转换格式，还可以从一些结构网站获取结构。
 
-### 方法1：通过新建POSCAR文件并手动写入内容来准备
+### 方法1：通过新建POSCAR文件并手动写入内容
 
 ```bash
 vi POSCAR
-# 之后手动键入上面POSCAR示例的内容（不包含#后的注释）
 ```
 
 ### 方法2：通过Materials Studio建模以生成POSCAR
@@ -91,7 +90,7 @@ vi POSCAR
 
 #### 2.1. 使用VASPKIT的cif2pos.py
 
-从MS建模完成后导出为cif文件：`file-export`，`save as type : .cif`，上传到服务器上，使用`vaspkit`-`1`-`105`，
+从MS建模完成后导出为cif文件：`file-export`，`save as type : .cif`，上传到集群上，使用`vaspkit`-`1`-`105) Generate POSCAR File from cif (no fractional occupations)  `，
 
  ```
    ------------>>
@@ -126,9 +125,17 @@ vi POSCAR
 
 从MS建模完成后导出为xsd文件，上传，使用`vaspkit`-`1）VASP Input Files Generator`-`106) Generate POSCAR File from Material Studio xsd (retain fixes)`.
 
+另外值得一提的是，通过`xsd2pos`可以保留原子的位置限制信息，而上面两种导出为`.cif`的方式会丢失原子固定。
+
+> Material Studio是常用的构建模型和可视化结构的软件，MS中的结构亦可借助其它工具转换成`POSCAR`。目前常用的做法是在MS中导出`cif`文件，再通过功能`105`或者`vesta`转换成`POSCAR`。但是转换颇为麻烦并且会丢失原子的位置限制信息。因此赵焱老师开发了固定原子坐标perl小脚本[xsd2pos.pl](https://mp.weixin.qq.com/s/F82Hzh4saiOpp4xLFU_HGg)，可以在MS中运行`perl`脚本将结构生成`POSCAR`,链接里有详细的操作流程，这里不再赘述。`vaspkit`开发者也开发了一款类似的后处理脚本，能够将含有位置固定信息的`xsd`批量转换成·`POSCAR`，并将此脚本集成到了`vaspkit`的`106`功能中。`xsd`中可以包含`Fix Fractional Position`或者`Fix Cartesian Position`两种限制方式。
+>
+> 引自 [VASPKIT中文手册](https://tamaswells.github.io/VASPKIT_manual/manual0.73/vaspkit-manual-0.73.html#header-n67) 。
+
 ### 方法3：从结构网站获取
 
-从诸如 [Materials Project](https://materialsproject.org/) 等网站获取结构，然后同方法2里的各种转换方法。
+从诸如 [Materials Project](https://materialsproject.org/) 等网站获取结构，通常获取到的是`.vasp`文件，将其上传，重命名为`POSCAR`即可。
+
+值得一提的是VASPKIT官方文档提到，有时候下载到的`.vasp`文件，里面会有制表符与空格的问题，最好通过`109) Check All VASP Files`检查一下，以免计算失败。
 
 ## INCAR
 
@@ -158,6 +165,12 @@ vi POSCAR
  9)   Back      
  ------------>>
  Input Key-Parameters (STH6D3 means HSE06-D3 Static-Calcualtion)
+
+```
+
+根据计算需要，选择相应类型的选项，如结构优化标准弛豫：
+
+```
 SR
  INCAR parameters are from user-specified Global.
  INCAR parameters are from user-specified SR.
@@ -173,10 +186,9 @@ SR
  | and Post-Processing Program for VASP Code, arXiv:1908.08269.  |
  +---------------------------------------------------------------+
 [zjb@op O2_opt]$ 
-
 ```
 
-之后我们打开`INCAR`进行进一步修改，
+上前4行提示可以知道`INCAR`已经生成，由于生成的INCAR与我们实际需要的INCAR仍有一些差别，所以之后我们打开`INCAR`进行进一步修改，
 
 ```
 Global Parameters
@@ -226,7 +238,7 @@ EDIFFG = -2E-02        (Ionic convergence; eV/AA)
 
 ## KPOINTS
 
-`vaspkit`-`1`，然后，`102) Generate KPOINTS File for SCF Calculation  `
+`vaspkit`-`1`，然后，`102) Generate KPOINTS File for SCF Calculation  `，然后选择需要的撒点方法和精度，
 
 ```
 ------------>>
@@ -280,9 +292,9 @@ EDIFFG = -2E-02        (Ionic convergence; eV/AA)
 
 ## POTCAR
 
-`vaspkit`-`1`-`103`。`103) Generate POTCAR File with Default Setting`
+`vaspkit`-`1`-`103) Generate POTCAR File with Default Setting`
 
-
+当然也可以选择`104) Generate POTCAR File with User Specified Potential`选择自己想要的赝势类型。
 
 ---
 
@@ -293,6 +305,6 @@ EDIFFG = -2E-02        (Ionic convergence; eV/AA)
 将`PBS脚本`复制到当前目录，然后使用`qsub`命令提交作业。
 
 ```bash
-qsub -N O2_opt vasp.pbs
+qsub -N JobName vasp.pbs
 ```
 
