@@ -739,9 +739,183 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x8FD8;&#x6CA1;&#x5199;</p>
-<p>&#x4E3B;&#x8981;&#x662F;&#x4E00;&#x822C;&#x4E5F;&#x7528;&#x4E0D;&#x5230;&#xFF0C;&#x96C6;&#x7FA4;&#x88C5;&#x4E86;2&#x4E86;&#x5DF2;&#x7ECF;&#x3002;</p>
-<p>&#x7F51;&#x4E0A;&#x4E5F;&#x4E00;&#x5927;&#x5806;&#x6559;&#x7A0B;&#xFF0C;&#x8DDF;&#x7740; <a href="linux-install-app-for-nonRoot.md">linux-install-app-for-nonRoot.md</a> &#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4E3A;&#x5B66;&#x6821;&#x7684;linux&#x5B89;&#x88C5;python3"><b></b>&#x4E3A;&#x5B66;&#x6821;&#x7684;linux&#x5B89;&#x88C5;python3</a></li><ul><li><span class="title-icon "></span><a href="#&#x6B65;&#x9AA4;&#x653E;&#x5728;&#x6700;&#x524D;&#x9762;"><b></b>&#x6B65;&#x9AA4;&#x653E;&#x5728;&#x6700;&#x524D;&#x9762;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5347;&#x7EA7;openssl"><b></b>&#x5347;&#x7EA7;OPENSSL</a></li><li><span class="title-icon "></span><a href="#&#x7F16;&#x8BD1;python3"><b></b>&#x7F16;&#x8BD1;Python3</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ECF;&#x5386;"><b></b>&#x7ECF;&#x5386;</a></li></ul></ul></div><a href="#&#x4E3A;&#x5B66;&#x6821;&#x7684;linux&#x5B89;&#x88C5;python3" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4E3A;&#x5B66;&#x6821;&#x7684;linux&#x5B89;&#x88C5;python3"><a name="&#x4E3A;&#x5B66;&#x6821;&#x7684;linux&#x5B89;&#x88C5;python3" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x5B66;&#x6821;&#x7684;linux&#x5B89;&#x88C5;python3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x5B66;&#x6821;&#x7684;linux&#x5B89;&#x88C5;python3</h1>
+<p>&#x7531;&#x4E8E;<code>ASE</code>&#x4F9D;&#x8D56;<code>Python3.5</code>&#x6216;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#xFF0C;&#x800C;&#x5B66;&#x4E60;&#x7684;&#x673A;&#x5668;&#x4E0A;&#x53EA;&#x6709;<code>python2</code>&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x88C5;&#x4E00;&#x4E0B;py3&#x3002;</p>
+<h2 id="&#x6B65;&#x9AA4;&#x653E;&#x5728;&#x6700;&#x524D;&#x9762;"><a name="&#x6B65;&#x9AA4;&#x653E;&#x5728;&#x6700;&#x524D;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x6B65;&#x9AA4;&#x653E;&#x5728;&#x6700;&#x524D;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B65;&#x9AA4;&#x653E;&#x5728;&#x6700;&#x524D;&#x9762;</h2>
+<h3 id="&#x5347;&#x7EA7;openssl"><a name="&#x5347;&#x7EA7;openssl" class="anchor-navigation-ex-anchor" href="#&#x5347;&#x7EA7;openssl"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5347;&#x7EA7;OPENSSL</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token builtin class-name">cd</span> /tmp
+$ <span class="token function">wget</span> -c https://www.openssl.org/source/openssl-1.1.1d.tar.gz
+$ <span class="token function">tar</span> -xvf openssl-1.1.1d.tar.gz
+$ <span class="token builtin class-name">cd</span> openssl-1.1.1d
+$ ./config --prefix<span class="token operator">=</span>/public/home/zjb/openssl-1.1.1d no-zlib  <span class="token comment">#&#x6CE8;&#x610F;&#x6DFB;&#x52A0;no-zlib</span>
+$ <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+</code></pre>
+<p>&#x4E4B;&#x540E;&#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">vi</span> ~/.bashrc
+<span class="token comment"># &#x52A0;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">&quot;/public/home/zjb/app/openssl-1.1.1d no-zlib&quot;</span><span class="token builtin class-name">:</span><span class="token variable">${<span class="token environment constant">PATH</span>}</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">&quot;/public/home/zjb/app/openssl-1.1.1d/bin&quot;</span><span class="token builtin class-name">:</span><span class="token variable">${<span class="token environment constant">PATH</span>}</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">&quot;/public/home/zjb/app/openssl-1.1.1d/lib&quot;</span><span class="token builtin class-name">:</span><span class="token variable">${<span class="token environment constant">PATH</span>}</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">LD_LIBRARY_PATH</span><span class="token operator">=</span><span class="token string">&quot;/public/home/zjb/app/openssl-1.1.1d/lib&quot;</span><span class="token builtin class-name">:</span><span class="token variable">${LD_LIBRARY_PATH}</span>
+
+$ <span class="token builtin class-name">source</span> ~/.bashrc
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x8FD0;&#x884C;<code>openssl</code>--<code>version</code>&#x5E94;&#x5F53;&#x663E;&#x793A;1.1.1&#x7248;&#x672C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>zjb@op ~<span class="token punctuation">]</span>$ openssl
+OpenSSL<span class="token operator">&gt;</span> version
+OpenSSL <span class="token number">1.1</span>.1d  <span class="token number">10</span> Sep <span class="token number">2019</span>
+OpenSSL<span class="token operator">&gt;</span> <span class="token builtin class-name">exit</span>
+<span class="token punctuation">[</span>zjb@op ~<span class="token punctuation">]</span>$
+</code></pre>
+<h3 id="&#x7F16;&#x8BD1;python3"><a name="&#x7F16;&#x8BD1;python3" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8BD1;python3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8BD1;Python3</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token builtin class-name">cd</span> /tmp
+$ <span class="token function">wget</span> -c https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tgz
+$ <span class="token function">tar</span> -xvf Python-3.8.1.tgz
+$ <span class="token builtin class-name">cd</span> Python-3.8.1
+$ ./configure --prefix<span class="token operator">=</span>/public/home/zjb/app/python38/
+</code></pre>
+<p>&#x5230;&#x8FD9;&#x513F;&#x622A;&#x4F4F;&#xFF0C;&#x53BB;<code>Python-3.8.1/Moudles</code>&#x4E0B;&#x7F16;&#x8F91;<code>Setup</code>&#x4EE5;&#x4FEE;&#x6539;OPENSSL&#x7684;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">vi</span> Moudles/Setup
+</code></pre>
+<p>&#x67E5;&#x627E;<code>SSL</code>&#xFF0C;&#x628A;&#x5982;&#x4E0B;&#x51E0;&#x884C;&#x53D6;&#x6D88;&#x6CE8;&#x91CA;</p>
+<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">SSL</span><span class="token operator">=</span>/public/home/zjb/app/openssl-1.1.1d     <span class="token comment">#&#x6539;&#x4E3A;&#x521A;&#x5B89;&#x88C5;&#x7684;ssl&#x8DEF;&#x5F84;</span>
+_ssl _ssl.c <span class="token punctuation">\</span>
+       -DUSE_SSL -I<span class="token variable"><span class="token variable">$(</span>SSL<span class="token variable">)</span></span>/include -I<span class="token variable"><span class="token variable">$(</span>SSL<span class="token variable">)</span></span>/include/openssl <span class="token punctuation">\</span>
+       -L<span class="token variable"><span class="token variable">$(</span>SSL<span class="token variable">)</span></span>/lib -lssl -lcrypto
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x884C;&#x66FF;&#x6362;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;OPENSSL&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;&#x4FEE;&#x6539;&#x540E;&#x7F16;&#x8BD1;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+
+<span class="token comment"># &#x5982;&#x679C;&#x4E4B;&#x524D;&#x6709;&#x7F16;&#x8BD1;&#x8FC7;&#xFF0C;&#x7528;make clean&#x6E05;&#x7406;&#x5DF2;&#x7F16;&#x8BD1;&#x7684;&#x6587;&#x4EF6;&#x540E;&#x518D;&#x7F16;&#x8BD1;</span>
+</code></pre>
+<p>&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x8BD5;&#x4E00;&#x4E0B;</p>
+<pre class="language-"><code class="lang-python"><span class="token punctuation">[</span>zjb@op Python<span class="token operator">-</span><span class="token number">3.8</span><span class="token number">.5</span><span class="token punctuation">]</span>$ python3
+Python <span class="token number">3.8</span><span class="token number">.5</span> <span class="token punctuation">(</span>default<span class="token punctuation">,</span> Nov <span class="token number">20</span> <span class="token number">2020</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">:</span><span class="token number">23</span><span class="token punctuation">:</span><span class="token number">42</span><span class="token punctuation">)</span> 
+<span class="token punctuation">[</span>GCC <span class="token number">4.4</span><span class="token number">.7</span> <span class="token number">20120313</span> <span class="token punctuation">(</span>Red Hat <span class="token number">4.4</span><span class="token number">.7</span><span class="token operator">-</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">]</span> on linux
+Type <span class="token string">&quot;help&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;copyright&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;credits&quot;</span> <span class="token keyword">or</span> <span class="token string">&quot;license&quot;</span> <span class="token keyword">for</span> more information<span class="token punctuation">.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">import</span> ssl
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+<p>OK&#xFF0C;&#x5B8C;&#x6210;&#xFF01;</p>
+<p>&#x6B64;&#x65F6;SSL&#x6A21;&#x5757;&#x5E94;&#x5F53;&#x662F;&#x53EF;&#x7528;&#x7684;&#xFF0C;&#x5C1D;&#x8BD5;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;</p>
+<pre class="language-"><code class="lang-bash">$ pip3 <span class="token function">install</span> ase
+</code></pre>
+<pre class="language-"><code>[zjb@op Python-3.8.5]$ pip3 install ase
+Collecting ase
+  Downloading ase-3.20.1-py3-none-any.whl (2.2 MB)
+     |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 2.2 MB 1.4 MB/s 
+Collecting matplotlib&gt;=2.0.0
+  Downloading matplotlib-3.3.3-cp38-cp38-manylinux1_x86_64.whl (11.6 MB)
+     |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 11.6 MB 2.3 MB/s 
+Collecting numpy&gt;=1.11.3
+  Downloading numpy-1.19.4-cp38-cp38-manylinux2010_x86_64.whl (14.5 MB)
+     |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 14.5 MB 153 kB/s 
+Collecting scipy&gt;=0.18.1
+  Downloading scipy-1.5.4-cp38-cp38-manylinux1_x86_64.whl (25.8 MB)
+     |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 25.8 MB 1.5 MB/s 
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.3
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+     |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 67 kB 1.3 MB/s 
+Collecting pillow&gt;=6.2.0
+  Downloading Pillow-8.0.1-cp38-cp38-manylinux1_x86_64.whl (2.2 MB)
+     |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 2.2 MB 1.9 MB/s 
+Collecting cycler&gt;=0.10
+  Downloading cycler-0.10.0-py2.py3-none-any.whl (6.5 kB)
+Collecting kiwisolver&gt;=1.0.1
+  Downloading kiwisolver-1.3.1-cp38-cp38-manylinux1_x86_64.whl (1.2 MB)
+     |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 1.2 MB 1.9 MB/s 
+Collecting python-dateutil&gt;=2.1
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+     |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 227 kB 2.0 MB/s 
+Collecting six
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Installing collected packages: pyparsing, pillow, six, cycler, numpy, kiwisolver, python-dateutil, matplotlib, scipy, ase
+Successfully installed ase-3.20.1 cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.3 numpy-1.19.4 pillow-8.0.1 pyparsing-2.4.7 python-dateutil-2.8.1 scipy-1.5.4 six-1.15.0
+</code></pre><p>&#x6B63;&#x5E38;&#xFF01;</p>
+<hr>
+<h2 id="&#x7ECF;&#x5386;"><a name="&#x7ECF;&#x5386;" class="anchor-navigation-ex-anchor" href="#&#x7ECF;&#x5386;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ECF;&#x5386;</h2>
+<p>&#x6700;&#x5F00;&#x59CB;&#x6309;&#x7167;&#x6B63;&#x5E38;&#x7684;&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x53BB;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;Python3&#xFF0C;&#x4F46;&#x662F;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x73B0;SSL&#x6A21;&#x5757;&#x65E0;&#x6CD5;&#x88AB;&#x7F16;&#x8BD1;&#xFF0C;&#x521A;&#x5F00;&#x59CB;&#x5F53;&#x56DE;&#x4E8B;&#xFF0C;&#x7ED3;&#x679C;&#x90FD;&#x597D;&#x4E86;&#x53D1;&#x73B0;pip3&#x6CA1;&#x6CD5;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code>pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+</code></pre><p>&#x56E0;&#x4E3A;ssl&#x6A21;&#x5757;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x53C8;&#x6298;&#x56DE;&#x53BB;&#x6298;&#x817E;&#xFF0C;&#x53D1;&#x73B0;&#x63D0;&#x793A;&#x4E2D;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x673A;&#x5668;&#x672C;&#x8EAB;&#x5B89;&#x88C5;&#x7684;openssl&#x7248;&#x672C;&#x8FC7;&#x4F4E;&#xFF08;1.0.1&#xFF09;&#x5BFC;&#x81F4;&#x7684;&#xFF0C;</p>
+<pre class="language-"><code>Python build finished successfully!
+The necessary bits to build these optional modules were not found:
+_sqlite3              _ssl                                     
+To find the necessary bits, look in setup.py in detect_modules() for the module&apos;s name.
+
+Could not build the ssl module!
+Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
+LibreSSL 2.6.4 and earlier do not provide the necessary APIs, https://github.com/libressl-portable/portable/issues/381
+</code></pre><p>&#x8003;&#x8651;&#x5347;&#x7EA7;openssl&#x89E3;&#x51B3;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">wget</span> -c https://www.openssl.org/source/openssl-1.1.1d.tar.gz
+$ <span class="token function">tar</span> -xvf openssl-1.1.1d.tar.gz
+$ <span class="token builtin class-name">cd</span> openssl-1.1.1d
+$ ./config --prefix<span class="token operator">=</span>/public/home/zjb/app/penssl-1.1.1d no-zlib  <span class="token comment">#&#x6CE8;&#x610F;&#x6DFB;&#x52A0;no-zlib</span>
+$ <span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+
+$ <span class="token function">vi</span> ~/.bashrc
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">&quot;/public/home/zjb/app/openssl-1.1.1d/bin&quot;</span><span class="token builtin class-name">:</span><span class="token variable">${<span class="token environment constant">PATH</span>}</span>
+</code></pre>
+<p>&#x8FD0;&#x884C;<code>openssl</code>&#x53D1;&#x73B0;&#x62A5;&#x9519;</p>
+<pre class="language-"><code>error while loading shared libraries: libssl.so.1.1: cannot open shared object file: No such file or directory
+</code></pre><p>&#x641C;&#x4E86;&#x4E00;&#x4E9B;&#x8D44;&#x6599;&#xFF0C;&#x53D1;&#x73B0;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x591A;&#x662F;<code>sudo</code>&#x7684;&#xFF0C;mmp&#x6211;&#x8981;&#x662F;&#x6709;root&#x8FD8;&#x8D39;&#x8FD9;&#x52B2;&#x53BB;&#x7F16;&#x8BD1;&#x5462;&#xFF1F;&#xFF1F;&#xFF1F;&#x8FD8;&#x597D;&#x5728;&#x4E00;&#x7BC7;&#x8D44;&#x6599;&#x91CC;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x65B9;&#x6848;&#xFF1A;&#x53D1;&#x73B0;<code>libssl.so.1.1</code>&#x5B58;&#x5728;&#x4E8E;<code>openssl.1.1.d/lib</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4E8E;&#x662F;&#x8003;&#x8651;&#x628A;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x52A0;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">LD_LIBRARY_PATH</span><span class="token operator">=</span>/my/path/openssl-1.1/lib:<span class="token variable">$LD_LIBRARY_PATH</span>
+</code></pre>
+<p>&#x8FD9;&#x4E0B;&#x6B63;&#x5E38;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>zjb@op ~<span class="token punctuation">]</span>$ openssl
+OpenSSL<span class="token operator">&gt;</span> version
+OpenSSL <span class="token number">1.1</span>.1d  <span class="token number">10</span> Sep <span class="token number">2019</span>
+OpenSSL<span class="token operator">&gt;</span> <span class="token builtin class-name">exit</span>
+<span class="token punctuation">[</span>zjb@op ~<span class="token punctuation">]</span>$
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x7EE7;&#x7EED;&#x7F16;&#x8BD1;Python3&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token builtin class-name">cd</span> /tmp
+$ <span class="token function">wget</span> -c https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tgz
+$ <span class="token function">tar</span> -xvf Python-3.8.1.tgz
+$ <span class="token builtin class-name">cd</span> Python-3.8.1
+$ ./configure --prefix<span class="token operator">=</span>/public/home/zjb/app/python38/
+$ <span class="token function">make</span>
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x7F16;&#x8BD1;&#x7684;&#x4ECD;&#x7136;&#x63D0;&#x793A;<code>Could not build the ssl module! Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().</code>&#xFF0C;&#x4F46;&#x662F;<code>make install</code>&#x540E;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x7684;&#xFF0C;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;</p>
+<pre class="language-"><code>export PATH=/public/home/zjb/app/python38/bin:${PATH}
+</code></pre><p>&#x7136;&#x540E;...&#x6B63;&#x5E38;&#x4E86;</p>
+<pre class="language-"><code class="lang-python"><span class="token punctuation">[</span>zjb@op Python<span class="token operator">-</span><span class="token number">3.8</span><span class="token number">.5</span><span class="token punctuation">]</span>$ python3
+Python <span class="token number">3.8</span><span class="token number">.5</span> <span class="token punctuation">(</span>default<span class="token punctuation">,</span> Nov <span class="token number">20</span> <span class="token number">2020</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">:</span><span class="token number">23</span><span class="token punctuation">:</span><span class="token number">42</span><span class="token punctuation">)</span> 
+<span class="token punctuation">[</span>GCC <span class="token number">4.4</span><span class="token number">.7</span> <span class="token number">20120313</span> <span class="token punctuation">(</span>Red Hat <span class="token number">4.4</span><span class="token number">.7</span><span class="token operator">-</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">]</span> on linux
+Type <span class="token string">&quot;help&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;copyright&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;credits&quot;</span> <span class="token keyword">or</span> <span class="token string">&quot;license&quot;</span> <span class="token keyword">for</span> more information<span class="token punctuation">.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">import</span> ssl
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+<hr>
+<p>&#x51E0;&#x5206;&#x949F;&#x540E;&#x53D1;&#x73B0;<code>ase</code>&#x867D;&#x7136;&#x5B89;&#x88C5;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x8FD0;&#x884C;&#xFF0C;</p>
+<pre class="language-"><code>[zjb@op python38]$ ase
+Traceback (most recent call last):
+  File &quot;/public/home/zjb/app/ase/bin/ase&quot;, line 2, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+    from ase.cli.main import main
+  File &quot;/public/home/zjb/app/ase/ase/__init__.py&quot;, line 25, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+    from ase.atoms import Atoms
+  File &quot;/public/home/zjb/app/ase/ase/atoms.py&quot;, line 19, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+    from ase.constraints import (FixConstraint, FixBondLengths, FixLinearTriatomic,
+  File &quot;/public/home/zjb/app/ase/ase/constraints.py&quot;, line 10, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+    from scipy.linalg import expm, logm
+  File &quot;/public/home/zjb/app/python38/lib/python3.8/site-packages/scipy/__init__.py&quot;, line 151, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+    from scipy._lib._ccallback import LowLevelCallable
+  File &quot;/public/home/zjb/app/python38/lib/python3.8/site-packages/scipy/_lib/_ccallback.py&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+    from . import _ccallback_c
+  File &quot;_ccallback_c.pyx&quot;, line 210, in init scipy._lib._ccallback_c
+  File &quot;/public/home/zjb/app/python38/lib/python3.8/ctypes/__init__.py&quot;, line 7, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+    from _ctypes import Union, Structure, Array
+ModuleNotFoundError: No module named &apos;_ctypes&apos;
+</code></pre><p>&#x56E0;&#x4E3A;python&#x7F3A;&#x5C11;&#x4F9D;&#x8D56;&#x5E93;<code>libffi-devel</code>&#xFF0C;&#x67E5;&#x8D44;&#x6599;&#x6CA1;&#x53D1;&#x73B0;&#x8FD9;&#x73A9;&#x610F;&#x600E;&#x4E48;&#x81EA;&#x5DF1;&#x641E;&#xFF0C;&#x4F3C;&#x4E4E;&#x53EA;&#x80FD;&#x7BA1;&#x7406;&#x5458;&#x53BB;&#x88C5;&#xFF0C;&#x53CD;&#x6B63;&#x7F51;&#x4E0A;&#x7ED9;&#x51FA;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x4E0D;&#x884C;...</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>zjb@op python38<span class="token punctuation">]</span>$ yum <span class="token function">install</span> -y libffi-devel
+Loaded plugins: aliases, changelog, kabi, ovl, presto, refresh-packagekit, security, tmprepo, verify, versionlock
+Loading support <span class="token keyword">for</span> Red Hat kernel ABI
+ovl: Error <span class="token keyword">while</span> doing RPMdb copy-up:
+<span class="token punctuation">[</span>Errno <span class="token number">13</span><span class="token punctuation">]</span> Permission denied: <span class="token string">&apos;/var/lib/rpm/Sigmd5&apos;</span>
+You need to be root to perform this command.
+<span class="token punctuation">[</span>zjb@op python38<span class="token punctuation">]</span>$
+</code></pre>
+<p>&#x6B64;&#x8D34;&#x7EC8;&#x7ED3;&#xFF0C;&#x5931;&#x8D25;&#x544A;&#x7EC8;&#xFF0C;over&#xFF01;</p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -786,7 +960,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"为非ROOT用户安装Python3","level":"3.2.4","depth":2,"next":{"title":"Irzsz","level":"3.2.5","depth":2,"path":"02-Install/linux-lrzsz-install.md","ref":"02-Install/linux-lrzsz-install.md","articles":[]},"previous":{"title":"gnuplot","level":"3.2.3","depth":2,"path":"02-install/linux-gnuplot-install.md","ref":"02-install/linux-gnuplot-install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","-popup","-auto-scroll-table","-theme-fexa","theme-comscore","-theme-cap","theme-northword1","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"theme-northword1":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"02-install/linux-python-for-nonRoot.md","mtime":"2020-11-17T13:29:34.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-20T12:54:16.319Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"为非ROOT用户安装Python3","level":"3.2.4","depth":2,"next":{"title":"Irzsz","level":"3.2.5","depth":2,"path":"02-Install/linux-lrzsz-install.md","ref":"02-Install/linux-lrzsz-install.md","articles":[]},"previous":{"title":"gnuplot","level":"3.2.3","depth":2,"path":"02-install/linux-gnuplot-install.md","ref":"02-install/linux-gnuplot-install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","-popup","-auto-scroll-table","-theme-fexa","theme-comscore","-theme-cap","theme-northword1","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"theme-northword1":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"02-install/linux-python-for-nonRoot.md","mtime":"2020-11-20T16:12:12.490Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-20T16:12:26.079Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
