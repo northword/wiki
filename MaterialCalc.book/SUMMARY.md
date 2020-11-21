@@ -1,4 +1,5 @@
 # Summary
+
 * [Introduction](INTRO.md)
 
 ## Theory
@@ -8,6 +9,7 @@
 * [第5章 物质结构](01-Theory/unfinished.md)
 
 ## Install
+
 * [Windows平台里的相关软件](02-Install/Windows-platform.md)
 	* [Python](02-install/windows-python.md)
 	* [ase](02-Install/windows-ase-install.md)
@@ -20,6 +22,7 @@
 	* [linux为非ROOT用户安装应用程序](02-Install/linux-install-app-for-nonRoot.md)
 
 ## Linux
+
 * [Linux](03-Linux/linux-README.md)
 	* [Linux 常用命令](03-Linux/linux-command.md)
 	* [VI/VIM 编辑器](03-Linux/linux-vi.md)
@@ -31,6 +34,7 @@
 	* [PBS 脚本](03-Linux/PBS-script.md)
 	
 ## Materials Studio
+
 * [关于Material Studio](04-Materials-Studio/About.md)
 * [栗子：建立Au的111切面的4×4超胞](04-Materials-Studio/unfinished.md)
 
@@ -39,6 +43,7 @@
 * [VASP与VASPKIT](05-VASP/VASP-and-VASPKIT.md)
 * [安装VASPKIT](05-VASP/install-vaspkit.md)
 * [VASP的输入文件](05-VASP\vasp-input-files.md) 
+* [VASP的输入文件之INCAR](05-VASP\vasp-input-INCAR.md) 
 * [VASP的输出文件](05-VASP\vasp-output-files.md) 
 * [生成VASP输入文件](05-VASP/gen-input-files.md)
 * [使用VASP进行结构优化](05-VASP\vasp-geo.md) 
@@ -53,6 +58,11 @@
 ## 异常解决
 * [MS在win2004一按键盘就假死](09-Others/MS-NoResponse-win2004.md)
 * [Windows 20H2下ASE报错](09-Others/numpy-in-win20H2.md)
+
+## On the End
+
+* [没啦没啦没啦](09-Others\on-the-end.md) 
+* [参考文献与推荐资源](09-Others\unfinished.md) 
 
 ---
 * []()

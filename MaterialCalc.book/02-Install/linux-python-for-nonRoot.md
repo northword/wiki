@@ -134,7 +134,7 @@ Successfully installed ase-3.20.1 cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.
 
 ## 经历
 
-最开始按照正常的编译过程去编译安装Python3，但是过程中发现SSL模块无法被编译，刚开始当回事，结果都好了发现pip3没法使用：
+最开始按照正常的编译过程去编译安装Python3，但是过程中发现SSL模块无法被编译，刚开始没当回事，结果都好了发现pip3没法使用：
 
 ```
 pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
