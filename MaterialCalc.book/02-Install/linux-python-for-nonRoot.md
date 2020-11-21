@@ -20,7 +20,6 @@ $ make && make install
 ```bash
 $ vi ~/.bashrc
 # 加入以下内容
-export PATH="/public/home/zjb/app/openssl-1.1.1d no-zlib":${PATH}
 export PATH="/public/home/zjb/app/openssl-1.1.1d/bin":${PATH}
 export PATH="/public/home/zjb/app/openssl-1.1.1d/lib":${PATH}
 export LD_LIBRARY_PATH="/public/home/zjb/app/openssl-1.1.1d/lib":${LD_LIBRARY_PATH}
@@ -175,7 +174,7 @@ error while loading shared libraries: libssl.so.1.1: cannot open shared object f
 搜了一些资料，发现解决方法多是`sudo`的，mmp我要是有root还费这劲去编译呢？？？还好在一篇资料里看到一个方案：发现`libssl.so.1.1`存在于`openssl.1.1.d/lib`目录下，于是考虑把这个目录加入环境变量：
 
 ```bash
-export LD_LIBRARY_PATH=/my/path/openssl-1.1/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/public/home/zjb/app/openssl-1.1/lib:$LD_LIBRARY_PATH
 ```
 
 这下正常了：

@@ -1,0 +1,27 @@
+{
+  "name": "gitbook-plugin-theme-cap",
+  "author": {
+    "name": "cernanalysispreservation"
+  },
+  "bugs": {
+    "url": "https://github.com/cernanalysispreservation/gitbook-plugin-theme-cap/issues"
+  },
+  "dependencies": {},
+  "description": "Gitbook theme for CAP docs",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "homepage": "https://github.com/cernanalysispreservation/gitbook-plugin-theme-cap#readme",
+  "keywords": [
+    "gitbook",
+    "theme",
+    "cap"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cernanalysispreservation/gitbook-plugin-theme-cap.git"
+  },
+  "scripts": {},
+  "version": "1.0.0"
+}
