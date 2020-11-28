@@ -16,7 +16,7 @@
 3. NEB计算
 4. 处理结果
 
-文件结构：
+## 文件结构
 
 ![neb计算的文件结构示意](vasp-neb.assets/neb2.png)
 

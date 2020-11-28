@@ -13,6 +13,8 @@
 		"prism",
 		"prism-themes",
 		"code",
+		"mathjax-pro",
+		"-katex",
 
 		"-lunr",
 		"-search",
@@ -21,22 +23,19 @@
 		"-sharing",
 		"livereload",
 		
-		"-expandable-chapters",
+		"expandable-chapters",
 		"-page-treeview",
 		"anchor-navigation-ex",
-		"chapter-fold",
-		"-splitter",
+		"-chapter-fold",
+
 		
-		"-mermaid-gb3",
+
 		"-popup",
 		"-auto-scroll-table",
-		
-		"-theme-fexa",
+
 		"theme-comscore",
-		"-theme-cap",
-		"theme-northword1",
-		
-		"-back-to-top-button"
+		"theme-northword1"
+
 	],
 	"pluginsConfig": {
 		"theme-default": {
@@ -67,7 +66,10 @@
 				"level2Icon": "fa fa-hand-o-right",
 				"level3Icon": "fa fa-hand-o-right"
 			}
-		}
+		},
+        "mathjax-pro1":{
+            "forceSVG": true
+        }
 	},
 	"variables": {
 		"themeCAP":{
@@ -80,4 +82,5 @@
             ]
         }
     }
+	
 }
