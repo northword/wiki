@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>VASP的输入文件 · Computation-Simulation</title>
+        <title>使用VASP计算电荷密度差 · Computation-Simulation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="vasp-input-INCAR.html" />
+    <link rel="next" href="../06-Other App/" />
     
     
-    <link rel="prev" href="install-vaspkit.html" />
+    <link rel="prev" href="vasp-neb.html" />
     
 
     </head>
@@ -523,7 +523,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6.3" data-path="vasp-input-files.html">
+        <li class="chapter " data-level="6.3" data-path="vasp-input-files.html">
             
                 <a href="vasp-input-files.html">
             
@@ -614,7 +614,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.10" data-path="vasp-chg-diff.html">
+        <li class="chapter active" data-level="6.10" data-path="vasp-chg-diff.html">
             
                 <a href="vasp-chg-diff.html">
             
@@ -796,7 +796,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >VASP的输入文件</a>
+        <a href=".." >使用VASP计算电荷密度差</a>
     </h1>
 </div>
 
@@ -811,45 +811,189 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vasp&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;"><b></b>VASP&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#incar"><b></b>INCAR</a></li><li><span class="title-icon "></span><a href="#poscar"><b></b>POSCAR</a></li><li><span class="title-icon "></span><a href="#potcar"><b></b>POTCAR</a></li><li><span class="title-icon "></span><a href="#kpoints"><b></b>KPOINTS</a></li></ul></ul></div><a href="#vasp&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vasp&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;"><a name="vasp&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#vasp&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>VASP&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;</h1>
-<p>VASP&#x8FD0;&#x884C;&#x81F3;&#x5C11;&#x5305;&#x542B;&#x56DB;&#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#xFF1A;<code>INCAR</code>&#x3001;<code>POSCAR</code>&#x3001;<code>POTCATR</code>&#x3001;<code>KPOINTS</code>&#x3002;</p>
-<h2 id="incar"><a name="incar" class="anchor-navigation-ex-anchor" href="#incar"><i class="fa fa-link" aria-hidden="true"></i></a>INCAR</h2>
-<p>INCAR &#x662F;VASP&#x8FD0;&#x884C;&#x7684;<strong>&#x63A7;&#x5236;&#x6587;&#x4EF6;</strong>&#xFF0C;&#x4ED6;&#x544A;&#x8BC9;VASP&#x8981;<strong>&#x505A;&#x4EC0;&#x4E48;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x53BB;&#x505A;</strong>&#x3002;INCAR&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;&#x5F88;&#x591A;&#x6807;&#x7B7E;&#x53CA;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x4ED6;&#x4EEC;&#x6765;&#x4FEE;&#x6539;VASP&#x8FD0;&#x884C;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
-<p>&#x6807;&#x7B7E;&#x7684;&#x542B;&#x4E49;&#x53EF;&#x4EE5;&#x67E5; <a href="https://www.vasp.at/wiki/index.php/Category:INCAR" target="_blank">VASP&#x624B;&#x518C;</a> &#x3002;</p>
-<h2 id="poscar"><a name="poscar" class="anchor-navigation-ex-anchor" href="#poscar"><i class="fa fa-link" aria-hidden="true"></i></a>POSCAR</h2>
-<p>POSCAR&#x662F;&#x4E2A;<strong>&#x7ED3;&#x6784;&#x6587;&#x4EF6;</strong>&#xFF0C;&#x4ED6;&#x544A;&#x8BC9;VASP&#x8981;&#x8FD0;&#x884C;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#x7269;&#x8D28;&#x3002;&#x8BE5;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x6676;&#x683C;&#x51E0;&#x4F55;&#x5F62;&#x72B6;&#x548C;&#x79BB;&#x5B50;&#x4F4D;&#x7F6E;&#x7B49;&#x3002;</p>
-<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;POSCAR&#x6587;&#x4EF6;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre class="language-"><code>O2 molecule           # &#x6CE8;&#x91CA;&#x884C;
-10                    # &#x6BD4;&#x4F8B;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x901A;&#x7528;&#x7F29;&#x653E;&#x56E0;&#x5B50;&#xFF08;&#x6676;&#x683C;&#x5E38;&#x6570;&#xFF09;
-1.0 0.0 0.0           # 3-5&#x884C; &#x683C;&#x77E2;
-0.0 1.0 0.0
-0.0 0.0 1.0
-O                     # &#x5143;&#x7D20;&#x7C7B;&#x522B;&#xFF08;&#x4E0E;&#x5B83;&#x4EEC;&#x5728;POTCAR&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x4E00;&#x81F4;&#xFF09;
-2                     # &#x539F;&#x5B50;&#x6570;&#x91CF;
-Selective Dynamic     # 
-Direct                # &#x5750;&#x6807;&#x7C7B;&#x522B;&#xFF1A;&#x76F4;&#x89D2;/&#x7B1B;&#x5361;&#x5C14;
-0.5 0.5 0.5    F F F  # &#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x7684;&#x4E09;&#x4E2A;(X Y Z)&#x5750;&#x6807;&#x3002;
-0.5 0.5 0.623  F F T
-</code></pre><p>&#x7B2C;8&#x884C;&#xFF1A;&#x8BE5;&#x6A21;&#x5F0F;&#x5141;&#x8BB8;&#x4E3A;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x63D0;&#x4F9B;&#x989D;&#x5916;&#x7684;&#x6807;&#x5FD7;&#xFF0C;&#x4EE5;&#x6307;&#x793A;&#x5728;&#x79BB;&#x5B50;&#x5F1B;&#x8C6B;&#x671F;&#x95F4;&#x662F;&#x5426;&#x5C06;&#x5141;&#x8BB8;&#x66F4;&#x6539;&#x6B64;&#x539F;&#x5B50;&#x7684;&#x76F8;&#x5E94;&#x5750;&#x6807;&#x3002;&#x5982;&#x679C;&#x4EC5;&#x7F3A;&#x9677;&#x5468;&#x56F4;&#x7684;&#x67D0;&#x4E9B;&#x58F3;&#x6216;&#x8868;&#x9762;&#x9644;&#x8FD1;&#x7684;&#x5C42;&#x5E94;&#x677E;&#x5F1B;&#xFF0C;&#x5219;&#x6B64;&#x8BBE;&#x7F6E;&#x5F88;&#x6709;&#x7528;&#x3002;<strong>&#x9009;&#x62E9;&#x6027;&#x52A8;&#x529B;&#x5B66;&#x8F93;&#x5165;&#x6807;&#x7B7E;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x7701;&#x7565;&#x4E86;&#x9009;&#x62E9;&#x6027;&#x52A8;&#x529B;&#x5B66;&#x6807;&#x7B7E;&#xFF0C;&#x5219;&#x7B2C;&#x516B;&#x884C;&#x5C06;&#x5728;&#x7B1B;&#x5361;&#x5C14;&#x548C;&#x76F4;&#x89D2;&#x5750;&#x6807;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x5207;&#x6362;&#xFF0C;&#x5982;&#x4E0B;&#x3002;</strong></p>
-<p>&#x7B2C;9&#x884C;&#xFF1A;&#xFF08;&#x5982;&#x679C;&#x4E0D;&#x542F;&#x7528;&#x9009;&#x62E9;&#x6027;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x5219;&#x4E3A;&#x7B2C;8&#x884C;&#xFF09;&#x6307;&#x5B9A;&#x539F;&#x5B50;&#x4F4D;&#x7F6E;&#x662F;&#x5728;&#x7B1B;&#x5361;&#x5C14;&#x5750;&#x6807;&#x7CFB;&#x4E2D;&#x8FD8;&#x662F;&#x5728;&#x76F4;&#x89D2;&#x5750;&#x6807;&#xFF08;&#x5206;&#x522B;&#x4E3A;&#x5206;&#x6570;&#x5750;&#x6807;&#xFF09;&#x4E2D;&#x63D0;&#x4F9B;&#x3002;&#x4EC5;&#x4E00;&#x884C;&#x4E0A;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x662F;&#x6709;&#x6548;&#x7684;&#xFF0C;&#x5E76;&#x4E14;VASP&#x8BC6;&#x522B;&#x7684;&#x552F;&#x4E00;&#x5173;&#x952E;&#x5B57;&#x7B26;&#x662F;<code>C</code>or<code>c</code> for <code>cartesian mode</code>&#xFF0C;<code>D</code>or<code>d</code>for <code>direct mode</code>&#x3002;</p>
-<pre class="language-"><code>O2 molecule           # &#x6CE8;&#x91CA;&#x884C;
-10                    # &#x6BD4;&#x4F8B;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x901A;&#x7528;&#x7F29;&#x653E;&#x56E0;&#x5B50;&#xFF08;&#x6676;&#x683C;&#x5E38;&#x6570;&#xFF09;
-1.0 0.0 0.0           # 3-5&#x884C; &#x683C;&#x77E2;
-0.0 1.0 0.0
-0.0 0.0 1.0
-O                     # &#x5143;&#x7D20;&#x7C7B;&#x522B;&#xFF08;&#x4E0E;&#x5B83;&#x4EEC;&#x5728;POTCAR&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x4E00;&#x81F4;&#xFF09;
-2                     # &#x539F;&#x5B50;&#x6570;&#x91CF;
-Direct                # &#x5750;&#x6807;&#x7C7B;&#x522B;&#xFF1A;&#x76F4;&#x89D2;/&#x7B1B;&#x5361;&#x5C14;
-0.5 0.5 0.5           # &#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x7684;&#x4E09;&#x4E2A;(X Y Z)&#x5750;&#x6807;&#x3002;
-0.5 0.5 0.623
-</code></pre><h2 id="potcar"><a name="potcar" class="anchor-navigation-ex-anchor" href="#potcar"><i class="fa fa-link" aria-hidden="true"></i></a>POTCAR</h2>
-<p>&#x8D5D;&#x52BF;&#x6587;&#x4EF6;&#x3002;POTCAR&#x6587;&#x4EF6;&#x5305;&#x542B;&#x8BA1;&#x7B97;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x79CD;&#x7C7B;&#x7684;&#x4F2A;&#x52BF;&#x3002;&#x5982;&#x679C;&#x7269;&#x79CD;&#x6570;&#x91CF;&#x5927;&#x4E8E;&#x4E00;&#x4E2A;&#xFF0C;&#x5219;<strong>&#x6309;&#x7167;POSCAR&#x4E2D;&#x539F;&#x5B50;&#x7684;&#x987A;&#x5E8F;</strong>&#x5408;&#x5E76;&#x6BCF;&#x4E2A;&#x7269;&#x79CD;&#x7684;POTCAR&#x6587;&#x4EF6;&#x3002;</p>
-<h2 id="kpoints"><a name="kpoints" class="anchor-navigation-ex-anchor" href="#kpoints"><i class="fa fa-link" aria-hidden="true"></i></a>KPOINTS</h2>
-<p>K&#x70B9;&#x53D6;&#x6837;&#x6587;&#x4EF6;&#x3002;KPOINTS&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x6307;&#x5B9A;Bloch&#x77E2;&#x91CF;&#xFF08;k&#x70B9;&#xFF09;&#xFF0C;&#x8FD9;&#x4E9B;&#x77E2;&#x91CF;&#x5C06;&#x7528;&#x4E8E;&#x5728;&#x8BA1;&#x7B97;&#x4E2D;&#x5BF9;&#x5E03;&#x91CC;&#x6E0A;&#x533A;&#x8FDB;&#x884C;&#x91C7;&#x6837;&#x3002;</p>
-<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x51E0;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x5728;KPOINTS&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;k&#x70B9;&#xFF1A;&#xFF08;1&#xFF09;&#x4F5C;&#x4E3A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#xFF08;&#x79FB;&#x4F4D;&#x7684;&#xFF09;&#x5E38;&#x89C4;&#x70B9;&#x7F51;&#x683C;&#xFF1B;&#xFF08;2&#xFF09;&#x901A;&#x8FC7;&#x7EBF;&#x6BB5;&#x7684;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;&#xFF1B;&#x6216;&#xFF08; 3&#xFF09;&#x4F5C;&#x4E3A;&#x70B9;&#x548C;&#x6743;&#x91CD;&#x7684;&#x660E;&#x786E;&#x5217;&#x8868;&#x3002;</p>
-<p>&#x624B;&#x518C;&#xFF1A;<a href="https://www.vasp.at/wiki/index.php/KPOINTS" target="_blank">KPOINTS - Vaspwiki</a></p>
-<hr>
-<p>&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x6587;&#x4EF6;&#xFF1A;<a href="https://www.vasp.at/wiki/index.php/Category:Input_Files" target="_blank">Category:Input Files - vaspwiki</a> .</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vasp&#x8BA1;&#x7B97;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5DEE;"><b></b>VASP&#x8BA1;&#x7B97;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5DEE;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;"><b></b>&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x76EE;&#x5F55;"><b></b>&#x76EE;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x5BF9;ab&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F18;&#x5316;-geo"><b></b>&#x5BF9;AB&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F18;&#x5316; geo</a></li><li><span class="title-icon "></span><a href="#&#x9759;&#x7535;&#x81EA;&#x6D3D;"><b></b>&#x9759;&#x7535;&#x81EA;&#x6D3D;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5BF9;a-b&#x8FDB;&#x884C;&#x9759;&#x7535;&#x81EA;&#x6D3D;-scf"><b></b>&#x5BF9;A-B&#x8FDB;&#x884C;&#x9759;&#x7535;&#x81EA;&#x6D3D; scf</a></li><li><span class="title-icon "></span><a href="#&#x5BF9;a&#x3001;b&#x5206;&#x522B;&#x9759;&#x7535;&#x81EA;&#x6D3D;"><b></b>&#x5BF9;A&#x3001;B&#x5206;&#x522B;&#x9759;&#x7535;&#x81EA;&#x6D3D;</a></li></ul><li><span class="title-icon "></span><a href="#chgsumpl"><b></b>chgsum.pl</a></li><li><span class="title-icon "></span><a href="#chgdiffpl"><b></b>chgdiff.pl</a></li></ul></ul></div><a href="#vasp&#x8BA1;&#x7B97;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5DEE;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vasp&#x8BA1;&#x7B97;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5DEE;"><a name="vasp&#x8BA1;&#x7B97;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5DEE;" class="anchor-navigation-ex-anchor" href="#vasp&#x8BA1;&#x7B97;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5DEE;"><i class="fa fa-link" aria-hidden="true"></i></a>VASP&#x8BA1;&#x7B97;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5DEE;</h1>
+<p>&#x4EE5;&#x8BA1;&#x7B97;O2&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5DEE;&#x4E3A;&#x4F8B;</p>
+<h2 id="&#x6D41;&#x7A0B;"><a name="&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x7A0B;</h2>
+<p>&#x4EE5;A-B&#x578B;&#x4E3A;&#x4F8B;</p>
+<ul>
+<li>&#x5BF9;A-B&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F18;&#x5316;</li>
+<li>&#x5206;&#x522B;&#x5BF9;A-B&#x3001;A&#x3001;B&#x5206;&#x522B;&#x9759;&#x7535;&#x81EA;&#x6D3D; &#xFF08;&#x4E0D;&#x80FD;&#x7ED3;&#x6784;&#x4F18;&#x5316;&#xFF09;</li>
+<li>chgsun.pl CHGCAR_A CHGCAR_B</li>
+<li>chgdiff.pl CHGCAR_AB CHGCAR_sum</li>
+</ul>
+<h2 id="&#x76EE;&#x5F55;"><a name="&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76EE;&#x5F55;</h2>
+<pre class="language-"><code>[zjb@op O2_chg_diff]$ tree
+O2_chg_diff
+&#x251C;&#x2500;&#x2500; A
+&#x2502;   &#x251C;&#x2500;&#x2500; CHG
+&#x2502;   &#x251C;&#x2500;&#x2500; CHGCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; CONTCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; INCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; KPOINTS
+&#x2502;   &#x251C;&#x2500;&#x2500; OSZICAR
+&#x2502;   &#x251C;&#x2500;&#x2500; OUTCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; out.log
+&#x2502;   &#x251C;&#x2500;&#x2500; POSCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; POTCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; stdout
+&#x2502;   &#x2514;&#x2500;&#x2500; vasp.pbs
+
+
+&#x251C;&#x2500;&#x2500; B
+&#x2502;   &#x251C;&#x2500;&#x2500; CHG
+&#x2502;   &#x251C;&#x2500;&#x2500; CHGCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; CONTCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; INCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; KPOINTS
+&#x2502;   &#x251C;&#x2500;&#x2500; OSZICAR
+&#x2502;   &#x251C;&#x2500;&#x2500; OUTCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; POSCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; POTCAR
+&#x2502;   &#x251C;&#x2500;&#x2500; REPORT
+&#x2502;   &#x251C;&#x2500;&#x2500; stdout
+&#x2502;   &#x2514;&#x2500;&#x2500; vasp.pbs
+
+&#x251C;&#x2500;&#x2500; CHGCAR_diff
+&#x251C;&#x2500;&#x2500; CHGCAR_sum
+
+&#x2514;&#x2500;&#x2500; O2
+    &#x251C;&#x2500;&#x2500; CHG
+    &#x251C;&#x2500;&#x2500; CHGCAR
+    &#x251C;&#x2500;&#x2500; CONTCAR
+    &#x251C;&#x2500;&#x2500; INCAR
+    &#x251C;&#x2500;&#x2500; KPOINTS
+    &#x251C;&#x2500;&#x2500; OSZICAR
+    &#x251C;&#x2500;&#x2500; OUTCAR
+    &#x251C;&#x2500;&#x2500; POSCAR
+    &#x251C;&#x2500;&#x2500; POTCAR
+    &#x2514;&#x2500;&#x2500; stdout
+
+3 directories, 62 files
+</code></pre><hr>
+<h2 id="&#x5BF9;ab&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F18;&#x5316;-geo"><a name="&#x5BF9;ab&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F18;&#x5316;-geo" class="anchor-navigation-ex-anchor" href="#&#x5BF9;ab&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F18;&#x5316;-geo"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BF9;AB&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F18;&#x5316; geo</h2>
+<p>&#x5728;<code>O2</code>&#x76EE;&#x5F55;&#x4E2D;&#x5BF9;O2&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F18;&#x5316;</p>
+<p><code>[zjb@op O2]$ cat POSCAR</code>&#xFF1A;</p>
+<pre class="language-"><code>O2
+1
+10 0 0
+0 10 0
+0 0 12
+O
+2
+S
+D
+0.5 0.5 0.5   F F F
+0.5 0.5 0.62  F F T
+</code></pre><p><code>[zjb@op O2]$ cat INCAR</code>&#xFF1A;</p>
+<pre class="language-"><code>Global Parameters
+ ISTART =  1            (Read existing wavefunction; if there)
+ ISPIN =  2           (Spin polarised DFT)
+ ICHARG =  2         (Non-self-consistent: GGA/LDA band structures)
+ LREAL  = .FALSE.          (Projection operators: automatic)
+ ENCUT  =  400        (Cut-off energy for plane wave basis set, in eV)
+ PREC   =  Normal       (Precision level)
+ LWAVE  = .TRUE.        (Write WAVECAR or not)
+ LCHARG = .TRUE.        (Write CHGCAR or not)
+ ADDGRID= .TRUE.        (Increase grid; helps GGA convergence)
+ NGXF    = 150         (FFT grid mesh density for nice charge/potential plots)
+ NGYF    = 150         (FFT grid mesh density for nice charge/potential plots)
+ NGZF    = 180         (FFT grid mesh density for nice charge/potential plots)
+
+Electronic Relaxation
+ISMEAR =  0            (Gaussian smearing; metals:1)
+SIGMA  =  0.05         (Smearing value in eV; metals:0.2)
+NELM   =  60           (Max electronic SCF steps)
+NELMIN =  4            (Min electronic SCF steps)
+EDIFF  =  1E-06        (SCF energy convergence; in eV)
+
+Ionic Relaxation
+NSW    =  0          (Max electronic SCF steps)
+IBRION =  2            (Algorithm: 0-MD; 1-Quasi-New; 2-CG)
+ISIF   =  2            (Stress/relaxation: 2-Ions, 3-Shape/Ions/V, 4-Shape/Ions)
+EDIFFG = -2E-02        (Ionic convergence; eV/AA)
+</code></pre><p>&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#xFF0C;&#x7ED3;&#x6784;&#x4F18;&#x5316;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x5C06;<code>CONTCAR</code>&#x4F5C;&#x4E3A;&#x65B0;&#x7684;<code>POSCAR</code>&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x8FD0;&#x7B97;&#x3002; </p>
+<pre class="language-"><code class="lang-bash"> <span class="token punctuation">[</span>zjb@op O2<span class="token punctuation">]</span>$ <span class="token function">cp</span> COUTCAR POSCAR
+</code></pre>
+<p>&#x7ED3;&#x6784;&#x4F18;&#x5316;&#x540E;&#x7684;&#x65B0;POSCAR</p>
+<pre class="language-"><code> [zjb@op O2]$ cat POSCAR
+O2                                      
+   1.00000000000000     
+    10.0000000000000000    0.0000000000000000    0.0000000000000000
+     0.0000000000000000   10.0000000000000000    0.0000000000000000
+     0.0000000000000000    0.0000000000000000   12.0000000000000000
+   O 
+     2
+Selective dynamics
+Direct
+  0.5000000000000000  0.5000000000000000  0.5000000000000000   F   F   F
+  0.5000000000000000  0.5000000000000000  0.6028640220057100   F   F   T
+
+  0.00000000E+00  0.00000000E+00  0.00000000E+00
+  0.00000000E+00  0.00000000E+00  0.00000000E+00
+</code></pre><h2 id="&#x9759;&#x7535;&#x81EA;&#x6D3D;"><a name="&#x9759;&#x7535;&#x81EA;&#x6D3D;" class="anchor-navigation-ex-anchor" href="#&#x9759;&#x7535;&#x81EA;&#x6D3D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9759;&#x7535;&#x81EA;&#x6D3D;</h2>
+<p>&#x4E09;&#x6B21;&#x9759;&#x7535;&#x81EA;&#x6D3D;&#x9700;&#x8981;&#x6CE8;&#x610F;INCAR&#x9700;&#x8981;&#x4E00;&#x6837;&#xFF1A;</p>
+<ul>
+<li>FFT mesh&#x9700;&#x8981;&#x4E00;&#x81F4;</li>
+<li>LCHARG&#x9700;&#x8981;&#x6253;&#x5F00;</li>
+</ul>
+<h3 id="&#x5BF9;a-b&#x8FDB;&#x884C;&#x9759;&#x7535;&#x81EA;&#x6D3D;-scf"><a name="&#x5BF9;a-b&#x8FDB;&#x884C;&#x9759;&#x7535;&#x81EA;&#x6D3D;-scf" class="anchor-navigation-ex-anchor" href="#&#x5BF9;a-b&#x8FDB;&#x884C;&#x9759;&#x7535;&#x81EA;&#x6D3D;-scf"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BF9;A-B&#x8FDB;&#x884C;&#x9759;&#x7535;&#x81EA;&#x6D3D; scf</h3>
+<p>&#x5C06;&#x4E0A;&#x4E00;&#x6B65;&#x7684;<code>INCAR</code>&#x4E2D;<code>ISBRION</code>&#x503C;&#x4FEE;&#x6539;&#x4E3A;<code>-1</code>&#xFF0C;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#x8FDB;&#x884C;&#x9759;&#x7535;&#x81EA;&#x6D3D;&#x3002;</p>
+<h3 id="&#x5BF9;a&#x3001;b&#x5206;&#x522B;&#x9759;&#x7535;&#x81EA;&#x6D3D;"><a name="&#x5BF9;a&#x3001;b&#x5206;&#x522B;&#x9759;&#x7535;&#x81EA;&#x6D3D;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;a&#x3001;b&#x5206;&#x522B;&#x9759;&#x7535;&#x81EA;&#x6D3D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BF9;A&#x3001;B&#x5206;&#x522B;&#x9759;&#x7535;&#x81EA;&#x6D3D;</h3>
+<p>&#x5C06;A-B&#x9759;&#x7535;&#x81EA;&#x6D3D;&#x7528;&#x7684;INCAR&#x3001;POSCAR&#x3001;POTCAR&#x3001;KPOINTS&#x590D;&#x5236;&#x51FA;&#x6765;&#xFF0C;&#x5206;&#x522B;&#x653E;&#x5728;A&#x548C;B&#x76EE;&#x5F55;&#x4E2D;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>zjb@op O2<span class="token punctuation">]</span>$ <span class="token function">cp</span> INCAR POSCAR POTCAR KPOINTS <span class="token punctuation">..</span>/A/
+<span class="token punctuation">[</span>zjb@op O2<span class="token punctuation">]</span>$ <span class="token function">cp</span> INCAR POSCAR POTCAR KPOINTS <span class="token punctuation">..</span>/B/
+</code></pre>
+<p>&#x5728;A&#x76EE;&#x5F55;&#x7684;POSCAR&#x4E2D;&#x5220;&#x9664;B&#x90E8;&#x5206;&#x5BF9;&#x5E94;&#x7684;&#x70B9;&#xFF0C;&#x5143;&#x7D20;&#x6570;&#x91CF;&#x6539;&#x4E00;&#x4E0B;&#xFF0C;&#x5F97;&#x5230;A&#x90E8;&#x5206;&#x7684;POSCAR&#xFF0C;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#x9759;&#x7535;&#x81EA;&#x6D3D;&#x3002;</p>
+<p>&#x5728;B&#x76EE;&#x5F55;&#x7684;POSCAR&#x4E2D;&#x5220;&#x9664;A&#x90E8;&#x5206;&#x5BF9;&#x5E94;&#x7684;&#x70B9;&#xFF0C;&#x5143;&#x7D20;&#x6570;&#x91CF;&#x6539;&#x4E00;&#x4E0B;&#xFF0C;&#x5F97;&#x5230;B&#x90E8;&#x5206;&#x7684;POSCAR&#xFF0C;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#x9759;&#x7535;&#x81EA;&#x6D3D;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>zjb@op O2_chg_diff<span class="token punctuation">]</span>$ <span class="token function">cat</span> A/POSCAR 
+O2                                      
+   <span class="token number">1.00000000000000</span>     
+    <span class="token number">10.0000000000000000</span>    <span class="token number">0.0000000000000000</span>    <span class="token number">0.0000000000000000</span>
+     <span class="token number">0.0000000000000000</span>   <span class="token number">10.0000000000000000</span>    <span class="token number">0.0000000000000000</span>
+     <span class="token number">0.0000000000000000</span>    <span class="token number">0.0000000000000000</span>   <span class="token number">12.0000000000000000</span>
+   O 
+     <span class="token number">1</span>
+Selective dynamics
+Direct
+  <span class="token number">0.5000000000000000</span>  <span class="token number">0.5000000000000000</span>  <span class="token number">0.5000000000000000</span>   F   F   F
+
+  <span class="token number">0</span>.00000000E+00  <span class="token number">0</span>.00000000E+00  <span class="token number">0</span>.00000000E+00
+  <span class="token number">0</span>.00000000E+00  <span class="token number">0</span>.00000000E+00  <span class="token number">0</span>.00000000E+00
+
+
+
+<span class="token punctuation">[</span>zjb@op O2_chg_diff<span class="token punctuation">]</span>$ <span class="token function">cat</span> B/POSCAR 
+O2                                      
+   <span class="token number">1.00000000000000</span>     
+    <span class="token number">10.0000000000000000</span>    <span class="token number">0.0000000000000000</span>    <span class="token number">0.0000000000000000</span>
+     <span class="token number">0.0000000000000000</span>   <span class="token number">10.0000000000000000</span>    <span class="token number">0.0000000000000000</span>
+     <span class="token number">0.0000000000000000</span>    <span class="token number">0.0000000000000000</span>   <span class="token number">12.0000000000000000</span>
+   O 
+     <span class="token number">1</span>
+Selective dynamics
+Direct
+  <span class="token number">0.5000000000000000</span>  <span class="token number">0.5000000000000000</span>  <span class="token number">0.6028640220057100</span>   F   F   T
+
+  <span class="token number">0</span>.00000000E+00  <span class="token number">0</span>.00000000E+00  <span class="token number">0</span>.00000000E+00
+  <span class="token number">0</span>.00000000E+00  <span class="token number">0</span>.00000000E+00  <span class="token number">0</span>.00000000E+00
+</code></pre>
+<h2 id="chgsumpl"><a name="chgsumpl" class="anchor-navigation-ex-anchor" href="#chgsumpl"><i class="fa fa-link" aria-hidden="true"></i></a>chgsum.pl</h2>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">chgsum.pl <span class="token operator">&lt;</span>CHGCAR_A<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>CHGCAR_B<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x6BD4;&#x5982;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"> <span class="token punctuation">[</span>zjb@op O2_chg_diff<span class="token punctuation">]</span>$ chgsum.pl A/CHGCAR B/CHGCAR
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x540E;&#x5728;<code>O2_chg_diff/</code>&#x4E0B;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E2A;<code>CHGCAR_sum</code>&#x6587;&#x4EF6;&#x3002;</p>
+<h2 id="chgdiffpl"><a name="chgdiffpl" class="anchor-navigation-ex-anchor" href="#chgdiffpl"><i class="fa fa-link" aria-hidden="true"></i></a>chgdiff.pl</h2>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">chgdiff.pl <span class="token operator">&lt;</span>CHGCAR_AB<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>CHGCAR_sum<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x662F;&#x540E;&#x9762;&#x7684;&#x51CF;&#x524D;&#x9762;&#x7684;&#x3002;</p>
+<p>&#x672C;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code> [zjb@op O2_chg_diff]$ chgdiff.pl O2/CHGCAR CHGCAR_sum
+</code></pre><p>&#x8FD0;&#x884C;&#x540E;&#x5728;<code>O2_chg_diff/</code>&#x4E0B;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E2A;<code>CHGCAR_diff</code>&#x6587;&#x4EF6;&#xFF0C;&#x4E0B;&#x8F7D;&#xFF0C;&#x4F7F;&#x7528;<code>VESTA</code>&#x663E;&#x793A;&#xFF1A;</p>
+<p><img src="vasp-chg-diff.assets/image-20201128155815668.png" alt="O2_chg_diff_VESTA"></p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -878,12 +1022,12 @@ Direct                # &#x5750;&#x6807;&#x7C7B;&#x522B;&#xFF1A;&#x76F4;&#x89D2;
 
             
                 
-                <a href="install-vaspkit.html" class="navigation navigation-prev " aria-label="Previous page: 安装VASPKIT">
+                <a href="vasp-neb.html" class="navigation navigation-prev " aria-label="Previous page: 使用VASP NEB方法计算反应路径">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="vasp-input-INCAR.html" class="navigation navigation-next " aria-label="Next page: VASP的输入文件之INCAR">
+                <a href="../06-Other App/" class="navigation navigation-next " aria-label="Next page: 高斯">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -894,7 +1038,7 @@ Direct                # &#x5750;&#x6807;&#x7C7B;&#x522B;&#xFF1A;&#x76F4;&#x89D2;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"VASP的输入文件","level":"6.3","depth":1,"next":{"title":"VASP的输入文件之INCAR","level":"6.4","depth":1,"path":"05-VASP/vasp-input-INCAR.md","ref":"05-VASP/vasp-input-INCAR.md","articles":[]},"previous":{"title":"安装VASPKIT","level":"6.2","depth":1,"path":"05-VASP/install-vaspkit.md","ref":"05-VASP/install-vaspkit.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","-popup","-auto-scroll-table","-theme-fexa","theme-comscore","-theme-cap","theme-northword1","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"theme-northword1":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"05-VASP/vasp-input-files.md","mtime":"2020-11-19T08:41:24.018Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-28T08:03:24.918Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"使用VASP计算电荷密度差","level":"6.10","depth":1,"next":{"title":"高斯","level":"7.1","depth":1,"path":"06-Other App/README.md","ref":"06-Other App/README.md","articles":[]},"previous":{"title":"使用VASP NEB方法计算反应路径","level":"6.9","depth":1,"path":"05-VASP/vasp-neb.md","ref":"05-VASP/vasp-neb.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","code","-lunr","-search","search-plus","-sharing","livereload","-expandable-chapters","-page-treeview","anchor-navigation-ex","chapter-fold","-splitter","-mermaid-gb3","-popup","-auto-scroll-table","-theme-fexa","theme-comscore","-theme-cap","theme-northword1","-back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"theme-northword1":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"05-VASP/vasp-chg-diff.md","mtime":"2020-11-28T08:02:22.909Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-28T08:03:24.918Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

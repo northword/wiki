@@ -10,16 +10,17 @@
 
 ## Install
 
-* [Windows平台里的相关软件](02-Install/Windows-platform.md)
-	* [Python](02-install/windows-python.md)
-	* [ase](02-Install/windows-ase-install.md)
-* [Linux里的相关软件](02-Install/linux-platform.md)
-	* [VaspKit](02-Install\linux-install-vaspkit.md)
-	* [VTST Script](02-Install\linux-install-VTSTScript.md) 
-	* [gnuplot](02-install/linux-gnuplot-install.md)
-	* [为非ROOT用户安装Python3](02-install/linux-python-for-nonRoot.md)
-	* [Irzsz](02-Install/linux-lrzsz-install.md)
-	* [linux为非ROOT用户安装应用程序](02-Install/linux-install-app-for-nonRoot.md)
+* [可能需要的软件](02-Install\software-requirements.md) 
+* Windows
+  * [Python](02-install/windows-python.md)
+  * [ase](02-Install/windows-ase-install.md)
+* Linux
+  * [VaspKit](02-Install\linux-install-vaspkit.md)
+  * [VTST Script](02-Install\linux-install-VTSTScript.md) 
+  * [gnuplot](02-install/linux-gnuplot-install.md)
+  * [为非ROOT用户安装Python3](02-install/linux-python-for-nonRoot.md)
+  * [Irzsz](02-Install/linux-lrzsz-install.md)
+  * [linux为非ROOT用户安装应用程序](02-Install/linux-install-app-for-nonRoot.md)
 
 ## Linux
 
@@ -49,6 +50,7 @@
 * [使用VASP进行结构优化](05-VASP\vasp-geo.md) 
 * [K-PATH](05-VASP\K-PATH.md) 
 * [使用VASP NEB方法计算反应路径](05-VASP/vasp-neb.md)
+* [使用VASP计算电荷密度差](05-VASP/vasp-chg-diff.md)
 
 ## Other Apps
 

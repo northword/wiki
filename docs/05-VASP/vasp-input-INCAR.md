@@ -14,7 +14,6 @@
 | REAL | 实型     | -2^128 ~ 2^128 |                                       |
 | BOOL | 布尔     | 0或1           | VASP中用`.TURE.`和`.FALSE.`           |
 |      |          |                |                                       |
-|      |          |                |                                       |
 
 ---
 
@@ -49,6 +48,65 @@
 | 5    | yes       | yes           | no                 | yes        | no          |
 | 6    | yes       | yes           | no                 | yes        | yes         |
 | 7    | yes       | yes           | no                 | no         | yes         |
+
+## ISTART
+
+取值：0 | 1 | 2 | 3
+
+缺省值：如果`WAVECAR`存在，则为`1`，否则为`0`
+
+描述：是否读取`WAVECAR`
+
+| ISTART | function          |
+| ------ | ----------------- |
+| 0      | 从头开始          |
+| 1      | 从WAVECAR读取轨道 |
+| 2      |                   |
+| 3      |                   |
+
+
+
+## ISPIN
+
+取值：1 | 2
+
+缺省：1
+
+描述：自旋极化
+
+ISPIN = 1 ：不自旋
+
+ISPIN = 2 ：自旋
+
+与`MAGMOM`结合，可以研究共线磁性
+
+## ICAHARG
+
+取值：0 | 1 | 2 | 4
+
+缺省：ICHARG=2 if ISTART=0，=0 else
+
+描述：决定VASP如何构造初始电荷密度
+
+### ICHARG=0
+
+从初始波函数计算电荷密度。如果因为无效WAVECAR导致ISTART重置，则ICHARG会被设置为2。
+
+### ICHARG=1
+
+从CHGCAR读取电荷密度，使用原子电荷密度的线性组合从旧位置（在CHGCAR上）外推到新位置。
+
+### ICHARG=2
+
+原子电荷密度叠加
+
+### +10：非自洽计算
+
+
+
+
+
+
 
 ## LWAVE
 
@@ -90,3 +148,10 @@
 
 描述：离子步的最大步数
 
+IBRION = 0时，NSW给出了所有从头开始的Molecular Dynamics运行的步骤数，因此必须提供它，否则VASP在启动后立即崩溃。
+
+IBRION != 0时，在所有最小化算法（准牛顿，共轭梯度和阻尼分子动力学）中，NSW定义了最大离子步数。
+
+## IBRION
+
+取值：
