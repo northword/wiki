@@ -45,10 +45,14 @@ Bug/typo/error reports should be sent to:
 
 
 
-> Powered by Gitbook, 	Hosted by Github Pages. 	
+> Powered by [Gitbook](https://www.gitbook.com/), 	Hosted by [Github Pages](https://pages.github.com/). 	
 >
-> Copyright 2020 Northword.  			
+> Link of This [repositories](https://github.com/northword/Computation-Simulation) in GitHub. 		
 >
-> 晋ICP备18010037号-1 	
+> 晋ICP备18010037号-1. 	
+>
+> ©2020 [Northword]().  	
+
+
 
 菜鸡小张，2020年。
