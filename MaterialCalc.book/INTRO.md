@@ -23,12 +23,6 @@
 
 ---
 
-上拉一点点，左上角汉堡菜单查看文档大纲；右上角汉堡菜单查看当前页面大纲。
-
-桌面端食用体验更加~
-
----
-
 同为初学者，水平有限，如有错误还请指出。
 
 Bug/typo/error reports should be sent to:
@@ -37,5 +31,24 @@ Bug/typo/error reports should be sent to:
 
 ---
 
-菜鸡小张，2020年。
+**Tips:** 
 
+上拉一点点，左上角汉堡菜单查看文档大纲；右上角汉堡菜单查看当前页面大纲。
+
+桌面端食用体验更加~
+
+本笔记中，代码块行前有`$`的，表示在终端输入的命令，实际不需要输入`$`符号。
+
+本笔记中的命令的语法表示中：`<参数>`表示必须参数，`[参数]`表示可选参数，可参考 [命令行语法格式中常用符号的含义](https://www.cnblogs.com/uakora/p/11809501.html) 。
+
+---
+
+
+
+> Powered by Gitbook, 	Hosted by Github Pages. 	
+>
+> Copyright 2020 Northword.  			
+>
+> 晋ICP备18010037号-1 	
+
+菜鸡小张，2020年。

@@ -1,4 +1,4 @@
-# 使用VASP进行结构优化
+# 使用VASP进行结构优化和静电自洽
 
 
 
@@ -11,3 +11,14 @@
 [vasp计算流程-结构优化](https://cndaqiang.github.io/2018/01/23/vasp-step1/)
 
 [【vasp笔记】结构优化（结构弛豫）](https://blog.csdn.net/flowingsand/article/details/103656692)
+
+# 步骤
+
+## Step1
+
+
+
+
+
+# 其他
+

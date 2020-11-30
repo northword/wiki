@@ -76,7 +76,7 @@
 
 # 步骤
 
-## 对AB进行结构优化 geo
+## Step1：对AB进行结构优化 geo
 
 在`O2`目录中对O2进行结构优化
 
@@ -121,7 +121,7 @@ NELMIN =  4            (Min electronic SCF steps)
 EDIFF  =  1E-06        (SCF energy convergence; in eV)
 
 Ionic Relaxation
-NSW    =  0          (Max electronic SCF steps)
+NSW    =  20          (Max electronic SCF steps)
 IBRION =  2            (Algorithm: 0-MD; 1-Quasi-New; 2-CG)
 ISIF   =  2            (Stress/relaxation: 2-Ions, 3-Shape/Ions/V, 4-Shape/Ions)
 EDIFFG = -2E-02        (Ionic convergence; eV/AA)
@@ -155,7 +155,7 @@ Direct
 
 
 
-## 静电自洽
+## Step2：静电自洽
 
 三次静电自洽需要注意：
 
@@ -221,7 +221,7 @@ Direct
 
 ```
 
-## 求差
+## Step3：求差
 
 ### chgsum.pl
 
@@ -293,7 +293,7 @@ $$
 
 在主菜单选择`31) Charge & Spin Density`，之后进入`314) Charge-Density Difference `，在下一个界面提示输入`O2/CHGCAR A/CHGCAR B/CHGCAR`。
 
-```
+```bash
 ======================= File Options ============================
  Input the Names of Charge/Potential Files with Space: 
  (e.g., to get AB-A-B, type: ~/AB/CHGCAR ./A/CHGCAR ../B/CHGCAR)

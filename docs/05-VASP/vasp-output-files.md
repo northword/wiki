@@ -1,6 +1,6 @@
 # VASP的输出文件
 
-## OUTCARR
+## OUTCAR
 
 
 
