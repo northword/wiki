@@ -21,6 +21,8 @@
 
 - 对AB进行结构优化
 - 分别对AB、A、B分别静电自洽 （不能结构优化）
+  - FFT mesh需要一致
+  - LCHARG需要打开
 - 求差（chgsun.pl CHGCAR_A CHGCAR_B；chgdiff.pl CHGCAR_AB CHGCAR_sum）
 
 ## 目录结构
