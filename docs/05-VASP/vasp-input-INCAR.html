@@ -981,6 +981,17 @@
 <p>ISPIN = 1 &#xFF1A;&#x4E0D;&#x81EA;&#x65CB;</p>
 <p>ISPIN = 2 &#xFF1A;&#x81EA;&#x65CB;</p>
 <p>&#x4E0E;<code>MAGMOM</code>&#x7ED3;&#x5408;&#xFF0C;&#x53EF;&#x4EE5;&#x7814;&#x7A76;&#x5171;&#x7EBF;&#x78C1;&#x6027;</p>
+<p>&#x9700;&#x8981;&#x8003;&#x8651;&#x81EA;&#x65CB;&#x6781;&#x5316;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ol>
+<li><p>&#x5355;&#x539F;&#x5B50;&#x7684;&#x8BA1;&#x7B97;,</p>
+</li>
+<li><p>O2 &#x5206;&#x5B50;(&#x57FA;&#x6001;&#x4E3A;&#x4E09;&#x91CD;&#x6001;)</p>
+</li>
+<li>&#x81EA;&#x7531;&#x57FA;&#x76F8;&#x5173;&#x7684;&#x8BA1;&#x7B97;</li>
+<li>&#x542B;Fe,Co, Ni &#x7684;&#x4F53;&#x7CFB;</li>
+<li>&#x8981;&#x8BA1;&#x7B97;&#x7684;&#x4F53;&#x7CFB;&#x5177;&#x6709;&#x78C1;&#x6027;&#xFF1A;&#x987A;&#x78C1;&#xFF0C;&#x94C1;&#x78C1;&#xFF0C;&#x53CD;&#x94C1;&#x78C1;&#x7B49;&#xFF0C;&#x8981;&#x6253;&#x5F00;&#x81EA;&#x65CB;&#x6781;&#x5316;&#x3002;</li>
+<li>&#x5F53;&#x5173;&#x6CE8;&#x4F53;&#x7CFB;&#x7684;&#x7535;&#x5B50;&#x6027;&#x8D28;&#x65F6;&#xFF0C;&#x4E14;&#x81EA;&#x5DF1;&#x4E0D;&#x77E5;&#x9053;&#x52A0;&#x6216;&#x8005;&#x4E0D;&#x52A0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5EFA;&#x8BAE;&#x52A0;&#x4E0A;&#x3002;</li>
+</ol>
 <h2 id="icharg"><a name="icharg" class="anchor-navigation-ex-anchor" href="#icharg"><i class="fa fa-link" aria-hidden="true"></i></a>ICHARG</h2>
 <p>&#x53D6;&#x503C;&#xFF1A;0 | 1 | 2 | 4</p>
 <p>&#x7F3A;&#x7701;&#xFF1A;ICHARG=2 if ISTART=0&#xFF0C;=0 else</p>
@@ -1024,6 +1035,9 @@
 <p>&#x7F3A;&#x7701;&#x503C;&#xFF1A;<code>.TRUE.</code></p>
 <p>&#x63CF;&#x8FF0;&#xFF1A;&#x662F;&#x5426;&#x5C06;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x5199;&#x5165;<code>CHGCAR</code>&#x548C;<code>CHG</code></p>
 <h2 id="ediff"><a name="ediff" class="anchor-navigation-ex-anchor" href="#ediff"><i class="fa fa-link" aria-hidden="true"></i></a>EDIFF</h2>
+<p>&#x53D6;&#x503C;&#xFF1A;real</p>
+<p>&#x7F3A;&#x7701;&#x503C;&#xFF1A;<code>1E-4</code></p>
+<p>&#x63CF;&#x8FF0;&#xFF1A;&#x63A7;&#x5236;&#x7535;&#x5B50;&#x6B65;&#xFF08;&#x81EA;&#x6D3D;&#xFF09;&#x7684;&#x6536;&#x655B;&#x6807;&#x51C6;</p>
 <h2 id="ediffg"><a name="ediffg" class="anchor-navigation-ex-anchor" href="#ediffg"><i class="fa fa-link" aria-hidden="true"></i></a>EDIFFG</h2>
 <p>&#x53D6;&#x503C;&#xFF1A;real</p>
 <p>&#x7F3A;&#x7701;&#x503C;&#xFF1A;<code>EDIFF</code>x10</p>
@@ -1058,11 +1072,17 @@
 </tr>
 <tr>
 <td>1</td>
-<td>&#x79BB;&#x5B50;&#x5F1B;&#x8C6B;&#xFF08;RMM-DIIS&#xFF09;</td>
+<td>&#x79BB;&#x5B50;&#x5F1B;&#x8C6B;&#xFF08;RMM-DIIS&#xFF09;\</td>
+<td>&#x5C0F;&#x8303;&#x56F4;&#x5185;&#x7684;&#x7A33;&#x5B9A;&#x7ED3;&#x6784;&#x641C;&#x7D22;</td>
 </tr>
 <tr>
 <td>2</td>
-<td>&#x79BB;&#x5B50;&#x5F1B;&#x8C6B;&#xFF08;&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x7B97;&#x6CD5;&#xFF09;</td>
+<td>&#x79BB;&#x5B50;&#x5F1B;&#x8C6B;&#xFF08;&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x7B97;&#x6CD5;&#xFF09; \</td>
+<td>&#x4E00;&#x822C;&#x7528;&#x8FD9;&#x4E2A;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&#x521D;&#x59CB;&#x7ED3;&#x6784;&#x5F88;&#x5DEE;&#x65F6;</td>
 </tr>
 </tbody>
 </table>
@@ -1111,7 +1131,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"VASP的输入文件之INCAR","level":"6.4","depth":1,"next":{"title":"VASP的输出文件","level":"6.5","depth":1,"path":"05-VASP/vasp-output-files.md","ref":"05-VASP/vasp-output-files.md","articles":[]},"previous":{"title":"VASP的输入文件","level":"6.3","depth":1,"path":"05-VASP/vasp-input-files.md","ref":"05-VASP/vasp-input-files.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","code","mathjax-pro","-katex","-lunr","-search","search-plus","-sharing","livereload","expandable-chapters","-page-treeview","anchor-navigation-ex","-chapter-fold","-popup","-auto-scroll-table","theme-comscore","theme-northword1"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"theme-northword1":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"prism-themes":{},"mathjax-pro1":{"forceSVG":true},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"05-VASP/vasp-input-INCAR.md","mtime":"2020-11-28T13:40:28.963Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:44:04.301Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"VASP的输入文件之INCAR","level":"6.4","depth":1,"next":{"title":"VASP的输出文件","level":"6.5","depth":1,"path":"05-VASP/vasp-output-files.md","ref":"05-VASP/vasp-output-files.md","articles":[]},"previous":{"title":"VASP的输入文件","level":"6.3","depth":1,"path":"05-VASP/vasp-input-files.md","ref":"05-VASP/vasp-input-files.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","code","mathjax-pro","-katex","-lunr","-search","search-plus","-sharing","livereload","expandable-chapters","-page-treeview","anchor-navigation-ex","-chapter-fold","-popup","-auto-scroll-table","theme-comscore","theme-northword1"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"theme-northword1":{},"code":{"copyButtons":true},"theme-cap":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./fav.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"prism-themes":{},"mathjax-pro1":{"forceSVG":true},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"Northword","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeCAP":{"nav":[{"url":"../","target":"_blank","name":"Blog"}]}},"title":"Computation-Simulation","language":"zh-hans","gitbook":"3.2.3","description":"Notes to record the learning process of 'Calculation and simulation method of environmental energy materials'"},"file":{"path":"05-VASP/vasp-input-INCAR.md","mtime":"2020-12-03T11:42:25.851Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-10T08:29:00.232Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

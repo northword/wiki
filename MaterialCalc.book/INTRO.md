@@ -55,7 +55,7 @@ Bug/typo/error reports should be sent to:
 >
 > ©2020 [Northword]().  	
 
-[Overseas link](blog.northword.cn/Computation-Simulation) | Mainland link: [calc.northword.cn](calc.northword.cn) or [coding link](https://coding-pages-bucket-754421-7989532-6736-398709-1252916143.cos-website.ap-shanghai.myqcloud.com/)
+
 
 菜鸡小张，2020年。
 

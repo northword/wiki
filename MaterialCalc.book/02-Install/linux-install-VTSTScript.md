@@ -10,7 +10,8 @@ $ wget https://github.com/northword/Computation-Simulation/raw/main/app/vtstscri
 ## 解压缩
 
 ```bash
-tar -xzvf vtstscripts.tgz & rm vtstscripts.tar
+tar -xzvf vtstscripts.tgz 
+rm vtstscripts.tgz
 cd vtstscripts-933
 pwd
 # 将返回值复制

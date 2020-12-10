@@ -296,6 +296,8 @@ EDIFFG = -2E-02        (Ionic convergence; eV/AA)
 
 当然也可以选择`104) Generate POTCAR File with User Specified Potential`选择自己想要的赝势类型。
 
+如果没有VASPKIT，就可以`cat <元素1的赝势文件> <元素2的赝势文件> >> POTCAR`。
+
 ---
 
 

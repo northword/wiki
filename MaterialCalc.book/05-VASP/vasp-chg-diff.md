@@ -225,6 +225,52 @@ Direct
 
 ## Step3：求差
 
+求差也可以使用`VASPKIT`提供的功能。
+
+在主菜单选择`31) Charge & Spin Density`，之后进入`314) Charge-Density Difference `，在下一个界面提示输入`O2/CHGCAR A/CHGCAR B/CHGCAR`。
+
+```bash
+======================= File Options ============================
+ Input the Names of Charge/Potential Files with Space: 
+ (e.g., to get AB-A-B, type: ~/AB/CHGCAR ./A/CHGCAR ../B/CHGCAR)
+ 
+ ------------>>
+O2_scf/CHGCAR A/CHGCAR B/CHGCAR
+ 
+  -->> (01) Reading Structural Parameters from O2_scf/CHGCAR File...
+  -->> (02) Reading Charge Density From O2_scf/CHGCAR File...
+  -->> (03) Reading Structural Parameters from A/CHGCAR File...
+  -->> (04) Reading Charge Density From A/CHGCAR File...
+  -->> (05) Reading Structural Parameters from B/CHGCAR File...
+  -->> (06) Reading Charge Density From B/CHGCAR File...
+  -->> (07) Written CHGDIFF.vasp File!
+ +---------------------------------------------------------------+
+ |                       * ACKNOWLEDGMENTS *                     |
+ | Other Contributors: Xue-Fei LIU, Peng-Fei LIU, Dao-Xiong WU,  |
+ | Zhao-Fu ZHANG, Tian WANG, Ya-Chao LIU, Qiang LI, iGo and You! |
+ +---------------------------------------------------------------+
+ |                          * CITATIONS *                        |
+ | We Would Appreciate if You Cite in Your Research with VASPKIT.|
+ | [1] V. Wang, N. Xu, J.C. LIU, G. Tang, et al, VASPKIT: A Pre- |
+ | and Post-Processing Program for VASP Code, arXiv:1908.08269.  |
+ +---------------------------------------------------------------+
+[zjb@op O2_chg_diff]$ ls
+A  B  CHGCAR_diff  CHGCAR_sum  CHGDIFF.vasp  O2_scf
+
+```
+
+输出一个`CHGDIFF.vasp`，即为所求，下载，VESTA打开：
+
+![CHGDIFF.vasp](vasp-chg-diff.assets/image-20201128200429769.png)
+
+
+
+---
+
+# 其他
+
+## 求差的其他方法
+
 ### chgsum.pl
 
 语法：
@@ -283,54 +329,6 @@ $$
 
 ![O2_chg_diff_VESTA](vasp-chg-diff.assets/image-20201128155815668.png)
 
-黄色部分表示电荷密度增加，蓝色表示电荷密度减少：
-
----
-
-# 其他
-
-## 求差的其他方法
-
-求差也可以使用`VASPKIT`提供的功能。
-
-在主菜单选择`31) Charge & Spin Density`，之后进入`314) Charge-Density Difference `，在下一个界面提示输入`O2/CHGCAR A/CHGCAR B/CHGCAR`。
-
-```bash
-======================= File Options ============================
- Input the Names of Charge/Potential Files with Space: 
- (e.g., to get AB-A-B, type: ~/AB/CHGCAR ./A/CHGCAR ../B/CHGCAR)
- 
- ------------>>
-O2_scf/CHGCAR A/CHGCAR B/CHGCAR
- 
-  -->> (01) Reading Structural Parameters from O2_scf/CHGCAR File...
-  -->> (02) Reading Charge Density From O2_scf/CHGCAR File...
-  -->> (03) Reading Structural Parameters from A/CHGCAR File...
-  -->> (04) Reading Charge Density From A/CHGCAR File...
-  -->> (05) Reading Structural Parameters from B/CHGCAR File...
-  -->> (06) Reading Charge Density From B/CHGCAR File...
-  -->> (07) Written CHGDIFF.vasp File!
- +---------------------------------------------------------------+
- |                       * ACKNOWLEDGMENTS *                     |
- | Other Contributors: Xue-Fei LIU, Peng-Fei LIU, Dao-Xiong WU,  |
- | Zhao-Fu ZHANG, Tian WANG, Ya-Chao LIU, Qiang LI, iGo and You! |
- +---------------------------------------------------------------+
- |                          * CITATIONS *                        |
- | We Would Appreciate if You Cite in Your Research with VASPKIT.|
- | [1] V. Wang, N. Xu, J.C. LIU, G. Tang, et al, VASPKIT: A Pre- |
- | and Post-Processing Program for VASP Code, arXiv:1908.08269.  |
- +---------------------------------------------------------------+
-[zjb@op O2_chg_diff]$ ls
-A  B  CHGCAR_diff  CHGCAR_sum  CHGDIFF.vasp  O2_scf
-
-```
-
-输出一个`CHGDIFF.vasp`，即为所求，下载，VESTA打开：
-
-![CHGDIFF.vasp](vasp-chg-diff.assets/image-20201128200429769.png)
-
-
-
 ## 为什么chgdiff.pl是后减前？
 
 读取源码：
@@ -376,3 +374,9 @@ for ($i=0; $i<$psum1/5; $i++) {
 第7-15行：第一个参数`CHGCAR_1`里的每一行记为`line1`，第二个参数`CHGCAR_2`里的每一行记为`line2`.
 
 第27行，`line2-line1`，即`CHGCAR_2 - CHGCAR_1`，即为后减前。
+
+## chgdiff.pl后少了原子
+
+由源码得，`chgdiff.pl`保留的是file1的原子信息，所以如果file1只有部分原子就会缺。
+
+这个脚本我感觉是bug，建议把上面第27行`line2-line1`改成`line1-line2`一劳永逸。

@@ -35,20 +35,20 @@ $ make && make install
 
 ```bash
 $ cd /public/home/zjb/app/lrzsz
-$ mkdir bash-command
-$ cd bash-command
+$ mkdir bash-command $$ cd bash-command
 $ ln -s /public/home/zjb/app/lrzsz/bin/lrz rz 
 $ ln -s /public/home/zjb/app/lrzsz/bin/lsz sz
+# 上面几个路径需要替换成自己的
 ```
 
 ## 配置当前用户的环境变量
 
 ```bash
 $ cd ~
-$ vi .bash_profile
+$ vi .bashrc
 # 在PATH列表中添加如下：
 export PATH="/public/home/zjb/app/lrzsz/bash-command":$PATH
-$ source .bash_profile
+$ source .bashrc
 ```
 
 # 使用方法
