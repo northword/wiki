@@ -1,47 +1,38 @@
-name: Gitee repos mirror periodic sync job
+name: sync2gitee
+# version: 1.0.1
+# author: [yiXu](https://github.com/yi-Xu-0100)
+# guide: [yi-Xu-0100/hub-mirror](https://github.com/yi-Xu-0100/hub-mirror)
+# lastmod: 2020-12-10 09:26:13
 
 on:
-  # push推送时触发
   push:
-  # 定时任务触发
   schedule:
-    # 每天北京时间9点跑
-    # Runs at 01:00 UTC (9:00 AM Beijing) every day
-    - cron:  '0 1 * * *'
+    # UTC 17:00 -> CST (China) 1:00 see https://datetime360.com/cn/utc-cst-china-time/
+    - cron: '1 17 * * *'
 
 jobs:
-  build:
-
+  run:
+    name: Sync GitHub to Gitee
     runs-on: ubuntu-latest
-
     steps:
-    - name: Cache phpdragon src repos
-      # 引用发行版的主要版本
-      uses: actions/cache@v1
-      with:
-        path: /home/runner/work/phpdragon/phpdragon-cache
-        key: ${{ runner.os }}-phpdragon-repos-cache
+      - name: Checkout source code
+        uses: actions/checkout@v2.3.4
 
-    - name: Mirror the Github organization repos to Gitee.
-      # 引用master分支的脚本支持
-      uses: phpdragon/hub-mirror-action@master
-      with:
-        #  需要被同步的源端账户名，如github/phpdragon，表示Github的phpdragon账户。
-        src: github/northword
-        # 需要同步到的目的端账户名，如gitee/phpdragon，表示Gitee的phpdragon账户。
-        dst: gitee/northword
-        # 用于目的端上传代码的SSH key，用于上传代码
-        dst_key: ${{ secrets.GITEE_PRIVATE_SSH_KEY }}
-        # 创建仓库的API tokens， 用于自动创建不存在的仓库
-        dst_token: ${{ secrets.GITEE_PRIVATE_TOKEN }}
-        account_type: user
-        # 指定目录cache
-        cache_path: /github/workspace/phpdragon-cache
-        # 白名单，仅同步白名单中的repos，如“repo1,repo2,repo3”
-        white_list: "hub-mirror-action,spark-example"
-        # 仅同步静态列表，不会再动态获取需同步列表（黑白名单机制依旧生效）
-        static_list: "Computation-Simulation"
-        # 强制更新
-        force_update: true
-        # clone方式，使用http、ssh方式进行clone
-        clone_style: "ssh"
+      - name: Get current repository name
+        id: info
+        uses: actions/github-script@v3.1
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          result-encoding: string
+          script: |
+            return context.repo.repo;
+      - name: Mirror the GitHub repos to Gitee
+        uses: Yikun/hub-mirror-action@v0.12
+        with:
+          src: github/northword
+          dst: gitee/northword
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: '${{ steps.info.outputs.result }}'
+          account_type: user
+          force_update: true
