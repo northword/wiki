@@ -1,5 +1,7 @@
 # 使用默认GCC编译gnuplot
 
+无需，学校已安装。
+
 ```bash
 cd /tmp
 wget https://jaist.dl.sourceforge.net/project/gnuplot/gnuplot/5.2.5/gnuplot-5.2.5.tar.gz

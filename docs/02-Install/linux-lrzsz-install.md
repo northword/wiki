@@ -23,6 +23,7 @@ $ tar -zxvf lrzsz-0.12.20.tar.gz && cd lrzsz-0.12.20
 ```bash
 # 在等号后写入目标安装路径
 ./configure --prefix=/public/home/zjb/app/lrzsz
+# 路径写自己的
 ```
 
 ## 编译安装
@@ -46,7 +47,7 @@ $ ln -s /public/home/zjb/app/lrzsz/bin/lsz sz
 ```bash
 $ cd ~
 $ vi .bashrc
-# 在PATH列表中添加如下：
+# 在PATH列表中添加如下：路径自己的
 export PATH="/public/home/zjb/app/lrzsz/bash-command":$PATH
 $ source .bashrc
 ```

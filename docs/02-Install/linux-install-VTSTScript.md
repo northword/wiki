@@ -3,17 +3,17 @@
 ## 下载
 
 ```bash
-cd ~/app
+$ cd ~/app
 $ wget https://github.com/northword/Computation-Simulation/raw/main/app/vtstscripts.tgz
 ```
 
 ## 解压缩
 
 ```bash
-tar -xzvf vtstscripts.tgz 
-rm vtstscripts.tgz
-cd vtstscripts-933
-pwd
+$ tar -xzvf vtstscripts.tgz 
+$ rm vtstscripts.tgz
+$ cd vtstscripts-933
+$ pwd
 # 将返回值复制
 ```
 
