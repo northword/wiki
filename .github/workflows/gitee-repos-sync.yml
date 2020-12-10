@@ -40,7 +40,7 @@ jobs:
         # 白名单，仅同步白名单中的repos，如“repo1,repo2,repo3”
         white_list: "hub-mirror-action,spark-example"
         # 仅同步静态列表，不会再动态获取需同步列表（黑白名单机制依旧生效）
-        static_list: "spark-example"
+        static_list: "Computation-Simulation"
         # 强制更新
         force_update: true
         # clone方式，使用http、ssh方式进行clone
