@@ -31,8 +31,8 @@ jobs:
         with:
           src: github/northword
           dst: gitee/northword
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITEE_TOKEN }}
+          dst_key: ${{ secrets.GITEE_PRIVATE_SSH_KEY }}
+          dst_token: ${{ secrets.GITEE_PRIVATE_TOKEN }}
           static_list: '${{ steps.info.outputs.result }}'
           account_type: user
           force_update: true
