@@ -49,13 +49,15 @@ Bug/typo/error reports should be sent to:
 >
 > Link of This [repository](https://github.com/northword/Computation-Simulation) in GitHub. 		
 >
-> Sync repository in Coding. 
+> Repository synced by [Gitee](https://gitee.com/northword/Computation-Simulation). 
 >
 > 晋ICP备18010037号-1. 	
 >
 > ©2020 [Northword]().  	
 
+Overseas link:  [Github Pages](http://blog.northword.cn/Computation-Simulation) 
 
+Mainland link:  [northword.gitee.io/computation-simulation](http://northword.gitee.io/computation-simulation)
 
 菜鸡小张，2020年。
 
