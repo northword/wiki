@@ -2,7 +2,7 @@ name: Deploy Vuepress
 on:
     push:
     branches:
-        - main
+      - main
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
