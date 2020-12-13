@@ -7,18 +7,18 @@ jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
         steps:
-        - name: Checkout 🛎️
+          - name: Checkout 🛎️
             uses: actions/checkout@v2.3.1
             with:
                 persist-credentials: false
 
-        - name: Install and Build 🔧
+          - name: Install and Build 🔧
             run: |
                 npm install vuepress
                 npm install
                 npm run build
 
-        - name: Deploy 🚀
+          - name: Deploy 🚀
             uses: peaceiris/actions-gh-pages@v3
             with:
                 github_token: ${{ secrets.ACCESS_TOKEN }}
@@ -28,7 +28,7 @@ jobs:
         needs: build-and-deploy
         runs-on: ubuntu-latest
         steps:      
-        - name: Get current repository name
+          - name: Get current repository name
             id: info
             uses: actions/github-script@v3.1
             with:
@@ -36,7 +36,7 @@ jobs:
               result-encoding: string
               script: |
                 return context.repo.repo;
-        - name: Mirror the GitHub repos to Gitee
+          - name: Mirror the GitHub repos to Gitee
             uses: Yikun/hub-mirror-action@v0.12
             with:
               src: github/northword
