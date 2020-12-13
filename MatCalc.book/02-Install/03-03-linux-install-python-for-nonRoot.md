@@ -1,0 +1,265 @@
+---
+title: linux编译py3
+---
+
+# 为学校的linux安装python3
+
+由于`ASE`依赖`Python3.5`或更高版本，而学习的机器上只有`python2`，所以要装一下py3。
+
+## 步骤放在最前面
+
+### 升级OPENSSL
+
+```bash
+$ cd /tmp
+$ wget -c https://www.openssl.org/source/openssl-1.1.1d.tar.gz
+$ tar -xvf openssl-1.1.1d.tar.gz
+$ cd openssl-1.1.1d
+$ ./config --prefix=/public/home/zjb/openssl-1.1.1d no-zlib  #注意添加no-zlib
+$ make && make install
+```
+
+之后添加环境变量
+
+```bash
+$ vi ~/.bashrc
+# 加入以下内容
+export PATH="/public/home/zjb/app/openssl-1.1.1d/bin":${PATH}
+export PATH="/public/home/zjb/app/openssl-1.1.1d/lib":${PATH}
+export LD_LIBRARY_PATH="/public/home/zjb/app/openssl-1.1.1d/lib":${LD_LIBRARY_PATH}
+
+$ source ~/.bashrc
+```
+
+此时运行`openssl`--`version`应当显示1.1.1版本，如果是，进行下一步。
+
+```bash
+[zjb@op ~]$ openssl
+OpenSSL> version
+OpenSSL 1.1.1d  10 Sep 2019
+OpenSSL> exit
+[zjb@op ~]$ 
+```
+
+### 编译Python3
+
+```bash
+$ cd /tmp
+$ wget -c https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tgz
+$ tar -xvf Python-3.8.1.tgz
+$ cd Python-3.8.1
+$ ./configure --prefix=/public/home/zjb/app/python38/
+```
+
+到这儿截住，去`Python-3.8.1/Moudles`下编辑`Setup`以修改OPENSSL的路径：
+
+```bash
+$ vi Moudles/Setup
+```
+
+查找`SSL`，把如下几行取消注释
+
+```bash
+SSL=/public/home/zjb/app/openssl-1.1.1d     #改为刚安装的ssl路径
+_ssl _ssl.c \
+       -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+       -L$(SSL)/lib -lssl -lcrypto
+```
+
+其中第一行替换为自己的OPENSSL安装路径，修改后编译：
+
+```bash
+$ make && make install
+
+# 如果之前有编译过，用make clean清理已编译的文件后再编译
+```
+
+编译完成后，试一下
+
+```python
+[zjb@op Python-3.8.5]$ python3
+Python 3.8.5 (default, Nov 20 2020, 23:23:42) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-17)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ssl
+>>> 
+```
+
+OK，完成！
+
+此时SSL模块应当是可用的，尝试安装一个
+
+```bash
+$ pip3 install ase
+```
+
+```
+[zjb@op Python-3.8.5]$ pip3 install ase
+Collecting ase
+  Downloading ase-3.20.1-py3-none-any.whl (2.2 MB)
+     |████████████████████████████████| 2.2 MB 1.4 MB/s 
+Collecting matplotlib>=2.0.0
+  Downloading matplotlib-3.3.3-cp38-cp38-manylinux1_x86_64.whl (11.6 MB)
+     |████████████████████████████████| 11.6 MB 2.3 MB/s 
+Collecting numpy>=1.11.3
+  Downloading numpy-1.19.4-cp38-cp38-manylinux2010_x86_64.whl (14.5 MB)
+     |████████████████████████████████| 14.5 MB 153 kB/s 
+Collecting scipy>=0.18.1
+  Downloading scipy-1.5.4-cp38-cp38-manylinux1_x86_64.whl (25.8 MB)
+     |████████████████████████████████| 25.8 MB 1.5 MB/s 
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+     |████████████████████████████████| 67 kB 1.3 MB/s 
+Collecting pillow>=6.2.0
+  Downloading Pillow-8.0.1-cp38-cp38-manylinux1_x86_64.whl (2.2 MB)
+     |████████████████████████████████| 2.2 MB 1.9 MB/s 
+Collecting cycler>=0.10
+  Downloading cycler-0.10.0-py2.py3-none-any.whl (6.5 kB)
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.3.1-cp38-cp38-manylinux1_x86_64.whl (1.2 MB)
+     |████████████████████████████████| 1.2 MB 1.9 MB/s 
+Collecting python-dateutil>=2.1
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+     |████████████████████████████████| 227 kB 2.0 MB/s 
+Collecting six
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Installing collected packages: pyparsing, pillow, six, cycler, numpy, kiwisolver, python-dateutil, matplotlib, scipy, ase
+Successfully installed ase-3.20.1 cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.3 numpy-1.19.4 pillow-8.0.1 pyparsing-2.4.7 python-dateutil-2.8.1 scipy-1.5.4 six-1.15.0
+```
+
+正常！
+
+
+
+---
+
+
+
+## 经历
+
+最开始按照正常的编译过程去编译安装Python3，但是过程中发现SSL模块无法被编译，刚开始没当回事，结果都好了发现pip3没法使用：
+
+```
+pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+```
+
+因为ssl模块不可用，又折回去折腾，发现提示中，是因为机器本身安装的openssl版本过低（1.0.1）导致的，
+
+```
+Python build finished successfully!
+The necessary bits to build these optional modules were not found:
+_sqlite3              _ssl                                     
+To find the necessary bits, look in setup.py in detect_modules() for the module's name.
+
+Could not build the ssl module!
+Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
+LibreSSL 2.6.4 and earlier do not provide the necessary APIs, https://github.com/libressl-portable/portable/issues/381
+```
+
+考虑升级openssl解决一下：
+
+```bash
+$ wget -c https://www.openssl.org/source/openssl-1.1.1d.tar.gz
+$ tar -xvf openssl-1.1.1d.tar.gz
+$ cd openssl-1.1.1d
+$ ./config --prefix=/public/home/zjb/app/penssl-1.1.1d no-zlib  #注意添加no-zlib
+$ make && make install
+
+$ vi ~/.bashrc
+export PATH="/public/home/zjb/app/openssl-1.1.1d/bin":${PATH}
+```
+
+运行`openssl`发现报错
+
+```
+error while loading shared libraries: libssl.so.1.1: cannot open shared object file: No such file or directory
+```
+
+搜了一些资料，发现解决方法多是`sudo`的，mmp我要是有root还费这劲去编译呢？？？还好在一篇资料里看到一个方案：发现`libssl.so.1.1`存在于`openssl.1.1.d/lib`目录下，于是考虑把这个目录加入环境变量：
+
+```bash
+export LD_LIBRARY_PATH=/public/home/zjb/app/openssl-1.1/lib:$LD_LIBRARY_PATH
+```
+
+这下正常了：
+
+```bash
+[zjb@op ~]$ openssl
+OpenSSL> version
+OpenSSL 1.1.1d  10 Sep 2019
+OpenSSL> exit
+[zjb@op ~]$ 
+```
+
+接下来就继续编译Python3：
+
+```bash
+$ cd /tmp
+$ wget -c https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tgz
+$ tar -xvf Python-3.8.1.tgz
+$ cd Python-3.8.1
+$ ./configure --prefix=/public/home/zjb/app/python38/
+$ make 
+```
+
+此时编译的仍然提示`Could not build the ssl module! Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().`，但是`make install`后是可以用的，也不知道为什么。
+
+接下来添加环境变量，
+
+```
+export PATH=/public/home/zjb/app/python38/bin:${PATH}
+```
+
+然后...正常了
+
+```python
+[zjb@op Python-3.8.5]$ python3
+Python 3.8.5 (default, Nov 20 2020, 23:23:42) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-17)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ssl
+>>> 
+```
+
+
+
+---
+
+
+
+几分钟后发现`ase`虽然安装了，但是不能运行，
+
+```
+[zjb@op python38]$ ase
+Traceback (most recent call last):
+  File "/public/home/zjb/app/ase/bin/ase", line 2, in <module>
+    from ase.cli.main import main
+  File "/public/home/zjb/app/ase/ase/__init__.py", line 25, in <module>
+    from ase.atoms import Atoms
+  File "/public/home/zjb/app/ase/ase/atoms.py", line 19, in <module>
+    from ase.constraints import (FixConstraint, FixBondLengths, FixLinearTriatomic,
+  File "/public/home/zjb/app/ase/ase/constraints.py", line 10, in <module>
+    from scipy.linalg import expm, logm
+  File "/public/home/zjb/app/python38/lib/python3.8/site-packages/scipy/__init__.py", line 151, in <module>
+    from scipy._lib._ccallback import LowLevelCallable
+  File "/public/home/zjb/app/python38/lib/python3.8/site-packages/scipy/_lib/_ccallback.py", line 1, in <module>
+    from . import _ccallback_c
+  File "_ccallback_c.pyx", line 210, in init scipy._lib._ccallback_c
+  File "/public/home/zjb/app/python38/lib/python3.8/ctypes/__init__.py", line 7, in <module>
+    from _ctypes import Union, Structure, Array
+ModuleNotFoundError: No module named '_ctypes'
+```
+
+因为python缺少依赖库`libffi-devel`，查资料没发现这玩意怎么自己搞，似乎只能管理员去装，反正网上给出的方法都不行...
+
+```bash
+[zjb@op python38]$ yum install -y libffi-devel
+Loaded plugins: aliases, changelog, kabi, ovl, presto, refresh-packagekit, security, tmprepo, verify, versionlock
+Loading support for Red Hat kernel ABI
+ovl: Error while doing RPMdb copy-up:
+[Errno 13] Permission denied: '/var/lib/rpm/Sigmd5'
+You need to be root to perform this command.
+[zjb@op python38]$ 
+```
+
+此贴终结，失败告终，over！

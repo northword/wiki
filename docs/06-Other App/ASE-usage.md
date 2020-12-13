@@ -1,5 +1,0 @@
-# ASE GUI的用法
-
-原子模拟环境（Atomic Simulation Environment）（ASE）是一组工具和Python模块，用于设置，操作，运行，可视化和分析原子模拟。
-
-参考文档：https://wiki.fysik.dtu.dk/ase/ase/gui/gui.html?highlight=gui#module-ase.gui

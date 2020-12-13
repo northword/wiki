@@ -1,20 +1,6 @@
 # gitignore
-/MaterialCalc.book/node_modules/*
-/MaterialCalc.book/_book/*
-/MaterialCalc.book/gitbook-build.bat
-/MaterialCalc.book/.bookignore
-gitbook-build.bat
+/node_modules/*
+
+
 /**/*.*ignore
-!/**/*.bookignore
 
-# 使用了但是没有修改的插件，之后`gitbook install`即可
-# /MaterialCalc.book/node_modules/gitbook-plugin-anchor-navigation-ex
-# /MaterialCalc.book/node_modules/gitbook-plugin-code
-# /MaterialCalc.book/node_modules/gitbook-plugin-search-plus
-# /MaterialCalc.book/node_modules/gitbook-plugin-prism-theme
-
-# 修改过的插件一并git
-!/MaterialCalc.book/node_modules/gitbook-plugin-prism/index.js
-!/MaterialCalc.book/node_modules/gitbook-plugin-theme-cap
-!/MaterialCalc.book/node_modules/gitbook-plugin-theme-comscore
-!/MaterialCalc.book/node_modules/gitbook-plugin-theme-northword1
