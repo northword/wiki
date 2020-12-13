@@ -11,7 +11,7 @@ module.exports = {
   plugins: pluginConf,
   themeConfig: {
     lastUpdated: '上次更新',
-    repo: 'northword/MatCalc',
+    repo: 'northword/computation-simulation',
     editLinks: true,
     editLinkText: '编辑文档！',
     docsDir: 'MatCalc.book',
