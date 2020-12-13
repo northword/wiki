@@ -50,7 +50,7 @@ tar -xzvf pot.tgz
 rm vaspkit.1.2.1.linux.x64.tar.gz pot.tar vtstscripts.tar
 ```
 
-`tar`命令用法见 [linux-command.md](..\Chap03-linux\linux-command.html#tar) 
+`tar`命令用法见 [linux-command.md](..\03-linux\linux-command.html#tar) 
 
 ## 配置VASPKIT程序的环境变量
 

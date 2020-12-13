@@ -17,7 +17,7 @@ autoNext: 01-01-windows-apps
 | Materials Studio            | 可视化建模；MS本身可以进行计算，但不常用                     |                                                              |
 | VESTA                       | 结构模型，体积数据（如电子/核密度）和晶体形态的3D可视化程序  | [官网](http://jp-minerals.org/vesta/en/) / [下载](http://jp-minerals.org/vesta/en/download.html) |
 | Python                      |                                                              |                                                              |
-| ASE                         | 原子模拟环境                                                 | [官网](http://wiki.fysik.dtu.dk/ase) / [安装见windows-ase-install.md](windows-ase-install.md) |
+| ASE                         | 原子模拟环境                                                 | [官网](http://wiki.fysik.dtu.dk/ase) / [安装见windows-ase-install.md](01-03-install-ase.md) |
 | 一个好的文本编辑器          | eg. NotePad++（NOT Recommend because its author is anti-Chinese） | 呱~                                                          |
 
 这是一些在Linux上可能用得到的软件
@@ -26,9 +26,9 @@ autoNext: 01-01-windows-apps
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | VASP          | Vienna Ab-initio Simulation Package, 电子结构计算和量子力学-分子动力学模拟软件包 | [官网](http://www.vasp.at/) / 集群管理员已编译               |
 | VTST          | Vasp TST(transition state theory) Tools                      | [官网](http://theory.cm.utexas.edu/vtsttools/index.html) / 分Code和Script两部分，Code集群管理员已编译 |
-| VTST-Script   |                                                              | 安装见  [linux-install-VTSTScript.md](linux-install-VTSTScript.md) |
-| VASPKIT       | VASP预-后数据处理脚本                                        | [官网](https://vaspkit.com/index.html) / 安装见  [install-vaspkit.md](..\05-VASP\install-vaspkit.md) |
+| VTST-Script   |                                                              | 安装见  [linux-install-VTSTScript.md](02-02-linux-install-vtstScript.md) |
+| VASPKIT       | VASP预-后数据处理脚本                                        | [官网](https://vaspkit.com/index.html) / 安装见  [install-vaspkit.md](02-01-linux-install-vaspkit.md) |
 | Python        |                                                              | 学校配置了python27                                           |
-| Irzsz         | 一个UNIX通信软件包，提供XMODEM，YMODEM和ZMODEM文件传输协议。 | [官网](https://ohse.de/uwe/software/lrzsz.html) / 安装见  [linux-lrzsz-install.md](linux-lrzsz-install.md) |
-| gunplot       | 命令行的交互式绘图工具                                       | [官网](http://www.gnuplot.info/) / 学校已安装 / 安装见  [linux-gunplot-install.md](linux-gunplot-install.md) |
-| ase           |                                                              | 安装见 [windows-ase-install.md](windows-ase-install.md)      |
+| Irzsz         | 一个UNIX通信软件包，提供XMODEM，YMODEM和ZMODEM文件传输协议。 | [官网](https://ohse.de/uwe/software/lrzsz.html) / 安装见  [linux-lrzsz-install.md](02-03-linux-install-lrzsz.md) |
+| gunplot       | 命令行的交互式绘图工具                                       | [官网](http://www.gnuplot.info/) / 学校已安装 / 安装见  [linux-gunplot-install.md](03-02-linux-install-gnuplot.md) |
+| ase           |                                                              | 安装见 [windows-ase-install.md](01-03-install-ase.md)        |

@@ -27,7 +27,7 @@
 
 Bug/typo/error reports should be sent to:
 
-[Zhang' email](mailto:zhangjianbei@stu.scu.edu.cn) or reported as an [issue](https://github.com/northword/Computation-Simulation/issues).
+[Zhang' email](mailto:zhangjianbei@stu.scu.edu.cn) or reported as an [issue](https://github.com/northword/computation-simulation/issues).
 
 ---
 
@@ -47,15 +47,15 @@ Bug/typo/error reports should be sent to:
 
 > Powered by [VuePress](https://www.gitbook.com/), 	Hosted by [Github Pages](https://pages.github.com/). 	
 >
-> Link of This [repository](https://github.com/northword/Computation-Simulation) in GitHub. 		
+> Link of This [repository](https://github.com/northword/computation-simulation) in GitHub. 		
 >
-> Repository synced by [Gitee](https://gitee.com/northword/Computation-Simulation). 
+> Repository synced by [Gitee](https://gitee.com/northword/computation-simulation). 
 >
 > 晋ICP备18010037号-1. 	
 >
 > ©2020 [Northword]().  	
 
-Overseas link:  [Github Pages](http://blog.northword.cn/Computation-Simulation) 
+Overseas link:  [Github Pages](http://blog.northword.cn/computation-simulation) 
 
 Mainland link:  [northword.gitee.io/computation-simulation](http://northword.gitee.io/computation-simulation)
 
