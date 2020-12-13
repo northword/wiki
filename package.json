@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "vuepress dev MatCalc.book",
+    "build": "vuepress build MatCalc.book"
+  },
+  "name": "matcalc",
+  "version": "1.0.0",
+  "description": "matcalc learning note",
+  "main": "index.js",
+  "author": "northword",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.7.1",
+    "@vuepress/plugin-google-analytics": "^1.7.0",
+    "@vuepress/plugin-medium-zoom": "^1.7.0",
+    "@vuepress/plugin-pwa": "^1.7.0",
+    "moment": "^2.29.1",
+    "vuepress": "^1.7.0",
+    "vuepress-plugin-auto-sidebar": "^1.5.0"
+  },
+  "dependencies": {}
+}
