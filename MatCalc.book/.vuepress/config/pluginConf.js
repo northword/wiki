@@ -24,7 +24,7 @@ module.exports = {
   "vuepress-plugin-auto-sidebar": {
     titleMode: "uppercase",
     titleMap: {
-      Linux: "Linux 基础",
+      Linux: "03-Linux",
     },
     collapseList: [
       "/03-Linux/"

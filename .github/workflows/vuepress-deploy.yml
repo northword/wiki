@@ -1,26 +1,58 @@
 name: Deploy Vuepress
 on:
-  push:
+    push:
     branches:
-      - main
+        - main
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-        with:
-          persist-credentials: false
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout 🛎️
+            uses: actions/checkout@v2.3.1
+            with:
+                persist-credentials: false
 
-      - name: Install and Build 🔧
-        run: |
-            npm install vuepress
-            npm install
-            npm run build
+        - name: Install and Build 🔧
+            run: |
+                npm install vuepress
+                npm install
+                npm run build
 
-      - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: MatCalc.book/.vuepress/dist
-          commit_message: ${{ github.event.head_commit.message }}
+        - name: Deploy 🚀
+            uses: peaceiris/actions-gh-pages@v3
+            with:
+                github_token: ${{ secrets.ACCESS_TOKEN }}
+                publish_dir: MatCalc.book/.vuepress/dist
+                commit_message: ${{ github.event.head_commit.message }}
+    sync:
+        needs: build-and-deploy
+        runs-on: ubuntu-latest
+        steps:      
+        - name: Get current repository name
+            id: info
+            uses: actions/github-script@v3.1
+            with:
+              github-token: ${{secrets.GITHUB_TOKEN}}
+              result-encoding: string
+              script: |
+                return context.repo.repo;
+        - name: Mirror the GitHub repos to Gitee
+            uses: Yikun/hub-mirror-action@v0.12
+            with:
+              src: github/northword
+              dst: gitee/northword
+              dst_key: ${{ secrets.GITEE_PRIVATE_SSH_KEY }}
+              dst_token: ${{ secrets.GITEE_PRIVATE_TOKEN }}
+              static_list: '${{ steps.info.outputs.result }}'
+              account_type: user
+              force_update: true
+    reload-pages:
+        needs: sync
+        runs-on: ubuntu-latest
+        steps:
+          - name: reload
+            uses: mizuka-wu/gitee-pages-action@v1.0.0
+            with:
+              repository: linzowo/linzowo
+              cookie: ${{ secrets.GITEE_COOKIE }}
+              branch: gh_pages

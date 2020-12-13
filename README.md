@@ -1,7 +1,7 @@
 # Computation-Simulation
 本库是《能源环境材料计算模拟方法》课程学习与实践笔记，内容包括 Linux基础命令、PBS作业管理系统、VASPKIT、Materials Studio 等。
 
-笔记内容以`Markdown`书写，`HTML`由`GitBook`创建，托管在`GitHub Pages`上。同时本库由[`Gitee`](https://gitee.com/northword/Computation-Simulation) 同步。
+笔记内容以`Markdown`书写，`HTML`由`VuePress`创建，托管在`GitHub Pages`上。同时本库由[`Gitee`](https://gitee.com/northword/Computation-Simulation) 同步。
 
 阅读请访问： 
 
