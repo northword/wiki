@@ -28,6 +28,9 @@ jobs:
         needs: build-and-deploy
         runs-on: ubuntu-latest
         steps:      
+          - name: Checkout source code
+            uses: actions/checkout@v2.3.4
+
           - name: Get current repository name
             id: info
             uses: actions/github-script@v3.1
