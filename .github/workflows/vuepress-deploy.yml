@@ -59,3 +59,4 @@ jobs:
               repository: northword/computation-simulation
               cookie: ${{ secrets.GITEE_COOKIE }}
               branch: gh_pages
+              https: false
