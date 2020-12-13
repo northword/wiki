@@ -7,7 +7,7 @@ module.exports = {
   title: '计算模拟学习笔记',
   description: '计算模拟学习笔记，VuePress文档',
   head: headConf,
-  base: "/Computation-Simulation/"
+  base: "/Computation-Simulation/",
   plugins: pluginConf,
   themeConfig: {
     lastUpdated: '上次更新',
