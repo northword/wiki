@@ -20,6 +20,7 @@ module.exports = {
     searchMaxSuggestions: 10,                 // 搜索结果显示最大数
     lastUpdated: '上次更新',            // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs',                          // 编辑的文件夹
+	docsBranch: 'main',
     editLinks: true,                          // 启用编辑
     editLinkText: '编辑文档！',
 	activeHeaderLinks: true,
@@ -92,7 +93,7 @@ module.exports = {
         {
           iconClass: 'icon-erji',
           title: '听音乐',
-          link: 'https://music.163.com/#/playlist?id=418115654',
+          link: 'http://music.163.com/playlist/596573426/418115654/?userid=418115654',
         },
       ],
     },
@@ -113,6 +114,25 @@ module.exports = {
         transformer: (timestamp, lang) => {
           const moment = require('moment') // https://momentjs.com/
           return moment(timestamp).format('YYYY/MM/DD, HH:mm:ss')
+        },
+      },
+    ],
+    [
+      'one-click-copy',
+      {
+        // 代码块复制按钮
+        copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+        copyMessage: '复制成功',       // default is 'Copy successfully and then paste it for use.'
+        duration: 1000,                // prompt message display time.
+        showInMobile: false,           // whether to display on the mobile side, default: false.
+      },
+    ],
+    [
+      'vuepress-plugin-zooming', // 放大图片
+      {
+        selector: '.theme-vdoing-content img:not(.no-zoom)', // 排除class是no-zoom的图片
+        options: {
+          bgColor: 'rgba(0,0,0,0.6)',
         },
       },
     ],
