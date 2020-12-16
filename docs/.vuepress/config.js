@@ -3,19 +3,19 @@ const nav = require('./config/nav.js');
 module.exports = {
   title: "计算模拟学习笔记",
   description: "计算模拟学习笔记", // 描述,以 <meta> 标签渲染到页面html中
-  base: '/computation-simulation/',          // '/<github仓库名>/'， 默认'/'
+  base: '/dft-learning/',          // '/<github仓库名>/'， 默认'/'
   markdown: {
     lineNumbers: true,             // 代码行号
   },
 
-  //theme: 'vdoing', // 使用依赖包主题
-   theme: require.resolve('../../theme-vdoing'), // 使用本地主题
+  theme: 'vdoing', // 使用依赖包主题
+   //theme: require.resolve('../../theme-vdoing'), // 使用本地主题
 
   themeConfig: {
     // 主题配置
     nav,
     sidebarDepth: 2,                          // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-    logo: '/img/EB-logo.png',                 // 导航栏logo
+    logo: '/img/logo.png',                    // 导航栏logo
     repo: 'northword/computation-simulation', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10,                 // 搜索结果显示最大数
     lastUpdated: '上次更新',            // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
@@ -66,14 +66,14 @@ module.exports = {
 
     author: {
       // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
-      name: 'northword', // 必需
+      name: 'Northword', // 必需
       link: 'https://github.com/northword', // 可选的
     },
     blogger: {
       // 博主信息，显示在首页侧边栏
-      avatar: 'https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg',
+      avatar: '/dft-learning/img/avatar.ico',
       name: 'northword',
-      slogan: '哈哈哈哈哈',
+      slogan: '菜鸡小张在此！',
     },
     social: {
       // 社交图标，显示于博主信息栏和页脚栏
@@ -112,7 +112,7 @@ module.exports = {
       {
         transformer: (timestamp, lang) => {
           const moment = require('moment') // https://momentjs.com/
-          return moment(timestamp).format('YYYY/MM/DD, hh:mm:ss')
+          return moment(timestamp).format('YYYY/MM/DD, HH:mm:ss')
         },
       },
     ],
