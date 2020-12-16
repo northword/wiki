@@ -6,26 +6,57 @@
  *
 */
 
-.btv {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 75%;
-}
-    
-.btv iframe {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-}
+.btv 
+    position relative
+    width  100%
+    height  0px
+    padding-bottom  75%
 
 
+.btv iframe 
+    position  absolute
+    width  100%
+    height  100%
+    left  0px
+    top  0
+
+/*
+h2:before {
+    content: '';
+    border-right: 6px solid #2486b9;
+    margin-right: 8px;
+    margin-left: 0;
+    padding-left: 0;
+    height: auto;
+    margin-bottom: .18em;
+}
+*/
+h4:before {
+  border-radius: 50%;
+  background-color: #2486b9;
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 6px;
+  vertical-align: middle;
+  margin-bottom: .18em;
+  margin-right: 8px 
+}
+/* h4:before {
+  background-color: #2486b9;
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 2px;
+  vertical-align: middle;
+  margin-bottom: .18em;
+  margin-right: 8px
+}
+ */
 
 
 // 评论区颜色重置
-.gt-container
+/* .gt-container
   .gt-ico-tip
     &::after
       content: '。( Win + . ) 或 ( ⌃ + ⌘ + ␣ ) 打开表情'
@@ -55,10 +86,10 @@
       box-shadow 0 0 25px rgba(150,150,150,.5)!important
     .gt-comment-body
       color var(--textColor)!important
-
+ */
 
 // qq徽章
-.qq
+/* .qq
   position: relative;
 .qq::after
   content: "可撩";
@@ -70,7 +101,7 @@
   position: absolute;
   top: -4px;
   right: -35px;
-  transform:scale(0.85);
+  transform:scale(0.85); */
 
 // demo模块图标颜色
 body .vuepress-plugin-demo-block__wrapper
@@ -82,3 +113,6 @@ body .vuepress-plugin-demo-block__wrapper
       border-bottom-color: $accentColor !important;
     svg
       fill: $accentColor !important;
+
+
+
