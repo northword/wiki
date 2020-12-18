@@ -1,7 +1,7 @@
 module.exports = [
   { text: '首页', link: '/' },
   { text: '理论', link: '/pages/77a22e/' },
-  { text: '安装', link: '/contents/linux/' },
+  { text: '安装', link: '/contents/install/' },
   { text: 'Linux', link: '/pages/9810fa/' },
   { text: 'MatStudio', link: '/pages/2e10d2/' },
   { text: 'VASP', link: '/contents/vasp/' },
