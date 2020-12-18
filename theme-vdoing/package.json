@@ -40,8 +40,10 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "maintainers": [{
-    "name": "Evan xu",
-    "email": "894072666@qq.com"
-  }]
+  "maintainers": [
+    {
+      "name": "Evan xu",
+      "email": "894072666@qq.com"
+    }
+  ]
 }
