@@ -19,8 +19,40 @@
     height  100%
     left  0px
     top  0
+	
+/*
+ * @name: 重新定义标题样式
+ *
+ * @year: 2020.11.16
+ *
+*/
+// 清掉冲突样式
+h1,h2,h3,h4,h5 
+	margin-top: 2rem !important;
+	padding-top: 0rem !important;
+	margin-bottom: 1rem !important;
+	
+// h2 底部一条分割线，不用改
+// h3 左边加竖线
+h3 
+  margin: 1.6em auto 1.2em;
+  //padding-left: 6px;
+  font-size: 1.35rem;
+  line-height: 1.43;
+
+h3:before
+	content: ''
+	height: 2rem
+	width: 6px
+	display: inline-block;
+	vertical-align: middle;
+	background-color: var(--textLightenColor);
+	//border-left: 6px solid var(--textLightenColor);
+	margin-bottom: .18em;
+	margin-right: 8px 
 
 
+// h4前面加点点
 /* h4:before {
     content: '';
     border-right: 6px solid #000000;
@@ -33,7 +65,7 @@
  */
 h4:before {
   border-radius: 50%;
-  background-color: #000000;
+  background-color: var(--textLightenColor);
   content: '';
   width: 6px;
   display: inline-block;
@@ -48,9 +80,10 @@ h4
 h5
   font-size: 16px
 
+// h5 前面加小短线
 h5:before {
   // background-color: #2486b9;
-  background-color: #000000;
+  background-color: var(--textLightenColor);
   content: '';
   width: 6px;
   display: inline-block;
@@ -59,6 +92,9 @@ h5:before {
   margin-bottom: .18em;
   margin-right: 8px
 }
+
+.theme-vdoing-wrapper 
+  box-shadow: none !important
 
 
 
