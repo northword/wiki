@@ -22,11 +22,13 @@ jobs:
                 npm run build
 
           - name: Deploy 🚀
-            uses: peaceiris/actions-gh-pages@v3
+            uses: peaceiris/actions-gh-pages@v3.7.3
             with:
                 github_token: ${{ secrets.ACCESS_TOKEN }}
                 publish_dir: docs/.vuepress/dist
                 commit_message: ${{ github.event.head_commit.message }}
+                keep_files: true
+                
     sync:
         needs: build-and-deploy
         runs-on: ubuntu-latest
