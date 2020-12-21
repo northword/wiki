@@ -13,3 +13,11 @@ docs/.vuepress/dist
 
 # 百度链接推送
 urls.txt
+
+# Vdoing
+theme-vdoing
+utils
+
+# tmp
+baiduPush.sh
+deploy.sh
