@@ -10,6 +10,14 @@ module.exports = [
       },
     },
   ],
+  // [
+    // 'vuepress-plugin-mathjax'
+  // ],
+  ['@maginapp/vuepress-plugin-katex',
+        {
+          delimiters: 'dollars'
+        }
+  ],
   [
     'one-click-copy',
     {
