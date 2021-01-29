@@ -3,7 +3,7 @@ pageComponent:
   name: Catalogue 
   data: 
     key:  05.VASP
-    imgUrl: https://avatars2.githubusercontent.com/u/44738481?s=80&v=4
+    imgUrl: https://www.vasp.at/images/logo.png
     description: VASP的配置和运行及其案例
 
 title: 目录
