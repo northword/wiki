@@ -6,9 +6,14 @@ module.exports = [
   { text: 'MatStudio', link: '/pages/2e10d2/' },
   { text: 'VASP', link: '/contents/vasp/' },
 
-  { text: '其他', items: [
-    { text: '其他软件', link: '/pages/c0ca29/' },
-    { text: '异常解决', link: '/contents/others/' },
+  { text: '更多', items: [
+    { text: '其他内容', items: [
+      { text: '其他软件', link: '/pages/c0ca29/' },
+      { text: '异常解决', link: '/contents/others/' },
+    ]},
+    { text: '索引', items: [
+      { text: '归档', link: '/archives/' },
+    ]},
   ]}
 ];
 
