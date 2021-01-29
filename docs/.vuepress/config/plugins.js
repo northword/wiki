@@ -18,6 +18,7 @@ module.exports = [
           delimiters: 'dollars'
         }
   ],
+  ['vuepress-plugin-element-tabs'],
   [
     'one-click-copy',
     {
