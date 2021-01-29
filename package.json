@@ -12,22 +12,21 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@maginapp/vuepress-plugin-katex": "^1.0.9",
-    "inquirer": "^7.1.0",
+    "@maginapp/vuepress-plugin-katex": "^1.0.10",
+    "inquirer": "^7.3.3",
     "json2yaml": "^1.1.0",
-    "moment": "^2.25.3",
-    "vuepress": "1.5.2",
+    "moment": "^2.29.1",
+    "vuepress": "1.8.0",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-demo-block": "^0.7.2",
     "vuepress-plugin-one-click-copy": "^1.0.2",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
-    "vuepress-plugin-zooming": "^1.1.7",
-    "vuepress-theme-vdoing": "^1.7.1",
+    "vuepress-plugin-zooming": "^1.1.8",
+    "vuepress-theme-vdoing": "^1.8.0",
     "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "vuepress-plugin-comment": "^0.7.3",
-    "vuepress-plugin-mathjax": "^1.2.8"
+    "vuepress-plugin-comment": "^0.7.3"
   }
 }

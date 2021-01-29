@@ -27,20 +27,20 @@
  *
 */
 // 清掉冲突样式
-h1,h2,h3,h4,h5 
+.theme-vdoing-content h1,.theme-vdoing-content h2,.theme-vdoing-content h3,.theme-vdoing-content h4,.theme-vdoing-content h5 
 	margin-top: 2rem !important;
 	padding-top: 0rem !important;
 	margin-bottom: 1rem !important;
 	
 // h2 底部一条分割线，不用改
 // h3 左边加竖线
-h3 
+.theme-vdoing-content h3 
   margin: 1.6em auto 1.2em;
   //padding-left: 6px;
   font-size: 1.35rem;
   line-height: 1.43;
 
-h3:before
+.theme-vdoing-content h3:before
 	content: ''
 	height: 2rem
 	width: 6px
@@ -63,7 +63,7 @@ h3:before
     margin-bottom: .18em;
 }
  */
-h4:before {
+.theme-vdoing-content h4:before {
   border-radius: 50%;
   background-color: var(--textLightenColor);
   content: '';
@@ -74,14 +74,14 @@ h4:before {
   margin-bottom: .18em;
   margin-right: 8px 
 }
-h4 
+.theme-vdoing-content h4 
   font-size: 1.25rem
 
-h5
+.theme-vdoing-content h5
   font-size: 16px
 
 // h5 前面加小短线
-h5:before {
+.theme-vdoing-content h5:before {
   // background-color: #2486b9;
   background-color: var(--textLightenColor);
   content: '';
@@ -96,7 +96,19 @@ h5:before {
 .theme-vdoing-wrapper 
   box-shadow: none !important
 
+/*
+ * @name: 修改code-group样式
+ *
+ * @year: 2021.01.29
+ *
+*/
+.theme-code-group
+  padding-bottom: 0px !important
+  padding-top: 5px !important
 
+.theme-code-group__nav
+  margin-bottom: -10px !important
+  padding-bottom: 0px !important
 
 // 评论区颜色重置
 /* .gt-container
