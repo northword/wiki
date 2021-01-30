@@ -3,7 +3,7 @@ pageComponent:
   name: Catalogue 
   data: 
     key:  09.Others
-    imgUrl: https://avatars2.githubusercontent.com/u/44738481?s=80&v=4
+    imgUrl: /assets/img/other.png
     description: 记录一些遇到的错误和异常的解决方法和其他乱七八糟的事情
 
 title: 目录

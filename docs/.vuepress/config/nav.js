@@ -12,6 +12,7 @@ module.exports = [
       { text: '异常解决', link: '/contents/others/' },
     ]},
     { text: '索引', items: [
+      { text: '分类', link: '/categories/' },
       { text: '归档', link: '/archives/' },
     ]},
   ]}

@@ -6,7 +6,7 @@ pageComponent:
     imgUrl: https://www.vasp.at/images/logo.png
     description: VASP的配置和运行及其案例
 
-title: 目录
+title: VASP
 date: 2020-12-18 21:42:53 
 permalink: /contents/vasp
 sidebar: false

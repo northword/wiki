@@ -3,10 +3,10 @@ pageComponent:
   name: Catalogue 
   data: 
     key:  02.Install
-    imgUrl: https://avatars2.githubusercontent.com/u/44738481?s=80&v=4
-    description: 本节介绍所要安装的软件
+    imgUrl: /assets/img/more.png
+    description: 所要安装的软件和替代品及其安装过程，加上一些小技巧。
 
-title: 目录
+title: 软件安装
 date: 2020-12-18 21:42:53 
 permalink: /contents/install
 sidebar: false
