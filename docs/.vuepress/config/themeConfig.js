@@ -64,7 +64,7 @@ module.exports = {
   },
   blogger: {
     // 博主信息，显示在首页侧边栏
-    avatar: '/assets/img/avatar.ico',
+    avatar: '/dft-learning/assets/img/avatar.ico',
     name: 'northword',
     slogan: '菜鸡小张在此！',
   },
