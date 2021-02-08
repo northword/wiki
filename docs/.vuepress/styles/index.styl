@@ -139,6 +139,42 @@
   height: auto !important
   max-width: 100% !important
 
+/*
+ * @name: 滚动条
+ *
+ * @year: 2021.02.08
+ *
+*/
+// 滚动条样式
+@media (min-width: 719px)
+  ::-webkit-scrollbar 
+      width: 6px !important
+      height: 12px !important
+
+@media (min-width: 719px)
+  ::-webkit-scrollbar-track-piece 
+      background-color: rgba(0,0,0,.15) !important
+      -webkit-border-radius: 0px !important
+
+
+/* ::-webkit-scrollbar 
+    width: 6px !important
+    height: 12px !important
+
+
+::-webkit-scrollbar-track-piece 
+    background-color: rgba(0,0,0,.15) !important
+    -webkit-border-radius: 0px !important */
+
+// 为溢出的内容添加滚动条
+// 公式
+section 
+  overflow-x: auto
+
+//.vuepress-eqn
+//      overflow-x: auto
+
+
 
 // 评论区颜色重置
 /* .gt-container
