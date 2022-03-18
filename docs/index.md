@@ -1,4 +1,5 @@
 ---
+title: 不完全不准确不系统的计算模拟入坑记录
 home: false
 # heroImage: /img/web.png
 heroText:  计算模拟学习笔记
@@ -11,7 +12,7 @@ date: 2020-10-31 18:00:00
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: simple
 # simplePostListLength: 10 # 简约版文章列表显示的文章数量，默认 10。（仅在 postList 设置为 simple 时生效）
-updated: 2022-01-16 19:45:35
+updated: 2022-03-18 18:22:19
 ---
 
 # 不完全不准确不系统的计算模拟入坑记录
@@ -41,7 +42,7 @@ updated: 2022-01-16 19:45:35
 
 Bug/typo/error reports should be sent to:
 
-[Zhang' email](mailto: zhangjianbei@stu.scu.edu.cn) or reported as an [issue](https://github.com/northword/computation-simulation/issues) .
+[Zhang' email](mailto:zhangjianbei@stu.scu.edu.cn) or reported as an [issue](https://github.com/northword/dft-learning/issues) .
 
 ---
 
