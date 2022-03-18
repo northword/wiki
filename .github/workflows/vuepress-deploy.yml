@@ -1,4 +1,4 @@
-name: Deploy Vuepress
+name: Deploy
 on:
     push:
       branches:
@@ -15,12 +15,16 @@ jobs:
             with:
                 persist-credentials: false
                 fetch-depth: 0
-
-          - name: Install and Build 🔧
+          - name: Setup Node
+            uses: actions/setup-node@v3
+            with:
+              node-version: "16.x"
+              registry-url: "https://registry.npmjs.org"
+              cache: "yarn"
+          - name: Build
             run: |
-                npm install
-                npm run build
-
+              yarn install
+              yarn build
           - name: Deploy 🚀
             uses: peaceiris/actions-gh-pages@v3.7.3
             with:
@@ -29,6 +33,24 @@ jobs:
                 commit_message: ${{ github.event.head_commit.message }}
                 # keep_files: false
                 force_orphan: true
+
+          # - name: 📂 Sync files
+            # uses: SamKirkland/FTP-Deploy-Action@4.2.0
+            # with:
+                # server: ftp.samkirkland.com
+                # username: myFtpUserName
+                # password: ${{ secrets.password }}
+
+            # 利用 action 把 build 好的文件上传到服务器路径下,需要确认此目录已在服务端创建
+            # - name: deploy file to server
+            # uses: wlixcc/SFTP-Deploy-Action@v1.0 
+            # with:  
+              # username: 'root'   #ssh user name
+              # port: '6666' # 远程服务器ssh端口，默认22
+              # server: '162.1' # 远程服务器IP
+              # ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} # 认证服务器秘钥对的私钥
+              # local_path: 'docs/.vuepress/dist/*'  # 对应我们项目打包后的静态文件路径
+              # remote_path: '/www/wwwroot/blog/dft-learning' # 服务器上的路径
                 
     sync:
         needs: build-and-deploy
@@ -70,3 +92,5 @@ jobs:
               gitee-repo: northword/dft-learning
               # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
               branch: gh-pages
+
+       
