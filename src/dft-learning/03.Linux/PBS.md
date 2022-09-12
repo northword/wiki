@@ -21,7 +21,7 @@ PBS 就是其中一种解决方案，作业通过 PBS 命令提交到 PBS 队列
 用以下命令提交作业：
 
 ```bash
-$ qsub [options] <control script>
+qsub [options] <control script>
 ```
 
 命令执行后会返回一个作业 ID。如：
@@ -33,7 +33,7 @@ $ qsub [options] <control script>
 
 作业提交后一般会先排队等待，PBS 系统会根据作业的优先级和可用的计算资源来调度和执行作业。
 
-其中 `-N thisIsName` 为选项，它指定了作业的名称。`vasp.pbs` 为 PBS 脚本，它设定了作业的属性和作业的内容。`options` 与 `control script` 详见 [## PBS 脚本](03.PBS-script.md) 。
+其中 `-N thisIsName` 为选项，它指定了作业的名称。`vasp.pbs` 为 PBS 脚本，它设定了作业的属性和作业的内容。`options` 与 `control script` 详见 PBS 脚本 。
 
 > 文档中，命令带有 `` 符号的，表示是在 shell 终端输入的命令，实际输入的时候不需要带有这个符号。
 
