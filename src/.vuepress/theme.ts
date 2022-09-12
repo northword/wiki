@@ -26,7 +26,7 @@ export default hopeTheme({
   navbar: [
     "/",
     {
-      text: "笔记",
+      text: "维基",
       icon: "read",
       children: [
         {
@@ -40,15 +40,15 @@ export default hopeTheme({
           link: "/characterize/",
         },
         {
+          text: "代码",
+          icon: "code",
+          link: "/docs/",
+        },
+        {
           text: "Zotero 使用手册",
           link: "https://zotero-cn.github.io/zotero/",
         },
       ],
-    },
-    {
-      text: "代码",
-      icon: "code",
-      link: "/docs/",
     },
     {
       text: "博客",
