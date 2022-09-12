@@ -23,6 +23,8 @@ export default hopeTheme({
   displayFooter: true,
   copyright: "Copyright © 2022-Present Northword",
 
+  darkmode: "auto",
+
   navbar: [
     "/",
     {
@@ -98,7 +100,6 @@ export default hopeTheme({
       tex: true,
       vpre: true,
     },
-
   },
   blog:{
     // sidebarDisplay: 'none',

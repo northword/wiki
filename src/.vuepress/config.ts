@@ -1,6 +1,7 @@
 import { defineUserConfig } from "@vuepress/cli";
 import { searchPlugin } from "@vuepress/plugin-search";
 import theme from "./theme";
+import { redirectPlugin } from "vuepress-plugin-redirect";
 
 export default defineUserConfig({
   title: "北辞",
@@ -12,6 +13,9 @@ export default defineUserConfig({
   plugins: [
     searchPlugin({
       maxSuggestions: 10
+    }),
+    redirectPlugin({
+      // 配置选项
     }),
   ],
 });
