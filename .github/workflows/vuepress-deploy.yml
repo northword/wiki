@@ -23,8 +23,8 @@ jobs:
               # cache: "yarn"
           - name: Build
             run: |
-              yarn install
-              yarn build:vite
+              pnpm install
+              pnpm build:vite
           - name: Deploy 🚀
             uses: peaceiris/actions-gh-pages@v3.7.3
             with:
