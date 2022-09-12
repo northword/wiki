@@ -3,6 +3,8 @@ title: 软件安装
 date: 2021-09-13
 author: Northword
 updated: 2022-01-16 19:52:55
+dir:
+   link: true
 ---
 
 # 计算常用软件

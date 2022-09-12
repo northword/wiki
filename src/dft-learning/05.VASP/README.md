@@ -2,10 +2,9 @@
 title: VASP 简介
 date: 2020-12-15 13:28:10
 permalink: /dft-learning/pages/df30ef/
-categories:
+category:
   - VASP
-tags:
-  -
+
 updated: 2022-01-16 19:56:51
 ---
 

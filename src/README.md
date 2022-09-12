@@ -3,7 +3,7 @@ home: true
 layout: Blog
 icon: home
 title: 首页
-heroImage: /logo.svg
+# heroImage: /assets/img/logo.png
 heroText: 北辞
 tagline: 北辞の窝 ✨
 actions:

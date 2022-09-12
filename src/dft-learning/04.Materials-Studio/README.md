@@ -1,11 +1,10 @@
 ---
-title: Mat.Studio 操作
+title: Materials Studio
 date: 2020-11-30 13:28:10
 permalink: /dft-learning/pages/2e10d2/
-categories:
+category:
   - Materials-Studio
-tags:
-  -
+
 updated: 2022-01-16 19:56:29
 ---
 

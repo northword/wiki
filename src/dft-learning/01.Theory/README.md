@@ -2,10 +2,9 @@
 title: 理论知识
 date: 2020-11-17 19:28:10
 permalink: /dft-learning/pages/77a22e/
-categories:
+category:
   - Theory
-tags:
-  -
+
 updated: 2022-01-16 19:55:14
 ---
 
