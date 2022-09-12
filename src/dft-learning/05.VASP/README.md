@@ -1,7 +1,7 @@
 ---
 title: VASP 简介
 date: 2020-12-15 13:28:10
-permalink: /pages/df30ef/
+permalink: /dft-learning/pages/df30ef/
 categories:
   - VASP
 tags:
@@ -15,9 +15,9 @@ updated: 2022-01-16 19:56:51
 
 因此我们需要区分开 `VASP` 和 `VASPKIT`。`VASP` 是一款计算模拟软件，而 `VASPKIT` 仅是为方便使用 `VASP` 而开发的一个脚本包。也即，如果不用 `VASPKIT`，你仍然可以使用 `VASP` 进行计算，无非麻烦一些罢了。
 
-`VASP` 官网：https://www.vasp.at/
+`VASP` 官网：<https://www.vasp.at/>
 
-`VASPKIT` 官网：https://vaspkit.com/index.html
+`VASPKIT` 官网：<https://vaspkit.com/index.html>
 
 官网已经详细的列出了 VASPKIT 如何配置安装，如何开始使用。由于课程需要，实际使用与官方文档的描述有一丁点区别，本文档仅对本人使用过程做记录。
 

@@ -1,7 +1,7 @@
 ---
 title: Mat.Studio 操作
 date: 2020-11-30 13:28:10
-permalink: /pages/2e10d2/
+permalink: /dft-learning/pages/2e10d2/
 categories:
   - Materials-Studio
 tags:

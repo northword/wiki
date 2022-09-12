@@ -1,7 +1,7 @@
 ---
 title: PBS
 date: 2020-10-31 18:00:00
-permalink: /pages/832cb5/
+permalink: /dft-learning/pages/832cb5/
 categories:
   - Linux
 tags:

@@ -1,7 +1,7 @@
 ---
 title: 理论知识
 date: 2020-11-17 19:28:10
-permalink: /pages/77a22e/
+permalink: /dft-learning/pages/77a22e/
 categories:
   - Theory
 tags:
