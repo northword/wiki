@@ -1,0 +1,35 @@
+/**************************************/
+/* 5. WYSIWYG: imitation in Edit mode */
+/**************************************/
+/* Source: various people on forum, incl. Piotr and pihentagy
+/**************************************/
+/* Editor font: make thicker so it is like in Preview
+/* Remove markdown clutter
+/* Unordered lists: turn into bullets as you type, as per Typora
+/* Underline H1 heading in Edit mode
+/* Blockquote in edit mode with left border rendered instead of ">"
+/* Tag pills in edit mode
+/* Coloured headings for editor and preview, same font-weight in Edit & Preview
+/* ============================================================================*/
+/* https://github.com/Dmitriy-Shulha/obsidian-css-snippets/blob/master/Snippets/WYSIWYG.md */
+
+
+/* Blockquote: in edit mode with left border rendered instead of > */
+/* 引用块：使用左 border 装饰而不是 > ，同时加宽边距 */
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting.cm-formatting-quote,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hmd-indent-in-quote {
+  display: inline !important;
+  color: transparent !important;
+}
+
+div:not(.CodeMirror-activeline)>.HyperMD-quote {
+   background-color:rgb(238, 234, 234);
+   border-left: 3px solid var(--text-selection);
+   border-color:  !important; 
+   border-radius: 0 8px 8px 0;
+   font-size: 17px;
+   line-height: 1.5em;
+   margin-left: 5px;
+   padding: 12px 10px 15px 8.5px;
+   display: inline-block;
+}

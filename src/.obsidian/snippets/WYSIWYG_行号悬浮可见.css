@@ -1,0 +1,9 @@
+/* Show line numbers only on hover */
+.theme-dark
+.cm-s-obsidian .CodeMirror-linenumber {
+  opacity : 0;
+}
+
+.cm-s-obsidian .CodeMirror-linenumber:hover {
+  opacity: 1;
+}
