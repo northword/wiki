@@ -1,0 +1,22 @@
+{
+  "showFrontmatter": true,
+  "legacyEditor": false,
+  "livePreview": true,
+  "attachmentFolderPath": "assets",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "promptDelete": false,
+  "foldHeading": true,
+  "showLineNumber": true,
+  "foldIndent": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 83
+  },
+  "showUnsupportedFiles": true,
+  "newFileLocation": "current",
+  "spellcheck": true
+}

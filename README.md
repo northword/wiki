@@ -1,23 +1,23 @@
-# computation-simulation
+# 北辞
 
-本库是《能源环境材料计算模拟方法》课程学习与实践笔记，内容包括 Linux基础命令、PBS作业管理系统、VASP、Materials Studio 等。
+个人博客、知识库。
 
-笔记内容以`Markdown`书写，`HTML`由`VuePress`创建，托管在`GitHub Pages`上。同时本库由[`Gitee`](https://gitee.com/northword/dft-learning) 同步。
+笔记内容以 Markdown 书写，由 VuePress & theme-hope 构建，托管在 GitHub Pages 上。
 
 阅读请访问：
 
-- Overseas link:  [Github Pages](http://blog.northword.cn/dft-learning)
+- Overseas link: [Github Pages](northword.github.io)
 
-- Mainland link:  [northword.gitee.io/dft-learning](http://northword.gitee.io/dft-learning)
+- Mainland link: [northword.cn](https://northword.cn)
 
 ---
 
-This repository is the notes of course study and practice of "Energy Environment Material Calculation and Simulation Method", which includes Linux basic commands, PBS job management system, VASPKIT, Materials Studio, etc.
+This is the source file repository for the northword.cn site.
 
-To read, please visit [GitHub Pages](http://blog.northword.cn/dft-learning) .
+To read, please visit [Github Pages](northword.github.io) .
 
 ---
 
 You are welcome to contribute examples of how to run calculations.
 
-Bug/typo/error reports should be sent to: [Zhang' e-mail](mailto:zhangjianbei@stu.scu.edu.cn) or reported as an [issue](https://github.com/northword/dft-learning/issues).
+Bug/typo/error reports should be sent to: Zhang' e-mail or reported as an issue.

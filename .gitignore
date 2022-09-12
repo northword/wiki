@@ -9,8 +9,8 @@ yarn.lock
 .vscode
 
 # vuepress
-docs/.vuepress/dist
-**/dist
+**/.vuepress/.*
+**/**/dist
 
 # 百度链接推送
 urls.txt
@@ -23,3 +23,7 @@ utils
 baiduPush.sh
 deploy.sh
 test.md
+
+# obsidian
+# **/.obsidian
+**/.obsidian/workspace
