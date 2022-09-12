@@ -46,6 +46,7 @@ export default hopeTheme({
         },
         {
           text: "Zotero 使用手册",
+          icon: "study",
           link: "https://zotero-cn.github.io/zotero/",
         },
       ],

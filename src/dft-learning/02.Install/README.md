@@ -1,80 +1,52 @@
 ---
-title: 软件安装
-date: 2021-09-13
+title: 常用软件
+date: 2020-10-31 13:28:10
+permalink: /dft-learning/pages/06c8b9/
 author: Northword
-updated: 2022-01-16 19:52:55
-dir:
-   link: true
+updated: 2022-09-12 20:05:18
 ---
 
-# 计算常用软件
+# 常用软件
 
-## 列表
+本列表中，对于完成课程所必需使用的软件，标注为 `(Required)`；可选安装的软件，标注为 `(Optional)`。
 
-本列表中，对于完成课程所必需使用的软件，标注为 `(Required)`，可选安装的软件，标注为 `(Optional)`。
+对于 Windows 端的程序，部分关键的安装步骤展示在第二节。
 
-对于 Windows 端的程序，部分关键的安装步骤展示在第二节。Linux 端的程序安装步骤略，不在本节课范围内。
+## For Windows
 
-### For Windows
+- 建模及可视化软件 (Required)
+	- Materials Studio
+	- VESTA：[官网](http://jp-minerals.org/vesta/en/) / [下载](http://jp-minerals.org/vesta/en/download.html)
+	- GaussView：高斯 (Optional)
+- SSH 客户端 (Required)
+	- XShell：[官网找教育版](https://www.netsarang.com/zh/free-for-home-school/)
+	- WindTerm：集成 X11 server，免费。
+- 文件传输工具 (Required)
+	- XFTP
+	- WinSCP
+- X Server (Required)
+	- Xming：[下载](http://www1.udel.edu/topics/connect/sw/xming/)
+	- XManager
+- 开发环境：Python (Required)（含 ase 包）
+	- ASE：[官网](http://wiki.fysik.dtu.dk/ase) / [安装见 windows-ase-install.md](./03.install-ase.md)
+- 文本编辑器 (Optional)
+	- Notepad++ 
+	- VS Code
+- Markdown 编辑器（Optional）
+	- Typora 
 
-1. 建模软件：Materials Studio (Required)
-2. SSH 工具：XShell (Required)
-3. FTP 工具：XFTP (Required)
-4. X Server：Xming (Required)
-5. 开发环境：Python (Required)（含 ase 包）
-6. VESTA (Required)
-7. 文本编辑器：Notepad++  (Optional)
-   Markdown 编辑器：Typora (Optional)
-8. GaussView：高斯 (Optional)
+## For Linux
 
-### For Linux
+- VASP ：Vienna Ab-initio Simulation Package, 电子结构计算和量子力学 - 分子动力学模拟软件包，集群已安装
 
-- VASP ：集群已安装
+- VASP with VTST：Vasp TST(transition state theory) Tools，若为川大二代集群，可调用我已经编译的
 
-- VASP with VTST：若为川大二代集群，可调用我已经编译的
+- VTST Script：Vasp TST (transition state theory) Tools 脚本，安装参 [linux-install-VTSTScript.md](22.linux-install-vtstScript.md) 
 
-- VTST Script：参见 [VTST-Script | 计算模拟学习笔记 (northword.cn)](https://blog.northword.cn/dft-learning/pages/40eca8/)
-
-- VASPKIT：参见 [安装 VASPKIT | 计算模拟学习笔记 (northword.cn)](https://blog.northword.cn/dft-learning/pages/fce84f/)
+- VASPKIT：VASP 预 - 后数据处理脚本， [官网](https://vaspkit.com/index.html) ， 安装见 [install-vaspkit.md](21.linux-install-vaspkit.md)
 
 - ase：同 Windows ，需安装在 local 。
 
-- gunplot (Optional) 参见 [linux 编译 gnuplot | 计算模拟学习笔记 (northword.cn)](https://blog.northword.cn/dft-learning/pages/a33822/)
+- gunplot (Optional) ：命令行的交互式绘图工具，[官网](http://www.gnuplot.info/) / 学校已安装 / 安装见 [linux-gunplot-install.md](32.linux-install-gnuplot.md)
 
-- lrzsz (Optional)参见 [linux 安装 lrzsz | 计算模拟学习笔记 (northword.cn)](https://blog.northword.cn/dft-learning/pages/ea401e/)
-
----
-
-## 安装
-
-由于安装过于简单，故只对部分关键步骤做说明。
-
-### Materials Studio 激活
-
-安装结束后，不要运行软件！把安装包旁的的 `msi2019.lic` 复制到 `C: \Program Files (x86)\BIOVIA\LicensePack\Licenses`
-
-![image-20210913190855840](../../assets/7488b4869aad2b110bfff2effa063dc6.png)
-
-然后启动授权管理器：
-
-![image-20210913190616258](../../assets/1443f8e66c95a78827d048c7d7e89ef5.png)
-
-![image-20210913191736535](../../assets/362168238c6600dcac8c0bfeb7738a13.png)
-
-### Python
-
-打开安装包后勾选上左下角的 `添加到系统 PATH` 的选项后再进行下一步！
-
-### ASE 安装
-
-由于 Python Pip 默认源服务器在境外，速度较慢，故须换为国内镜像源或配置科学上网。以下安装命令已配置为清华大学镜像源，在已配置 Python 的环境下，执行：
-
-```
-pip install ase -i https://pypi.tuna.tsinghua.edu.cn/simple
-```
-
-## 一些资料
-
-- [PIP 换源](https://www.jianshu.com/p/b2412f7fc93f)
-- [不完全不准确不系统的计算模拟入坑记录 | 计算模拟学习笔记 (northword.cn)](https://blog.northword.cn/dft-learning/)
-- [不完全不准确不系统的计算模拟入坑记录 | 计算模拟学习笔记 (gitee.io)](https://northword.gitee.io/dft-learning/)
+- lrzsz (Optional) 参见 [linux 安装 lrzsz | 计算模拟学习笔记 (northword.cn)](https://blog.northword.cn/dft-learning/pages/ea401e/)
