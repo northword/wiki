@@ -4,7 +4,8 @@ index: false
 dir:
     link: ture
 date: 2022-09-12 17:04:23
-updated: 2022-09-12 17:09:21
+updated: 2022-09-12 17:52:32
+permalink: /dft-learning/pages/linux
 ---
 
 # Linux 基础
