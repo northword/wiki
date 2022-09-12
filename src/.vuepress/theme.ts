@@ -12,7 +12,7 @@ export default hopeTheme({
   iconAssets: "//at.alicdn.com/t/font_2410206_vuzkjonf4s9.css",
   iconPrefix: "iconfont icon-",
 
-  logo: "/logo.png",
+  logo: "/assets/img/logo.png",
 
   repo: "https://github.com/northword/wiki",
 
@@ -26,33 +26,54 @@ export default hopeTheme({
   navbar: [
     "/",
     {
-      text: "科研",
-      icon: "wiki",
-      children: ["dft-learning", "dft-learning"],
+      text: "笔记",
+      icon: "read",
+      children: [
+        {
+          text: "理论计算",
+          icon: "shell",
+          link: "/dft-learning/",
+        },
+        {
+          text: "材料表征",
+          icon: "relation",
+          link: "/characterize/",
+        },
+        {
+          text: "Zotero 使用手册",
+          link: "https://zotero-cn.github.io/zotero/",
+        },
+      ],
     },
     {
-      text: "编程笔记",
+      text: "代码",
       icon: "code",
-      link: "/code/",
+      link: "/docs/",
     },
     {
-      text: "存档",
-      icon: 'timeline',
+      text: "博客",
+      icon: "blog",
+      link: "/blog/",
+    },
+    {
+      text: "归档",
+      icon: 'time',
       link: "/timeline/",
     },
   ],
 
   sidebar: {
     "/dft-learning/": "structure",
-
-    "/bar/": "structure",
+    "/docs/": "structure",
+    "/blog/": "structure",
 
     // fallback
-    "/": [
-      "",
-    ],
+    // "/": [
+    //   "",
+    // ],
   },
 
+  sidebarSorter:["readme", "order", "file-number"],
 
   plugins: {
     blog: true,
