@@ -63,6 +63,22 @@ export default hopeTheme({
       icon: 'time',
       link: "/timeline/",
     },
+    {
+      text: "工具",
+      icon: 'tool',
+      children: [
+        {
+          text: "订阅转换工具",
+          icon: "anonymous",
+          link: "https://northword.github.io/sub-web/",
+        },
+        {
+          text: "Aria 2 WebUI",
+          icon: "install",
+          link: "https://aria2.northword.cn",
+        },
+      ],
+    },
   ],
 
   sidebar: {
