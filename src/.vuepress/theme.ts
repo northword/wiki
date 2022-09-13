@@ -21,6 +21,7 @@ export default hopeTheme({
   docsDir: "src",
 
   displayFooter: true,
+  footer: "晋 ICP 备 18010037 号-1",
   copyright: "Copyright © 2022-Present Northword",
 
   darkmode: "auto",
@@ -42,7 +43,7 @@ export default hopeTheme({
           link: "/characterize/",
         },
         {
-          text: "代码",
+          text: "文档",
           icon: "code",
           link: "/docs/",
         },

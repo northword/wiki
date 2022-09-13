@@ -122,8 +122,41 @@
   }
 }
 
+// theme-hope 修改
+
+// 页脚与正文留白加大
 .footer-wrapper {
   margin-top: -2rem;
   padding-top: 10rem;
   padding-bottom: 5rem;
 }
+
+// 侧边栏缩进
+.sidebar-links ul {
+  padding-left: 1.25rem !important;
+}
+.sidebar-group .sidebar-link {
+  padding-left: 1rem !important;
+  // margin-left: 1rem !important;
+  // width: auto !important;
+}
+
+.sidebar-group .sidebar-group {
+  // padding-left: 1rem !important;
+}
+.sidebar-heading.active{
+  color: var(--theme-color) !important;
+  a{
+    color: var(--theme-color) !important;
+  }
+
+}
+// .sidebar-link {
+//   border-left-color: var(--theme-color);
+//   // background-color: var(--theme-color-mask);
+//   // color: var(--theme-color);
+//   font-weight: 500;
+// }
+// .sidebar-group .sidebar-links li{
+//   border-left-color: var(--theme-color);
+// }
