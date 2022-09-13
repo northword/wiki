@@ -12,8 +12,8 @@ actions:
     type: primary
 
   - text: 笔记 🛠
-    link: /dft-learning/
+    link: /docs/
 
 copyright: false
-footer: MIT Licensed | Copyright © 2019-present Mr.Hope
+footer: 晋 ICP 备 18010037 号-1 | Copyright © 2019-Present Northword.
 ---
