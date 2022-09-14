@@ -6,7 +6,7 @@
       "Try to Escape Single Line Arrays": false
     },
     "Format Tags in YAML": {
-      "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
+      "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": false
     },
     "Format Yaml Array": {
       "Allows for the formatting of regular yaml arrays as either multi-line or single-line and `tags` and `aliases` are allowed to have some Obsidian specific yaml formats. Note that single string to single-line goes from a single string entry to a single-line array if more than 1 entry is present. The same is true for single string to multi-line except it becomes a multi-line array.": false,
@@ -42,7 +42,7 @@
       "Format": "YYYY-MM-DD HH:mm:ss"
     },
     "YAML Title": {
-      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename if there is no H1.": false,
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename if there is no H1.": true,
       "Title Key": "title",
       "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": true
     },
@@ -160,7 +160,8 @@
   "lintOnSave": true,
   "displayChanged": true,
   "foldersToIgnore": [
-    "Research/Templates"
+    "Research/Templates",
+    "templates"
   ],
   "linterLocale": "system-default",
   "logLevel": 4
