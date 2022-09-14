@@ -2,12 +2,11 @@
   "dataview",
   "obsidian-system-dark-mode",
   "obsidian-style-settings",
-  "table-editor-obsidian",
   "obsidian-linter",
   "obsidian-kanban",
-  "remotely-save",
   "obsidian-file-cleaner",
   "obsidian-link-converter",
+  "note-refactor-obsidian",
   "obsidian-paste-image-rename",
-  "note-refactor-obsidian"
+  "templater-obsidian"
 ]
