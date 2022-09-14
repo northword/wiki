@@ -1,5 +1,5 @@
 import { defineUserConfig } from "@vuepress/cli";
-import { searchPlugin } from "@vuepress/plugin-search";
+// import { searchPlugin } from "@vuepress/plugin-search";
 import theme from "./theme";
 // import { redirectPlugin } from "vuepress-plugin-redirect";
 import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
@@ -13,9 +13,9 @@ export default defineUserConfig({
   theme,
   shouldPrefetch: false,
   plugins: [
-    searchPlugin({
-      maxSuggestions: 10
-    }),
+    // searchPlugin({
+    //   maxSuggestions: 10
+    // }),
     // redirectPlugin({
     //   // 配置选项
     // }),
