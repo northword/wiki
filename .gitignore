@@ -1,9 +1,8 @@
-# npm
+# Package maneger
 package-lock.json
 node_modules
-
-#yarn
 yarn.lock
+*.log
 
 # vscode
 .vscode
@@ -27,3 +26,4 @@ test.md
 # obsidian
 # **/.obsidian
 **/.obsidian/workspace
+
