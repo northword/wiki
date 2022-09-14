@@ -133,30 +133,33 @@
 
 // 侧边栏缩进
 .sidebar-links ul {
-  padding-left: 1.25rem !important;
+  padding-left: 1rem !important;
 }
 .sidebar-group .sidebar-link {
   padding-left: 1rem !important;
   // margin-left: 1rem !important;
   // width: auto !important;
 }
-
 .sidebar-group .sidebar-group {
-  // padding-left: 1rem !important;
+  padding-left: 0rem !important;
 }
+.sidebar-heading {
+  padding: .35rem 1rem .35rem 1rem !important;
+}
+// 侧边栏活动的选项高亮
 .sidebar-heading.active{
   color: var(--theme-color) !important;
   a{
     color: var(--theme-color) !important;
   }
-
 }
-// .sidebar-link {
-//   border-left-color: var(--theme-color);
-//   // background-color: var(--theme-color-mask);
-//   // color: var(--theme-color);
-//   font-weight: 500;
-// }
+.sidebar-link.active {
+  border-left-color: transparent !important;
+  // border-left-color: var(--theme-color);
+  // background-color: var(--theme-color-mask);
+  // color: var(--theme-color);
+  // font-weight: 500;
+}
 // .sidebar-group .sidebar-links li{
 //   border-left-color: var(--theme-color);
 // }

@@ -40,7 +40,7 @@ export default hopeTheme({
         {
           text: "材料表征",
           icon: "relation",
-          link: "/characterize/",
+          link: "/characterization/",
         },
         {
           text: "文档",
@@ -86,17 +86,20 @@ export default hopeTheme({
     "/dft-learning/": "structure",
     "/docs/": "structure",
     "/blog/": "structure",
-
+    "/characterization/": "structure",
     // fallback
-    // "/": [
-    //   "",
-    // ],
+    "/": [
+      '',
+      "structure",
+    ],
   },
 
   sidebarSorter:["readme", "order", "file-number"],
 
   plugins: {
-    blog: true,
+    blog: {
+      autoExcerpt: false,
+    },
 
     // feed: {
     //   atom: true,
@@ -116,6 +119,7 @@ export default hopeTheme({
       sup: true,
       tex: true,
       vpre: true,
+      mermaid: true,
     },
   },
   blog:{
