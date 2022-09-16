@@ -43,9 +43,14 @@ export default hopeTheme({
           link: "/characterization/",
         },
         {
-          text: "文档",
+          text: "代码笔记",
           icon: "code",
-          link: "/docs/",
+          link: "/code/",
+        },
+        {
+          text: "软件使用",
+          icon: "more",
+          link: "/software/",
         },
         {
           text: "Zotero 使用手册",
@@ -84,9 +89,11 @@ export default hopeTheme({
 
   sidebar: {
     "/dft-learning/": "structure",
-    "/docs/": "structure",
-    "/blog/": "structure",
     "/characterization/": "structure",
+    "/docs/": "structure",
+    "/code/":"structure",
+    "/software/": "structure",
+    "/blog/": "structure",
     // fallback
     "/": [
       '',

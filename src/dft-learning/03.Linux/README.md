@@ -10,7 +10,7 @@ timeline: false
 
 # Linux 基础
 
-Linux 基础应参考 [Linux 笔记](../../docs/Linux/00.intro.md)。
+Linux 基础应参考 [Linux 笔记](../../code/linux/00.intro.md)。
 
 完成计算至少应了解的内容有以下：
 
