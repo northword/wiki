@@ -1,7 +1,7 @@
 ---
 title: pip 换源
 date: 2022-09-16 20:53:40
-updated: 2022-09-16 20:58:30
+updated: 2022-09-16 21:07:17
 permalink: /code/python/pip-mirrors/
 ---
 
@@ -31,7 +31,7 @@ Linux 下，修改 `~/.pip/pip.conf`
 
 ```ini
 [global]  
-index-url = <https://pypi.tuna.tsinghua.edu.cn/simple>  
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 [install]  
 trusted-host=mirrors.aliyun.com  
 ```

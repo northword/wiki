@@ -1,11 +1,11 @@
 ---
-title: pip-error
+title: pip 报错
 date: 2022-09-16 20:24:53
-updated: 2022-09-16 20:52:59
+updated: 2022-09-16 21:10:06
 permalink: /code/python/pip-error/
 ---
 
-# pip-error
+# pip 报错
 
 ## 找不到指定文件
 
@@ -131,6 +131,7 @@ AttributeError: module 'pip._internal' has no attribute 'pep425tags'
 >>> print(pip._internal)
 <module 'pip._internal' from 'C:\\Program Files\\Python311\\Lib\\site-packages\\pip\\_internal\\__init__.py'>
 >>> exit()
+
 PS C:\WINDOWS\system32> python -m pip debug --verbose
 WARNING: This command is only meant for debugging. Do not use this with automation for parsing and getting these details, since the output and options of this command may change without notice.
 pip version: pip 22.2.2 from C:\Program Files\Python311\Lib\site-packages\pip (python 3.11)
@@ -294,6 +295,6 @@ Successfully installed ase-3.22.1 contourpy-1.0.5 cycler-0.11.0 fonttools-4.37.2
 PS C:\WINDOWS\system32>
 ```
 
-## ref
+该条报错可参考：
 
-[Python学习笔记: pip install 常见错误汇总 - yahoon - 博客园 (cnblogs.com)](https://www.cnblogs.com/yahoon/p/16172517.html)
+- [Python学习笔记: pip install 常见错误汇总 - yahoon - 博客园 (cnblogs.com)](https://www.cnblogs.com/yahoon/p/16172517.html)
