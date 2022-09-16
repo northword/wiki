@@ -1,29 +1,27 @@
-# Package maneger
-package-lock.json
-node_modules
-yarn.lock
-*.log
+# Dependencies
+/node_modules
 
-# vscode
-.vscode
+# Production
+/build
 
-# vuepress
-**/.vuepress/.*
-**/**/dist
+# Generated files
+.docusaurus
+.cache-loader
 
-# 百度链接推送
-urls.txt
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Vdoing
-theme-vdoing
-utils
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# tmp
-baiduPush.sh
-deploy.sh
-test.md
+# other
+/dist
+/.vscode
+/.trash
 
-# obsidian
-# **/.obsidian
-**/.obsidian/workspace
-
+/blog
