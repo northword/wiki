@@ -1,18 +1,12 @@
 ---
 title: 不完全不准确不系统的计算模拟入坑记录
-home: false
-# heroImage: /img/web.png
-heroText:  计算模拟学习笔记
-tagline:  不完全不准确不系统的计算模拟入坑记录
-# actionText: 立刻进入 →
-# actionLink: /
-# bannerBg: auto # auto => 网格纹背景(有 bodyBgImg 时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到 palette.styl 修改$bannerTextColor 变量
-index: false
 date: 2020-10-31 18:00:00
-# 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
+updated: 2022-09-16 10:04:29
+heroText: 计算模拟学习笔记
+home: false
+index: false
 postList: simple
-# simplePostListLength: 10 # 简约版文章列表显示的文章数量，默认 10。（仅在 postList 设置为 simple 时生效）
-updated: 2022-03-18 18:22:19
+tagline: 不完全不准确不系统的计算模拟入坑记录
 ---
 
 # 不完全不准确不系统的计算模拟入坑记录
@@ -54,7 +48,7 @@ Bug/typo/error reports should be sent to:
 
 本笔记中，代码块行前有 `$` 的，表示在终端输入的命令，实际不需要输入 `$` 符号。
 
-本笔记中的命令的语法表示中：`<参数>` 表示必须参数，`[参数]` 表示可选参数，可参考 [命令行语法格式中常用符号的含义](https://www.cnblogs.com/uakora/p/11809501.html) 。
+本笔记中的命令的语法表示中：`<参数>` 表示必须参数，`[参数]` 表示可选参数，可参考 [命令行语法格式中常用符号的含义](https://www.cnblogs.com/uakora/p/11809501.html)。
 
 ---
 
@@ -64,9 +58,9 @@ Bug/typo/error reports should be sent to:
 >
 > Repository synced by [Gitee](https://gitee.com/northword/dft-learning) .
 >
-> 晋 ICP 备 18010037 号-1.
+> 晋 ICP 备 18010037 号 -1.
 >
-> ©2020 [Northword]() .
+> ©2020 [Northword](https://northword.cn) .
 
 Overseas link: [Github Pages](http://blog.northword.cn/dft-learning)
 

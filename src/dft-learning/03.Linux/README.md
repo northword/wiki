@@ -1,8 +1,10 @@
 ---
 title: Linux 基础
 date: 2022-09-12 17:04:23
-updated: 2022-09-12 20:07:55
+updated: 2022-09-15 15:13:00
 permalink: /dft-learning/pages/linux
+article: false
+index: true
 timeline: false
 ---
 

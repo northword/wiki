@@ -21,10 +21,10 @@ export default hopeTheme({
   docsDir: "src",
 
   displayFooter: true,
-  footer: "晋 ICP 备 18010037 号-1",
+  footer: "<a href='https://beian.miit.gov.cn/' >晋 ICP 备 18010037 号</a>",
   copyright: "Copyright © 2022-Present Northword",
 
-  darkmode: "auto",
+  // darkmode: "auto",
 
   navbar: [
     "/",

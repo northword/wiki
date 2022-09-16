@@ -18,5 +18,6 @@
   },
   "showUnsupportedFiles": true,
   "newFileLocation": "current",
-  "spellcheck": true
+  "spellcheck": true,
+  "useTab": false
 }

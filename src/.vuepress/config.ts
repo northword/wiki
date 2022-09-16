@@ -1,7 +1,7 @@
 import { defineUserConfig } from "@vuepress/cli";
 // import { searchPlugin } from "@vuepress/plugin-search";
 import theme from "./theme";
-// import { redirectPlugin } from "vuepress-plugin-redirect";
+import { redirectPlugin } from "vuepress-plugin-redirect";
 import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
 
 export default defineUserConfig({
@@ -16,18 +16,22 @@ export default defineUserConfig({
     // searchPlugin({
     //   maxSuggestions: 10
     // }),
-    // redirectPlugin({
-    //   // 配置选项
-    // }),
-    fullTextSearchPlugin({
-      locales: {
-        '/': {
-          placeholder: 'Search',
-        },
-        '/zh/': {
-          placeholder: '搜索',
-        },
-      },
+    redirectPlugin({
+      // 配置选项
+      hostname: 'https://northword.cn',
+      config: {
+        '/dft-learning/pages/9810fa/': '/docs/pages/9810fa/'
+      }
     }),
+    // fullTextSearchPlugin({
+    //   locales: {
+    //     '/': {
+    //       placeholder: 'Search',
+    //     },
+    //     '/zh/': {
+    //       placeholder: '搜索',
+    //     },
+    //   },
+    // }),
   ],
 });

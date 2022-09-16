@@ -1,10 +1,14 @@
 ---
 title: 文档
 date: 2022-09-12 17:02:02
-updated: 2022-09-14 14:17:06
+updated: 2022-09-15 15:34:44
 permalink: /docs/
+alias: 文档索引
+aliases:
+  - 文档
 article: false
 index: false
+linter-yaml-title-alias: 文档
 timeline: false
 ---
 
