@@ -1,0 +1,5 @@
+collapse_single_pages: false
+nav:
+    - README.md
+    - ...
+    - end.md

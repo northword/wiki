@@ -1,0 +1,8 @@
+collapse_single_pages: false
+nav:
+    - 首页: README.md
+    - CSL 简介: primer
+    - CSL 规范: specification
+    - 翻译 CSL: translating-locale-files.md
+    - XML 基础: xml-basic.md
+    - 中文用样式文件仓库: https://github.com/zotero-cn/styles

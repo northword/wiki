@@ -1,0 +1,12 @@
+collapse_single_pages: false
+nav:
+    - README.md
+    - namespacing.md
+    - whitespace-handling.md
+    - file-types.md
+    - xml-declaration.md
+    - styles-structure.md
+    - locale-files-strucure.md
+    - rendering-elements.md
+    - style-behavior.md
+    - ...
