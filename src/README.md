@@ -14,6 +14,6 @@ actions:
   - text: 笔记 🛠
     link: /docs/
 
-copyright: false
-footer: 晋 ICP 备 18010037 号-1 | Copyright © 2019-Present Northword.
+copyright: "<a href='https://beian.miit.gov.cn/' >晋 ICP 备 18010037 号</a>"
+footer: Copyright © 2018-Present Northword.
 ---
