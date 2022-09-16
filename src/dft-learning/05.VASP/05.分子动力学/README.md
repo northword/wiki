@@ -1,6 +1,12 @@
 ---
 title: 分子动力学
-index: false
-timeline: false
+date: 2022-09-12 22:46:14
+updated: 2022-09-16 13:23:05
 permalink: /dft-learning/pages/vasp-md/
+article: false
+index: false
+order: 0
+timeline: false
 ---
+
+# 分子动力学
