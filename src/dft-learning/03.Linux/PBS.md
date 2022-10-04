@@ -1,11 +1,10 @@
 ---
 title: PBS
 date: 2020-10-31 18:00:00
+updated: 2022-09-30 08:41:01
 permalink: /dft-learning/pages/832cb5/
 category:
   - Linux
-
-updated: 2022-09-12 20:13:59
 ---
 
 # PBS
@@ -33,7 +32,7 @@ qsub [options] <control script>
 
 作业提交后一般会先排队等待，PBS 系统会根据作业的优先级和可用的计算资源来调度和执行作业。
 
-其中 `-N thisIsName` 为选项，它指定了作业的名称。`vasp.pbs` 为 PBS 脚本，它设定了作业的属性和作业的内容。`options` 与 `control script` 详见 PBS 脚本 。
+其中 `-N thisIsName` 为选项，它指定了作业的名称。`vasp.pbs` 为 PBS 脚本，它设定了作业的属性和作业的内容。`options` 与 `control script` 详见 PBS 脚本。
 
 > 文档中，命令带有 `` 符号的，表示是在 shell 终端输入的命令，实际输入的时候不需要带有这个符号。
 
@@ -198,6 +197,18 @@ echo "============================================="
 | walltime | hh: mm: ss                       | 设定作业所需的最大 wallclock 时间                            |
 | cput     | hh: mm: ss                       | 设定作业所需的最大 CPU 时间                                  |
 | mem      | 正整数，后面可跟 b，kb，mb，gb | 设定作业所需的最大内存 ncpus 正整数 设定作业所需的 CPU 数目 |
+
+**指定节点运行：**
+
+有时候某个节点出了问题，但是直接提交仍会被分配到这个节点计算，这时候可以指定一个其他的节点进行提交。
+
+```
+#PBS -l nodes=c72:ppn=16+c73:ppn=16
+```
+
+其中，`c72` 和 `c73` 是节点名，可以通过 `pbsnodes` 获取到。
+
+> [【已解决】pbs指定作业节点 (novarizark.github.io)](https://novarizark.github.io/2015/01/24/e3-80-90-e5-b7-b2-e8-a7-a3-e5-86-b3-e3-80-91pbs-e/)
 
 ### PBS 常用环境变量
 

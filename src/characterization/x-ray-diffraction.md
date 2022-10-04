@@ -5,4 +5,4 @@ updated: 2022-09-14 14:00:07
 permalink: /characterization/xrd/
 ---
 
-# XRD
+# X射线衍射
