@@ -163,6 +163,6 @@
     "Research/Templates",
     "templates"
   ],
-  "linterLocale": "system-default",
+  "linterLocale": "zh-cn",
   "logLevel": 4
 }
