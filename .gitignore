@@ -24,6 +24,11 @@ deploy.sh
 test.md
 
 # obsidian
-# **/.obsidian
+**/.obsidian
 **/.obsidian/workspace
+**/.obsidian/remotely-save
 
+# notes
+src/research
+src/tmp
+src/*.md
