@@ -2,7 +2,7 @@
 
 个人博客、知识库。
 
-笔记内容以 Markdown 书写，由 VuePress & theme-hope 构建，托管在 GitHub Pages 上。
+笔记内容以 Markdown 书写，Obsidian 管理，由 VuePress & theme-hope 构建，托管在 GitHub Pages 上。
 
 阅读请访问：
 

@@ -1,7 +1,7 @@
 ---
 title: PBS
 date: 2020-10-31 18:00:00
-updated: 2022-09-30 08:41:01
+updated: 2022-10-30 16:19:55
 permalink: /dft-learning/pages/832cb5/
 category:
   - Linux
@@ -225,3 +225,38 @@ echo "============================================="
 | PBS_O_HOST      | 执行 qsub 命令节点名称                               |
 | PBS_O_QUEUE     | 提交的作业的最初队列名称                             |
 | PBS_O_WORKDIR   | 执行 qsub 命令所在的绝对路径                         |
+
+## 高级配置
+
+配置使普通用户可以查看其他用户提交的作业（但不能操作）：
+
+```bash
+qmgr: set server query_other_jobs = True
+```
+
+示例：
+
+```bash
+[scujh_zjb@scu ~]$ qstat
+[scujh_zjb@scu ~]$ su
+Password: 
+[root@scu /home/scujh_zjb]# qmgr
+Max open servers: 49
+Qmgr: set server query_other_jobs = True
+Qmgr: exit
+[root@scu /home/scujh_zjb]# exit
+exit
+[scujh_zjb@scu ~]$ qstat
+
+scu: 
+                                                            Req'd  Req'd   Elap
+Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
+--------------- -------- -------- ---------- ------ --- --- ------ ----- - -----
+19.scu          scudt_du gpu      vasp-test-   1753   1  12    --  720:0 R 69:24
+190.scu         cdu_lsh  batch    4-CeO2      10325   1  24    --  72:00 R 18:13
+203.scu         cdu_hg   gpu      8-OHqy       8101   1   8    --  24:00 R 00:40
+214.scu         cdu_lsh  batch    2CeO2Ni       --    1  24    --  72:00 Q   -- 
+[scujh_zjb@scu ~]$ 
+```
+
+参考：[PBS command to see other users job from user environment - Users/Site Administrators - OpenPBS](https://community.openpbs.org/t/pbs-command-to-see-other-users-job-from-user-environment/745)

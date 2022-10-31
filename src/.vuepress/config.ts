@@ -9,7 +9,7 @@ export default defineUserConfig({
   dest: "dist",
   lang: "zh-CN",
   base: '/',
-  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules', '!.obsidian', '!templates'],
+  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules', '!.obsidian', '!templates', '!research', '!tmp'],
   theme,
   shouldPrefetch: false,
   plugins: [
