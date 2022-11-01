@@ -36,10 +36,10 @@ jobs:
                 commit_message: ${{ github.event.head_commit.message }}
                 # keep_files: false
                 force_orphan: true
-    deploy-server:
-        needs: build-and-deploy
-        runs-on: ubuntu-latest
-        steps:     
+    # deploy-server:
+    #     needs: build-and-deploy
+    #     runs-on: ubuntu-latest
+    #     steps:     
           - name: Prepare SSH to work with the remote server
             run: |
               cd ~ && mkdir .ssh &&
