@@ -36,6 +36,16 @@ jobs:
                 commit_message: ${{ github.event.head_commit.message }}
                 # keep_files: false
                 force_orphan: true
+    deploy-server:
+        needs: build-and-deploy
+        runs-on: ubuntu-latest
+        steps:     
+          - name: Prepare SSH to work with the remote server
+            run: |
+              cd ~ && mkdir .ssh &&
+              touch ~/.ssh/known_hosts &&
+              echo "${{ secrets.SSH_HOSTKEY }}" > ~/.ssh/known_hosts
+
           - name: Deploy to Server
             uses: easingthemes/ssh-deploy@main
             env:
@@ -47,24 +57,7 @@ jobs:
                 REMOTE_USER: ${{ secrets.REMOTE_USER }}
                 TARGET: ${{ secrets.REMOTE_TARGET }}
                 EXCLUDE: "/dist/, /node_modules/"
-          # - name: 📂 Sync files
-            # uses: SamKirkland/FTP-Deploy-Action@4.2.0
-            # with:
-                # server: ftp.samkirkland.com
-                # username: myFtpUserName
-                # password: ${{ secrets.password }}
 
-            # 利用 action 把 build 好的文件上传到服务器路径下,需要确认此目录已在服务端创建
-            # - name: deploy file to server
-            # uses: wlixcc/SFTP-Deploy-Action@v1.0 
-            # with:  
-              # username: 'root'   #ssh user name
-              # port: '6666' # 远程服务器ssh端口，默认22
-              # server: '162.1' # 远程服务器IP
-              # ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} # 认证服务器秘钥对的私钥
-              # local_path: 'docs/.vuepress/dist/*'  # 对应我们项目打包后的静态文件路径
-              # remote_path: '/www/wwwroot/blog/dft-learning' # 服务器上的路径
-                
     # sync:
     #     needs: build-and-deploy
     #     runs-on: ubuntu-latest
