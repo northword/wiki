@@ -56,7 +56,7 @@ jobs:
                 REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
                 REMOTE_USER: ${{ secrets.REMOTE_USER }}
                 TARGET: ${{ secrets.REMOTE_TARGET }}
-                EXCLUDE: "/dist/, /node_modules/"
+                EXCLUDE: "/dist/, /node_modules/, ./.user.ini"
 
     # sync:
     #     needs: build-and-deploy
