@@ -1,7 +1,7 @@
 ---
 title: PBS
 date: 2020-10-31 18:00:00
-updated: 2022-10-30 16:19:55
+updated: 2022-11-14 11:11:12
 permalink: /dft-learning/pages/832cb5/
 category:
   - Linux
@@ -208,7 +208,9 @@ echo "============================================="
 
 其中，`c72` 和 `c73` 是节点名，可以通过 `pbsnodes` 获取到。
 
-> [【已解决】pbs指定作业节点 (novarizark.github.io)](https://novarizark.github.io/2015/01/24/e3-80-90-e5-b7-b2-e8-a7-a3-e5-86-b3-e3-80-91pbs-e/)
+参考：
+
+- [【已解决】pbs指定作业节点 (novarizark.github.io)](https://novarizark.github.io/2015/01/24/e3-80-90-e5-b7-b2-e8-a7-a3-e5-86-b3-e3-80-91pbs-e/)
 
 ### PBS 常用环境变量
 
@@ -228,6 +230,63 @@ echo "============================================="
 
 ## 高级配置
 
+### Qmgr 查看所有配置
+
+```bash
+ qmgr -c "p s"
+```
+
+example:
+
+```bash
+[root@compute-0-11 init.d]# qmgr
+Max open servers: 49
+Qmgr: p s
+#
+# Create queues and set their attributes.
+#
+#
+# Create and define queue batch
+#
+create queue batch
+set queue batch queue_type = Execution
+set queue batch acl_host_enable = False
+set queue batch acl_hosts = compute-0-3.local+compute-0-4.local+compute-0-5.local+compute-0-6.local+compute-0-7.local+compute-0-8.local+compute-0-9.local+compute-0-10.local+compute-0-11.local
+set queue batch resources_default.walltime = 7200:00:00
+set queue batch enabled = True
+set queue batch started = True
+#
+# Create and define queue gpu
+#
+create queue gpu
+set queue gpu queue_type = Execution
+set queue gpu acl_host_enable = False
+set queue gpu acl_hosts = compute-0-2.local
+set queue gpu resources_default.walltime = 720:00:00
+set queue gpu enabled = True
+set queue gpu started = True
+#
+# Set server attributes.
+#
+set server scheduling = True
+set server default_queue = batch
+set server query_other_jobs = True
+set server default_chunk.ncpus = 1
+set server scheduler_iteration = 600
+set server resv_enable = True
+set server node_fail_requeue = 310
+set server max_array_size = 10000
+set server pbs_license_min = 0
+set server pbs_license_max = 2147483647
+set server pbs_license_linger_time = 31536000
+set server eligible_time_enable = False
+set server max_concurrent_provision = 5
+set server max_job_sequence_id = 9999999
+Qmgr: 
+```
+
+### 普通用户查询他人作业
+
 配置使普通用户可以查看其他用户提交的作业（但不能操作）：
 
 ```bash
@@ -237,7 +296,7 @@ qmgr: set server query_other_jobs = True
 示例：
 
 ```bash
-[scujh_zjb@scu ~]$ qstat
+[scujh_zjb@scu ~]$ qstat                  # 仅能查看自己的任务，查看不到别人的任务
 [scujh_zjb@scu ~]$ su
 Password: 
 [root@scu /home/scujh_zjb]# qmgr
@@ -259,4 +318,88 @@ Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
 [scujh_zjb@scu ~]$ 
 ```
 
-参考：[PBS command to see other users job from user environment - Users/Site Administrators - OpenPBS](https://community.openpbs.org/t/pbs-command-to-see-other-users-job-from-user-environment/745)
+参考：
+
+- [PBS command to see other users job from user environment - Users/Site Administrators - OpenPBS](https://community.openpbs.org/t/pbs-command-to-see-other-users-job-from-user-environment/745)
+
+### 解除堆栈大小限制
+
+UPDATE in 2022.11.14：该方法未解决该问题。
+
+用于解决 [分段错误：`forrtl: severe (174): SIGSEGV, segmentation fault occurred`](../05. VASP/08.%E5%85%B6%E4%BB%96/error. md #forrtl :%20severe%20 (174):%20SIGSEGV,%20segmentation%20fault%20occurred)，为每一个计算节点解除堆栈大小限制。
+
+在每一个计算节点上，修改 `$PBS_EXEC/lib/init.d/limits.pbs_mom`（该文件会在运行前被 `source`）在里面添加 `ulimit -s unlimited`，然后重启 PBS 服务。
+
+具体步骤如下：
+
+```bash
+## 依次登录每一个计算节点
+ssh compute-0-11 
+
+## 编辑 limits.pbs_mom 文件
+cd /opt/pbs/lib/init.d/ && cp limits.pbs_mom limits.pbs_mom.bak && vi limits.pbs_mom
+
+## 原文件内容：
+if [ -f /etc/sgi-release -o -f /etc/sgi-compute-node-release ] ; then
+    MEMLOCKLIM=`ulimit -l`
+    NOFILESLIM=`ulimit -n`
+    STACKLIM=`ulimit -s`
+    ulimit -l unlimited
+    ulimit -n 16384
+    ulimit -s unlimited
+fi
+
+## 修改后内容
+    MEMLOCKLIM=`ulimit -l`
+    NOFILESLIM=`ulimit -n`
+    STACKLIM=`ulimit -s`
+    ulimit -l unlimited
+    ulimit -n 16384
+    ulimit -s unlimited
+
+## 重启 pbs
+systemctl restart pbs && systemctl status pbs  # 或执行 /etc/init.d/pbs restart
+```
+
+日志备份以便理解：
+
+```bash
+[root@scu /home/scujh_zjb/test]# ssh compute-0-11
+Warning: untrusted X11 forwarding setup failed: xauth key data not generated
+Last login: Thu Nov 10 03:11:13 2022 from scu
+Rocks Compute Node
+Rocks 7.0 (Manzanita)
+Profile built 21:21 20-Oct-2022
+
+Kickstarted 21:27 20-Oct-2022
+[root@compute-0-11 ~]# cd /opt/pbs/lib/init.d/ 
+[root@compute-0-11 init.d]# ls
+limits.pbs_mom         limits.post_services         sgigenvnodelist.awk
+limits.pbs_mom.compat  limits.post_services.compat  sgiICEvnode.sh
+[root@compute-0-11 init.d]# cd /opt/pbs/lib/init.d/ && cp limits.pbs_mom limits.pbs_mom.bak && ls
+limits.pbs_mom      limits.pbs_mom.compat  limits.post_services.compat  sgiICEvnode.sh
+limits.pbs_mom.bak  limits.post_services   sgigenvnodelist.awk
+[root@compute-0-11 init.d]# vi limits.pbs_mom
+[root@compute-0-11 init.d]# systemctl restart pbs && systemctl status pbs
+● pbs.service - Portable Batch System
+   Loaded: loaded (/opt/pbs/libexec/pbs_init.d; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2022-11-11 02:50:13 EST; 10ms ago
+     Docs: man:pbs(8)
+  Process: 39964 ExecStop=/opt/pbs/libexec/pbs_init.d stop (code=exited, status=0/SUCCESS)
+  Process: 40010 ExecStart=/opt/pbs/libexec/pbs_init.d start (code=exited, status=0/SUCCESS)
+   Memory: 2.6M
+   CGroup: /system.slice/pbs.service
+           └─40074 /opt/pbs/sbin/pbs_mom
+
+Nov 11 02:50:12 compute-0-11.local systemd[1]: Starting Portable Batch System...
+Nov 11 02:50:12 compute-0-11.local pbs_init.d[40010]: Starting PBS
+Nov 11 02:50:13 compute-0-11.local pbs_init.d[40010]: PBS mom
+Nov 11 02:50:13 compute-0-11.local systemd[1]: Started Portable Batch System.
+[root@compute-0-11 init.d]# 
+```
+
+参考：
+
+- [How to set up stack-size to unlimited in PBS pro - Users/Site Administrators - OpenPBS](https://community.openpbs.org/t/how-to-set-up-stack-size-to-unlimited-in-pbs-pro/235)
+- [Increasing the open files limit across all nodes - Users/Site Administrators - OpenPBS](https://community.openpbs.org/t/increasing-the-open-files-limit-across-all-nodes/1361)
+- [How to Use the ulimit Linux Command {With Examples} (phoenixnap.com)](https://phoenixnap.com/kb/ulimit-linux-command)
