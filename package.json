@@ -19,7 +19,7 @@
     "@vuepress/client": "2.0.0-beta.53",
     "sass-loader": "13.1.0",
     "vue": "3.2.41",
-    "vuepress-theme-hope": "2.0.0-beta.116",
+    "vuepress-theme-hope": "2.0.0-beta.148",
     "vuepress-vite": "2.0.0-beta.53",
     "vuepress-plugin-full-text-search2": "^0.4.0"
   },
