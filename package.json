@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "cross-env": "7.0.3",
-    "markdownlint-cli": "0.32.1",
+    "markdownlint-cli": "0.33.0",
     "prettier": "2.7.1"
   },
   "pnpm": {
