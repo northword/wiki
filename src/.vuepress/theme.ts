@@ -21,7 +21,7 @@ export default hopeTheme({
   docsDir: "src",
 
   displayFooter: true,
-  footer: "<a href='https://beian.miit.gov.cn/' >晋 ICP 备 18010037 号 - 1</a>",
+  footer: "<a href='https://beian.miit.gov.cn/' >晋 ICP 备 18010037 号</a>",
   copyright: "Copyright © 2018-Present Northword",
 
   // darkmode: "auto",
@@ -101,7 +101,7 @@ export default hopeTheme({
     ],
   },
 
-  sidebarSorter:["readme", "order", "file-number"],
+  sidebarSorter:["readme", "order", "filename"],
 
   plugins: {
     blog: {
@@ -120,14 +120,16 @@ export default hopeTheme({
       // demo: true,
       flowchart: true,
       footnote: true,
-      imageMark: true,
-      presentation: true,
+      imgLazyload: true,
+      figure: true,
+      // presentation: true,
       sub: true,
       sup: true,
-      tex: true,
-      vpre: true,
+      mathjax: true,
       mermaid: true,
+      linkCheck: "always"
     },
+    autoCatalog: true
   },
   blog:{
     // sidebarDisplay: 'none',

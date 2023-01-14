@@ -1,6 +1,6 @@
 ---
 home: true
-layout: Blog
+layout: BlogHome
 icon: home
 title: 首页
 # heroImage: /assets/img/logo.png
@@ -14,6 +14,4 @@ actions:
   - text: 笔记 🛠
     link: /docs/
 
-copyright: "<a href='https://beian.miit.gov.cn/' >晋 ICP 备 18010037 号 - 1</a>"
-footer: Copyright © 2018-Present Northword.
 ---

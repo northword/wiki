@@ -11,21 +11,31 @@
     "lint:check": "prettier --check .",
     "lint-md": "markdownlint **/*.md --ignore node_modules --fix",
     "test": "echo \"Warning: no test specified\" && exit 0",
-    "update": "yarn add vuepress@next vuepress-theme-hope@next && yarn install && yarn upgrade"
+    "update": "pnpm update"
   },
   "license": "MIT",
   "dependencies": {
-    "@vuepress/cli": "2.0.0-beta.53",
-    "@vuepress/client": "2.0.0-beta.53",
-    "sass-loader": "13.1.0",
-    "vue": "3.2.41",
-    "vuepress-theme-hope": "2.0.0-beta.116",
-    "vuepress-vite": "2.0.0-beta.53",
-    "vuepress-plugin-full-text-search2": "^0.4.0"
+    "@vuepress/cli": "2.0.0-beta.60",
+    "@vuepress/client": "2.0.0-beta.60",
+    "sass-loader": "13.2.0",
+    "vue": "3.2.45",
+    "vuepress-theme-hope": "2.0.0-beta.157",
+    "vuepress-vite": "2.0.0-beta.60"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
     "markdownlint-cli": "0.32.1",
     "prettier": "2.7.1"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "@types/react",
+        "react",
+        "react-dom",
+        "webpack"
+      ]
+    }
   }
 }
