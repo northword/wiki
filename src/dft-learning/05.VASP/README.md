@@ -5,7 +5,7 @@ permalink: /dft-learning/pages/df30ef/
 category:
   - VASP
 dir:
-   link: false
+   link: true
 updated: 2022-10-13 21:17:48
 ---
 

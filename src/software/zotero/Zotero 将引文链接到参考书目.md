@@ -10,7 +10,7 @@ updated: 2022-09-16 21:57:24
 
 建立引用（citation）与参考书目（bibliography）之间的单向超链接（引用 -> 参考书目），类似于 endnotes 的“Link in-text citations to references in the bibliography”：
 
-![](../../assets/712b4026fdc29fc75f8a1b2002119422.png)
+![](./assets/712b4026fdc29fc75f8a1b2002119422.png)
 
 Zotero 官方不提供该功能，这是因为 Zotero 使用的 CSL 处理器将 citation 渲染为一个 filed，无法添加超链接 [^1]。
 

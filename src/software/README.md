@@ -15,5 +15,5 @@ timeline: false
 
 ## 目录
 
-- [自用 Windows Apps 列表](./windows-applications)
+- [自用 Windows Apps 列表](windows-applications.md)
 - Zoero 手册：<https://zotero-cn.github.io/zotero>
