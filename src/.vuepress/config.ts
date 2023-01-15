@@ -1,8 +1,7 @@
 import { defineUserConfig } from "@vuepress/cli";
-// import { searchPlugin } from "@vuepress/plugin-search";
 import theme from "./theme";
 // import { redirectPlugin } from "vuepress-plugin-redirect";
-// import fullTextSearchPlugin from "vuepress-plugin-full-text-search2";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 export default defineUserConfig({
   title: "北辞",
@@ -12,26 +11,22 @@ export default defineUserConfig({
   pagePatterns: ['**/*.md', '!.vuepress', '!node_modules', '!.obsidian', '!templates', '!research', '!tmp'],
   theme,
   shouldPrefetch: false,
+  // permalinkPattern: 'posts/:slug/',
   plugins: [
-    // searchPlugin({
-    //   maxSuggestions: 10
-    // }),
-    // redirectPlugin({
-    //   // 配置选项
-    //   hostname: 'https://northword.cn',
-    //   config: {
-    //     '/dft-learning/pages/9810fa/': '/docs/pages/9810fa/'
-    //   }
-    // }),
-    // fullTextSearchPlugin({
-    //   locales: {
-    //     '/': {
-    //       placeholder: 'Search',
-    //     },
-    //     '/zh/': {
-    //       placeholder: '搜索',
-    //     },
-    //   },
-    // }),
+    searchProPlugin({
+      // 索引全部内容
+      indexContent: true,
+      // 为分类和标签添加索引
+      customFields: [
+        {
+          getter: (page) => page.frontmatter.category,
+          formatter: "分类：$content",
+        },
+        {
+          getter: (page) => page.frontmatter.tag,
+          formatter: "标签：$content",
+        },
+      ],
+    }),
   ],
 });

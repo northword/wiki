@@ -1,6 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-
 export default hopeTheme({
   hostname: "https://northword.cn",
 
@@ -104,9 +103,7 @@ export default hopeTheme({
   sidebarSorter:["readme", "order", "filename"],
 
   plugins: {
-    blog: {
-      autoExcerpt: false,
-    },
+    blog: true,
 
     // feed: {
     //   atom: true,
@@ -129,7 +126,7 @@ export default hopeTheme({
       mermaid: true,
       linkCheck: "always"
     },
-    autoCatalog: true
+    // autoCatalog: false
   },
   blog:{
     // sidebarDisplay: 'none',
