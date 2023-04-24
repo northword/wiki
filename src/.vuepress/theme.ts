@@ -20,7 +20,7 @@ export default hopeTheme({
   docsDir: "src",
 
   displayFooter: true,
-  footer: "<a href='https://beian.miit.gov.cn/' >晋 ICP 备 18010037 号</a>",
+  footer: "<a href='https://beian.miit.gov.cn/' target='_blank'>晋 ICP 备 18010037 号 - 1</a>",
   copyright: "Copyright © 2018-Present Northword",
 
   // darkmode: "auto",
