@@ -5,7 +5,7 @@ specifiers:
   '@vuepress/client': 2.0.0-beta.61
   cross-env: 7.0.3
   markdownlint-cli: 0.32.1
-  prettier: 2.7.1
+  prettier: 2.8.8
   sass-loader: 13.2.0
   vue: ^3.2.47
   vuepress-plugin-search-pro: 2.0.0-beta.206
@@ -24,7 +24,7 @@ dependencies:
 devDependencies:
   cross-env: 7.0.3
   markdownlint-cli: 0.32.1
-  prettier: 2.7.1
+  prettier: 2.8.8
 
 packages:
 
@@ -1867,7 +1867,7 @@ packages:
   /@types/sax/1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 18.16.1
+      '@types/node': 17.0.45
     dev: false
 
   /@types/scheduler/0.16.3:
@@ -4591,8 +4591,8 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+  /prettier/2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
