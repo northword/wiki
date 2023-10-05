@@ -30,7 +30,6 @@ export default defineUserConfig({
     }),
     
     () => {
-      const key = "5574297d56b065f5137cf3654e3de360";
       return {
         name: "vuepress-plugin-baidu-tongji",
         extendsPage: (page) => {
@@ -44,7 +43,11 @@ export default defineUserConfig({
           ]);
           page.frontmatter.head?.push([
             "script",
-            { src: `https://hm.baidu.com/hm.js?${key}` },
+            { src: `https://hm.baidu.com/hm.js?5574297d56b065f5137cf3654e3de360` }, // northword.cn
+          ]);
+          page.frontmatter.head?.push([
+            "script",
+            { src: `https://hm.baidu.com/hm.js?92a8f6d9fbb75efa90964afcd42be758` }, // northword.dev
           ]);
         },
       };
