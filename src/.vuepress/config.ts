@@ -28,5 +28,26 @@ export default defineUserConfig({
         },
       ],
     }),
+    
+    () => {
+      const key = "5574297d56b065f5137cf3654e3de360";
+      return {
+        name: "vuepress-plugin-baidu-tongji",
+        extendsPage: (page) => {
+          page.frontmatter.head = page.frontmatter.head || [];
+          page.frontmatter.head?.push([
+            "script",
+            {
+              type: "text/javascript",
+            },
+            "var _hmt = _hmt || []",
+          ]);
+          page.frontmatter.head?.push([
+            "script",
+            { src: `https://hm.baidu.com/hm.js?${key}` },
+          ]);
+        },
+      };
+    },
   ],
 });
