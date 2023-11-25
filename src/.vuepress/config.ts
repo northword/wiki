@@ -1,4 +1,4 @@
-import { defineUserConfig } from "@vuepress/cli";
+import { defineUserConfig } from "vuepress";
 import theme from "./theme";
 // import { redirectPlugin } from "vuepress-plugin-redirect";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
@@ -7,8 +7,16 @@ export default defineUserConfig({
   title: "北辞",
   dest: "dist",
   lang: "zh-CN",
-  base: '/',
-  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules', '!.obsidian', '!templates', '!research', '!tmp'],
+  base: "/",
+  pagePatterns: [
+    "**/*.md",
+    "!.vuepress",
+    "!node_modules",
+    "!.obsidian",
+    "!templates",
+    "!research",
+    "!tmp",
+  ],
   theme,
   shouldPrefetch: false,
   // permalinkPattern: 'posts/:slug/',

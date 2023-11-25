@@ -2,31 +2,30 @@
   "name": "northword-blog",
   "version": "1.0.0",
   "scripts": {
-    "build:vite": "vuepress-vite build src",
-    "build:vite-debug": "cross-env DEBUG=vuepress* vuepress-vite build src",
-    "dev:vite": "vuepress-vite dev src",
-    "dev:vite-clean": "vuepress-vite dev src --clean-cache",
-    "dev:vite-debug": "cross-env DEBUG=vuepress* vuepress-vite dev src",
+    "build:vite": "vuepress build src",
+    "dev:vite": "vuepress dev src",
+    "dev:vite-clean": "vuepress dev src --clean-cache",
     "lint": "prettier --check --write .",
     "lint:check": "prettier --check .",
     "lint-md": "markdownlint **/*.md --ignore node_modules --fix",
     "test": "echo \"Warning: no test specified\" && exit 0",
-    "update": "pnpm update"
+    "update": "pnpm update",
+    "docs:update-package": "npx vp-update"
   },
   "license": "MIT",
   "dependencies": {
-    "@vuepress/cli": "2.0.0-beta.61",
-    "@vuepress/client": "2.0.0-beta.61",
-    "sass-loader": "13.2.0",
-    "vue": "^3.2.47",
-    "vuepress-theme-hope": "2.0.0-beta.206",
-    "vuepress-plugin-search-pro": "2.0.0-beta.206",
-    "vuepress-vite": "2.0.0-beta.61"
+    "@vuepress/client": "2.0.0-rc.0",
+    "sass-loader": "^13.3.2",
+    "vue": "^3.3.9",
+    "vuepress": "2.0.0-rc.0",
+    "vuepress-plugin-search-pro": "2.0.0-rc.0",
+    "vuepress-theme-hope": "2.0.0-rc.0"
   },
   "devDependencies": {
-    "cross-env": "7.0.3",
-    "markdownlint-cli": "0.32.1",
-    "prettier": "2.8.8"
+    "katex": "^0.16.9",
+    "markdownlint-cli": "^0.32.2",
+    "mermaid": "^10.6.1",
+    "prettier": "^2.8.8"
   },
   "pnpm": {
     "peerDependencyRules": {
