@@ -15,19 +15,25 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+
       - uses: pnpm/action-setup@v2
         with:
-          version: 6.32.9
+          version: 8
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
-          # cache: "yarn"
+          cache: "pnpm"
+
+      - name: Install deps
+        run: pnpm install
+
       - name: Build
         run: |
-          pnpm install
           pnpm build:vite
+
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
@@ -36,13 +42,15 @@ jobs:
           commit_message: ${{ github.event.head_commit.message }}
           # keep_files: false
           force_orphan: true
-      - name: Deploy to Server 📂
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
+
+      # - name: Deploy to Server 📂
+      #   uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      #   with:
+      #     server: ${{ secrets.FTP_SERVER }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: ./dist/
+
   # deploy-server:
   #     needs: build-and-deploy
   #     runs-on: ubuntu-latest
