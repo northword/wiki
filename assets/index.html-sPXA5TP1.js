@@ -1,0 +1,18 @@
+import{_ as a}from"./plugin-vue_export-helper-x3n3nnut.js";import{r as t,o as i,c as o,a as s,b as n,e as l,w as c,d}from"./app-1ZTmwhuN.js";const p="/assets/image-04.vasp-DOS-20221119172502337-0f9mNQHX.jpg",r={},u=s("h1",{id:"态密度分析",tabindex:"-1"},[s("a",{class:"header-anchor",href:"#态密度分析","aria-hidden":"true"},"#"),n(" 态密度分析")],-1),m=s("p",null,"态密度，也就是每个轨道的电子云分布比例，通过态密度可以了解电子结构。",-1),v=s("p",null,[n("在"),s("strong",null,"非自洽计算"),n("的基础上进行态密度分析。")],-1),b=s("p",null,"本页以计算 O2 的态密度为例。",-1),_=s("h2",{id:"步骤",tabindex:"-1"},[s("a",{class:"header-anchor",href:"#步骤","aria-hidden":"true"},"#"),n(" 步骤")],-1),h=s("code",null,"3-nscf",-1),k=d(`<p>计算完成后用 <code>VTST Script</code> 的脚本 <code>split_dos</code> 分离态密度：</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token punctuation">[</span>zjb@op <span class="token number">3</span>-nscf<span class="token punctuation">]</span>$ split_dos
+The OUTCAR exists, we use it to get the Fermi level,
+the RWIGS tag and the number of spins.
+Fermi level: <span class="token parameter variable">-6.6846</span>
+Spin polarized calculation
+LORBIT <span class="token operator">=</span> <span class="token number">11</span>
+WARNING: not completely <span class="token builtin class-name">test</span> <span class="token keyword">for</span> vasp.4.*
+Use at your own risk. Please check results <span class="token keyword">for</span> consistency.
+<span class="token number">7</span> <span class="token number">6006</span>
+<span class="token number">0</span> <span class="token number">7</span> <span class="token number">6006</span>
+<span class="token number">1</span> <span class="token number">6008</span> <span class="token number">12007</span>
+<span class="token number">2</span> <span class="token number">12009</span> <span class="token number">18008</span>
+
+<span class="token punctuation">[</span>zjb@op <span class="token number">3</span>-nscf<span class="token punctuation">]</span>$ <span class="token function">ls</span>
+CHG     CONTCAR  DOS1  DOSCAR    IBZKPT  KPOINTS  OUTCAR   PCDAT   POTCAR  REPORT  tmp.dat   vasp.pbs     WAVECAR
+CHGCAR  DOS0     DOS2  EIGENVAL  INCAR   OSZICAR  out.log  POSCAR  PROCAR  stdout  tmp.dat2  vasprun.xml  XDATCAR
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这一命令后得到了 <code>DOS0</code>、<code>DOS1</code>、<code>DOS2</code> 三个文件，DOS0 是总的态密度，DOS1 和 DOS2 分别是第 1 个 O 原子，第二个 O 原子的态密度。</p><p>使用脚本画图：</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>dosplot.pl DOS0
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>执行后生成了 <code>dosplot.eps</code>，下载，使用矢量图工具打开。</p><figure><img src="`+p+'" alt="dosplot.eps" tabindex="0" loading="lazy"><figcaption>dosplot.eps</figcaption></figure><p>也可以将 <code>DOS0</code> 回传，使用 Origin 画图。</p>',8);function O(f,g){const e=t("RouterLink");return i(),o("div",null,[u,m,v,b,_,s("p",null,[n("本页操作在完成 "),l(e,{to:"/dft-learning/05.VASP/02.%E4%BC%98%E5%8C%96/02.vasp-opt.html"},{default:c(()=>[n("O2 结构优化、自洽、非自洽")]),_:1}),n(" 之后进行。在 "),h,n(" 文件夹中继续。")]),k])}const R=a(r,[["render",O],["__file","index.html.vue"]]);export{R as default};

@@ -1,0 +1,10 @@
+import{_ as a}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as s,c as e,d as n}from"./app-1ZTmwhuN.js";const i={},d=n(`<h1 id="配置-vtst-的脚本" tabindex="-1"><a class="header-anchor" href="#配置-vtst-的脚本" aria-hidden="true">#</a> 配置 VTST 的脚本</h1><h2 id="下载" tabindex="-1"><a class="header-anchor" href="#下载" aria-hidden="true">#</a> 下载</h2><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">cd</span> ~/app
+<span class="token function">wget</span> http://theory.cm.utexas.edu/code/vtstscripts.tgz
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="解压缩" tabindex="-1"><a class="header-anchor" href="#解压缩" aria-hidden="true">#</a> 解压缩</h2><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>$ <span class="token function">tar</span> <span class="token parameter variable">-xzvf</span> vtstscripts.tgz 
+$ <span class="token function">rm</span> vtstscripts.tgz
+$ <span class="token builtin class-name">cd</span> vtstscripts-（按Tab）
+$ <span class="token builtin class-name">pwd</span>
+<span class="token comment"># 将返回值复制</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="加入-bashrc" tabindex="-1"><a class="header-anchor" href="#加入-bashrc" aria-hidden="true">#</a> 加入 bashrc</h2><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">vi</span> ~/.bashrc
+<span class="token comment"># 将上面pwd的返回值加入PATH</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>`,7),t=[d];function c(r,l){return s(),e("div",null,t)}const u=a(i,[["render",c],["__file","index.html.vue"]]);export{u as default};

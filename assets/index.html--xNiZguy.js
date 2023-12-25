@@ -1,0 +1,1 @@
+import{_ as o}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as t,c as r,a as e,b as a}from"./app-1ZTmwhuN.js";const c={},n=e("h1",{id:"zotero",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#zotero","aria-hidden":"true"},"#"),a(" Zotero")],-1),s=[n];function _(d,i){return t(),r("div",null,s)}const f=o(c,[["render",_],["__file","index.html.vue"]]);export{f as default};

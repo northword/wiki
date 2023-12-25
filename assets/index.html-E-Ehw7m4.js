@@ -1,0 +1,8 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as t,c as d,d as i}from"./app-1ZTmwhuN.js";const n={},c=i(`<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>DFT+U Calculation
+ LDAU   = .TRUE.        (启用 DFT+U)
+ LDATYPE=  2            (+U的类型)
+ LDAUL  =  2 -1         (Orbitals for each species)
+ LDAUU  =  3.5  0       (U for each species)
+ LDAUJ  =  0  0         (J for each species)
+ LMAXMIX=  4            (Mixing cut-off; 4-d, 6-f)
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>LADATYPE——描述+U 的类型。取值有：1、2（默认）、4。</p><table><thead><tr><th>LDAUL 取值</th><th>描述</th></tr></thead><tbody><tr><td>1</td><td>The rotationally invariant LSDA+U introduced by Liechtenstein et al</td></tr><tr><td>2（默认）</td><td>Dudarev 简化的。在此方案中，描述库仑和交换相互作用的 U 和 J 项始终以 Ueff = U-J 的形式组合在一起，只有 U-J 有物理意义。</td></tr><tr><td>4</td><td>todo</td></tr></tbody></table><p>LDAUL——描述在哪个原子轨道上加 U。 <code>-1</code> 不加 U；<code>1</code> p 轨道； <code>2</code> d 轨道 （默认） ； <code>3</code>f 轨道。</p><p>LDAUU——电子库伦相互作用项( on-site Coulomb interaction)</p><p>LDAUJ——电子交换相互作用项( on-site exchange interaction)</p><div class="hint-container tip"><p class="hint-container-title">提示</p><p>LDAUL、LDAUU、LDAUJ 都需要为每个物种设定（有几种元素就有几个数字），顺序应当与 POSCAR/POTCAR 中的一致。</p><p>最终的 U 值 = <code>LDAUU</code> - <code>LDAUUJ</code> 。</p><p>一般说来＋U 的过程要自始至终，也就是从结构优化到计算性质都要考虑 U 的影响</p></div>`,7),o=[c];function a(s,r){return t(),d("div",null,o)}const p=e(n,[["render",a],["__file","index.html.vue"]]);export{p as default};

@@ -1,0 +1,7 @@
+import{_ as n}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as a,c as s,d as e}from"./app-1ZTmwhuN.js";const t={},c=e(`<h1 id="使用默认-gcc-编译-gnuplot" tabindex="-1"><a class="header-anchor" href="#使用默认-gcc-编译-gnuplot" aria-hidden="true">#</a> 使用默认 GCC 编译 gnuplot</h1><p>无需，学校已安装。</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">cd</span> /tmp
+<span class="token function">wget</span> https://jaist.dl.sourceforge.net/project/gnuplot/gnuplot/5.2.5/gnuplot-5.2.5.tar.gz
+<span class="token function">tar</span> xzvf gnuplot-5.2.5.tar.gz 
+<span class="token builtin class-name">cd</span> gnuplot-5.2.5/
+./configure <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/public/home/zjb/app/gunplot/
+<span class="token function">make</span> <span class="token operator">&amp;</span> <span class="token function">make</span> <span class="token function">install</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>第五行等号后面是你的目标安装路径</p>`,4),l=[c];function i(o,p){return a(),s("div",null,l)}const u=n(t,[["render",i],["__file","index.html.vue"]]);export{u as default};
