@@ -35,7 +35,7 @@ jobs:
           pnpm build:vite
 
       - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3.9.3
+        uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: dist
