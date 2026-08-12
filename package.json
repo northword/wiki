@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@vuepress/client": "2.0.0-rc.0",
+    "@vuepress/client": "2.0.0-rc.2",
     "vue": "^3.3.13",
     "vuepress": "2.0.0-rc.0",
     "vuepress-plugin-search-pro": "2.0.0-rc.6",
