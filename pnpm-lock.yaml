@@ -19,12 +19,12 @@ dependencies:
     version: 2.0.0-rc.6(vuepress@2.0.0-rc.0)
   vuepress-theme-hope:
     specifier: 2.0.0-rc.6
-    version: 2.0.0-rc.6(katex@0.16.9)(markdown-it@13.0.2)(mermaid@10.6.1)(vuepress@2.0.0-rc.0)
+    version: 2.0.0-rc.6(katex@0.16.21)(markdown-it@13.0.2)(mermaid@10.6.1)(vuepress@2.0.0-rc.0)
 
 devDependencies:
   katex:
     specifier: ^0.16.9
-    version: 0.16.9
+    version: 0.16.21
   markdownlint-cli:
     specifier: ^0.38.0
     version: 0.38.0
@@ -1694,7 +1694,7 @@ packages:
       upath: 2.0.1
     dev: false
 
-  /@mdit/plugin-katex@0.7.6(katex@0.16.9)(markdown-it@13.0.2):
+  /@mdit/plugin-katex@0.7.6(katex@0.16.21)(markdown-it@13.0.2):
     resolution: {integrity: sha512-ZbPIks1SlgzS5R6YOL5s0J5vk20ROl5hF+Yj9o6CiEljodK2ln0ewpX36qM6POVrS/cu6E4Lx4X0fc5JTI6nAQ==}
     engines: {node: '>= 18'}
     peerDependencies:
@@ -1709,7 +1709,7 @@ packages:
       '@mdit/plugin-tex': 0.7.6(markdown-it@13.0.2)
       '@types/katex': 0.16.7
       '@types/markdown-it': 13.0.7
-      katex: 0.16.9
+      katex: 0.16.21
       markdown-it: 13.0.2
     dev: false
 
@@ -4165,8 +4165,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /katex@0.16.9:
-    resolution: {integrity: sha512-fsSYjWS0EEOwvy81j3vRA8TEAhQhKiqO+FQaKWp0m39qwOzHVBgAUBIXWj1pB+O2W3fIpNa6Y9KSKCVbfPhyAQ==}
+  /katex@0.16.21:
+    resolution: {integrity: sha512-XvqR7FgOHtWupfMiigNzmh+MgUVmDGU2kXZm899ZkPfcuoPuFxyHmXsgATDpFZDAXCI8tvinaVcDo8PIIJSo4A==}
     hasBin: true
     dependencies:
       commander: 8.3.0
@@ -5891,7 +5891,7 @@ packages:
       - typescript
     dev: false
 
-  /vuepress-plugin-md-enhance@2.0.0-rc.6(katex@0.16.9)(markdown-it@13.0.2)(mermaid@10.6.1)(vuepress@2.0.0-rc.0):
+  /vuepress-plugin-md-enhance@2.0.0-rc.6(katex@0.16.21)(markdown-it@13.0.2)(mermaid@10.6.1)(vuepress@2.0.0-rc.0):
     resolution: {integrity: sha512-cEsMccjqdNFq4UjnFbg9OlBwrIF9Ducr2MX2G+6p4h17yJ8yf7NctpGZwnVMh2FGmQ7oYjcIpkuUDrkLn4elzw==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -5959,7 +5959,7 @@ packages:
       '@mdit/plugin-img-mark': 0.7.6(markdown-it@13.0.2)
       '@mdit/plugin-img-size': 0.7.6(markdown-it@13.0.2)
       '@mdit/plugin-include': 0.7.6(markdown-it@13.0.2)
-      '@mdit/plugin-katex': 0.7.6(katex@0.16.9)(markdown-it@13.0.2)
+      '@mdit/plugin-katex': 0.7.6(katex@0.16.21)(markdown-it@13.0.2)
       '@mdit/plugin-mark': 0.7.6(markdown-it@13.0.2)
       '@mdit/plugin-mathjax': 0.7.6(markdown-it@13.0.2)
       '@mdit/plugin-stylize': 0.7.6(markdown-it@13.0.2)
@@ -5976,7 +5976,7 @@ packages:
       '@vueuse/core': 10.7.0(vue@3.3.13)
       balloon-css: 1.2.0
       js-yaml: 4.1.0
-      katex: 0.16.9
+      katex: 0.16.21
       mermaid: 10.6.1
       vue: 3.3.13
       vue-router: 4.2.5(vue@3.3.13)
@@ -6265,7 +6265,7 @@ packages:
       - typescript
     dev: false
 
-  /vuepress-theme-hope@2.0.0-rc.6(katex@0.16.9)(markdown-it@13.0.2)(mermaid@10.6.1)(vuepress@2.0.0-rc.0):
+  /vuepress-theme-hope@2.0.0-rc.6(katex@0.16.21)(markdown-it@13.0.2)(mermaid@10.6.1)(vuepress@2.0.0-rc.0):
     resolution: {integrity: sha512-+fD5ieV8XZ2kdlcrbAICLd7ZF5gCv/JBkyXg5bIR5ZX8aC0L2FB+4tXKepNQQI9xgb2pio1yPr1qNNINZdzrkA==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -6311,7 +6311,7 @@ packages:
       vuepress-plugin-copy-code2: 2.0.0-rc.6(vuepress@2.0.0-rc.0)
       vuepress-plugin-copyright2: 2.0.0-rc.6(vuepress@2.0.0-rc.0)
       vuepress-plugin-feed2: 2.0.0-rc.6(vuepress@2.0.0-rc.0)
-      vuepress-plugin-md-enhance: 2.0.0-rc.6(katex@0.16.9)(markdown-it@13.0.2)(mermaid@10.6.1)(vuepress@2.0.0-rc.0)
+      vuepress-plugin-md-enhance: 2.0.0-rc.6(katex@0.16.21)(markdown-it@13.0.2)(mermaid@10.6.1)(vuepress@2.0.0-rc.0)
       vuepress-plugin-photo-swipe: 2.0.0-rc.6(vuepress@2.0.0-rc.0)
       vuepress-plugin-pwa2: 2.0.0-rc.6(vuepress@2.0.0-rc.0)
       vuepress-plugin-reading-time2: 2.0.0-rc.6(vuepress@2.0.0-rc.0)
